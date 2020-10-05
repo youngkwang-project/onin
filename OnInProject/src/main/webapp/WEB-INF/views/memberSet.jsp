@@ -1524,8 +1524,7 @@ textarea {
 																	</div>
 																</div>
 
-																<button width="139px" height="50px" type="button"
-																	class="sc-EHOje kVkKtH">인증하기</button>
+																
 															</div>
 														</div>
 														<div width="612px" class="sc-ihiiSJ hmuaMQ">
@@ -1584,23 +1583,23 @@ textarea {
 
 
 														</div>
-														<div width="453px" class="sc-ihiiSJ bdXKMA">
-															<div width="296px" class="sc-chPdSV glyfuW">
-																<div width="50px" class="sc-kgoBCf bUwjoZ">
-																	<img src="https://pren.kr/static/Icon/password.svg"
-																		alt="password" width="30.00%" height="37.50%" />
-																</div>
-																<div class="sc-kGXeez kUKQcj">
-																	<div class="sc-bdVaJa jCeSos">
-																		<input type="password" placeholder="변경할 비밀번호 확인"
-																			value="" class="sc-htpNat ksfJEf sc-kpOJdX intbG"
-																			width="100%" />
+															<div width="611px" class="sc-ihiiSJ cOiWSs">
+																<div width="297px" class="sc-chPdSV gRxJcl">
+																	<div width="50px" class="sc-kgoBCf bUwjoZ">
+																		<img src="https://pren.kr/static/Icon/password.svg"
+																			alt="tel" width="32.50%" height="32.50%" />
+																	</div>
+																	<div class="sc-kGXeez kUKQcj">
+																		<div class="sc-bdVaJa jCeSos">
+																			<input name="pw" placeholder="변경할 비밀번호 확인"
+																				value="" class="sc-htpNat ksfJEf sc-kpOJdX intbG"
+																				width="100%" />
+																		</div>
 																	</div>
 																</div>
-
+																<button width="139px" height="50px" type="button"
+																	class="sc-EHOje dKYqiz">비밀번호 변경</button>
 															</div>
-
-
 														</div>
 														<div class="sc-ifAKCX ktBaKe">
 															<div width="452px" class="sc-ihiiSJ flypWG">
@@ -1641,16 +1640,16 @@ textarea {
 														<div class="sc-cFlXAS gAfcgo">
 															<div class="sc-cfWELz eAobcy">
 																<div class="sc-kAdXeD ljcIYa">
-																	<label for="sms" class="sc-bvTASY Gyhlc">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 카카오톡
-																		알림</label><label class="sc-hCaUpS kJvgYD"><input
+																	<label for="sms" class="sc-bvTASY Gyhlc">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+																		카카오톡 알림</label><label class="sc-hCaUpS kJvgYD"><input
 																		type="checkbox" id="sms" name="sms" checked=""><span
-																		class="slider"></span></label>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <label for="email"
-																		class="sc-bvTASY Gyhlc">이메일</label><label
+																		class="slider"></span></label>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <label
+																		for="email" class="sc-bvTASY Gyhlc">이메일</label><label
 																		class="sc-hCaUpS kJvgYD"><input
 																		type="checkbox" id="email" name="email"><span
-																		class="slider"></span></label> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<label for="do_not_disturb"
-																		class="sc-bvTASY Gyhlc">방해금지 모드</label><label
-																		class="sc-hCaUpS kJvgYD"><input
+																		class="slider"></span></label> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<label
+																		for="do_not_disturb" class="sc-bvTASY Gyhlc">방해금지
+																		모드</label><label class="sc-hCaUpS kJvgYD"><input
 																		type="checkbox" id="do_not_disturb"
 																		name="do_not_disturb"><span class="slider"></span></label>
 																</div>
