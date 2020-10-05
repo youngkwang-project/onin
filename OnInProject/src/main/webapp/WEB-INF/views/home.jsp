@@ -1870,8 +1870,16 @@ textarea {
 							</div>
 							<div class="sc-bAeIUo iVogkW">
 								<a href="/login" class="sc-bXGyLb drBCjk">
-									<p color="#585858" class="sc-bxivhb bscqcK">로그인</p>
+									<p color="#585858" class="s c-bxivhb bscqcK">로그인</p>
 								</a>
+								<c:choose>
+									<c:when test="${empty loginMember}">
+										<a href="/login">로그인</a>
+									</c:when>
+									<c:otherwise>
+										<a href="/logout">로그아웃</a>
+									</c:otherwise>
+								</c:choose>
 							</div>
 						</div>
 					</div>
