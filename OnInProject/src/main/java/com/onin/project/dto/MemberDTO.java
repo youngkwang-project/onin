@@ -1,5 +1,7 @@
 package com.onin.project.dto;
 
+import lombok.Data;
+
 @Data
 public class MemberDTO {
 
