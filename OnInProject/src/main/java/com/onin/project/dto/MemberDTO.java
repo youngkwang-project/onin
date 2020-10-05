@@ -1,5 +1,6 @@
 package com.onin.project.dto;
 
+@Data
 public class MemberDTO {
 
 	int mno;
