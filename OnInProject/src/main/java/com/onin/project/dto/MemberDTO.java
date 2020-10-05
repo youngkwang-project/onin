@@ -3,7 +3,7 @@ package com.onin.project.dto;
 import lombok.Data;
 
 @Data
-public class memberDTO {
+public class MemberDTO {
 	
 	int mno;
 	String email;
