@@ -1,5 +1,5 @@
 package com.onin.project.mapper;
 
-public class MypageMapper {
+public interface MypageMapper {
 
 }

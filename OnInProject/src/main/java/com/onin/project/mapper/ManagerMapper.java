@@ -1,5 +1,5 @@
 package com.onin.project.mapper;
 
-public class ManagerMapper {
+public interface ManagerMapper {
 
 }

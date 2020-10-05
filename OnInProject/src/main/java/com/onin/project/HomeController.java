@@ -17,12 +17,14 @@ public class HomeController {
 
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
 
-	@RequestMapping(value = "/", method = RequestMethod.GET)
-	public String home(Model model) {
-		logger.info("home(){}");
-
-		return "home";
-	}
+//	@RequestMapping(value = "/", method = RequestMethod.GET)
+//	public String home(Model model) {
+//		logger.info("home(){}");
+//
+//		return "memberSet";
+//	}
+	
+	
 //	//로그인뷰 
 //	@GetMapping(value="/login")
 //	public String memberLogin(Model model) {
