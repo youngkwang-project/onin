@@ -8,14 +8,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="robots" content="index,follow" />
 <meta name="description"
-	content="각 분야 최고의 전문가들을 만날 수 있는 플랫폼. 믿을 수 있는 프랜에서 전문가를 찾아보세요! 서비스: 디자인, 마케팅, IT 프로그래밍" />
+	content="각 분야 최고의 전문가들을 만날 수 있는 플랫폼. 믿을 수 있는 ON-IN에서 전문가를 찾아보세요! 서비스: 디자인, 마케팅, IT 프로그래밍" />
 <meta name="keywords"
 	content="진정성, 실명제, 안심, 분쟁해결, 실력 이상의 전문성은 진정성에서 나온다. 마케팅,디자인,IT프로그래밍,번역·통역,영상·사진·음악,문서·작문,상담·컨설팅,이벤트,레슨,기타(생활서비스)" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="ON-IN" />
 <meta property="og:title" content="ON-IN | 전문가 매칭 플랫폼" />
 <meta property="og:description"
-	content="각 분야 최고의 전문가들을 만날 수 있는 플랫폼. 믿을 수 있는 프랜에서 전문가를 찾아보세요! 서비스: 디자인, 마케팅, IT 프로그래밍" />
+	content="각 분야 최고의 전문가들을 만날 수 있는 플랫폼. 믿을 수 있는 ON-IN에서 전문가를 찾아보세요! 서비스: 디자인, 마케팅, IT 프로그래밍" />
 <meta property="og:image"
 	content="https://pren-frontend.s3.ap-northeast-2.amazonaws.com/og-temp-image.png" />
 <meta property="og:url" content="https://pren.kr" />
@@ -1517,7 +1517,7 @@ textarea {
 																	</div>
 																	<div class="sc-kGXeez kUKQcj">
 																		<div class="sc-bdVaJa jCeSos">
-																			<input name="email" type="email" placeholder="이메일"
+																			<input name="email" type="email" placeholder=${member.email}
 																				value="" class="sc-htpNat ksfJEf sc-kpOJdX intbG"
 																				width="100%" />
 																		</div>
@@ -1628,15 +1628,7 @@ textarea {
 																<label for="sms" class="sc-bvTASY Gyhlc">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
 																	카카오톡 알림</label><label class="sc-hCaUpS kJvgYD"><input
 																	type="checkbox" id="sms" name="sms" checked=""><span
-																	class="slider"></span></label>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <label
-																	for="email" class="sc-bvTASY Gyhlc">이메일</label><label
-																	class="sc-hCaUpS kJvgYD"><input type="checkbox"
-																	id="email" name="email"><span class="slider"></span></label>
-																&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<label
-																	for="do_not_disturb" class="sc-bvTASY Gyhlc">방해금지
-																	모드</label><label class="sc-hCaUpS kJvgYD"><input
-																	type="checkbox" id="do_not_disturb"
-																	name="do_not_disturb"><span class="slider"></span></label>
+																	class="slider"></span>
 															</div>
 														</div>
 													</div>

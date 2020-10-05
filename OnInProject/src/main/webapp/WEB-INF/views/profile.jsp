@@ -2521,7 +2521,8 @@ textarea {
 	min-width: 20px;
 	min-height: 20px;
 	background-color: #00d387;
-	background-image: url(https://pren.kr/static/expert_onboarding/select.svg);
+	background-image:
+		url(https://pren.kr/static/expert_onboarding/select.svg);
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 45% 45%;
@@ -3317,7 +3318,8 @@ textarea {
 	min-width: 20px;
 	min-height: 20px;
 	background-color: #00d387;
-	background-image: url(https://pren.kr/static/expert_onboarding/select.svg);
+	background-image:
+		url(https://pren.kr/static/expert_onboarding/select.svg);
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 45% 45%;
@@ -3558,8 +3560,8 @@ textarea {
 							<div class="sc-bsbRJL eIEXWC">
 								<div class="sc-hZSUBg VKktY">
 									<a href="/" class="sc-bXGyLb drBCjk"><img
-										src="https://pren.kr/static/Icon/logo.svg" alt="logo" width="88px"
-										height="44px" /></a>
+										src="https://pren.kr/static/Icon/logo.svg" alt="logo"
+										width="88px" height="44px" /></a>
 								</div>
 								<div class="sc-bMVAic hPoZmI">
 									<a href="/categories/experts" class="sc-bXGyLb drBCjk"><p
@@ -3592,8 +3594,8 @@ textarea {
 							<div class="sc-bsbRJL eIEXWC">
 								<div class="sc-hZSUBg VKktY">
 									<a href="/" class="sc-bXGyLb drBCjk"><img
-										src="https://pren.kr/static/Icon/logo.svg" alt="logo" width="88px"
-										height="44px" /></a>
+										src="https://pren.kr/static/Icon/logo.svg" alt="logo"
+										width="88px" height="44px" /></a>
 								</div>
 							</div>
 							<div>
@@ -3648,28 +3650,15 @@ textarea {
 						<div width="928px" class="sc-jwJjzT cBgKYk">
 							<div class="fresnel-container fresnel-greaterThan-xs ">
 								<div class="sc-ghUbLI eCMiui">
-									<img src="https://pren.kr/static/expert_onboarding/illust.svg" width="393px"
-										height="264px" />
-									<div class="sc-ghUbLI PpAqF">
-										<a href="/commission" target="_blank" class="sc-LAuEU hPNSTp"><button
-												class="sc-EHOje sc-iEPtyo eyeceW">
-												<p class="sc-bxivhb sc-ertOQY jDWytV">프랜 수수료 정책 확인하기</p>
-											</button></a><a href="https://pren.kr/categories/experts/portfolio/386"
-											target="__blank" class="sc-gkfylT cCZsfw"><button
-												class="sc-EHOje sc-iEPtyo jFGgVT">
-												<p class="sc-bxivhb sc-ertOQY jDWytV">프로필 작성 가이드 보기</p>
-											</button></a>
-									</div>
+									<img src="https://pren.kr/static/expert_onboarding/illust.svg"
+										width="393px" height="264px" />
 								</div>
 							</div>
 							<div class="fresnel-container fresnel-at-xs ">
 								<div class="sc-ghUbLI PpAqF">
 									<p color="#000000" class="sc-bxivhb sc-ljUfdc bVwINp">판매자
 										전환</p>
-									<div class="sc-hrBRpH keZYYI">
-										<img src="https://pren.kr/static/expert_onboarding/illust.svg" width="66.67%"
-											height="121px" />
-									</div>
+									
 									<div>
 										<p color="#585858" class="sc-bxivhb sc-cgThhu fCcgYe">
 											실력 검증은 기본사항이며 향후 활동하시는데 있어<br />파트너님의 프로의식과 정직함 여부에 따라 <br />의뢰인
@@ -3690,46 +3679,7 @@ textarea {
 								</div>
 							</div>
 						</div>
-						<div width="931px" class="sc-jRnjsG djqoyJ">
-							<div class="fresnel-container fresnel-greaterThan-xs ">
-								<div class="sc-gUlUPW epPFKv">
-									<label for="what" width="235px" class="sc-kQZOhr LhMlM"><p
-											color="#191919" class="sc-bxivhb kHpoSQ">무엇을 심사하나요?</p>
-										<p color="#585858" class="sc-bxivhb sc-kSpkgE fgZdXI">
-											프랜은 의뢰인 만족도 최우선 정책으로<br />파트너의 실력, 프로의식, 정직함<br />3가지 항목을
-											가장 중시합니다.
-										</p>
-										<div class="sc-bvODop eCMKqY">
-											<input type="checkbox" id="what" value="true"
-												class="sc-bZQynM evOLrP" /><label for="what" height="14px"
-												value="true" class="sc-gzVnrw iojgOY"></label>
-											<p color="#585858" class="sc-bxivhb sc-bQmweE jELUDS">이해했습니다.</p>
-										</div></label><label for="when" width="235px" class="sc-kQZOhr LhMlM"><p
-											color="#191919" class="sc-bxivhb kHpoSQ">심사결과는 언제 나오나요?</p>
-										<p color="#585858" class="sc-bxivhb sc-kSpkgE fgZdXI">
-											판매자 전환 심사는 영업일 기준 평균<br />2일 내로 완료되며 등록하신 이메일과<br />SMS 로
-											결과안내를 드리겠습니다.
-										</p>
-										<div class="sc-bvODop eCMKqY">
-											<input type="checkbox" id="when" value="true"
-												class="sc-bZQynM evOLrP" /><label for="when" height="14px"
-												value="true" class="sc-gzVnrw iojgOY"></label>
-											<p color="#585858" class="sc-bxivhb sc-bQmweE jELUDS">이해했습니다.</p>
-										</div></label><label for="welcome" width="235px" class="sc-kQZOhr LhMlM"><p
-											color="#191919" class="sc-bxivhb kHpoSQ">프랜의 역할은 무엇인가요?</p>
-										<p color="#585858" class="sc-bxivhb sc-kSpkgE fgZdXI">
-											파트너가 정직함, 프로의식을 갖고<br />고객의 프로젝트에 집중 할 수 있도록<br />서포트에 최선을
-											다합니다.
-										</p>
-										<div class="sc-bvODop eCMKqY">
-											<input type="checkbox" id="welcome" value="true"
-												class="sc-bZQynM evOLrP" /><label for="welcome"
-												height="14px" value="true" class="sc-gzVnrw iojgOY"></label>
-											<p color="#585858" class="sc-bxivhb sc-bQmweE jELUDS">이해했습니다.</p>
-										</div></label>
-								</div>
-							</div>
-						</div>
+						
 						<div class="sc-bjPkoM sc-kBzFSH hhComY">
 							<div class="fresnel-container fresnel-greaterThan-xs ">
 								<form>
@@ -3810,8 +3760,8 @@ textarea {
 													</div>
 													<div width="278px" class="sc-chPdSV bmoXTr">
 														<div width="50px" class="sc-kgoBCf fRTCQn">
-															<img src="https://pren.kr/static/Icon/nickname.svg" alt="nickname"
-																width="32.50%" height="35.00%" />
+															<img src="https://pren.kr/static/Icon/nickname.svg"
+																alt="nickname" width="32.50%" height="35.00%" />
 														</div>
 														<div class="sc-kGXeez kUKQcj">
 															<div class="sc-bdVaJa jCeSos">
@@ -3829,8 +3779,8 @@ textarea {
 													</div>
 													<div width="278px" class="sc-chPdSV eqtCXC">
 														<div width="50px" class="sc-kgoBCf fRTCQn">
-															<img src="https://pren.kr/static/Icon/nickname.svg" alt="nickname"
-																width="32.50%" height="35.00%" />
+															<img src="https://pren.kr/static/Icon/nickname.svg"
+																alt="nickname" width="32.50%" height="35.00%" />
 														</div>
 														<div class="sc-kGXeez kUKQcj">
 															<div class="sc-bdVaJa jCeSos">
@@ -4005,8 +3955,8 @@ textarea {
 									<div class="sc-ibnDSj fEvhzc">
 										<div width="455px" class="sc-chPdSV gWWDIG">
 											<div width="50px" class="sc-kgoBCf fRTCQn">
-												<img src="https://pren.kr/static/Icon/address.svg" alt="address"
-													width="42.00%" height="38.00%" />
+												<img src="https://pren.kr/static/Icon/address.svg"
+													alt="address" width="42.00%" height="38.00%" />
 											</div>
 											<div class="sc-kGXeez kUKQcj">
 												<div class="sc-bdVaJa jCeSos">
@@ -4050,8 +4000,8 @@ textarea {
 						</div>
 						<div width="931px" class="sc-jgwFWF jzQsjH">
 							<div width="453px" height="56px" class="sc-kRCAcj dQWmVC">
-								<img src="https://pren.kr/static/Icon/individual.svg" alt="individual"
-									width="27px" height="27px" />
+								<img src="https://pren.kr/static/Icon/individual.svg"
+									alt="individual" width="27px" height="27px" />
 								<p color="#cccccc" class="sc-bxivhb kOUrkb">개인 회원</p>
 							</div>
 							<div class="sc-fQfKYo jktryq">
@@ -4074,8 +4024,8 @@ textarea {
 								<div class="sc-frudsx fWJOge">
 									<div width="297px" class="sc-chPdSV gRxJcl">
 										<div width="50px" class="sc-kgoBCf fRTCQn">
-											<img src="https://pren.kr/static/Icon/business.svg" alt="business"
-												width="18px" height="17px" />
+											<img src="https://pren.kr/static/Icon/business.svg"
+												alt="business" width="18px" height="17px" />
 										</div>
 										<div class="sc-kGXeez kUKQcj">
 											<div class="sc-bdVaJa jCeSos">
@@ -4086,8 +4036,8 @@ textarea {
 									</div>
 									<div width="297px" class="sc-chPdSV gRxJcl">
 										<div width="50px" class="sc-kgoBCf fRTCQn">
-											<img src="https://pren.kr/static/Icon/user.svg" alt="user" width="18px"
-												height="18px" />
+											<img src="https://pren.kr/static/Icon/user.svg" alt="user"
+												width="18px" height="18px" />
 										</div>
 										<div class="sc-kGXeez kUKQcj">
 											<div class="sc-bdVaJa jCeSos">
@@ -4098,8 +4048,8 @@ textarea {
 									</div>
 									<div width="297px" class="sc-chPdSV gRxJcl">
 										<div width="50px" class="sc-kgoBCf fRTCQn">
-											<img src="https://pren.kr/static/Icon/company.svg" alt="company"
-												width="18px" height="16px" />
+											<img src="https://pren.kr/static/Icon/company.svg"
+												alt="company" width="18px" height="16px" />
 										</div>
 										<div class="sc-kGXeez kUKQcj">
 											<div class="sc-bdVaJa jCeSos">
@@ -4116,8 +4066,8 @@ textarea {
 									</div>
 									<div width="297px" class="sc-chPdSV gRxJcl">
 										<div width="50px" class="sc-kgoBCf fRTCQn">
-											<img src="https://pren.kr/static/Icon/business.svg" alt="business"
-												width="18px" height="17px" />
+											<img src="https://pren.kr/static/Icon/business.svg"
+												alt="business" width="18px" height="17px" />
 										</div>
 										<div class="sc-kGXeez kUKQcj">
 											<div class="sc-bdVaJa jCeSos">
@@ -4128,8 +4078,8 @@ textarea {
 									</div>
 									<div width="297px" class="sc-chPdSV gRxJcl">
 										<div width="50px" class="sc-kgoBCf fRTCQn">
-											<img src="https://pren.kr/static/Icon/business.svg" alt="business"
-												width="18px" height="17px" />
+											<img src="https://pren.kr/static/Icon/business.svg"
+												alt="business" width="18px" height="17px" />
 										</div>
 										<div class="sc-kGXeez kUKQcj">
 											<div class="sc-bdVaJa jCeSos">
@@ -4140,8 +4090,8 @@ textarea {
 									</div>
 									<div width="455px" class="sc-chPdSV gWWDIG">
 										<div width="50px" class="sc-kgoBCf fRTCQn">
-											<img src="https://pren.kr/static/Icon/company.svg" alt="company"
-												width="18px" height="16px" />
+											<img src="https://pren.kr/static/Icon/company.svg"
+												alt="company" width="18px" height="16px" />
 										</div>
 										<div class="sc-kGXeez kUKQcj">
 											<div class="sc-bdVaJa jCeSos">
@@ -4152,8 +4102,8 @@ textarea {
 									</div>
 									<div width="455px" class="sc-chPdSV gWWDIG">
 										<div width="50px" class="sc-kgoBCf fRTCQn">
-											<img src="https://pren.kr/static/Icon/email.svg" alt="email" width="32.50%"
-												height="27.50%" />
+											<img src="https://pren.kr/static/Icon/email.svg" alt="email"
+												width="32.50%" height="27.50%" />
 										</div>
 										<div class="sc-kGXeez kUKQcj">
 											<div class="sc-bdVaJa jCeSos">
@@ -4177,8 +4127,8 @@ textarea {
 								<div class="sc-cBXKeB gTchbb">
 									<div width="455px" class="sc-chPdSV gWWDIG">
 										<div width="50px" class="sc-kgoBCf fRTCQn">
-											<img src="https://pren.kr/static/Icon/user.svg" alt="user" width="18px"
-												height="18px" />
+											<img src="https://pren.kr/static/Icon/user.svg" alt="user"
+												width="18px" height="18px" />
 										</div>
 										<div class="sc-kGXeez kUKQcj">
 											<div class="sc-bdVaJa jCeSos">
@@ -4189,8 +4139,8 @@ textarea {
 									</div>
 									<div width="455px" class="sc-chPdSV gWWDIG">
 										<div width="50px" class="sc-kgoBCf fRTCQn">
-											<img src="https://pren.kr/static/Icon/tel.svg" alt="tel" width="32.50%"
-												height="32.50%" />
+											<img src="https://pren.kr/static/Icon/tel.svg" alt="tel"
+												width="32.50%" height="32.50%" />
 										</div>
 										<div class="sc-kGXeez kUKQcj">
 											<div class="sc-bdVaJa jCeSos">
@@ -4260,20 +4210,21 @@ textarea {
 						<div class="sc-eerKOB jSzkPZ">
 							<a href="https://blog.naver.com/pren2018" target="_blank"
 								class="sc-cpmLhU gQHXag"><img
-								src="https://pren.kr/static/Icon/sns_blog.svg" alt="sns_blog" width="35px"
-								height="34px" class="sc-emmjRN hRQZQm" /></a><a
+								src="https://pren.kr/static/Icon/sns_blog.svg" alt="sns_blog"
+								width="35px" height="34px" class="sc-emmjRN hRQZQm" /></a><a
 								href="https://www.instagram.com/be__pren/" target="_blank"
 								class="sc-cpmLhU gQHXag"><img
-								src="https://pren.kr/static/Icon/sns_insta.svg" alt="sns_insta" width="35px"
-								height="34px" class="sc-emmjRN hRQZQm" /></a><a
+								src="https://pren.kr/static/Icon/sns_insta.svg" alt="sns_insta"
+								width="35px" height="34px" class="sc-emmjRN hRQZQm" /></a><a
 								href="http://pf.kakao.com/_xiBExiT" target="_blank"
 								class="sc-cpmLhU gQHXag"><img
-								src="https://pren.kr/static/Icon/sns_kakao.svg" alt="sns_kakao" width="35px"
-								height="34px" class="sc-emmjRN hRQZQm" /></a><a
+								src="https://pren.kr/static/Icon/sns_kakao.svg" alt="sns_kakao"
+								width="35px" height="34px" class="sc-emmjRN hRQZQm" /></a><a
 								href="https://www.facebook.com/%ED%94%84%EB%9E%9C-pren-121853672540997/"
 								target="_blank" class="sc-cpmLhU gQHXag"><img
-								src="https://pren.kr/static/Icon/sns_facebook.svg" alt="sns_facebook"
-								width="35px" height="34px" class="sc-emmjRN hRQZQm" /></a>
+								src="https://pren.kr/static/Icon/sns_facebook.svg"
+								alt="sns_facebook" width="35px" height="34px"
+								class="sc-emmjRN hRQZQm" /></a>
 						</div>
 					</div>
 				</div>
