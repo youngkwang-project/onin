@@ -13,9 +13,16 @@ public class Ebloginservice {
 	EbmemberMapper ebmemberMapper;
 	
 	public MemberDTO memberLogin(MemberDTO memberdto) {
-//		MemberDTO loginMember = null;
-//		loginMember = ebmemberMapper.memberLogin(memberdto);
-//		return loginMember;
 		return ebmemberMapper.memberLogin(memberdto);
+	}
+	
+	//pwd찾기
+	public MemberDTO pwdForgot(MemberDTO memberdto) {
+		return ebmemberMapper.pwdForgot(memberdto);
+	}
+	
+	//임시비밀번호
+	public int updatepwd(MemberDTO memberdto) {
+		return ebmemberMapper.updatepwd(memberdto);
 	}
 }

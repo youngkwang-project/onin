@@ -3,6 +3,7 @@ package com.onin.project.contoller;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
+import org.apache.maven.model.Model;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,6 +23,8 @@ public class Eblogincontroller {
 	
 	private static final Logger logger = LoggerFactory.getLogger(Eblogincontroller.class);
 
+	//login
+	
 	@GetMapping("/login")
 	public String login() {
 		logger.info("loginget");
@@ -43,11 +46,37 @@ public class Eblogincontroller {
 		}
 	}
 	
+		//logout
+	
 	   @RequestMapping(value="/logout", method = { RequestMethod.GET , RequestMethod.POST})
 	   public String logout(HttpSession httpsession) { 
 	      logger.info("로그아웃됨");
 	      httpsession.invalidate();
 	      
 	      return "redirect:/";
+	   }
+	   
+	   //pwd찾기
+	   @GetMapping("/pwForgot")
+	   public String pwdForgot(){
+		logger.info("pwd찾기");
+		return "pwForgot";
+	   }
+	   
+	   @PostMapping("/pwForgot")
+	   public String pwdForgotDone(MemberDTO memberdto,HttpServletRequest request) {
+		   logger.info("입력된 값"+memberdto.getEmail());
+		   MemberDTO email = ebloginservice.pwdForgot(memberdto);
+		   if(email==null) {
+			   logger.info("email이 틀립니다.");
+			   request.setAttribute("mailfail", "등록되지않은 이메일입니다.");
+			   return null;
+		   } else {
+			   logger.info("이메일정보가 있습니다.");
+			   request.setAttribute("mailsuccess", "메일이 전송되었습니다.");
+
+			   
+			   return "pwForgot";
+		   }
 	   }
 }
