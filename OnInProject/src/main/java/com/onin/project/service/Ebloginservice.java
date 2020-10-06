@@ -25,5 +25,4 @@ public class Ebloginservice {
 	public int updatepwd(MemberDTO memberdto) {
 		return ebmemberMapper.updatepwd(memberdto);
 	}
-	
 }

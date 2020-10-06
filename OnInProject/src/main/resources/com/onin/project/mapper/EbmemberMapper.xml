@@ -18,5 +18,4 @@ select * from member where email=#{email}
 <update id="updatepwd">
 	update member set pwd = #{pwd} where email = #{email}
 </update>
-
 </mapper>

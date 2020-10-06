@@ -75,7 +75,6 @@ public class Eblogincontroller {
 			   logger.info("이메일정보가 있습니다.");
 			   request.setAttribute("mailsuccess", "메일이 전송되었습니다.");
 			   
-			   
 			   return "pwForgot";
 		   }
 	   }

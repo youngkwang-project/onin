@@ -10,7 +10,6 @@ public interface EbmemberMapper {
 	//pwd 비밀번호찾기
 	public MemberDTO pwdForgot(MemberDTO memberdto);
 	
-	
 	//임시비밀번호
 	public int updatepwd(MemberDTO memberdto);
 }
