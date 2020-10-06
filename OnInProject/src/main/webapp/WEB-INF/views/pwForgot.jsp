@@ -999,53 +999,7 @@ textarea {
 </style>
 </head>
 <body>
-	<script>
-		
-	</script>
-	<div id="__next">
-		<div class="sc-dymIpo kdtjOQ">
-			<h1 class="sc-gwVKww jmbAFp">전문가 매칭 플랫폼 프랜</h1>
-			<div class="sc-eTuwsz JXlWL">
-				<div class="sc-hXRMBi OZoVQ">
-					<div class="sc-gqPbQI iQSKvq">
-						<div width="64.95vw" class="sc-hORach LOgNr">
-							<div class="sc-bsbRJL eIEXWC">
-								<div class="sc-hZSUBg VKktY">
-									<a href="/" class="sc-bXGyLb drBCjk"><img
-										src="https://pren.kr/static/Icon/logo.svg" alt="logo"
-										width="88px" height="44px" /></a>
-								</div>
-								<div class="sc-bMVAic hPoZmI">
-									<a href="/experts/categories" class="sc-bXGyLb drBCjk"><p
-											color="#585858" class="sc-bxivhb hRLeCu">전문가 찾기</p></a><a
-										href="/estimate" class="sc-bXGyLb drBCjk"><p
-											color="#585858" class="sc-bxivhb hRLeCu">의뢰 요청하기</p></a>
-								</div>
-							</div>
-							<div class="sc-bAeIUo iVogkW">
-								<a href="/login" class="sc-bXGyLb drBCjk"><p color="#585858"
-										class="sc-bxivhb bscqcK">로그인</p></a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="sc-eTuwsz kBvlYL">
-				<div class="sc-hXRMBi OZoVQ">
-					<div class="sc-gqPbQI iQSKvq">
-						<div width="90%" class="sc-hORach loTjFL">
-							<div class="sc-bsbRJL eIEXWC">
-								<div class="sc-hZSUBg VKktY">
-									<a href="/" class="sc-bXGyLb drBCjk"><img
-										src="https://pren.kr/static/Icon/logo.svg" alt="logo"
-										width="88px" height="44px" /></a>
-								</div>
-							</div>
-
-						</div>
-					</div>
-				</div>
-			</div>
+<%@include file="header.jsp" %>
 			<div class="sc-bnXvFD buSScp">
 				<div class="fresnel-container fresnel-greaterThan-xs ">
 					<div class="fresnel-container fresnel-greaterThan-xs ">
@@ -1061,7 +1015,7 @@ textarea {
 										</div>
 										<div class="fresnel-container fresnel-greaterThan-xs ">
 											<div class="sc-bZJeJD oHkMU">
-												<form method="post" action="pwforgot">
+												<form method="post" action="pwForgot">
 													<div class="sc-ifAKCX ktBaKe">
 														<div width="296px" class="sc-chPdSV glyfuW">
 															<div width="50px" class="sc-kgoBCf bUwjoZ">
@@ -1076,6 +1030,8 @@ textarea {
 															</div>
 														</div>
 													</div>
+													<div style="color: red">${mailfail}</div>
+													<div style="color: green">${mailsuccess}</div>
 													<button width="296px" height="40px" type="submit"
 														class="sc-EHOje sc-gbuiJB fkIeKB">이메일 전송</button>
 												</form>
@@ -1089,58 +1045,4 @@ textarea {
 					</div>
 				</div>
 			</div>
-			<div class="fresnel-container fresnel-at-xs ">
-				<div class="sc-lkqHmb qEHPE">
-					<div width="84.37%" class="sc-cbkKFq eAugEp">
-						<span class="sc-krvtoX eSRUic"><div
-								class="sc-fYiAbW iiYskj">
-								<a href="/privacy" class="sc-htoDjs jIyWnK"><p
-										class="sc-bxivhb sc-eLExRp hxWWju">개인정보 처리방침</p></a>
-								<p class="sc-bxivhb sc-fOKMvo jLFQGw">|</p>
-								<a href="/terms" class="sc-htoDjs jIyWnK"><p
-										class="sc-bxivhb sc-eLExRp hxWWju">서비스 이용약관</p></a>
-								<p class="sc-bxivhb sc-fOKMvo jLFQGw">|</p>
-								<a href="/support/notice" class="sc-htoDjs jIyWnK"><p
-										class="sc-bxivhb sc-eLExRp hxWWju">고객센터</p></a>
-							</div>
-							<p class="sc-bxivhb sc-eLExRp gQuMFF">
-								상호 : ㈜ 탈트 | 사업자등록번호 : 737-88-01166<br /> 통신판매업신고 :
-								2019-고양덕양구-1362<br />경기도 고양시 덕양구 동송로 70, 힐스테이트 삼송역 102동 19층
-								(삼송동) <br /> 대표 : 이승민
-							</p>
-							<p color="#cccccc" class="sc-bxivhb sc-eLExRp fyVqUN">Copyright
-								© 2020 talt inc, ltd. All rights reserved</p></span>
-						<div class="sc-eerKOB jSzkPZ">
-							<a href="https://blog.naver.com/pren2018" target="_blank"
-								class="sc-cpmLhU gQHXag"><img
-								src="https://pren.kr/static/Icon/sns_blog.svg" alt="sns_blog"
-								width="35px" height="34px" class="sc-emmjRN hRQZQm" /></a><a
-								href="https://www.instagram.com/be__pren/" target="_blank"
-								class="sc-cpmLhU gQHXag"><img
-								src="https://pren.kr/static/Icon/sns_insta.svg" alt="sns_insta"
-								width="35px" height="34px" class="sc-emmjRN hRQZQm" /></a><a
-								href="http://pf.kakao.com/_xiBExiT" target="_blank"
-								class="sc-cpmLhU gQHXag"><img
-								src="https://pren.kr/static/Icon/sns_kakao.svg" alt="sns_kakao"
-								width="35px" height="34px" class="sc-emmjRN hRQZQm" /></a><a
-								href="https://www.facebook.com/%ED%94%84%EB%9E%9C-pren-121853672540997/"
-								target="_blank" class="sc-cpmLhU gQHXag"><img
-								src="https://pren.kr/static/Icon/sns_facebook.svg"
-								alt="sns_facebook" width="35px" height="34px"
-								class="sc-emmjRN hRQZQm" /></a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	</div>
-	</div>
-	</div>
-	</div>
-	</div>
-	</div>
-	</div>
-
-</body>
-</html>
+<%@include file="footer.jsp" %>		

@@ -1845,63 +1845,8 @@ textarea {
         "pluginKey": "8597edd3-13ff-441f-90a3-6e172237e6c7"
     });
     </script>
-	<div id="__next">
-		<div class="sc-dymIpo kdtjOQ">
-			<h1 class="sc-gwVKww jmbAFp">전문가 매칭 플랫폼</h1>
-			<div class="sc-eTuwsz JXlWL">
-				<div class="sc-hXRMBi OZoVQ">
-					<div class="sc-gqPbQI iQSKvq">
-						<div width="64.95vw" class="sc-hORach LOgNr">
-							<div class="sc-bsbRJL eIEXWC">
-								<div class="sc-hZSUBg VKktY">
-									<a href="/" class="sc-bXGyLb drBCjk">
-									<img src="resources/logo2.svg" alt="logo" width="100px"
-										height="60px" />
-									</a>
-								</div>
-								<div class="sc-bMVAic hPoZmI">
-									<a href="/experts/categorise" class="sc-bXGyLb drBCjk">
-										<p color="#585858" class="sc-bxivhb hRLeCu">전문가 찾기</p>
-									</a>
-									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-									<a href="/estimate" class="sc-bXGyLb drBCjk">
-										<p color="#585858" class="sc-bxivhb hRLeCu">의뢰 요청하기</p>
-									</a>
-									
-									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-									<%MemberDTO loginMember2 = (MemberDTO)session.getAttribute("loginMember"); %>
-									<%if(loginMember2==null) {%>
-									<a></a>
-									<%} else{%>
-									<a href="/mypage/setting" class="sc-bXGyLb drBCjk">
-										<p color="#585858" class="sc-bxivhb hRLeCu">마이페이지</p>
-									</a>
-									<%} %>
-									
-								</div>
-							</div>
-<!-- 							<div class="sc-bAeIUo iVogkW"> -->
-<!-- 								<a href="/login" class="sc-bXGyLb drBCjk"> -->
-<!-- 									<p color="#585858" class="s c-bxivhb bscqcK">로그인</p> -->
-<!-- 								</a> -->
-<!-- 							</div> -->
-							<%MemberDTO loginMember = (MemberDTO)session.getAttribute("loginMember"); %>
-							<div class="sc-bAeIUo iVogkW">
-							<%if(loginMember==null){ %>
-							<a href="<%=request.getContextPath()%>/login" class="sc-bXGyLb drBCjk">
-								<p color="#585858" class="s c-bxivhb bscqcK">로그인</p>
-							</a>
-							<%} else{%>
-							${loginMember.name}님
-							<a href="<%=request.getContextPath()%>/logout" class="sc-bXGyLb drBCjk">
-								<p color="#585858" class="s c-bxivhb bscqcK">로그아웃</p>
-							</a>
-							<% }%>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
+
+<%@include file="header.jsp" %>
 			<div class="sc-bnXvFD buSScp">
 				<div class="sc-hGoxap hvaoks">
 					<div>
@@ -2167,9 +2112,15 @@ textarea {
 											절약하세요.
 										</p>
 									</div>
+									<%MemberDTO loginMember3 = (MemberDTO)session.getAttribute("loginMember"); %>
 									<div class="react-reveal">
-										<a href="/register"><button width="200px" height="40px"
-												class="sc-EHOje ihmBCL">ON-IN 가입하기</button>
+									<%if(loginMember3==null){ %>
+										<a href="/register">
+										<button width="200px" height="40px" class="sc-EHOje ihmBCL">ON-IN 가입하기</button>
+									<%}else{%>	
+										<a href="/estimate">
+										<button width="200px" height="40px" class="sc-EHOje ihmBCL">의뢰요청하기</button>
+									<%} %>
 									</div>
 								</div>
 							</div>
@@ -2177,56 +2128,6 @@ textarea {
 					</div>
 				</div>
 			</div>
-			<div class="fresnel-container fresnel-greaterThan-xs ">
-				<div class="sc-lkqHmb qEHPE">
-					<div width="64.95vw" class="sc-cbkKFq jKmBqF">
-						<span class="sc-krvtoX eSRUic">
-							<div class="sc-fYiAbW isIIme">
-								<a href="/privacy" class="sc-htoDjs jIyWnK">
-									<p color="#585858" class="sc-bxivhb boFQBu">개인정보 처리방침</p>
-								</a>
-								<p color="#585858" class="sc-bxivhb sc-fOKMvo jlYqWR">|</p>
-								<a href="/terms" class="sc-htoDjs jIyWnK">
-									<p color="#585858" class="sc-bxivhb boFQBu">서비스 이용약관</p>
-								</a>
-								<p color="#585858" class="sc-bxivhb sc-fOKMvo jlYqWR">|</p>
-								<a href="/support/notice" class="sc-htoDjs jIyWnK">
-									<p color="#585858" class="sc-bxivhb boFQBu">고객센터</p>
-								</a>
-							</div>
-							<p color="#585858" class="sc-bxivhb sc-dUjcNx ANjrS">
-								상호 : ㈜ 탈트 | 사업자등록번호 : 737-88-01166 통신판매업신고 : 2019-고양덕양구-1362 |
-								경기도 고양시 덕양구 동송로 70, <br /> 힐스테이트 삼송역 102동 19층 (삼송동) | 대표 : 신영광
-							</p>
-							<p color="#cccccc" class="sc-bxivhb sc-eilVRo gKXsws">Copyright
-								© 2020 talt inc, ltd. All rights reserved</p>
-						</span>
-						<div class="sc-eerKOB gBjaoW">
-							<a href="https://blog.naver.com/pren2018" target="_blank"
-								class="sc-cpmLhU gQHXag"> <img
-								src="https://pren.kr/static/Icon/sns_blog.svg" alt="sns_blog"
-								width="35px" height="34px" class="sc-emmjRN hRQZQm" />
-							</a> <a href="https://www.instagram.com/be__pren/" target="_blank"
-								class="sc-cpmLhU gQHXag"> <img
-								src="https://pren.kr/static/Icon/sns_insta.svg" alt="sns_insta"
-								width="35px" height="34px" class="sc-emmjRN hRQZQm" />
-							</a> <a href="http://pf.kakao.com/_xiBExiT" target="_blank"
-								class="sc-cpmLhU gQHXag"> <img
-								src="https://pren.kr/static/Icon/sns_kakao.svg" alt="sns_kakao"
-								width="35px" height="34px" class="sc-emmjRN hRQZQm" />
-							</a> <a
-								href="https://www.facebook.com/%ED%94%84%EB%9E%9C-pren-121853672540997/"
-								target="_blank" class="sc-cpmLhU gQHXag"> <img
-								src="https://pren.kr/static/Icon/sns_facebook.svg"
-								alt="sns_facebook" width="35px" height="34px"
-								class="sc-emmjRN hRQZQm" />
-							</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</body>
-</html>
+<%@include file="footer.jsp" %>			
+
 
