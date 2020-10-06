@@ -1,5 +1,6 @@
 package com.onin.project.contoller;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import org.slf4j.Logger;
@@ -28,12 +29,13 @@ public class Eblogincontroller {
 	}
 	
 	@PostMapping("/login")
-	public String loginDone(HttpSession session, MemberDTO memberdto) {
+	public String loginDone(HttpServletRequest request,HttpSession session, MemberDTO memberdto) {
 		logger.info("입력된 id/pw값"+ memberdto.toString());
 		MemberDTO loginMember = ebloginservice.memberLogin(memberdto);
 		if(loginMember==null) {
 			logger.info("login실패");
-			return "loginFail";
+			request.setAttribute("loginFailMsg", "아이디/패스워드를 확인해주세요.");
+			return null;
 		}else {
 			session.setAttribute("loginMember", loginMember);
 			logger.info("로그인성공"+loginMember.getName());
@@ -46,6 +48,6 @@ public class Eblogincontroller {
 	      logger.info("로그아웃됨");
 	      httpsession.invalidate();
 	      
-	      return "/logout";
+	      return "redirect:/";
 	   }
 }

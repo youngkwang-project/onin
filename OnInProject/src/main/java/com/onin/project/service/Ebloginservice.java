@@ -13,8 +13,9 @@ public class Ebloginservice {
 	EbmemberMapper ebmemberMapper;
 	
 	public MemberDTO memberLogin(MemberDTO memberdto) {
-		MemberDTO loginMember = null;
-		loginMember = ebmemberMapper.memberLogin(memberdto);
-		return loginMember;
+//		MemberDTO loginMember = null;
+//		loginMember = ebmemberMapper.memberLogin(memberdto);
+//		return loginMember;
+		return ebmemberMapper.memberLogin(memberdto);
 	}
 }

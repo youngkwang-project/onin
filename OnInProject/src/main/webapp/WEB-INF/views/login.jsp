@@ -1049,8 +1049,8 @@ textarea {
 							<div class="sc-bsbRJL eIEXWC">
 								<div class="sc-hZSUBg VKktY">
 									<a href="/" class="sc-bXGyLb drBCjk"><img
-										src="https://pren.kr/static/Icon/logo.svg" alt="logo" width="88px"
-										height="44px" /></a>
+										src="resources/logo2.svg" alt="logo" width="100px"
+										height="60px" /></a>
 								</div>
 								<div class="sc-bMVAic hPoZmI">
 									<a href="/experts/categories" class="sc-bXGyLb drBCjk"><p
@@ -1074,7 +1074,7 @@ textarea {
 							<div class="sc-bsbRJL eIEXWC">
 								<div class="sc-hZSUBg VKktY">
 									<a href="/" class="sc-bXGyLb drBCjk"><img
-										src="https://pren.kr/static/Icon/logo.svg" alt="logo" width="88px"
+										src="resources/logo2.svg" alt="logo" width="88px"
 										height="44px" /></a>
 								</div>
 							</div>
@@ -1090,7 +1090,7 @@ textarea {
 								<div width="921px" class="sc-bhlBdH jhvjEz">
 									<div>
 										<div class="fresnel-container fresnel-greaterThan-xs ">
-											<img src="https://pren.kr/static/Icon/logo.svg" alt="logo" width="124px"
+											<img src="resources/logo2.svg" alt="logo" width="124px"
 												height="62px" />
 											<p color="#191919" class="sc-bxivhb sc-ekulBa kbewKE">환영합니다!</p>
 										</div>
@@ -1123,6 +1123,7 @@ textarea {
 															</div>
 														</div>
 													</div>
+													<div style="color: red">${loginFailMsg}</div>
 													<button type="submit" width="296px" height="40px"
 														class="sc-EHOje sc-gGCbJM bnPQrN">로그인</button>
 												</form>
