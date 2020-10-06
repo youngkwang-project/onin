@@ -1133,7 +1133,7 @@ textarea {
 											<div class="sc-lcpuFF gKGvaF">
 												<a href="/register" class="sc-htoDjs jIyWnK"><p
 														color="#191919" class="sc-bxivhb kTCCem">회원 가입</p></a><a
-													href="/pwforgot" class="sc-htoDjs jIyWnK"><p
+													href="/pwForgot" class="sc-htoDjs jIyWnK"><p
 														color="#191919" class="sc-bxivhb kTCCem">비밀번호 찾기</p></a>
 											</div>
 										</div>
