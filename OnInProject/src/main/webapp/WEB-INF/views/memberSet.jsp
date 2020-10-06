@@ -1408,15 +1408,10 @@ textarea {
 }
 </style>
 <style type="text/css">
-label {
+.lab {
 	display: block;
 	margin-top: 20px;
 	letter-spacing: 2px;
-}
-
-form {
-	margin: 0 auto;
-	width: 459px;
 }
 
 .inp, .txt {
@@ -1431,7 +1426,7 @@ form {
 	color: #3a3a3a;
 }
 
-input:focus, textarea:focus {
+.inp:focus, .txt:focus {
 	border: 1px solid #97d6eb;
 }
 
@@ -1521,7 +1516,29 @@ textarea {
 </head>
 <body>
 	<script>
+		window.onload = function() {
+			
+
+			cpwSubmit = function() {
+				var pwd = document.getElementById("pwd").value
+				var cpwd_1 = document.getElementById("cpwd_1").value
+				var cpwd_2 = document.getElementById("cpwd_2").value
+				
+				if(cpwd_1 != cpwd_2 || ${member.pwd} != pwd){
+					alert("비밀번호를 다시입력해주세요")
+				
+				}else{
+					document.getElementById("pwchange").submit()
+				}
+				
+			}
+			
+
+				document.getElementById("cpwd_bt").addEventListener("click",
+						cpwSubmit);
+
 		
+		}
 	</script>
 	<div id="__next">
 		<div class="sc-dymIpo kdtjOQ">
@@ -1616,39 +1633,40 @@ textarea {
 									<div>
 										<div class="fresnel-container fresnel-greaterThan-xs ">
 											<div class="sc-cXHFlN flDCkP">
-												<form method="post" action="register">
-													<div class="sc-ifAKCX ktBaKe">
-														<div width="612px" class="sc-ihiiSJ hmuaMQ">
-															<p class="sc-bxivhb sc-iNovjJ cftYnu">이메일</p>
-															<div class="sc-gJTSre cWlVFq">
-																<div width="296px" class="sc-chPdSV glyfuW">
-																	<div width="50px" class="sc-kgoBCf bUwjoZ">
-																		<img src="https://pren.kr/static/Icon/email.svg"
-																			alt="email" width="32.50%" height="27.50%" />
-																	</div>
-																	<div class="sc-kGXeez kUKQcj">
-																		<div class="sc-bdVaJa jCeSos">
-																			<input name="email" type="email"
-																				placeholder=${member.email
+
+												<div class="sc-ifAKCX ktBaKe">
+													<div width="612px" class="sc-ihiiSJ hmuaMQ">
+														<p class="sc-bxivhb sc-iNovjJ cftYnu">이메일</p>
+														<div class="sc-gJTSre cWlVFq">
+															<div width="296px" class="sc-chPdSV glyfuW">
+																<div width="50px" class="sc-kgoBCf bUwjoZ">
+																	<img src="https://pren.kr/static/Icon/email.svg"
+																		alt="email" width="32.50%" height="27.50%" />
+																</div>
+																<div class="sc-kGXeez kUKQcj">
+																	<div class="sc-bdVaJa jCeSos">
+																		<input name="email" type="email"
+																			placeholder=${member.email
 																				}
-																				value=""
-																				class="sc-htpNat ksfJEf sc-kpOJdX intbG"
-																				width="100%" />
-																		</div>
+																			value="" class="sc-htpNat ksfJEf sc-kpOJdX intbG"
+																			width="100%" />
 																	</div>
 																</div>
-
-
 															</div>
-														</div>
-														<div width="612px" class="sc-ihiiSJ hmuaMQ">
-															<p class="sc-bxivhb sc-iNovjJ cftYnu"></p>
-															<div class="sc-gJTSre cWlVFq">
-																<div width="296px" class="sc-chPdSV glyfuW"></div>
-															</div>
-														</div>
 
+
+														</div>
 													</div>
+													<div width="612px" class="sc-ihiiSJ hmuaMQ">
+														<p class="sc-bxivhb sc-iNovjJ cftYnu"></p>
+														<div class="sc-gJTSre cWlVFq">
+															<div width="296px" class="sc-chPdSV glyfuW"></div>
+														</div>
+													</div>
+
+												</div>
+												<form method="post" action="/mypage/setting" id="pwchange">
+
 													<div class="sc-ifAKCX ktBaKe">
 														<div width="452px" class="sc-ihiiSJ flypWG">
 															<p class="sc-bxivhb sc-iNovjJ cftYnu">비밀번호 변경</p>
@@ -1659,9 +1677,9 @@ textarea {
 																</div>
 																<div class="sc-kGXeez kUKQcj">
 																	<div class="sc-bdVaJa jCeSos">
-																		<input name="pwd" type="password" placeholder="현재비밀번호"
-																			value="" class="sc-htpNat ksfJEf sc-kpOJdX intbG"
-																			width="100%" />
+																		<input id="pwd" name="pwd" type="password"
+																			placeholder="현재비밀번호"
+																			class="sc-htpNat ksfJEf sc-kpOJdX intbG" width="100%" />
 																	</div>
 																</div>
 															</div>
@@ -1674,7 +1692,8 @@ textarea {
 																</div>
 																<div class="sc-kGXeez kUKQcj">
 																	<div class="sc-bdVaJa jCeSos">
-																		<input type="password" placeholder="변경할 비밀번호" value=""
+																		<input type="password" id="cpwd_1" name="cpwd_1"
+																			placeholder="변경할 비밀번호"
 																			class="sc-htpNat ksfJEf sc-kpOJdX intbG" width="100%" />
 																	</div>
 																</div>
@@ -1691,85 +1710,62 @@ textarea {
 																</div>
 																<div class="sc-kGXeez kUKQcj">
 																	<div class="sc-bdVaJa jCeSos">
-																		<input name="pw" placeholder="변경할 비밀번호 확인" value=""
+																		<input type="password" id="cpwd_2" name="cpwd_2"
+																			placeholder="변경할 비밀번호 확인"
 																			class="sc-htpNat ksfJEf sc-kpOJdX intbG" width="100%" />
 																	</div>
 																</div>
 															</div>
-															<button width="139px" height="50px" type="button"
-																class="sc-EHOje dKYqiz">비밀번호 변경</button>
+															<button id="cpwd_bt" width="139px" height="50px"
+																type="button" class="sc-EHOje dKYqiz">비밀번호 변경</button>
 														</div>
-													</div>
-													<div class="sc-ifAKCX ktBaKe">
-														<div width="452px" class="sc-ihiiSJ flypWG">
-															<p class="sc-bxivhb sc-iNovjJ cftYnu">인증정보 변경</p>
-															<div width="297px" class="sc-chPdSV gRxJcl">
-																<div width="50px" class="sc-kgoBCf bUwjoZ">
-																	<img src="https://pren.kr/static/Icon/nickname.svg"
-																		alt="nickname" width="32.50%" height="35.00%" />
-																</div>
-																<div class="sc-kGXeez kUKQcj">
-																	<div class="sc-bdVaJa jCeSos">
-																		<input name="name" placeholder="이름" value=""
-																			class="sc-htpNat ksfJEf sc-kpOJdX intbG" width="100%" />
-																	</div>
-																</div>
-															</div>
-														</div>
-														<div width="611px" class="sc-ihiiSJ cOiWSs">
-															<div width="297px" class="sc-chPdSV gRxJcl">
-																<div width="50px" class="sc-kgoBCf bUwjoZ">
-																	<img src="https://pren.kr/static/Icon/tel.svg"
-																		alt="tel" width="32.50%" height="32.50%" />
-																</div>
-																<div class="sc-kGXeez kUKQcj">
-																	<div class="sc-bdVaJa jCeSos">
-																		<input name="tel" placeholder="휴대폰 번호(번호만 입력해주세요)"
-																			value="" class="sc-htpNat ksfJEf sc-kpOJdX intbG"
-																			width="100%" />
-																	</div>
-																</div>
-															</div>
-															<button width="139px" height="50px" type="button"
-																class="sc-EHOje dKYqiz trigger">인증</button>
-															
-															<div class="modal">
-																<div class="modal-content">
-																	<span class="close-button">&times;</span>
-																	<h1 class="title">메일 보내기</h1>
-																	<form action="#post.php" method="POST">
-																		<label for="email">Email</label> <input class="inp" type="email"
-																			name="email" placeholder="Your email"
-																			required="required"> <label></label>
-																		<textarea class="txt" name="message" placeholder="Test Message"
-																			required="required"></textarea>
-																		<input class="inp" type="button" id="cancel" value="취소"> <input
-																			type="submit" id="submit" value="보내기">
-																	</form>
-																</div>
-															</div>
-															
-														</div>
-														<div class="sc-kyCyAI dXQimh"></div>
-													</div>
-													<div class="sc-cFlXAS gAfcgo">
-														<div class="sc-cfWELz eAobcy">
-															<div class="sc-kAdXeD ljcIYa">
-																<label for="sms" class="sc-bvTASY Gyhlc">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-																	카카오톡 알림</label><label class="sc-hCaUpS kJvgYD"><input
-																	type="checkbox" id="sms" name="sms" checked=""><span
-																	class="slider"></span>
-															</div>
-														</div>
-													</div>
-													<div width="613px" class="sc-ihiiSJ erEnpy">
-														<button width="297px" height="60px" type="submit"
-															class="sc-EHOje sc-cLmFfZ fOHccz">정보수정</button>
-														&nbsp&nbsp&nbsp
-														<button width="297px" height="60px" type="submit"
-															class="sc-EHOje sc-cLmFfZ fOHccz">회원탈퇴</button>
 													</div>
 												</form>
+
+
+												<div class="sc-ifAKCX ktBaKe">
+													<div width="452px" class="sc-ihiiSJ flypWG">
+														<p class="sc-bxivhb sc-iNovjJ cftYnu">인증정보 변경</p>
+														<div width="297px" class="sc-chPdSV gRxJcl">
+															<div width="50px" class="sc-kgoBCf bUwjoZ">
+																<img src="https://pren.kr/static/Icon/nickname.svg"
+																	alt="nickname" width="32.50%" height="35.00%" />
+															</div>
+															<div class="sc-kGXeez kUKQcj">
+																<div class="sc-bdVaJa jCeSos">
+																	<input name="name" placeholder="이름" value=""
+																		class="sc-htpNat ksfJEf sc-kpOJdX intbG" width="100%"
+																		readonly />
+																</div>
+															</div>
+														</div>
+													</div>
+													<div width="611px" class="sc-ihiiSJ cOiWSs">
+														<div width="297px" class="sc-chPdSV gRxJcl">
+															<div width="50px" class="sc-kgoBCf bUwjoZ">
+																<img src="https://pren.kr/static/Icon/tel.svg" alt="tel"
+																	width="32.50%" height="32.50%" />
+															</div>
+															<div class="sc-kGXeez kUKQcj">
+																<div class="sc-bdVaJa jCeSos">
+																	<input name="tel" placeholder="휴대폰 번호(번호만 입력해주세요)"
+																		value="" class="sc-htpNat ksfJEf sc-kpOJdX intbG"
+																		width="100%" readonly />
+																</div>
+															</div>
+														</div>
+														<button width="139px" height="50px" type="button"
+															class="sc-EHOje dKYqiz trigger">인증</button>
+													</div>
+													<div class="sc-kyCyAI dXQimh"></div>
+												</div>
+											
+												<div width="613px" class="sc-ihiiSJ erEnpy">
+													<button width="297px" height="60px" type="submit"
+														class="sc-EHOje sc-cLmFfZ fOHccz">회원탈퇴</button>
+													
+												</div>
+
 											</div>
 										</div>
 									</div>
@@ -1823,28 +1819,6 @@ textarea {
 
 			</div>
 		</div>
-		<script type="text/javascript"> 
-         var modal = document.querySelector(".modal"); 
-         var trigger = document.querySelector(".trigger"); 
-         var closeButton = document.querySelector(".close-button"); 
-         var cancelButton = document.querySelector("#cancel");
-
-        //console.log(modal);
-
-        function toggleModal() { 
-             modal.classList.toggle("show-modal"); 
-         }
-
-        function windowOnClick(event) { 
-             if (event.target === modal) { 
-                 toggleModal(); 
-             } 
-         }
-
-        trigger.addEventListener("click", toggleModal); 
-         closeButton.addEventListener("click", toggleModal); 
-         cancel.addEventListener("click", toggleModal); 
-         window.addEventListener("click", windowOnClick); 
-     </script>
+		
 </body>
 </html>
