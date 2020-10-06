@@ -9,8 +9,7 @@ public class MemberDTO {
 	String email;
 	String pwd;
 	String name;
-	int tel;
+	String tel;
 	String pro;
 	String alarm;
-
 }
