@@ -21,7 +21,7 @@
 							<div class="sc-bsbRJL eIEXWC">
 								<div class="sc-hZSUBg VKktY">
 									<a href="/" class="sc-bXGyLb drBCjk">
-									<img src="resources/logo2.svg" alt="logo" width="100px"
+									<img src="/resources/logo2.svg" alt="logo" width="100px"
 										height="60px" />
 									</a>
 								</div>
