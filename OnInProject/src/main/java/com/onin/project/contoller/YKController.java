@@ -31,6 +31,7 @@ public class YKController {
 	@PostMapping(value = "/mypage/setting")
 	public String memberSetDone(Model model,@RequestParam("cpwd_1") String pwd, @RequestParam("email") String email) {
 		logger.info("memberSetDone(){}");
+		
 		service.pwdChange(pwd, email);
 		return "home";
 	}
