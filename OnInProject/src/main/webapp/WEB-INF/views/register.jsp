@@ -1407,7 +1407,39 @@ textarea {
 	padding-left: 157px;
 }
 </style>
+
+
+
 </head>
+<script>
+$(function(){
+	//아이디 중복체크
+	    $('#asd').click(function(){
+	        $.ajax({
+		     type:"POST",
+		     url:"/checkSignup",
+		     data:{
+		            email:$('#email').val()
+		     },
+		     success:function(data){	//data : checkSignup에서 넘겨준 결과값
+		            if($.trim(data)=="YES"){
+		               if($('#email').val()!=''){ 
+		               	alert("사용가능한 이메일입니다.");
+		               }
+		           	}else{
+		               if($('#email').val()!=''){
+		                  alert("중복된 이메일입니다.");
+		                  $('#email').val('');
+		                  $('#email').focus();
+		               }
+		            }
+		         }
+		    }) 
+	     })
+
+	});
+
+</script>
 <body>
 <%@include file="header.jsp" %>
 			<div class="sc-bnXvFD buSScp">
@@ -1444,37 +1476,37 @@ textarea {
 																	</div>
 																	<div class="sc-kGXeez kUKQcj">
 																		<div class="sc-bdVaJa jCeSos">
-																			<input name="email" type="email" placeholder="이메일"
-																				value="" class="sc-htpNat ksfJEf sc-kpOJdX intbG"
+																			<input id="email" name="email" type="email" placeholder="이메일"
+																				 class="sc-htpNat ksfJEf sc-kpOJdX intbG"
 																				width="100%" />
 																		</div>
 																	</div>
 																</div>
 
-																<button width="139px" height="50px" type="button"
-																	class="sc-EHOje kVkKtH">인증하기</button>
+																<button id="asd" width="139px" height="50px" type="button"
+																	class="sc-EHOje kVkKtH">중복확인</button>
 															</div>
 														</div>
-														<div width="612px" class="sc-ihiiSJ hmuaMQ">
-															<p class="sc-bxivhb sc-iNovjJ cftYnu"></p>
-															<div class="sc-gJTSre cWlVFq">
-																<div width="296px" class="sc-chPdSV glyfuW">
-																	<div width="50px" class="sc-kgoBCf bUwjoZ">
-																		<img src="https://pren.kr/static/Icon/email.svg"
-																			alt="email" width="32.50%" height="27.50%" />
-																	</div>
-																	<div class="sc-kGXeez kUKQcj">
-																		<div class="sc-bdVaJa jCeSos">
-																			<input name="email" type="email" placeholder="인증번호"
-																				value="" class="sc-htpNat ksfJEf sc-kpOJdX intbG"
-																				width="100%" />
-																		</div>
-																	</div>
-																</div>
+<!-- 														 <div width="612px" class="sc-ihiiSJ hmuaMQ"> -->
+<!-- 															<p class="sc-bxivhb sc-iNovjJ cftYnu"></p> -->
+<!-- 															<div class="sc-gJTSre cWlVFq"> -->
+<!-- 																<div width="296px" class="sc-chPdSV glyfuW"> -->
+<!-- 																	<div width="50px" class="sc-kgoBCf bUwjoZ"> -->
+<!-- 																		<img src="https://pren.kr/static/Icon/email.svg" -->
+<!-- 																			alt="email" width="32.50%" height="27.50%" /> -->
+<!-- 																	</div> -->
+<!-- 																	<div class="sc-kGXeez kUKQcj"> -->
+<!-- 																		<div class="sc-bdVaJa jCeSos"> -->
+<!-- 																			<input name="email" type="text" placeholder="인증번호" -->
+<!-- 																				value="" class="sc-htpNat ksfJEf sc-kpOJdX intbG" -->
+<!-- 																				width="100%" /> -->
+<!-- 																		</div> -->
+<!-- 																	</div> -->
+<!-- 																</div> -->
 
 
-															</div>
-														</div>
+<!-- 															</div> -->
+<!-- 														</div> -->
 
 													</div>
 													<div class="sc-ifAKCX ktBaKe">
@@ -1511,8 +1543,8 @@ textarea {
 													</div>
 													<div class="sc-ifAKCX ktBaKe">
 														<div width="452px" class="sc-ihiiSJ flypWG">
-															<p class="sc-bxivhb sc-iNovjJ cftYnu">본인인증</p>
-															<div width="297px" class="sc-chPdSV gRxJcl">
+															<p class="sc-bxivhb sc-iNovjJ cftYnu">사용자정보</p>
+															<div width="297px" class="sc-chPdSV gRxJcl">															
 																<div width="50px" class="sc-kgoBCf bUwjoZ">
 																	<img src="https://pren.kr/static/Icon/nickname.svg"
 																		alt="nickname" width="32.50%" height="35.00%" />
@@ -1546,25 +1578,26 @@ textarea {
 													</div>
 													<div class="sc-ifAKCX ktBaKe">
 														<div width="538px" class="sc-ihiiSJ bvXeCN">
-															<p class="sc-bxivhb sc-iNovjJ cftYnu">이용약관 동의</p>
+<!-- 															<p class="sc-bxivhb sc-iNovjJ cftYnu">이용약관 동의</p> -->
 															<div class="sc-eAyhxF daGJjB">
-																<input type="checkbox"
-																	id="b3d360b2-eb37-475b-a81f-c473615b5f8a" value="false"
-																	class="sc-bZQynM evOLrP" /><label
-																	for="b3d360b2-eb37-475b-a81f-c473615b5f8a"
-																	height="10px" value="false" class="sc-gzVnrw KSyMU"></label>
-																<p color="#585858" class="sc-bxivhb sc-kbdWBx gkRfQP">
-																	Pren<span class="sc-eVrGFk kBCtDU">서비스 약관</span> 및 <span
-																		class="sc-eVrGFk kBCtDU">개인정보 처리방침</span>에 동의합니다.<br />
-																	<br />여기에는 ㈜탈트로부터 마케팅 정보를 받는 것에 대한 동의가 포함됩니다.<br /> <br />언제든지
-																	마케팅 커뮤니케이션을 수신 거부 할 수 있습니다.
-																</p>
+<!-- 																<input type="checkbox" -->
+<!-- 																	id="b3d360b2-eb37-475b-a81f-c473615b5f8a" value="false" -->
+<!-- 																	class="sc-bZQynM evOLrP" /><label -->
+<!-- 																	for="b3d360b2-eb37-475b-a81f-c473615b5f8a" -->
+<!-- 																	height="10px" value="false" class="sc-gzVnrw KSyMU"></label> -->
+<!-- 																<p color="#585858" class="sc-bxivhb sc-kbdWBx gkRfQP"> -->
+<!-- 																	Pren<span class="sc-eVrGFk kBCtDU">서비스 약관</span> 및 <span -->
+<!-- 																		class="sc-eVrGFk kBCtDU">개인정보 처리방침</span>에 동의합니다.<br /> -->
+<!-- 																	<br />여기에는 ㈜탈트로부터 마케팅 정보를 받는 것에 대한 동의가 포함됩니다.<br /> <br />언제든지 -->
+<!-- 																	마케팅 커뮤니케이션을 수신 거부 할 수 있습니다. 
+																</p>-->
 															</div>
 														</div>
 														<div class="sc-kyCyAI ejEJPT"></div>
 													</div>
 													<div width="613px" class="sc-ihiiSJ erEnpy">
 														<button width="297px" height="60px" type="submit"
+													
 															class="sc-EHOje sc-cLmFfZ fOHccz">회원가입</button>
 													</div>
 												</form>

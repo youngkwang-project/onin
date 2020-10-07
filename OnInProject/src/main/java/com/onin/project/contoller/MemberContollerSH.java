@@ -8,6 +8,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.onin.project.dto.MemberDTO;
 import com.onin.project.service.MemberServiceSH;
@@ -30,21 +32,12 @@ public class MemberContollerSH {
 	public String register(MemberDTO memberDTO,Model model) throws Exception {
 		logger.info("/register2 호출");
 		memberService.register(memberDTO);
-		memberService.create(memberDTO);
+		//memberService.create(memberDTO);
 		
 
 		return"redirect:/";
 	}
 	
-	@GetMapping("/emailConfirm")
-	public String emaliConfirm(String email, Model model) throws Exception{
-		
-		memberService.userAuth(email);
-		
-		model.addAttribute("email", email);
-		
-		return "emailConfirm";
-	}
-
+	
 	
 }

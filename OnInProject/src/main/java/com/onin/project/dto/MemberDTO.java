@@ -12,4 +12,5 @@ public class MemberDTO {
 	String tel;
 	String pro;
 	String alarm;
+	
 }

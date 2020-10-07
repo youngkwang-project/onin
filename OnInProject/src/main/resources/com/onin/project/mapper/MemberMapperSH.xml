@@ -7,12 +7,15 @@
 	insert into member(mno,email,pwd,name,tel)
 	values(#{mno},#{email},#{pwd},#{name},#{tel})
 </insert>
-<insert id="createAuthKey">
-	insert into registerauth values(#{email}, #{authKey})
-</insert>
+<!-- <insert id="createAuthKey"> -->
+<!-- 	 into registerauth values(#{email}, #{authKey}) -->
+<!-- </insert> -->
 
 <!-- <update id="userAuth"> -->
 <!-- 	<![CDATA[update user set userCertification = 1 where (select count(*) from userAuth where userEmail = #{userEmail}) > 0]]> -->
 <!-- </update> -->
+<select id="idCheck" resultType="com.onin.project.dto.MemberDTO" >
+select * from member where email=#{email}
 
+</select>
 </mapper>
