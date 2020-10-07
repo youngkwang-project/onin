@@ -4,13 +4,8 @@
 <%-- <%@ page session="false"%> --%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%@ page import="com.onin.project.dto.MemberDTO" %>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-</head>
-<body>
+<%MemberDTO loginMember = (MemberDTO)session.getAttribute("loginMember"); %>
+
 	<div id="__next">
 		<div class="sc-dymIpo kdtjOQ">
 			<h1 class="sc-gwVKww jmbAFp">전문가 매칭 플랫폼</h1>
@@ -35,12 +30,12 @@
 									</a>
 									
 									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-									<%MemberDTO loginMember2 = (MemberDTO)session.getAttribute("loginMember"); %>
-									<%if(loginMember2==null) {%>
+									
+									<%if(loginMember==null) {%>
 									<a></a>
 									<%} else{%>
 									<a href="/mypage/setting" class="sc-bXGyLb drBCjk">
-										<p color="#585858" class="sc-bxivhb hRLeCu">마이페이지</p>
+										<p color="#585858" class="sc-bxivhb hRLeCu">마이페이지 </p>
 									</a>
 									<%} %>
 									
@@ -51,7 +46,7 @@
 <!-- 									<p color="#585858" class="s c-bxivhb bscqcK">로그인</p> -->
 <!-- 								</a> -->
 <!-- 							</div> -->
-							<%MemberDTO loginMember = (MemberDTO)session.getAttribute("loginMember"); %>
+						
 							<div class="sc-bAeIUo iVogkW">
 							<%if(loginMember==null){ %>
 							<a href="<%=request.getContextPath()%>/login" class="sc-bXGyLb drBCjk">

@@ -9,6 +9,7 @@ select * FROM Member
 </select>
 
 <update id="pwdChange">
-
+update MEMBER set pwd=${pwd} where email=#{email}
 </update>
+
 </mapper>

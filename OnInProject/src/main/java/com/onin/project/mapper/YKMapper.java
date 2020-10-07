@@ -8,6 +8,6 @@ public interface YKMapper {
 
 	public MemberDTO memberSet();
 
-	public int pwdChange(String pwd);
+	public int pwdChange(String pwd, String email);
 
 }

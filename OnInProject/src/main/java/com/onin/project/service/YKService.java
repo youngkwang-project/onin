@@ -22,8 +22,8 @@ YKMapper mapper;
 		
 	}
 
-	public int pwdChange(String pwd) {
-		return mapper.pwdChange(pwd);
+	public int pwdChange(String pwd, String email) {
+		return mapper.pwdChange(pwd, email);
 		
 	}
 

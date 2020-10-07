@@ -1,41 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%-- <%@ page session="false"%> --%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-<meta charSet="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="robots" content="index,follow" />
-<meta name="description"
-	content="각 분야 최고의 전문가들을 만날 수 있는 플랫폼. 믿을 수 있는 ON-IN에서 전문가를 찾아보세요! 서비스: 디자인, 마케팅, IT 프로그래밍" />
-<meta name="keywords"
-	content="진정성, 실명제, 안심, 분쟁해결, 실력 이상의 전문성은 진정성에서 나온다. 마케팅,디자인,IT프로그래밍,번역·통역,영상·사진·음악,문서·작문,상담·컨설팅,이벤트,레슨,기타(생활서비스)" />
-<meta property="og:type" content="website" />
-<meta property="og:site_name" content="ON-IN" />
-<meta property="og:title" content="ON-IN | 전문가 매칭 플랫폼" />
-<meta property="og:description"
-	content="각 분야 최고의 전문가들을 만날 수 있는 플랫폼. 믿을 수 있는 ON-IN에서 전문가를 찾아보세요! 서비스: 디자인, 마케팅, IT 프로그래밍" />
-<meta property="og:image"
-	content="https://pren-frontend.s3.ap-northeast-2.amazonaws.com/og-temp-image.png" />
-<meta property="og:url" content="https://pren.kr" />
-<link rel="canonical" href="https://pren.kr" />
-<link rel="shortcut icon" href="/static/favicon/pren_32x32_.ico" />
-<link
-	href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900&amp;display=swap&amp;subset=korean"
-	rel="stylesheet" />
-<script type="text/javascript"
-	src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-<script type="text/javascript"
-	src="https://cdn.iamport.kr/js/iamport.payment-1.1.7.js"></script>
-<meta name="naver-site-verification"
-	content="54f6e402d0671c88be7da5b0fec3befb89b84cf7" />
-<meta name="google-site-verification"
-	content="cG3SuzFuxLNf8he7n5cfF1TA3OA5IHxHQLhxYfBQco4" />
-<meta charSet="utf-8" />
-<meta name="viewport"
-	content="width=device-width,minimum-scale=1,initial-scale=1" />
-<meta name="next-head-count" content="2" />
 <link rel="preload" href="/_next/static/css/styles.e0203beb.chunk.css"
 	as="style" />
 <link rel="stylesheet"
@@ -1512,196 +1480,185 @@ textarea {
 	transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
 }
 </style>
+<script>
+      window.onload = function() {
+         
 
-</head>
-<body>
-	<script>
-		window.onload = function() {
-			
+         cpwSubmit = function() {
+            var pwd = document.getElementById("pwd").value
+            var cpwd_1 = document.getElementById("cpwd_1").value
+            var cpwd_2 = document.getElementById("cpwd_2").value
+            
+            if(cpwd_1 != cpwd_2 || ${loginMember.pwd} != pwd){
+               alert("비밀번호를 다시입력해주세요")
+            
+            }else{
+               document.getElementById("pwchange").submit()
+            }
+            
+         }
+         
 
-			cpwSubmit = function() {
-				var pwd = document.getElementById("pwd").value
-				var cpwd_1 = document.getElementById("cpwd_1").value
-				var cpwd_2 = document.getElementById("cpwd_2").value
-				
-				if(cpwd_1 != cpwd_2 || ${member.pwd} != pwd){
-					alert("비밀번호를 다시입력해주세요")
-				
-				}else{
-					document.getElementById("pwchange").submit()
-				}
-				
-			}
-			
+            document.getElementById("cpwd_bt").addEventListener("click",
+                  cpwSubmit);
 
-				document.getElementById("cpwd_bt").addEventListener("click",
-						cpwSubmit);
+      
+      }
+   </script>
 
-		
-		}
-	</script>
-<%@include file="header.jsp" %>
-			<div class="sc-bnXvFD buSScp">
-				<div class="fresnel-container fresnel-greaterThan-xs ">
-					<div class="fresnel-container fresnel-greaterThan-xs ">
-						<div class="sc-csZoYU ivQTYn">
-							<div width="287px" class="sc-dpiBDp bTkeVG">
-								<img src="https://pren.kr/static/Icon/logo.svg" alt="logo"
-									width="124px" height="62px" />
-								<div>
-									<p color="#000000" class="sc-bxivhb sc-hENMEE fmIaGN">정보수정</p>
-								</div>
-							</div>
-							<p color="#000000" class="sc-bxivhb sc-dCaJBF bYQuSi">새로운 만남이
-								가져오는 가치 창출에 대한 가능성을 믿습니다.</p>
-						</div>
-					</div>
-					<div class="fresnel-container fresnel-greaterThan-xs ">
-						<div class="sc-nrwXf bxvfV">
-							<div class="sc-eitiEO JWpsr">
-								<div width="970px" class="sc-bhlBdH dkblTD">
-									<div>
-										<div class="fresnel-container fresnel-greaterThan-xs ">
-											<div class="sc-cXHFlN flDCkP">
+<div class="sc-bnXvFD buSScp">
+	<div class="fresnel-container fresnel-greaterThan-xs ">
 
-												<div class="sc-ifAKCX ktBaKe">
-													<div width="612px" class="sc-ihiiSJ hmuaMQ">
-														<p class="sc-bxivhb sc-iNovjJ cftYnu">이메일</p>
-														<div class="sc-gJTSre cWlVFq">
-															<div width="296px" class="sc-chPdSV glyfuW">
-																<div width="50px" class="sc-kgoBCf bUwjoZ">
-																	<img src="https://pren.kr/static/Icon/email.svg"
-																		alt="email" width="32.50%" height="27.50%" />
-																</div>
-																<div class="sc-kGXeez kUKQcj">
-																	<div class="sc-bdVaJa jCeSos">
-																		<input name="email" type="email"
-																			placeholder=${member.email
-																				}
-																			value="" class="sc-htpNat ksfJEf sc-kpOJdX intbG"
-																			width="100%" />
-																	</div>
-																</div>
+		<div class="fresnel-container fresnel-greaterThan-xs ">
+			<div class="sc-nrwXf bxvfV">
+				<div class="sc-eitiEO JWpsr">
+
+					<div width="970px" class="sc-bhlBdH dkblTD"
+						style="padding-left: 100px;">
+						<div>
+							<div class="fresnel-container fresnel-greaterThan-xs ">
+								<p color="#000000" class="sc-bxivhb sc-hENMEE fmIaGN">회원정보수정</p>
+								<div class="sc-cXHFlN flDCkP">
+									<form method="post" action="/mypage/setting" id="pwchange">
+										<div class="sc-ifAKCX ktBaKe">
+											<div width="612px" class="sc-ihiiSJ hmuaMQ">
+												<p class="sc-bxivhb sc-iNovjJ cftYnu">이메일</p>
+												<div class="sc-gJTSre cWlVFq">
+													<div width="296px" class="sc-chPdSV glyfuW">
+														<div width="50px" class="sc-kgoBCf bUwjoZ">
+															<img src="https://pren.kr/static/Icon/email.svg"
+																alt="email" width="32.50%" height="27.50%" />
+														</div>
+														<div class="sc-kGXeez kUKQcj">
+															<div class="sc-bdVaJa jCeSos">
+																<input name="email" type="email" placeholder=""
+																	value="${loginMember.email
+																				}"
+																	class="sc-htpNat ksfJEf sc-kpOJdX intbG" width="100%"
+																	readonly />
 															</div>
-
-
 														</div>
 													</div>
-													<div width="612px" class="sc-ihiiSJ hmuaMQ">
-														<p class="sc-bxivhb sc-iNovjJ cftYnu"></p>
-														<div class="sc-gJTSre cWlVFq">
-															<div width="296px" class="sc-chPdSV glyfuW"></div>
+
+
+												</div>
+											</div>
+											<div width="612px" class="sc-ihiiSJ hmuaMQ">
+												<p class="sc-bxivhb sc-iNovjJ cftYnu"></p>
+												<div class="sc-gJTSre cWlVFq">
+													<div width="296px" class="sc-chPdSV glyfuW"></div>
+												</div>
+											</div>
+
+										</div>
+
+
+										<div class="sc-ifAKCX ktBaKe">
+											<div width="452px" class="sc-ihiiSJ flypWG">
+												<p class="sc-bxivhb sc-iNovjJ cftYnu">비밀번호 변경</p>
+												<div width="296px" class="sc-chPdSV glyfuW">
+													<div width="50px" class="sc-kgoBCf bUwjoZ">
+														<img src="https://pren.kr/static/Icon/password.svg"
+															alt="password" width="30.00%" height="37.50%" />
+													</div>
+													<div class="sc-kGXeez kUKQcj">
+														<div class="sc-bdVaJa jCeSos">
+															<input id="pwd" name="pwd" type="password"
+																placeholder="현재비밀번호"
+																class="sc-htpNat ksfJEf sc-kpOJdX intbG" width="100%" />
+														</div>
+													</div>
+												</div>
+											</div>
+											<div width="453px" class="sc-ihiiSJ bdXKMA">
+												<div width="296px" class="sc-chPdSV glyfuW">
+													<div width="50px" class="sc-kgoBCf bUwjoZ">
+														<img src="https://pren.kr/static/Icon/password.svg"
+															alt="password" width="30.00%" height="37.50%" />
+													</div>
+													<div class="sc-kGXeez kUKQcj">
+														<div class="sc-bdVaJa jCeSos">
+															<input type="password" id="cpwd_1" name="cpwd_1"
+																placeholder="변경할 비밀번호"
+																class="sc-htpNat ksfJEf sc-kpOJdX intbG" width="100%" />
 														</div>
 													</div>
 
 												</div>
-												<form method="post" action="/mypage/setting" id="pwchange">
 
-													<div class="sc-ifAKCX ktBaKe">
-														<div width="452px" class="sc-ihiiSJ flypWG">
-															<p class="sc-bxivhb sc-iNovjJ cftYnu">비밀번호 변경</p>
-															<div width="296px" class="sc-chPdSV glyfuW">
-																<div width="50px" class="sc-kgoBCf bUwjoZ">
-																	<img src="https://pren.kr/static/Icon/password.svg"
-																		alt="password" width="30.00%" height="37.50%" />
-																</div>
-																<div class="sc-kGXeez kUKQcj">
-																	<div class="sc-bdVaJa jCeSos">
-																		<input id="pwd" name="pwd" type="password"
-																			placeholder="현재비밀번호"
-																			class="sc-htpNat ksfJEf sc-kpOJdX intbG" width="100%" />
-																	</div>
-																</div>
-															</div>
-														</div>
-														<div width="453px" class="sc-ihiiSJ bdXKMA">
-															<div width="296px" class="sc-chPdSV glyfuW">
-																<div width="50px" class="sc-kgoBCf bUwjoZ">
-																	<img src="https://pren.kr/static/Icon/password.svg"
-																		alt="password" width="30.00%" height="37.50%" />
-																</div>
-																<div class="sc-kGXeez kUKQcj">
-																	<div class="sc-bdVaJa jCeSos">
-																		<input type="password" id="cpwd_1" name="cpwd_1"
-																			placeholder="변경할 비밀번호"
-																			class="sc-htpNat ksfJEf sc-kpOJdX intbG" width="100%" />
-																	</div>
-																</div>
-
-															</div>
-
-
-														</div>
-														<div width="611px" class="sc-ihiiSJ cOiWSs">
-															<div width="297px" class="sc-chPdSV gRxJcl">
-																<div width="50px" class="sc-kgoBCf bUwjoZ">
-																	<img src="https://pren.kr/static/Icon/password.svg"
-																		alt="tel" width="32.50%" height="32.50%" />
-																</div>
-																<div class="sc-kGXeez kUKQcj">
-																	<div class="sc-bdVaJa jCeSos">
-																		<input type="password" id="cpwd_2" name="cpwd_2"
-																			placeholder="변경할 비밀번호 확인"
-																			class="sc-htpNat ksfJEf sc-kpOJdX intbG" width="100%" />
-																	</div>
-																</div>
-															</div>
-															<button id="cpwd_bt" width="139px" height="50px"
-																type="button" class="sc-EHOje dKYqiz">비밀번호 변경</button>
-														</div>
-													</div>
-												</form>
-
-
-												<div class="sc-ifAKCX ktBaKe">
-													<div width="452px" class="sc-ihiiSJ flypWG">
-														<p class="sc-bxivhb sc-iNovjJ cftYnu">인증정보 변경</p>
-														<div width="297px" class="sc-chPdSV gRxJcl">
-															<div width="50px" class="sc-kgoBCf bUwjoZ">
-																<img src="https://pren.kr/static/Icon/nickname.svg"
-																	alt="nickname" width="32.50%" height="35.00%" />
-															</div>
-															<div class="sc-kGXeez kUKQcj">
-																<div class="sc-bdVaJa jCeSos">
-																	<input name="name" placeholder="이름" value=""
-																		class="sc-htpNat ksfJEf sc-kpOJdX intbG" width="100%"
-																		readonly />
-																</div>
-															</div>
-														</div>
-													</div>
-													<div width="611px" class="sc-ihiiSJ cOiWSs">
-														<div width="297px" class="sc-chPdSV gRxJcl">
-															<div width="50px" class="sc-kgoBCf bUwjoZ">
-																<img src="https://pren.kr/static/Icon/tel.svg" alt="tel"
-																	width="32.50%" height="32.50%" />
-															</div>
-															<div class="sc-kGXeez kUKQcj">
-																<div class="sc-bdVaJa jCeSos">
-																	<input name="tel" placeholder="휴대폰 번호(번호만 입력해주세요)"
-																		value="" class="sc-htpNat ksfJEf sc-kpOJdX intbG"
-																		width="100%" readonly />
-																</div>
-															</div>
-														</div>
-														<button width="139px" height="50px" type="button"
-															class="sc-EHOje dKYqiz trigger">인증</button>
-													</div>
-													<div class="sc-kyCyAI dXQimh"></div>
-												</div>
-											
-												<div width="613px" class="sc-ihiiSJ erEnpy">
-													<button width="297px" height="60px" type="submit"
-														class="sc-EHOje sc-cLmFfZ fOHccz">회원탈퇴</button>
-													
-												</div>
 
 											</div>
+											<div width="611px" class="sc-ihiiSJ cOiWSs">
+												<div width="297px" class="sc-chPdSV gRxJcl">
+													<div width="50px" class="sc-kgoBCf bUwjoZ">
+														<img src="https://pren.kr/static/Icon/password.svg"
+															alt="tel" width="32.50%" height="32.50%" />
+													</div>
+													<div class="sc-kGXeez kUKQcj">
+														<div class="sc-bdVaJa jCeSos">
+															<input type="password" id="cpwd_2" name="cpwd_2"
+																placeholder="변경할 비밀번호 확인"
+																class="sc-htpNat ksfJEf sc-kpOJdX intbG" width="100%" />
+														</div>
+													</div>
+												</div>
+												<button id="cpwd_bt" width="139px" height="50px"
+													type="button" class="sc-EHOje dKYqiz">비밀번호 변경</button>
+											</div>
 										</div>
+									</form>
+
+
+									<div class="sc-ifAKCX ktBaKe">
+										<div width="452px" class="sc-ihiiSJ flypWG">
+											<p class="sc-bxivhb sc-iNovjJ cftYnu">인증정보 변경</p>
+											<div width="297px" class="sc-chPdSV gRxJcl">
+												<div width="50px" class="sc-kgoBCf bUwjoZ">
+													<img src="https://pren.kr/static/Icon/nickname.svg"
+														alt="nickname" width="32.50%" height="35.00%" />
+												</div>
+												<div class="sc-kGXeez kUKQcj">
+													<div class="sc-bdVaJa jCeSos">
+														<input name="name" placeholder="이름"
+															value="${loginMember.name}"
+															class="sc-htpNat ksfJEf sc-kpOJdX intbG" width="100%"
+															readonly />
+													</div>
+												</div>
+											</div>
+										</div>
+										<div width="611px" class="sc-ihiiSJ cOiWSs">
+											<div width="297px" class="sc-chPdSV gRxJcl">
+												<div width="50px" class="sc-kgoBCf bUwjoZ">
+													<img src="https://pren.kr/static/Icon/tel.svg" alt="tel"
+														width="32.50%" height="32.50%" />
+												</div>
+												<div class="sc-kGXeez kUKQcj">
+													<div class="sc-bdVaJa jCeSos">
+														<input name="tel" placeholder="휴대폰 번호(번호만 입력해주세요)"
+															value="${loginMember.tel}"
+															class="sc-htpNat ksfJEf sc-kpOJdX intbG" width="100%"
+															readonly />
+													</div>
+												</div>
+											</div>
+											<button width="139px" height="50px" type="button"
+												class="sc-EHOje dKYqiz trigger">인증</button>
+										</div>
+										<div class="sc-kyCyAI dXQimh"></div>
 									</div>
+
+									<div width="613px" class="sc-ihiiSJ erEnpy">
+										<button width="297px" height="60px" type="submit"
+											class="sc-EHOje sc-cLmFfZ fOHccz">회원탈퇴</button>
+
+									</div>
+
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-<%@include file="footer.jsp" %>		
+			</div>
+		</div>
+	</div>
