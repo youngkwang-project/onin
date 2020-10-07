@@ -9,7 +9,14 @@ select * FROM Member
 </select>
 
 <update id="pwdChange">
-update MEMBER set pwd=${pwd} where email=#{email}
+update MEMBER set pwd=#{pwd} where email=#{email}
+
 </update>
+
+<delete id="memberDelete">
+
+DELETE FROM MEMBER WHERE MNO=#{mno}
+
+</delete>
 
 </mapper>

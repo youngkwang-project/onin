@@ -1485,23 +1485,31 @@ textarea {
          
 
          cpwSubmit = function() {
-            var pwd = document.getElementById("pwd").value
-            var cpwd_1 = document.getElementById("cpwd_1").value
+            var pwd = document.getElementById("nowpwd").value
+            var cpwd_1 = document.getElementById("pwd").value
             var cpwd_2 = document.getElementById("cpwd_2").value
             
-            if(cpwd_1 != cpwd_2 || ${loginMember.pwd} != pwd){
+            if(cpwd_1 != cpwd_2 || ${member.pwd} != pwd){
                alert("비밀번호를 다시입력해주세요")
             
             }else{
                document.getElementById("pwchange").submit()
+                alert("비밀번호가 변경되었습니다.")
             }
             
          }
-         
-
-            document.getElementById("cpwd_bt").addEventListener("click",
+         deleteFunc = function() {
+             
+        	 document.getElementById("delete").submit()
+        	 alert("회원정보가 삭제되었습니다.")
+             }
+             
+          
+      
+                 document.getElementById("cpwd_bt").addEventListener("click",
                   cpwSubmit);
-
+                 
+                 document.getElementById("delete_bt").addEventListener("click", deleteFunc);
       
       }
    </script>
@@ -1519,7 +1527,7 @@ textarea {
 							<div class="fresnel-container fresnel-greaterThan-xs ">
 								<p color="#000000" class="sc-bxivhb sc-hENMEE fmIaGN">회원정보수정</p>
 								<div class="sc-cXHFlN flDCkP">
-									<form method="post" action="/mypage/setting" id="pwchange">
+									<form method="post" action="/mypage/pwchange" id="pwchange">
 										<div class="sc-ifAKCX ktBaKe">
 											<div width="612px" class="sc-ihiiSJ hmuaMQ">
 												<p class="sc-bxivhb sc-iNovjJ cftYnu">이메일</p>
@@ -1563,7 +1571,7 @@ textarea {
 													</div>
 													<div class="sc-kGXeez kUKQcj">
 														<div class="sc-bdVaJa jCeSos">
-															<input id="pwd" name="pwd" type="password"
+															<input id="nowpwd" name="nowpwd" type="password"
 																placeholder="현재비밀번호"
 																class="sc-htpNat ksfJEf sc-kpOJdX intbG" width="100%" />
 														</div>
@@ -1578,7 +1586,7 @@ textarea {
 													</div>
 													<div class="sc-kGXeez kUKQcj">
 														<div class="sc-bdVaJa jCeSos">
-															<input type="password" id="cpwd_1" name="cpwd_1"
+															<input type="password" id="pwd" name="pwd"
 																placeholder="변경할 비밀번호"
 																class="sc-htpNat ksfJEf sc-kpOJdX intbG" width="100%" />
 														</div>
@@ -1647,13 +1655,14 @@ textarea {
 										</div>
 										<div class="sc-kyCyAI dXQimh"></div>
 									</div>
+									<form method="post" action="/mypage/delete" id="delete">
+										<input type="hidden" name="mno" value="${loginMember.mno }" />
+										<div width="613px" class="sc-ihiiSJ erEnpy">
+											<button id="delete_bt" width="297px" height="60px"
+												type="button" class="sc-EHOje sc-cLmFfZ fOHccz">회원탈퇴</button>
 
-									<div width="613px" class="sc-ihiiSJ erEnpy">
-										<button width="297px" height="60px" type="submit"
-											class="sc-EHOje sc-cLmFfZ fOHccz">회원탈퇴</button>
-
-									</div>
-
+										</div>
+									</form>
 								</div>
 							</div>
 						</div>

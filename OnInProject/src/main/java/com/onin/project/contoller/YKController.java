@@ -1,5 +1,7 @@
 package com.onin.project.contoller;
 
+import javax.servlet.http.HttpSession;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,6 +9,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -22,18 +25,30 @@ public class YKController {
 	@GetMapping(value = "/mypage/setting")
 	public String memberSet(Model model) {
 		logger.info("memberSet(){}");
-
+		model.addAttribute("member", service.memberSet());
 		
 	
 		return "setting";
 	}
 
-	@PostMapping(value = "/mypage/setting")
-	public String memberSetDone(Model model,@RequestParam("cpwd_1") String pwd, @RequestParam("email") String email) {
+	@PostMapping(value = "/mypage/pwchange")
+	public String memberSetDone(Model model,MemberDTO member) {
 		logger.info("memberSetDone(){}");
+		logger.info(member.getEmail()+ member.getPwd());
 		
-		service.pwdChange(pwd, email);
-		return "home";
+		service.pwdChange(member);
+		model.addAttribute("member", service.memberSet());
+		return "redirect:setting";
+		
+	}
+	@PostMapping(value = "/mypage/delete")
+	public String memberDeleteDone(HttpSession httpsession ,MemberDTO member) {
+		logger.info("memberDeleteDone(){}");
+		System.out.println(member.getMno());
+		
+		service.memberDelete(member);
+		httpsession.invalidate();
+		return "redirect:/";
 	}
 	
 	

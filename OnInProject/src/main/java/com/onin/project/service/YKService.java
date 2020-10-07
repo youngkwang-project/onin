@@ -22,9 +22,14 @@ YKMapper mapper;
 		
 	}
 
-	public int pwdChange(String pwd, String email) {
-		return mapper.pwdChange(pwd, email);
+	public int pwdChange(MemberDTO member) {
+		return mapper.pwdChange(member);
 		
+	}
+
+	public int memberDelete(MemberDTO member) {
+		
+		return mapper.memberDelete(member);
 	}
 
 }

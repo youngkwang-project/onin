@@ -1322,19 +1322,19 @@ textarea {
 					<div class="sc-gCwZxT kEouQA">
 						<div class="sc-jOVcOr ixlgyn">
 							<div class="sc-eQGPmX jvXLhQ">
-								<a href="/chatting" class="sc-dAOnuy gyJIGO"><img
+								<a href="/mypage/chat" class="sc-dAOnuy gyJIGO"><img
 									src="https://pren.kr/static/mypren/sidemenu_message_off.svg"
 									width="26px" height="22px" class="sc-cSYcjD laZApR" /><span
 									class="sc-gjAXCV iNaNZM">채팅</span></a>
 							</div>
 							<div class="sc-eQGPmX jvXLhQ">
-								<a href="/mypren/settings" class="sc-dAOnuy gyJIGO"><img
+								<a href="/mypage/setting" class="sc-dAOnuy gyJIGO"><img
 									src="https://pren.kr/static/mypren/sidemenu_account_off.svg"
 									width="23px" height="23px" class="sc-cSYcjD laZApR" /><span
 									class="sc-gjAXCV iNaNZM">계정설정</span></a>
 							</div>
 							<div class="sc-eQGPmX jvXLhQ">
-								<a href="/mypren/estimates/sents" class="sc-dAOnuy gyJIGO"><img
+								<a href="/mypage/estimates" class="sc-dAOnuy gyJIGO"><img
 									src="https://pren.kr/static/mypren/sidemenu_dashboard_off.svg"
 									width="23px" height="25px" class="sc-cSYcjD laZApR" /><span
 									class="sc-gjAXCV iNaNZM">의뢰요청</span></a>
