@@ -139,4 +139,9 @@ public class Eblogincontroller {
 			   return "pwForgot";
 		   }
 	   }
+	   
+	   @GetMapping("/estimate")
+	   public String estimate() {
+		   return "estimate";
+	   }
 }
