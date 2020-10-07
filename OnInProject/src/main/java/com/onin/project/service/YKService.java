@@ -17,8 +17,8 @@ YKMapper mapper;
 		
 	}
 
-	public MemberDTO memberSet() {
-		return mapper.memberSet();
+	public MemberDTO memberSet(MemberDTO member) {
+		return mapper.memberSet(member);
 		
 	}
 

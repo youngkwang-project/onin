@@ -1488,13 +1488,13 @@ textarea {
             var pwd = document.getElementById("nowpwd").value
             var cpwd_1 = document.getElementById("pwd").value
             var cpwd_2 = document.getElementById("cpwd_2").value
-            
-            if(cpwd_1 != cpwd_2 || ${member.pwd} != pwd){
+            var nowpwd = '${loginMember.pwd}'
+            if(cpwd_1 !== cpwd_2 || pwd != nowpwd){
                alert("비밀번호를 다시입력해주세요")
             
             }else{
                document.getElementById("pwchange").submit()
-                alert("비밀번호가 변경되었습니다.")
+                alert("비밀번호가 변경되었습니다. 다시 로그인하세요")
             }
             
          }
@@ -1507,7 +1507,7 @@ textarea {
           
       
                  document.getElementById("cpwd_bt").addEventListener("click",
-                  cpwSubmit);
+                		 cpwSubmit);
                  
                  document.getElementById("delete_bt").addEventListener("click", deleteFunc);
       

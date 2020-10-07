@@ -6,7 +6,7 @@ public interface YKMapper {
 
 	public int memberLogin(MemberDTO memberDTO);
 
-	public MemberDTO memberSet();
+	public MemberDTO memberSet(MemberDTO member);
 
 	public int pwdChange(MemberDTO member);
 

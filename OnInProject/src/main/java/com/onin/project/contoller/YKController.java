@@ -25,9 +25,6 @@ public class YKController {
 	@GetMapping(value = "/mypage/setting")
 	public String memberSet(Model model) {
 		logger.info("memberSet(){}");
-		model.addAttribute("member", service.memberSet());
-		
-	
 		return "setting";
 	}
 	
@@ -41,21 +38,17 @@ public class YKController {
 	}
 	//비밀번호변경
 	@PostMapping(value = "/mypage/pwchange")
-	public String memberSetDone(Model model,MemberDTO member) {
+	public String memberSetDone(HttpSession httpsession, Model model,MemberDTO member) {
 		logger.info("memberSetDone(){}");
-		logger.info(member.getEmail()+ member.getPwd());
-		
 		service.pwdChange(member);
-		model.addAttribute("member", service.memberSet());
-		return "redirect:setting";
+		httpsession.invalidate();
+		return "redirect:/";
 		
 	}
 	//회원탈퇴
 	@PostMapping(value = "/mypage/delete")
 	public String memberDeleteDone(HttpSession httpsession ,MemberDTO member) {
 		logger.info("memberDeleteDone(){}");
-		System.out.println(member.getMno());
-		
 		service.memberDelete(member);
 		httpsession.invalidate();
 		return "redirect:/";
