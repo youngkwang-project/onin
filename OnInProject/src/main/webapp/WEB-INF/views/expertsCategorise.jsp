@@ -2544,188 +2544,224 @@ textarea {
    
 </script>
 
+<script>
+window.onload=function(){
+	var innerS = document.getElementById("inner")
+
+	document.getElementById("moreCategory").addEventListener("click", inner);
+
+	var innerB = 'open'
+	function inner(){		
+		if(innerB == 'open'){
+			innerS.innerHTML= '	<div class="sc-fjdhpX eWZWnR">키워드광고</div> <div class="sc-fjdhpX eWZWnR">SNS</div>'
+			innerB = 'close'
+		}else{
+			innerS.innerHTML= ''
+			innerB = 'open'
+		}
+	}
+}
+
+
+$().ready(function() {
+
+	   $("#check").click(function() {
+	      $.ajax({
+	         url : '/rest/check',
+	          data : {
+	            name : $("#firstName").val(),
+	         }, 
+	         dataType : 'text', /*html, text, json, xml, script*/
+	         method : 'get',
+	         success : function(data) {
+	            
+	        	 alert(data);
+
+	         }
+	      });
+	   });
+	   
+	});
+</script>
 </head>
 <body>
-<%@include file="header.jsp" %>
-<!-- 	<div id="next"> -->
-<!-- 		<div class="sc-dymIpo kdtjOQ"> -->
-<!-- 			<h1 class="sc-gwVKww jmbAFp">전문가 매칭 플랫폼 프랜</h1> -->
-<!-- 			<div class="sc-eTuwsz JXlWL"> -->
-<!-- 				<div class="sc-hXRMBi OZoVQ"> -->
-<!-- 					<div class="sc-gqPbQI iQSKvq"> -->
-<!-- 						<div width="64.95vw" class="sc-hORach LOgNr"> -->
-<!-- 							<div class="sc-bsbRJL eIEXWC"> -->
-<!-- 								<div class="sc-hZSUBg VKktY"> -->
-<!-- 									<a href="/" class="sc-bXGyLb drBCjk"><img -->
-<!-- 										src="https://pren.kr/static/Icon/logo.svg" alt="logo" -->
-<!-- 										width="88px" height="44px" /></a> -->
-<!-- 								</div> -->
-<!-- 								<div class="sc-bMVAic hPoZmI"> -->
-<!-- 									<a href="/experts/categories" class="sc-bXGyLb drBCjk"><p -->
-<!-- 											color="#585858" class="sc-bxivhb hRLeCu">전문가 찾기</p></a><a -->
-<!-- 										href="/estimate" class="sc-bXGyLb drBCjk"><p -->
-<!-- 											color="#585858" class="sc-bxivhb hRLeCu">의뢰 요청하기</p></a> -->
-<!-- 								</div> -->
-<!-- 							</div> -->
-<!-- 							<div class="sc-bAeIUo iVogkW"> -->
-<!-- 								<a href="login" class="sc-bXGyLb drBCjk"><p color="#585858" -->
-<!-- 										class="sc-bxivhb bscqcK">로그인</p></a> -->
-<!-- 							</div> -->
-<!-- 						</div> -->
-<!-- 					</div> -->
-<!-- 				</div> -->
-<!-- 			</div> -->
-<!-- 			<div class="sc-eTuwsz kBvlYL"> -->
-<!-- 				<div class="sc-hXRMBi OZoVQ"> -->
-<!-- 					<div class="sc-gqPbQI iQSKvq"> -->
-<!-- 						<div width="90%" class="sc-hORach loTjFL"> -->
-<!-- 							<div class="sc-bsbRJL eIEXWC"> -->
-<!-- 								<div class="sc-hZSUBg VKktY"> -->
-<!-- 									<a href="/" class="sc-bXGyLb drBCjk"><img -->
-<!-- 										src="https://pren.kr/static/Icon/logo.svg" alt="logo" -->
-<!-- 										width="88px" height="44px" /></a> -->
-<!-- 								</div> -->
-<!-- 							</div> -->
-<!-- 							<div> -->
-<!-- 								<div> -->
-<!-- 									<button class="sc-iyvyFf dQiHqs"> -->
-<!-- 										<div></div> -->
-<!-- 										<div></div> -->
-<!-- 										<div></div> -->
-<!-- 									</button> -->
-<!-- 									<nav class="sc-hwwEjo fSkSkR"> -->
-<!-- 										<div width="83.46%" class="sc-gxMtzJ eDatwz"> -->
-<!-- 											<p class="sc-bxivhb sc-dfVpRl hUMmIm"> -->
-<!-- 												<a href="/" class="sc-gzOgki gQorcQ">Home</a> -->
-<!-- 											</p> -->
-<!-- 											<p class="sc-bxivhb sc-dfVpRl hUMmIm"> -->
-<!-- 												<a href="/login" class="sc-gzOgki gQorcQ">로그인</a> -->
-<!-- 											</p> -->
-<!-- 											<p class="sc-bxivhb sc-dfVpRl hUMmIm"> -->
-<!-- 												<a href="/experts/categories" class="sc-gzOgki gQorcQ">전문가 -->
-<!-- 													찾기</a> -->
-<!-- 											</p> -->
-<!-- 											<p class="sc-bxivhb sc-dfVpRl hUMmIm"> -->
-<!-- 												<a href="/estimate" class="sc-gzOgki gQorcQ">의뢰요청 하기</a> -->
-<!-- 											</p> -->
-<!-- 											<hr width="100%" height="1px" color="#cccccc" -->
-<!-- 												class="sc-kPVwWT eDCNLl" /> -->
-<!-- 										</div> -->
-<!-- 									</nav> -->
-<!-- 								</div> -->
-<!-- 							</div> -->
-<!-- 						</div> -->
-<!-- 					</div> -->
-<!-- 				</div> -->
-<!-- 			</div> -->
-			<div class="sc-bnXvFD buSScp">
-				<div class="fresnel-container fresnel-greaterThan-xs ">
-					<div class="sc-AnqlK keKZVr">
-						<div class="sc-keFjpB jqPQeu">
-							<div class="sc-ekkqgF dCJcpl">
-								<div class="fresnel-container fresnel-greaterThan-xs ">
-									<div class="sc-fKGOjr kjezKK">
-										<div width="64.9479vw" class="sc-jvEmr cjbISt">
-											<p class="sc-bxivhb sc-hycgNl cmUNKD">전문가 찾기</p>
-											<p class="sc-bxivhb sc-chAAoq cwVkDi">ON-IN에서는 고용이 아니라
-												파트너 입니다.</p>
-										</div>
-									</div>
+	<%@include file="header.jsp"%>
+	<!-- 	<div id="next"> -->
+	<!-- 		<div class="sc-dymIpo kdtjOQ"> -->
+	<!-- 			<h1 class="sc-gwVKww jmbAFp">전문가 매칭 플랫폼 프랜</h1> -->
+	<!-- 			<div class="sc-eTuwsz JXlWL"> -->
+	<!-- 				<div class="sc-hXRMBi OZoVQ"> -->
+	<!-- 					<div class="sc-gqPbQI iQSKvq"> -->
+	<!-- 						<div width="64.95vw" class="sc-hORach LOgNr"> -->
+	<!-- 							<div class="sc-bsbRJL eIEXWC"> -->
+	<!-- 								<div class="sc-hZSUBg VKktY"> -->
+	<!-- 									<a href="/" class="sc-bXGyLb drBCjk"><img -->
+	<!-- 										src="https://pren.kr/static/Icon/logo.svg" alt="logo" -->
+	<!-- 										width="88px" height="44px" /></a> -->
+	<!-- 								</div> -->
+	<!-- 								<div class="sc-bMVAic hPoZmI"> -->
+	<!-- 									<a href="/experts/categories" class="sc-bXGyLb drBCjk"><p -->
+	<!-- 											color="#585858" class="sc-bxivhb hRLeCu">전문가 찾기</p></a><a -->
+	<!-- 										href="/estimate" class="sc-bXGyLb drBCjk"><p -->
+	<!-- 											color="#585858" class="sc-bxivhb hRLeCu">의뢰 요청하기</p></a> -->
+	<!-- 								</div> -->
+	<!-- 							</div> -->
+	<!-- 							<div class="sc-bAeIUo iVogkW"> -->
+	<!-- 								<a href="login" class="sc-bXGyLb drBCjk"><p color="#585858" -->
+	<!-- 										class="sc-bxivhb bscqcK">로그인</p></a> -->
+	<!-- 							</div> -->
+	<!-- 						</div> -->
+	<!-- 					</div> -->
+	<!-- 				</div> -->
+	<!-- 			</div> -->
+	<!-- 			<div class="sc-eTuwsz kBvlYL"> -->
+	<!-- 				<div class="sc-hXRMBi OZoVQ"> -->
+	<!-- 					<div class="sc-gqPbQI iQSKvq"> -->
+	<!-- 						<div width="90%" class="sc-hORach loTjFL"> -->
+	<!-- 							<div class="sc-bsbRJL eIEXWC"> -->
+	<!-- 								<div class="sc-hZSUBg VKktY"> -->
+	<!-- 									<a href="/" class="sc-bXGyLb drBCjk"><img -->
+	<!-- 										src="https://pren.kr/static/Icon/logo.svg" alt="logo" -->
+	<!-- 										width="88px" height="44px" /></a> -->
+	<!-- 								</div> -->
+	<!-- 							</div> -->
+	<!-- 							<div> -->
+	<!-- 								<div> -->
+	<!-- 									<button class="sc-iyvyFf dQiHqs"> -->
+	<!-- 										<div></div> -->
+	<!-- 										<div></div> -->
+	<!-- 										<div></div> -->
+	<!-- 									</button> -->
+	<!-- 									<nav class="sc-hwwEjo fSkSkR"> -->
+	<!-- 										<div width="83.46%" class="sc-gxMtzJ eDatwz"> -->
+	<!-- 											<p class="sc-bxivhb sc-dfVpRl hUMmIm"> -->
+	<!-- 												<a href="/" class="sc-gzOgki gQorcQ">Home</a> -->
+	<!-- 											</p> -->
+	<!-- 											<p class="sc-bxivhb sc-dfVpRl hUMmIm"> -->
+	<!-- 												<a href="/login" class="sc-gzOgki gQorcQ">로그인</a> -->
+	<!-- 											</p> -->
+	<!-- 											<p class="sc-bxivhb sc-dfVpRl hUMmIm"> -->
+	<!-- 												<a href="/experts/categories" class="sc-gzOgki gQorcQ">전문가 -->
+	<!-- 													찾기</a> -->
+	<!-- 											</p> -->
+	<!-- 											<p class="sc-bxivhb sc-dfVpRl hUMmIm"> -->
+	<!-- 												<a href="/estimate" class="sc-gzOgki gQorcQ">의뢰요청 하기</a> -->
+	<!-- 											</p> -->
+	<!-- 											<hr width="100%" height="1px" color="#cccccc" -->
+	<!-- 												class="sc-kPVwWT eDCNLl" /> -->
+	<!-- 										</div> -->
+	<!-- 									</nav> -->
+	<!-- 								</div> -->
+	<!-- 							</div> -->
+	<!-- 						</div> -->
+	<!-- 					</div> -->
+	<!-- 				</div> -->
+	<!-- 			</div> -->
+	<div class="sc-bnXvFD buSScp">
+		<div class="fresnel-container fresnel-greaterThan-xs ">
+			<div class="sc-AnqlK keKZVr">
+				<div class="sc-keFjpB jqPQeu">
+					<div class="sc-ekkqgF dCJcpl">
+						<div class="fresnel-container fresnel-greaterThan-xs ">
+							<div class="sc-fKGOjr kjezKK">
+								<div width="64.9479vw" class="sc-jvEmr cjbISt">
+									<p class="sc-bxivhb sc-hycgNl cmUNKD">전문가 찾기</p>
+									<p class="sc-bxivhb sc-chAAoq cwVkDi">ON-IN에서는 고용이 아니라 파트너
+										입니다.</p>
 								</div>
 							</div>
-							<div class="fresnel-container fresnel-at-xs "></div>
-							<div class="sc-jWojfa cBVUID">
-								<div class="sc-RbTVP hzZIma">
-									<div class="sc-hMrMfs dgCAgh">
-										<div class="sc-iwsKbI dEdoSR">
-											<div id="moreCategory" class="sc-gZMcBi gwdlnH">
-												<div class="sc-gqjmRU bgQVQZ">카테고리</div>
-												<div class="sc-VigVT gjkitw"></div>
-											</div>
-											<div id="inner" class="sc-jTzLTM hEkMRL"></div>
+						</div>
+					</div>
+					<div class="fresnel-container fresnel-at-xs "></div>
+					<div class="sc-jWojfa cBVUID">
+						<div class="sc-RbTVP hzZIma">
+							<div class="sc-hMrMfs dgCAgh">
+								<div class="sc-iwsKbI dEdoSR">
+									<div id="moreCategory" class="sc-gZMcBi gwdlnH">
+										<div class="sc-gqjmRU bgQVQZ">카테고리</div>
+										<div class="sc-VigVT gjkitw"></div>
+									</div>
+									<div id="inner" class="sc-jTzLTM hEkMRL"></div>
 
-										</div>
+								</div>
+							</div>
+							<div class="sc-hMrMfs uKVTU">
+								<div class="sc-iwsKbI dEdoSR">
+									<div class="sc-gZMcBi eDlBqv">
+										<div class="sc-gqjmRU bgQVQZ">세부 카테고리</div>
+										<div class="sc-VigVT gjkitw"></div>
 									</div>
-									<div class="sc-hMrMfs uKVTU">
-										<div class="sc-iwsKbI dEdoSR">
-											<div class="sc-gZMcBi eDlBqv">
-												<div class="sc-gqjmRU bgQVQZ">세부 카테고리</div>
-												<div class="sc-VigVT gjkitw"></div>
-											</div>
-											<div class="sc-jTzLTM hEkMRL">
-												<div class="sc-fjdhpX eWZWnR">키워드광고</div>
-												<div class="sc-fjdhpX eWZWnR">SNS</div>
-												<div class="sc-fjdhpX eWZWnR">유튜브 크리에이터</div>
-												<div class="sc-fjdhpX eWZWnR">블로그 체험단</div>
-												<div class="sc-fjdhpX eWZWnR">앱·지도 평점리뷰</div>
-												<div class="sc-fjdhpX eWZWnR">검색최적화·seo</div>
-												<div class="sc-fjdhpX eWZWnR">블로그·카페</div>
-												<div class="sc-fjdhpX eWZWnR">해외 마케팅</div>
-												<div class="sc-fjdhpX eWZWnR">메시지·이메일</div>
-												<div class="sc-fjdhpX eWZWnR">쇼핑몰·스토어</div>
-												<div class="sc-fjdhpX eWZWnR">마케팅 컨설팅</div>
-												<div class="sc-fjdhpX eWZWnR">기타</div>
-												<div class="sc-fjdhpX eWZWnR">배너광고</div>
-												<div class="sc-fjdhpX eWZWnR">종합광고대행</div>
-												<div class="sc-fjdhpX eWZWnR">포털질문·답변</div>
-												<div class="sc-fjdhpX eWZWnR">인스타 인플루언서</div>
-												<div class="sc-fjdhpX eWZWnR">앱마케팅</div>
-												<div class="sc-fjdhpX eWZWnR">언론홍보</div>
-											</div>
-										</div>
+									<div class="sc-jTzLTM hEkMRL">
+										<div class="sc-fjdhpX eWZWnR">키워드광고</div>
+										<div class="sc-fjdhpX eWZWnR">SNS</div>
+										<div class="sc-fjdhpX eWZWnR">유튜브 크리에이터</div>
+										<div class="sc-fjdhpX eWZWnR">블로그 체험단</div>
+										<div class="sc-fjdhpX eWZWnR">앱·지도 평점리뷰</div>
+										<div class="sc-fjdhpX eWZWnR">검색최적화·seo</div>
+										<div class="sc-fjdhpX eWZWnR">블로그·카페</div>
+										<div class="sc-fjdhpX eWZWnR">해외 마케팅</div>
+										<div class="sc-fjdhpX eWZWnR">메시지·이메일</div>
+										<div class="sc-fjdhpX eWZWnR">쇼핑몰·스토어</div>
+										<div class="sc-fjdhpX eWZWnR">마케팅 컨설팅</div>
+										<div class="sc-fjdhpX eWZWnR">기타</div>
+										<div class="sc-fjdhpX eWZWnR">배너광고</div>
+										<div class="sc-fjdhpX eWZWnR">종합광고대행</div>
+										<div class="sc-fjdhpX eWZWnR">포털질문·답변</div>
+										<div class="sc-fjdhpX eWZWnR">인스타 인플루언서</div>
+										<div class="sc-fjdhpX eWZWnR">앱마케팅</div>
+										<div class="sc-fjdhpX eWZWnR">언론홍보</div>
 									</div>
 								</div>
 							</div>
-							<div class="sc-kVrTmx bligAu">
-								<div class="fresnel-container fresnel-greaterThan-xs ">
-									<div>
-										<div class="infinite-scroll-component__outerdiv">
-											<div class="infinite-scroll-component "
-												style="height: auto; overflow: auto; -webkit-overflow-scrolling: touch">
-												<ul class="sc-btzYZH dWUwGS">
-													<li class="sc-bYSBpT PnnTA"><a
-														href="/experts/categories/portfolio/15"
-														class="sc-dqBHgY PYpcY"><div class="sc-hqyNC keRCOE">
+						</div>
+					</div>
+					<div class="sc-kVrTmx bligAu">
+						<div class="fresnel-container fresnel-greaterThan-xs ">
+							<div>
+								<div class="infinite-scroll-component__outerdiv">
+									<div class="infinite-scroll-component "
+										style="height: auto; overflow: auto; -webkit-overflow-scrolling: touch">
+										<ul class="sc-btzYZH dWUwGS">
+											<li class="sc-bYSBpT PnnTA"><a
+												href="/experts/categories/portfolio/15"
+												class="sc-dqBHgY PYpcY"><div class="sc-hqyNC keRCOE">
+														<div class="fresnel-container fresnel-greaterThan-xs ">
+															<div width="280px" height="450px"
+																class="sc-gGBfsJ gYilSD">
 																<div class="fresnel-container fresnel-greaterThan-xs ">
-																	<div width="280px" height="450px"
-																		class="sc-gGBfsJ gYilSD">
-																		<div class="fresnel-container fresnel-greaterThan-xs ">
-																			<div class="sc-feJyhm foyJuu"></div>
-																		</div>
-																		<div class="fresnel-container fresnel-at-xs "></div>
-																		<div class="fresnel-container fresnel-greaterThan-xs ">
-																			<div class="sc-jnlKLf eyVOlp">
-																				<p color="#00d387" class="sc-bxivhb sc-tilXH jPooZs">로고·BI·CI</p>
-																			</div>
-																		</div>
-																		<div class="fresnel-container fresnel-at-xs "></div>
-																		<p class="sc-bxivhb sc-elJkPf enZxKB">추헌주</p>
-																		<p class="sc-bxivhb sc-elJkPf jmyixX">안녕하세요. 각종
-																			디자인 환영합니다!</p>
-																		<div class="fresnel-container fresnel-greaterThan-xs ">
-																			<div class="sc-iELTvK bitLaA">
-																				<img src="https://pren.kr/static/card/location.svg"
-																					width="11px" height="16px" alt="pren_area">
-																				<p color="#585858"
-																					class="sc-bxivhb sc-cmTdod eiHcSb">경기</p>
-																			</div>
-																		</div>
-																		<div class="fresnel-container fresnel-at-xs "></div>
-																		<button value="15" width="193px" height="40px"
-																			class="sc-EHOje sc-jtRfpW dNWrSt">
-																			<p color="#00d387" class="sc-bxivhb sc-kTUwUJ cGApee">자세히
-																				보기</p>
-																		</button>
+																	<div class="sc-feJyhm foyJuu"></div>
+																</div>
+																<div class="fresnel-container fresnel-at-xs "></div>
+																<div class="fresnel-container fresnel-greaterThan-xs ">
+																	<div class="sc-jnlKLf eyVOlp">
+																		<p color="#00d387" class="sc-bxivhb sc-tilXH jPooZs">로고·BI·CI</p>
 																	</div>
 																</div>
 																<div class="fresnel-container fresnel-at-xs "></div>
-															</div></a></li>
-												</ul>
-												<p color="#585858" class="sc-bxivhb sc-elJkPf cPhtHr">스크롤하시면
-													더 많은 전문가를 만나실 수 있습니다.</p>
+																<p class="sc-bxivhb sc-elJkPf enZxKB">추헌주</p>
+																<p class="sc-bxivhb sc-elJkPf jmyixX">안녕하세요. 각종 디자인
+																	환영합니다!</p>
+																<div class="fresnel-container fresnel-greaterThan-xs ">
+																	<div class="sc-iELTvK bitLaA">
+																		<img src="https://pren.kr/static/card/location.svg"
+																			width="11px" height="16px" alt="pren_area">
+																		<p color="#585858" class="sc-bxivhb sc-cmTdod eiHcSb">경기</p>
+																	</div>
+																</div>
+																<div class="fresnel-container fresnel-at-xs "></div>
+																<button value="15" width="193px" height="40px"
+																	class="sc-EHOje sc-jtRfpW dNWrSt">
+																	<p color="#00d387" class="sc-bxivhb sc-kTUwUJ cGApee">자세히
+																		보기</p>
+																</button>
+															</div>
+														</div>
+														<div class="fresnel-container fresnel-at-xs "></div>
+													</div></a></li>
+										</ul>
+										<p color="#585858" class="sc-bxivhb sc-elJkPf cPhtHr">스크롤하시면
+											더 많은 전문가를 만나실 수 있습니다.</p>
 
-											</div>
-										</div>
 									</div>
 								</div>
 							</div>
@@ -2733,4 +2769,6 @@ textarea {
 					</div>
 				</div>
 			</div>
-<%@include file="footer.jsp" %>		
+		</div>
+	</div>
+	<%@include file="footer.jsp"%>

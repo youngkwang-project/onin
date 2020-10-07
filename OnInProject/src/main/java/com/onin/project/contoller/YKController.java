@@ -30,7 +30,16 @@ public class YKController {
 	
 		return "setting";
 	}
-
+	
+	@GetMapping(value = "/experts/categorise")
+	public String expertsCategorise(Model model) {
+		logger.info("expertsCategorise(){}");
+		
+		
+	
+		return "expertsCategorise";
+	}
+	//비밀번호변경
 	@PostMapping(value = "/mypage/pwchange")
 	public String memberSetDone(Model model,MemberDTO member) {
 		logger.info("memberSetDone(){}");
@@ -41,6 +50,7 @@ public class YKController {
 		return "redirect:setting";
 		
 	}
+	//회원탈퇴
 	@PostMapping(value = "/mypage/delete")
 	public String memberDeleteDone(HttpSession httpsession ,MemberDTO member) {
 		logger.info("memberDeleteDone(){}");
