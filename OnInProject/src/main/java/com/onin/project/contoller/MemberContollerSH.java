@@ -31,7 +31,15 @@ public class MemberContollerSH {
 	@PostMapping("/register")
 	public String register(MemberDTO memberDTO,Model model) throws Exception {
 		logger.info("/register2 호출");
-		memberService.register(memberDTO);
+		MemberDTO result = memberService.idCheck(memberDTO);
+		if(result !=null) {
+				
+				return "/register";
+		}else if(result == null) {
+				memberService.register(memberDTO);
+		
+		}
+	
 		//memberService.create(memberDTO);
 		
 

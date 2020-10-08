@@ -1406,6 +1406,17 @@ textarea {
 .ejEJPT {
 	padding-left: 157px;
 }
+.alert-success{
+	color : #1e90ff;
+	font-size : 12px;
+	padding-left: 157px;
+	}
+.alert-danger{
+	color : #ff0000;
+	font-size : 12px;
+	padding-left: 157px;
+	}
+	
 </style>
 
 
@@ -1439,7 +1450,27 @@ $(function(){
 
 	});
 
+$(function() {
+	$("#alert-success").hide();
+	$("#alert-danger").hide();
+	$("#pwd,#pwd2").change(function() {
+		var pwd1 = $("#pwd").val();
+		var pwd2 = $("#pwd2").val();
+		if (pwd1 != "" || pwd2 != "") {
+			if (pwd1 === pwd2) {
+				$("#alert-success").show();
+				$("#alert-danger").hide();
+			} else {
+				$("#alert-success").hide();
+				$("#alert-danger").show();
+			}
+		}
+	});
+});
+
 </script>
+
+
 <body>
 <%@include file="header.jsp" %>
 			<div class="sc-bnXvFD buSScp">
@@ -1519,9 +1550,10 @@ $(function(){
 																</div>
 																<div class="sc-kGXeez kUKQcj">
 																	<div class="sc-bdVaJa jCeSos">
-																		<input name="pwd" type="password" placeholder="비밀번호"
+																		<input id ="pwd" name="pwd" type="password" placeholder="비밀번호"
 																			value="" class="sc-htpNat ksfJEf sc-kpOJdX intbG"
 																			width="100%" />
+																			
 																	</div>
 																</div>
 															</div>
@@ -1534,13 +1566,15 @@ $(function(){
 																</div>
 																<div class="sc-kGXeez kUKQcj">
 																	<div class="sc-bdVaJa jCeSos">
-																		<input type="password" placeholder="비밀번호 확인" value=""
+																		<input id="pwd2" type="password" placeholder="비밀번호 확인" value=""
 																			class="sc-htpNat ksfJEf sc-kpOJdX intbG" width="100%" />
-																	</div>
+																	</div>																	
 																</div>
 															</div>
 														</div>
 													</div>
+													<div class="alert alert-success" id="alert-success" >비밀번호가 일치합니다.</div> 
+													<div class="alert alert-danger" id="alert-danger">비밀번호가 일치하지 않습니다.</div>
 													<div class="sc-ifAKCX ktBaKe">
 														<div width="452px" class="sc-ihiiSJ flypWG">
 															<p class="sc-bxivhb sc-iNovjJ cftYnu">사용자정보</p>
@@ -1609,4 +1643,6 @@ $(function(){
 						</div>
 					</div>
 				</div>
+			</div>
+			
 <%@include file="footer.jsp" %>		

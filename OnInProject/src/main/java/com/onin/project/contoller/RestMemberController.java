@@ -19,9 +19,10 @@ public class RestMemberController {
 	@PostMapping("/checkSignup")
 	public String AjaxView(  
 		        MemberDTO memberDTO){
-		System.out.println(memberDTO.getEmail());
+		
 		String str = "";
 		MemberDTO idcheck = memberService.idCheck(memberDTO);
+		System.out.println(idcheck);
 		if(idcheck != null){ //이미 존재하는 계정
 			str = "NO";	
 		}else{	//사용 가능한 계정
@@ -30,6 +31,7 @@ public class RestMemberController {
 		System.out.println(str);
 		return str;
 	}
+	
 //	@RequestMapping(value = "/emailConfirm", method = RequestMethod.GET)
 //	public String emailConfirm(String email, Model model) throws Exception { // 이메일 인증 확인창
 //			memberService.userAuth(email);
