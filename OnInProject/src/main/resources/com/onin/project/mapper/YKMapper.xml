@@ -19,4 +19,10 @@ DELETE FROM MEMBER WHERE MNO=#{mno}
 
 </delete>
 
+<select id="categorySel" resultType="com.onin.project.dto.CategoryDTO">
+
+select * FROM CATEGORY where LV = 1
+
+</select>
+
 </mapper>

@@ -1,8 +1,11 @@
 package com.onin.project.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.onin.project.dto.CategoryDTO;
 import com.onin.project.dto.MemberDTO;
 import com.onin.project.mapper.YKMapper;
 
@@ -30,6 +33,11 @@ YKMapper mapper;
 	public int memberDelete(MemberDTO member) {
 		
 		return mapper.memberDelete(member);
+	}
+
+	public List<CategoryDTO> categorySel() {
+		
+		return mapper.categorySel();
 	}
 
 }

@@ -2541,47 +2541,51 @@ textarea {
 <script src="https://code.jquery.com/jquery-3.5.1.js"
 	integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
 	crossorigin="anonymous">
-   
+	
 </script>
 
 <script>
-window.onload=function(){
-	var innerS = document.getElementById("inner")
+	window.onload = function() {
+		var innerS = document.getElementById("inner")
+		var cateName = document.getElementById("cateName")
+		document.getElementById("moreCategory")
+				.addEventListener("click", inner);
 
-	document.getElementById("moreCategory").addEventListener("click", inner);
+		var innerB = 'open'
 
-	var innerB = 'open'
-	function inner(){		
-		if(innerB == 'open'){
-			innerS.innerHTML= '	<div class="sc-fjdhpX eWZWnR">키워드광고</div> <div class="sc-fjdhpX eWZWnR">SNS</div>'
-			innerB = 'close'
-		}else{
-			innerS.innerHTML= ''
-			innerB = 'open'
+		function inner() {
+			if (innerB == 'open') {
+
+				$.ajax({
+							url : '/rest/category',
+							dataType : 'json', /*html, text, json, xml, script*/
+							method : 'get',
+							success : function(data) {
+
+								var sum = ""
+								for (var i = 0; i < data.length; i++) {
+
+									var category = '<a  href="/experts/categories/category?cno='
+											+ data[i].cno
+											+ '"><div class="sc-fjdhpX eWZWnR">'
+											+ data[i].cname + '</div></a>'
+									sum = sum + category
+								}
+								innerS.innerHTML = sum
+								innerB = 'close'
+							}
+						});
+
+			} else {
+				innerS.innerHTML = ''
+				innerB = 'open'
+			}
+
+		}	
+		if( '${category}' > 0){
+			cateName.innerHTML = '<div id="cateName" class="sc-gqjmRU bgQVQZ">' + ${category} + '</div>'
 		}
 	}
-}
-
-
-$().ready(function() {
-
-	   $("#check").click(function() {
-	      $.ajax({
-	         url : '/rest/check',
-	          data : {
-	            name : $("#firstName").val(),
-	         }, 
-	         dataType : 'text', /*html, text, json, xml, script*/
-	         method : 'get',
-	         success : function(data) {
-	            
-	        	 alert(data);
-
-	         }
-	      });
-	   });
-	   
-	});
 </script>
 </head>
 <body>
@@ -2678,7 +2682,7 @@ $().ready(function() {
 							<div class="sc-hMrMfs dgCAgh">
 								<div class="sc-iwsKbI dEdoSR">
 									<div id="moreCategory" class="sc-gZMcBi gwdlnH">
-										<div class="sc-gqjmRU bgQVQZ">카테고리</div>
+										<div id="cateName" class="sc-gqjmRU bgQVQZ">카테고리</div>
 										<div class="sc-VigVT gjkitw"></div>
 									</div>
 									<div id="inner" class="sc-jTzLTM hEkMRL"></div>

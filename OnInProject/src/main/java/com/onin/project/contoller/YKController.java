@@ -36,6 +36,15 @@ public class YKController {
 	
 		return "expertsCategorise";
 	}
+	
+	@GetMapping(value = "/experts/categories/category")
+	public String category(Model model, @RequestParam("cno") int cno) {
+		
+		model.addAttribute("category", cno);
+		
+		return "expertsCategorise";
+	}
+	
 	//비밀번호변경
 	@PostMapping(value = "/mypage/pwchange")
 	public String memberSetDone(HttpSession httpsession, Model model,MemberDTO member) {
