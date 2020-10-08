@@ -1,9 +1,12 @@
 package com.onin.project.service;
 
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.onin.project.dto.CategoryDTO;
 import com.onin.project.dto.MemberDTO;
 import com.onin.project.mapper.EbmemberMapper;
 
@@ -25,4 +28,10 @@ public class Ebloginservice {
 	public int updatepwd(MemberDTO memberdto) {
 		return ebmemberMapper.updatepwd(memberdto);
 	}
+	
+	//카테고리 호출
+	public List<CategoryDTO>category() throws Exception{
+		return ebmemberMapper.category();
+	}
+	
 }

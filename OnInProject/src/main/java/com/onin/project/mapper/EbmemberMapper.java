@@ -1,5 +1,8 @@
 package com.onin.project.mapper;
 
+import java.util.List;
+
+import com.onin.project.dto.CategoryDTO;
 import com.onin.project.dto.MemberDTO;
 
 
@@ -12,6 +15,10 @@ public interface EbmemberMapper {
 	
 	//임시비밀번호
 	public int updatepwd(MemberDTO memberdto);
+	
+	//카테고리 호출
+	public List<CategoryDTO> category();
+
 }
 
 

@@ -18,4 +18,9 @@ select * from member where email=#{email}
 <update id="updatepwd">
 	update member set pwd = #{pwd} where email = #{email}
 </update>
+
+<!-- 카테고리 호출 -->
+<select id="category" resultType="com.onin.project.dto.CategoryDTO">
+SELECT * FROM CATEGORY start with CNOREF is null connect by prior CNO = CNOREF
+</select>
 </mapper>
