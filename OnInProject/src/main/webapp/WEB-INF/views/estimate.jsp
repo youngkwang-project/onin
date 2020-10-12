@@ -1348,37 +1348,22 @@ textarea {
 		<div class="sc-jKmXuR bxiZch">
 			<div class="sc-elNKlv bRLJtp">
 				<div class="sc-kkbgRg itjHuC">
-					<div class="sc-hRmvpr dsaJZA">
-						<div class="sc-cZBZkQ hcelKS">
-							<div class="sc-ecaExY iOkFTa">1</div>
-							<div class="sc-gbzWSY dHXXBR">Category</div>
-						</div>
-						<div class="sc-cZBZkQ eNcZEx">
-							<div class="sc-ecaExY dkjHUv">2</div>
-							<div class="sc-gbzWSY eKIdNg">Detail</div>
-						</div>
-						<div class="sc-cZBZkQ eNcZEx">
-							<div class="sc-ecaExY dkjHUv">3</div>
-							<div class="sc-gbzWSY eKIdNg">Date</div>
-						</div>
-						<div class="sc-cZBZkQ eNcZEx">
-							<div class="sc-ecaExY dkjHUv">4</div>
-							<div class="sc-gbzWSY eKIdNg">Budget</div>
-						</div>
-					</div>
+
 				</div>
 			</div>
 			<div class="sc-bYwvMP beStNa">
 				<div class="sc-hUMlYv bqFEAl">
 					<div class="sc-dEfkYy byQRMv">
 						<div class="sc-gNJABI inXjXV">
-							<div class="sc-cqPOvA bjnOOj">카테고리 선택</div>
+							<div class="sc-cqPOvA bjnOOj">요청서 내용</div>
 							<div class="sc-RbTVP hzZIma">
 								<div class="sc-hMrMfs dgCAgh">
 									<div class="sc-iwsKbI dEdoSR">
 										
 											<form action="estimate" method="post" autocomplete="off">
 												<div class="sc-gqjmRU bgQVQZ">
+												
+													<div>
 													<label>카테고리</label>
 													<select class="category1" name="cnoref">
 														<option value="">전체</option>
@@ -1388,33 +1373,34 @@ textarea {
 													<select class="category2" name="cno">
 														<option value="">전체</option>
 													</select>
+													</div>
 													
 													<div>
 													<h2>Detail</h2><br>
 													개인인가요 기업인가요?<br>
-													<input type="text" name="q1"><br>
+													<input type="text" name="q1" id="q1"><br>
 													
 													원하는 수업 내용을 상세하게 적어주세요.<br>
 									
-													<textarea name="q2" rows="5" cols="30"></textarea>
+													<textarea name="q2" id="q2" rows="5" cols="30"></textarea>
 													</div>
 													
 													<div>
 													<h2>Address</h2><br>
 													원하는 지역(시,구)<br>
-													<input type="text" name="ad">
+													<input type="text" name="ad" id="ad">
 													</div>
 													
 													<div>
 													<h2>Date</h2><br>
 													원하는 날짜<br>
-													<input type="date" name="invoice_date">
+													<input type="date" name="invoice_date" id="invoice_date">
 													</div>
 													
 													<div>
 													<h2>Budget</h2><br>
 													원하는 가격을 적어주세요.<br>
-													<input type="text" name="cost">
+													<input type="text" name="cost" id="cost">원
 													</div>
 													
 													<input type="hidden" name="from_mno" value="${loginMember.mno}">
@@ -1446,15 +1432,27 @@ textarea {
 								</div>
 								<div class="sc-iCwjlJ XyIJP">
 									<div class="sc-jUpvKA bfopgi">Detail</div>
+									<div class="sc-jdfcpN dBjJUM" id="v1"></div>
+									<div class="sc-jdfcpN dBjJUM" id="v2"></div>
 								</div>
+								
+								<div class="sc-iCwjlJ XyIJP">
+									<div class="sc-jUpvKA bfopgi">Address</div>
+									<div class="sc-jdfcpN dBjJUM" id="adv1"></div>
+								</div>
+								
 								<div class="sc-iCwjlJ XyIJP">
 									<div class="sc-jUpvKA bfopgi">Date</div>
-									<div class="sc-jdfcpN dBjJUM"></div>
+									<div class="sc-jdfcpN dBjJUM" id="invoice_datev1"></div>
 								</div>
+								
+
+								
 								<div class="sc-iCwjlJ XyIJP">
 									<div class="sc-fkyLDJ kqIOgM">
 										<div class="sc-jUpvKA bfopgi">Budget</div>
-										<span class="sc-eEieub jjTsJw">0 원</span>
+										<span class="sc-eEieub jjTsJw" id="costv1"> </span>
+										<span style="padding-top: 5px;">원</span>
 									</div>
 									<div style="justify-content: flex-end" class="sc-fkyLDJ kqIOgM">
 										<p class="sc-jRuhRL jVRVdm"></p>
@@ -1499,7 +1497,7 @@ for(var i = 0; i < cate1Arr.length; i++) {
 var str = "";
 $(document).on("change", "select.category1", function(){
 	//console.log($(".category1 option:selected").html());
-	str = $(".category1 option:selected").html()+"--<br>";
+	str = $(".category1 option:selected").html()+"--";
 	$("#cname").html(str);
 	 var cate2Arr = new Array();
 	 var cate2Obj = new Object();
@@ -1536,6 +1534,47 @@ $(document).on("change", "select.category1", function(){
 	  //console.log($(".category2 option:selected").html());
 	 });
 	});
+	var str2 ="";
+	var str3="";
+$(document).on("change", "select.category2", function(){
+	str2 = $(".category2 option:selected").html();
+	str3 = str+str2;
+	$("#cname").html(str3);
 	
+});	
+
+//미리보기
+
+$(document).ready(function(){
+	$("#q1").change(function(){
+		$("#v1").text($("#q1").val());
+		});
+});
+
+$(document).ready(function(){
+	$("#q2").change(function(){
+		$("#v2").text($("#q2").val());
+		});
+});
+
+$(document).ready(function(){
+	$("#ad").change(function(){
+		$("#adv1").text($("#ad").val());
+		});
+});
+
+$(document).ready(function(){
+	$("#invoice_date").change(function(){
+		$("#invoice_datev1").text($("#invoice_date").val());
+		});
+});
+
+
+$(document).ready(function(){
+	$("#cost").change(function(){
+		$("#costv1").text($("#cost").val());
+		});
+});
+
 </script>
 	<%@include file="footer.jsp"%>
