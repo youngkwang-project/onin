@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<%@ page import="com.onin.project.dto.MemberDTO"%>
 
 <!DOCTYPE html>
 <html lang="ko">
@@ -38,7 +40,8 @@
 <meta charSet="utf-8" />
 <title>전문가에게 의뢰 요청하기 | 전문가 매칭 플랫폼 프랜</title>
 <meta name="next-head-count" content="3" />
-<link rel="preload" href="https://pren.kr/_next/static/css/styles.e0203beb.chunk.css"
+<link rel="preload"
+	href="https://pren.kr/_next/static/css/styles.e0203beb.chunk.css"
 	as="style" />
 <link rel="stylesheet"
 	href="https://pren.kr/_next/static/css/styles.e0203beb.chunk.css" />
@@ -1324,51 +1327,13 @@ textarea {
 	overflow-x: hidden;
 	text-overflow: ellipsis;
 	cursor: pointer;
-	
 }
-
 </style>
 </head>
 <body>
 	<script>
-	window.onload = function() {
-		var innerS = document.getElementById("inner")
 
-		document.getElementById("moreCategory")
-				.addEventListener("click", inner);
-
-		var innerB = 'open'
-		function inner() {
-			
-			if (innerB == 'open') {
-
-				$.ajax({
-					url : '/rest/category',
-					dataType : 'json', /*html, text, json, xml, script*/
-					method : 'get',
-					success : function(data) {
-
-						var sum = ""
-						for(var i=0; i < data.length ; i++){
-							
-							var category = '<div class="sc-fjdhpX eWZWnR">'+ data[i].cname +'</div>'
-							sum =sum + category
-							}
-						innerS.innerHTML = sum
-						innerB = 'close'
-					
-					}
-				});
-				
-				
-			} else {
-				innerS.innerHTML = ''
-				innerB = 'open'
-			}
-		}
-
-		
-	}
+	
 	</script>
 	<%@include file="header.jsp"%>
 	<div class="sc-bnXvFD buSScp">
@@ -1411,29 +1376,60 @@ textarea {
 							<div class="sc-RbTVP hzZIma">
 								<div class="sc-hMrMfs dgCAgh">
 									<div class="sc-iwsKbI dEdoSR">
-										<div id = "moreCategory" class="sc-gZMcBi gwdlnH">
-											<div  class="sc-gqjmRU bgQVQZ">카테고리</div>
-											<div class="sc-VigVT gjkitw"></div>
-											<div id="asd" class="sc-jTzLTM hEkMRL">
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="sc-hMrMfs uKVTU">
-									<div class="sc-iwsKbI dEdoSR">
-										<div id = "moreCategory" class="sc-gZMcBi eDlBqv">
-											<div class="sc-gqjmRU bgQVQZ">세부 카테고리</div>
-											<div class="sc-VigVT gjkitw"></div>
-											<div id="asd" class="sc-jTzLTM hEkMRL"></div>
-										</div>
+										
+											<form action="estimate" method="post" autocomplete="off">
+												<div class="sc-gqjmRU bgQVQZ">
+													<label>카테고리</label>
+													<select class="category1" name="cnoref">
+														<option value="">전체</option>
+													</select>
+													
+													<label>세부카테고리</label>
+													<select class="category2" name="cno">
+														<option value="">전체</option>
+													</select>
+													
+													<div>
+													<h2>Detail</h2><br>
+													개인인가요 기업인가요?<br>
+													<input type="text" name="q1"><br>
+													
+													원하는 수업 내용을 상세하게 적어주세요.<br>
+									
+													<textarea name="q2" rows="5" cols="30"></textarea>
+													</div>
+													
+													<div>
+													<h2>Address</h2><br>
+													원하는 지역(시,구)<br>
+													<input type="text" name="ad">
+													</div>
+													
+													<div>
+													<h2>Date</h2><br>
+													원하는 날짜<br>
+													<input type="date" name="invoice_date">
+													</div>
+													
+													<div>
+													<h2>Budget</h2><br>
+													원하는 가격을 적어주세요.<br>
+													<input type="text" name="cost">
+													</div>
+													
+													<input type="hidden" name="from_mno" value="${loginMember.mno}">
+													
+													<div class="sc-yZwTr jnJmPo">
+														<input type="submit" value="보내기">
+													</div>
+												</div>
+											</form>
+										
 									</div>
 								</div>
 							</div>
 						</div>
-						<div class="sc-yZwTr jnJmPo">
-							<button height="40px" width="122px" disabled=""
-								class="sc-EHOje sc-erNlkL cjdytp">다음</button>
-						</div>
+
 					</div>
 				</div>
 				<div class="fresnel-container fresnel-greaterThan-xs ">
@@ -1446,7 +1442,7 @@ textarea {
 							<div class="sc-cBrjTV qAGnZ">
 								<div class="sc-iCwjlJ XyIJP">
 									<div class="sc-jUpvKA bfopgi">Category</div>
-									<div class="sc-jdfcpN dBjJUM"></div>
+									<div id= 'cname' class="sc-jdfcpN dBjJUM"></div>
 								</div>
 								<div class="sc-iCwjlJ XyIJP">
 									<div class="sc-jUpvKA bfopgi">Detail</div>
@@ -1471,4 +1467,75 @@ textarea {
 			</div>
 		</div>
 	</div>
+	<script>
+	
+// 컨트롤러에서 데이터 받기
+var jsonData = JSON.parse('${category}');
+console.log(jsonData);
+
+var cate1Arr = new Array();
+var cate1Obj = new Object();
+console.log(cate1Arr);
+
+// 1차 분류 셀렉트 박스에 삽입할 데이터 준비
+for(var i = 0; i < jsonData.length; i++) {
+ 
+ if(jsonData[i].LV == "1") {
+  cate1Obj = new Object();  //초기화
+  cate1Obj.CNO = jsonData[i].CNO;
+  cate1Obj.CNAME = jsonData[i].CNAME;
+  cate1Arr.push(cate1Obj);
+ }
+}
+
+// 1차 분류 셀렉트 박스에 데이터 삽입
+var cate1Select = $("select.category1")
+
+for(var i = 0; i < cate1Arr.length; i++) {
+ cate1Select.append("<option value='" + cate1Arr[i].CNO + "'>"
+      + cate1Arr[i].CNAME + "</option>"); 
+}
+
+var str = "";
+$(document).on("change", "select.category1", function(){
+	//console.log($(".category1 option:selected").html());
+	str = $(".category1 option:selected").html()+"--<br>";
+	$("#cname").html(str);
+	 var cate2Arr = new Array();
+	 var cate2Obj = new Object();
+	 console.log(cate2Arr);
+	 // 2차 분류 셀렉트 박스에 삽입할 데이터 준비
+	 for(var i = 0; i < jsonData.length; i++) {
+	  
+	  if(jsonData[i].LV == "2") {
+	   cate2Obj = new Object();  //초기화
+	   cate2Obj.CNO = jsonData[i].CNO;
+	   cate2Obj.CNAME = jsonData[i].CNAME;
+	   cate2Obj.CNOREF = jsonData[i].CNOREF;
+	   
+	   cate2Arr.push(cate2Obj);
+	  }
+	 }
+	 
+	 var cate2Select = $("select.category2");
+
+	 cate2Select.children().remove();
+
+
+	 $("option:selected", this).each(function(){
+	  
+	  var selectVal = $(this).val();  
+	  cate2Select.append("<option value=''>전체</option>");
+	  
+	  for(var i = 0; i < cate2Arr.length; i++) {
+	   if(selectVal == cate2Arr[i].CNOREF) {
+	    cate2Select.append("<option value='" + cate2Arr[i].CNO + "'>"
+	         + cate2Arr[i].CNAME + "</option>");
+	   }
+	  }
+	  //console.log($(".category2 option:selected").html());
+	 });
+	});
+	
+</script>
 	<%@include file="footer.jsp"%>

@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.onin.project.dto.CategoryDTO;
+import com.onin.project.dto.InvoiceDTO;
 import com.onin.project.dto.MemberDTO;
 import com.onin.project.mapper.EbmemberMapper;
 
@@ -33,5 +34,13 @@ public class Ebloginservice {
 	public List<CategoryDTO>category() throws Exception{
 		return ebmemberMapper.category();
 	}
+	
+	//form값 db 저장
+	public int estimateDone(InvoiceDTO invoicedto) {
+		return ebmemberMapper.estimateDone(invoicedto);
+	}
+
+	
+
 	
 }

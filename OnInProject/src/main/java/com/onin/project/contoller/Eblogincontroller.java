@@ -17,9 +17,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-
 import com.onin.project.dto.CategoryDTO;
+import com.onin.project.dto.InvoiceDTO;
 import com.onin.project.dto.MemberDTO;
 import com.onin.project.emailcheck.MailHandler;
 import com.onin.project.service.Ebloginservice;
@@ -154,6 +153,16 @@ public class Eblogincontroller {
 		   model.addAttribute("category",JSONArray.fromObject(category));
 		   logger.info("category" + model);
 		   
-		   return "estimate2";
+		   return "estimate";
 	   }
+	   
+	   @PostMapping("/estimate")
+	   public String estimateDone(InvoiceDTO invoicedto) {
+		 logger.info("form 전송");
+		 System.out.println(invoicedto.toString());
+		 ebloginservice.estimateDone(invoicedto);
+		return "estimateDone";  
+	   }
+	    
+	   
 }
