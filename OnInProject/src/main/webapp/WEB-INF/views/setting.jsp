@@ -1334,7 +1334,7 @@ textarea {
 									class="sc-gjAXCV iNaNZM">계정설정</span></a>
 							</div>
 							<div class="sc-eQGPmX jvXLhQ">
-								<a href="/mypage/estimates" class="sc-dAOnuy gyJIGO"><img
+								<a href="/mypage/invoice" class="sc-dAOnuy gyJIGO"><img
 									src="https://pren.kr/static/mypren/sidemenu_dashboard_off.svg"
 									width="23px" height="25px" class="sc-cSYcjD laZApR" /><span
 									class="sc-gjAXCV iNaNZM">의뢰요청</span></a>
