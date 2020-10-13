@@ -16,5 +16,9 @@ public interface YKMapper {
 	public int memberDelete(MemberDTO member);
 
 	public List<CategoryDTO> categorySel();
+	
+	public List<CategoryDTO> categorySel_1(int cno);
+	
+	public List<CategoryDTO> categorySel_2(int cno);
 
 }

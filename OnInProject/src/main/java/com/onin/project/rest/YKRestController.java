@@ -32,4 +32,12 @@ public class YKRestController {
 	
 		return service.categorySel();
 	}
+
+	
+//	@GetMapping(path="/category2", produces = MediaType.APPLICATION_JSON_VALUE)
+//	public List<CategoryDTO> categorySel2(Model model){
+//		logger.info("/member/rest/");
+//	
+//		return service.categorySel2();
+//	}
 }

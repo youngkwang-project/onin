@@ -31,18 +31,23 @@ public class YKController {
 	@GetMapping(value = "/experts/categorise")
 	public String expertsCategorise(Model model) {
 		logger.info("expertsCategorise(){}");
-		
-		
 	
 		return "expertsCategorise";
 	}
 	
 	@GetMapping(value = "/experts/categories/category")
+	public String categoryDetail(Model model, @RequestParam("cno") int cno) {
+		model.addAttribute("category", service.categorySel_1(cno).get(0).getCNAME());
+		model.addAttribute("detail", service.categorySel_2(cno));
+		System.out.println(service.categorySel_2(cno));
+		return "expertsCategorise_1";
+	}
+	@GetMapping(value = "/experts/categories/category/detail")
 	public String category(Model model, @RequestParam("cno") int cno) {
 		
-		model.addAttribute("category", cno);
 		
-		return "expertsCategorise";
+		
+		return "expertsCategorise_2";
 	}
 	
 	//비밀번호변경

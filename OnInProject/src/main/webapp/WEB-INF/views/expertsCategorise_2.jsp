@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -2556,7 +2556,8 @@ textarea {
 		function inner() {
 			if (innerB == 'open') {
 
-				$.ajax({
+				$
+						.ajax({
 							url : '/rest/category',
 							dataType : 'json', /*html, text, json, xml, script*/
 							method : 'get',
@@ -2582,6 +2583,45 @@ textarea {
 			}
 
 		}
+
+		var category = "${category}"
+		if (category != "") {
+			cateName.innerHTML = '<div id="cateName" class="sc-gqjmRU bgQVQZ">'
+					+ category + '</div>'
+		}
+
+		var innerS_1 = document.getElementById("inner_detail")
+		var cateName = document.getElementById("detailName")
+		document.getElementById("moreCategory_detail").addEventListener(
+				"click", inner2);
+
+		var innerB2 = 'open'
+	function inner2() {
+		if (innerB2 == 'open') {
+			
+							var sum = ""
+							<c:forEach var="member" items="${detail}">
+							
+
+								var detail = '<a  href="/experts/categories/category?cno='
+										+ ${member.CNO}
+										+ '"><div class="sc-fjdhpX eWZWnR">'
+										+ "${member.CNAME}" + '</div></a>'
+								sum = sum + detail
+							
+							</c:forEach>
+										
+							innerS_1.innerHTML = sum
+							innerB2 = 'close'
+						
+					
+
+		} else {
+			innerS_1.innerHTML = ""
+			innerB2 = 'open'
+		}
+	}
+
 	}
 </script>
 </head>
@@ -2689,11 +2729,11 @@ textarea {
 							<div class="sc-hMrMfs uKVTU">
 								<div class="sc-iwsKbI dEdoSR">
 									<div id="moreCategory_detail" class="sc-gZMcBi eDlBqv">
-										<div class="sc-gqjmRU bgQVQZ">세부 카테고리</div>
+										<div id="detailName" class="sc-gqjmRU bgQVQZ">세부 카테고리</div>
 										<div class="sc-VigVT gjkitw"></div>
 									</div>
 									<div id="inner_detail" class="sc-jTzLTM hEkMRL">
-										
+									
 									</div>
 								</div>
 							</div>
