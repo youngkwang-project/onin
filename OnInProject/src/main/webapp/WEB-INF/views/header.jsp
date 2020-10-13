@@ -4,6 +4,8 @@
 <%-- <%@ page session="false"%> --%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%@ page import="com.onin.project.dto.MemberDTO" %>
+<%@ page import="com.onin.project.dto.InvoiceDTO" %>
+
 <%MemberDTO loginMember = (MemberDTO)session.getAttribute("loginMember"); %>
 
 	<div id="__next">

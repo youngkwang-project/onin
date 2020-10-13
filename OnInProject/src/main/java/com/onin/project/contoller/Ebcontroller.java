@@ -17,22 +17,25 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+
 import com.onin.project.dto.CategoryDTO;
 import com.onin.project.dto.InvoiceDTO;
+import com.onin.project.dto.InvoiceJoinDTO;
 import com.onin.project.dto.MemberDTO;
 import com.onin.project.emailcheck.MailHandler;
-import com.onin.project.service.Ebloginservice;
+import com.onin.project.service.Ebservice;
 
 import net.sf.json.JSONArray;
 
 @Controller
-public class Eblogincontroller {
+public class Ebcontroller {
 	@Autowired
-	Ebloginservice ebloginservice;
+	Ebservice ebloginservice;
 	@Autowired
 	JavaMailSender mailSender;
 
-	private static final Logger logger = LoggerFactory.getLogger(Eblogincontroller.class);
+	private static final Logger logger = LoggerFactory.getLogger(Ebcontroller.class);
 
 	//login
 	
@@ -157,12 +160,23 @@ public class Eblogincontroller {
 	   }
 	   
 	   @PostMapping("/estimate")
-	   public String estimateDone(InvoiceDTO invoicedto) {
+	   public String estimate(InvoiceDTO invoicedto) {
 		 logger.info("form 전송");
 		 System.out.println(invoicedto.toString());
 		 ebloginservice.estimateDone(invoicedto);
+		 
 		return "estimateDone";  
 	   }
-	    
+	   
+	   
+	   @GetMapping("/mypage/invoice")
+	   public String invoice(Model model,@RequestParam("mno") int from_mno,InvoiceJoinDTO invoiceJoindto){
+		   logger.info("보낸의뢰요청서");
+		   model.addAttribute("list", ebloginservice.invoice(from_mno));
+//		   model.addAttribute("category", ebloginservice.invoiceJoin(from_mno));
+		   //System.out.println( ebloginservice.invoiceJoin(from_mno));
+
+		   return "invoice";
+	   }
 	   
 }

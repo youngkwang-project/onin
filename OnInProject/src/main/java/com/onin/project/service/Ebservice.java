@@ -8,13 +8,14 @@ import org.springframework.stereotype.Service;
 
 import com.onin.project.dto.CategoryDTO;
 import com.onin.project.dto.InvoiceDTO;
+import com.onin.project.dto.InvoiceJoinDTO;
 import com.onin.project.dto.MemberDTO;
-import com.onin.project.mapper.EbmemberMapper;
+import com.onin.project.mapper.EbMapper;
 
 @Service
-public class Ebloginservice {
+public class Ebservice {
 	@Autowired
-	EbmemberMapper ebmemberMapper;
+	EbMapper ebmemberMapper;
 	
 	public MemberDTO memberLogin(MemberDTO memberdto) {
 		return ebmemberMapper.memberLogin(memberdto);
@@ -39,7 +40,16 @@ public class Ebloginservice {
 	public int estimateDone(InvoiceDTO invoicedto) {
 		return ebmemberMapper.estimateDone(invoicedto);
 	}
-
+	
+	//로그인 사용자가 보낸 의뢰요청서
+//	public List<InvoiceDTO> invoice(int from_mno) {
+//		return ebmemberMapper.invoice(from_mno);
+//	}
+	
+	//invoice, category Join
+	public List<InvoiceJoinDTO> invoice(int from_mno) {
+		return ebmemberMapper.invoice(from_mno);
+	}
 	
 
 	
