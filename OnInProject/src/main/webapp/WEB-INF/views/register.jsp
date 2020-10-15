@@ -1406,23 +1406,27 @@ textarea {
 .ejEJPT {
 	padding-left: 157px;
 }
-.alert-success{
-	color : #1e90ff;
-	font-size : 12px;
+
+.alert-success {
+	color: #1e90ff;
+	font-size: 12px;
 	padding-left: 157px;
-	}
-.alert-danger{
-	color : #ff0000;
-	font-size : 12px;
+}
+
+.alert-danger {
+	color: #ff0000;
+	font-size: 12px;
 	padding-left: 157px;
-	}
-	
+}
 </style>
 
 
 
 </head>
 <script>
+window.onload = function(){
+	var check = false;
+	var regExp = /([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/
 $(function(){
 	//아이디 중복체크
 	    $('#asd').click(function(){
@@ -1434,9 +1438,13 @@ $(function(){
 		     },
 		     success:function(data){	//data : checkSignup에서 넘겨준 결과값
 		            if($.trim(data)=="YES"){
-		               if($('#email').val()!=''){ 
-		               	alert("사용가능한 이메일입니다.");
-		               }
+		               if(!regExp.test($('#email').val())){ 
+		               	alert("사용이 불가능한 형식의 이메일입니다.");
+		               }else{
+		            	   alert("사용가능한 이메일입니다.");
+		            	   check = true;
+		            	   
+			               }
 		           	}else{
 		               if($('#email').val()!=''){
 		                  alert("중복된 이메일입니다.");
@@ -1449,7 +1457,17 @@ $(function(){
 	     })
 
 	});
+	
+document.getElementById("registerBtn").addEventListener("click", function(){
 
+	if(){	
+	
+	}
+	}else(check && $("#email")){
+			document.getElementById("register").submit()
+	}
+});
+	  
 
 $(function() {
 	$("#alert-success").hide();
@@ -1468,177 +1486,177 @@ $(function() {
 		}
 	});
 });
-
+}
 
 </script>
 
 
 <body>
-<%@include file="header.jsp" %>
-			<div class="sc-bnXvFD buSScp">
-				<div class="fresnel-container fresnel-greaterThan-xs ">
-					<div class="fresnel-container fresnel-greaterThan-xs ">
-						<div class="sc-csZoYU ivQTYn">
-							<div width="287px" class="sc-dpiBDp bTkeVG">
-								<img src="https://pren.kr/static/Icon/logo.svg" alt="logo"
-									width="124px" height="62px" />
-								<div>
-									<p color="#000000" class="sc-bxivhb sc-hENMEE fmIaGN">회원가입</p>
-								</div>
-							</div>
-							<p color="#000000" class="sc-bxivhb sc-dCaJBF bYQuSi">새로운 만남이
-								가져오는 가치 창출에 대한 가능성을 믿습니다.</p>
+	<%@include file="header.jsp"%>
+	<div class="sc-bnXvFD buSScp">
+		<div class="fresnel-container fresnel-greaterThan-xs ">
+			<div class="fresnel-container fresnel-greaterThan-xs ">
+				<div class="sc-csZoYU ivQTYn">
+					<div width="287px" class="sc-dpiBDp bTkeVG">
+						<img src="https://pren.kr/static/Icon/logo.svg" alt="logo"
+							width="124px" height="62px" />
+						<div>
+							<p color="#000000" class="sc-bxivhb sc-hENMEE fmIaGN">회원가입</p>
 						</div>
 					</div>
-					<div class="fresnel-container fresnel-greaterThan-xs ">
-						<div class="sc-nrwXf bxvfV">
-							<div class="sc-eitiEO JWpsr">
-								<div width="970px" class="sc-bhlBdH dkblTD">
-									<div>
-										<div class="fresnel-container fresnel-greaterThan-xs ">
-											<div class="sc-cXHFlN flDCkP">
-												<form method="post" action="register">
-													<div class="sc-ifAKCX ktBaKe">
-														<div width="612px" class="sc-ihiiSJ hmuaMQ">
-															<p class="sc-bxivhb sc-iNovjJ cftYnu">이메일</p>
-															<div class="sc-gJTSre cWlVFq">
-																<div width="296px" class="sc-chPdSV glyfuW">
-																	<div width="50px" class="sc-kgoBCf bUwjoZ">
-																		<img src="https://pren.kr/static/Icon/email.svg"
-																			alt="email" width="32.50%" height="27.50%" />
-																	</div>
-																	<div class="sc-kGXeez kUKQcj">
-																		<div class="sc-bdVaJa jCeSos">
-																			<input id="email" name="email" type="email" placeholder="이메일"
-																				 class="sc-htpNat ksfJEf sc-kpOJdX intbG"
-																				width="100%" />
-																		</div>
-																	</div>
+					<p color="#000000" class="sc-bxivhb sc-dCaJBF bYQuSi">새로운 만남이
+						가져오는 가치 창출에 대한 가능성을 믿습니다.</p>
+				</div>
+			</div>
+			<div class="fresnel-container fresnel-greaterThan-xs ">
+				<div class="sc-nrwXf bxvfV">
+					<div class="sc-eitiEO JWpsr">
+						<div width="970px" class="sc-bhlBdH dkblTD">
+							<div>
+								<div class="fresnel-container fresnel-greaterThan-xs ">
+									<div class="sc-cXHFlN flDCkP">
+										<form id="register" method="post" action="register">
+											<div class="sc-ifAKCX ktBaKe">
+												<div width="612px" class="sc-ihiiSJ hmuaMQ">
+													<p class="sc-bxivhb sc-iNovjJ cftYnu">이메일</p>
+													<div class="sc-gJTSre cWlVFq">
+														<div width="296px" class="sc-chPdSV glyfuW">
+															<div width="50px" class="sc-kgoBCf bUwjoZ">
+																<img src="https://pren.kr/static/Icon/email.svg"
+																	alt="email" width="32.50%" height="27.50%" />
+															</div>
+															<div class="sc-kGXeez kUKQcj">
+																<div class="sc-bdVaJa jCeSos">
+																	<input id="email" name="email" type="email"
+																		placeholder="이메일"
+																		class="sc-htpNat ksfJEf sc-kpOJdX intbG" width="100%" />
 																</div>
+															</div>
+														</div>
 
-																<button id="asd" width="139px" height="50px" type="button"
-																	class="sc-EHOje kVkKtH">중복확인</button>
-															</div>
-														</div>
-<!-- 														 <div width="612px" class="sc-ihiiSJ hmuaMQ"> -->
-<!-- 															<p class="sc-bxivhb sc-iNovjJ cftYnu"></p> -->
-<!-- 															<div class="sc-gJTSre cWlVFq"> -->
-<!-- 																<div width="296px" class="sc-chPdSV glyfuW"> -->
-<!-- 																	<div width="50px" class="sc-kgoBCf bUwjoZ"> -->
-<!-- 																		<img src="https://pren.kr/static/Icon/email.svg" -->
-<!-- 																			alt="email" width="32.50%" height="27.50%" /> -->
-<!-- 																	</div> -->
-<!-- 																	<div class="sc-kGXeez kUKQcj"> -->
-<!-- 																		<div class="sc-bdVaJa jCeSos"> -->
-<!-- 																			<input name="email" type="text" placeholder="인증번호" -->
-<!-- 																				value="" class="sc-htpNat ksfJEf sc-kpOJdX intbG" -->
-<!-- 																				width="100%" /> -->
-<!-- 																		</div> -->
-<!-- 																	</div> -->
-<!-- 																</div> -->
+														<button id="asd" width="139px" height="50px" type="button"
+															class="sc-EHOje kVkKtH">중복확인</button>
+													</div>
+												</div>
+												<!-- 														 <div width="612px" class="sc-ihiiSJ hmuaMQ"> -->
+												<!-- 															<p class="sc-bxivhb sc-iNovjJ cftYnu"></p> -->
+												<!-- 															<div class="sc-gJTSre cWlVFq"> -->
+												<!-- 																<div width="296px" class="sc-chPdSV glyfuW"> -->
+												<!-- 																	<div width="50px" class="sc-kgoBCf bUwjoZ"> -->
+												<!-- 																		<img src="https://pren.kr/static/Icon/email.svg" -->
+												<!-- 																			alt="email" width="32.50%" height="27.50%" /> -->
+												<!-- 																	</div> -->
+												<!-- 																	<div class="sc-kGXeez kUKQcj"> -->
+												<!-- 																		<div class="sc-bdVaJa jCeSos"> -->
+												<!-- 																			<input name="email" type="text" placeholder="인증번호" -->
+												<!-- 																				value="" class="sc-htpNat ksfJEf sc-kpOJdX intbG" -->
+												<!-- 																				width="100%" /> -->
+												<!-- 																		</div> -->
+												<!-- 																	</div> -->
+												<!-- 																</div> -->
 
 
-<!-- 															</div> -->
-<!-- 														</div> -->
+												<!-- 															</div> -->
+												<!-- 														</div> -->
 
-													</div>
-													<div class="sc-ifAKCX ktBaKe">
-														<div width="452px" class="sc-ihiiSJ flypWG">
-															<p class="sc-bxivhb sc-iNovjJ cftYnu">비밀번호</p>
-															<div width="296px" class="sc-chPdSV glyfuW">
-																<div width="50px" class="sc-kgoBCf bUwjoZ">
-																	<img src="https://pren.kr/static/Icon/password.svg"
-																		alt="password" width="30.00%" height="37.50%" />
-																</div>
-																<div class="sc-kGXeez kUKQcj">
-																	<div class="sc-bdVaJa jCeSos">
-																		<input id ="pwd" name="pwd" type="password" placeholder="비밀번호"
-																			value="" class="sc-htpNat ksfJEf sc-kpOJdX intbG"
-																			width="100%" />
-																			
-																	</div>
-																</div>
-															</div>
-														</div>
-														<div width="453px" class="sc-ihiiSJ bdXKMA">
-															<div width="296px" class="sc-chPdSV glyfuW">
-																<div width="50px" class="sc-kgoBCf bUwjoZ">
-																	<img src="https://pren.kr/static/Icon/password.svg" alt="password"
-																		width="30.00%" height="37.50%" />
-																</div>
-																<div class="sc-kGXeez kUKQcj">
-																	<div class="sc-bdVaJa jCeSos">
-																		<input id="pwd2" type="password" placeholder="비밀번호 확인" value=""
-																			class="sc-htpNat ksfJEf sc-kpOJdX intbG" width="100%" />
-																	</div>																	
-																</div>
-															</div>
-														</div>
-													</div>
-													<div class="alert alert-success" id="alert-success" >비밀번호가 일치합니다.</div> 
-													<div class="alert alert-danger" id="alert-danger">비밀번호가 일치하지 않습니다.</div>
-													<div class="sc-ifAKCX ktBaKe">
-														<div width="452px" class="sc-ihiiSJ flypWG">
-															<p class="sc-bxivhb sc-iNovjJ cftYnu">사용자정보</p>
-															<div width="297px" class="sc-chPdSV gRxJcl">															
-																<div width="50px" class="sc-kgoBCf bUwjoZ">
-																	<img src="https://pren.kr/static/Icon/nickname.svg"
-																		alt="nickname" width="32.50%" height="35.00%" />
-																</div>
-																<div class="sc-kGXeez kUKQcj">
-																	<div class="sc-bdVaJa jCeSos">
-																		<input id="name" name="name" placeholder="이름" value=""
-																			class="sc-htpNat ksfJEf sc-kpOJdX intbG" width="100%" />
-																	</div>
-																</div>
-															</div>
-														</div>
-														<div width="611px" class="sc-ihiiSJ cOiWSs">
-															<div width="297px" class="sc-chPdSV gRxJcl">
-																<div width="50px" class="sc-kgoBCf bUwjoZ">
-																	<img src="https://pren.kr/static/Icon/tel.svg" alt="tel"
-																		width="32.50%" height="32.50%" />
-																</div>
-																<div class="sc-kGXeez kUKQcj">
-																	<div class="sc-bdVaJa jCeSos">
-																		<input id="tel" name="tel" placeholder="휴대폰 번호(번호만 입력해주세요)"
-																			value="" class="sc-htpNat ksfJEf sc-kpOJdX intbG"
-																			width="100%" />
-																	</div>
-																</div>
-															</div>
-															<button width="139px" height="50px" type="button"
-																class="sc-EHOje dKYqiz">인증</button>
-														</div>
-														<div class="sc-kyCyAI dXQimh"></div>
-													</div>
-													<div class="sc-ifAKCX ktBaKe">
-														<div width="538px" class="sc-ihiiSJ bvXeCN">
-<!-- 															<p class="sc-bxivhb sc-iNovjJ cftYnu">이용약관 동의</p> -->
-															<div class="sc-eAyhxF daGJjB">
-<!-- 																<input type="checkbox" -->
-<!-- 																	id="b3d360b2-eb37-475b-a81f-c473615b5f8a" value="false" -->
-<!-- 																	class="sc-bZQynM evOLrP" /><label -->
-<!-- 																	for="b3d360b2-eb37-475b-a81f-c473615b5f8a" -->
-<!-- 																	height="10px" value="false" class="sc-gzVnrw KSyMU"></label> -->
-<!-- 																<p color="#585858" class="sc-bxivhb sc-kbdWBx gkRfQP"> -->
-<!-- 																	Pren<span class="sc-eVrGFk kBCtDU">서비스 약관</span> 및 <span -->
-<!-- 																		class="sc-eVrGFk kBCtDU">개인정보 처리방침</span>에 동의합니다.<br /> -->
-<!-- 																	<br />여기에는 ㈜탈트로부터 마케팅 정보를 받는 것에 대한 동의가 포함됩니다.<br /> <br />언제든지 -->
-<!-- 																	마케팅 커뮤니케이션을 수신 거부 할 수 있습니다. 
-																</p>-->
-															</div>
-														</div>
-														<div class="sc-kyCyAI ejEJPT"></div>
-													</div>
-													<div id="register" width="613px" class="sc-ihiiSJ erEnpy">
-														<button width="297px" height="60px" type="submit"
-													
-															class="sc-EHOje sc-cLmFfZ fOHccz">회원가입</button>
-													</div>
-												</form>
 											</div>
-										</div>
+											<div class="sc-ifAKCX ktBaKe">
+												<div width="452px" class="sc-ihiiSJ flypWG">
+													<p class="sc-bxivhb sc-iNovjJ cftYnu">비밀번호</p>
+													<div width="296px" class="sc-chPdSV glyfuW">
+														<div width="50px" class="sc-kgoBCf bUwjoZ">
+															<img src="https://pren.kr/static/Icon/password.svg"
+																alt="password" width="30.00%" height="37.50%" />
+														</div>
+														<div class="sc-kGXeez kUKQcj">
+															<div class="sc-bdVaJa jCeSos">
+																<input id="pwd" name="pwd" type="password"
+																	placeholder="비밀번호" value=""
+																	class="sc-htpNat ksfJEf sc-kpOJdX intbG" width="100%" />
+
+															</div>
+														</div>
+													</div>
+												</div>
+												<div width="453px" class="sc-ihiiSJ bdXKMA">
+													<div width="296px" class="sc-chPdSV glyfuW">
+														<div width="50px" class="sc-kgoBCf bUwjoZ">
+															<img src="https://pren.kr/static/Icon/password.svg"
+																alt="password" width="30.00%" height="37.50%" />
+														</div>
+														<div class="sc-kGXeez kUKQcj">
+															<div class="sc-bdVaJa jCeSos">
+																<input id="pwd2" type="password" placeholder="비밀번호 확인"
+																	value="" class="sc-htpNat ksfJEf sc-kpOJdX intbG"
+																	width="100%" />
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="alert alert-success" id="alert-success">비밀번호가
+												일치합니다.</div>
+											<div class="alert alert-danger" id="alert-danger">비밀번호가
+												일치하지 않습니다.</div>
+											<div class="sc-ifAKCX ktBaKe">
+												<div width="452px" class="sc-ihiiSJ flypWG">
+													<p class="sc-bxivhb sc-iNovjJ cftYnu">사용자정보</p>
+													<div width="297px" class="sc-chPdSV gRxJcl">
+														<div width="50px" class="sc-kgoBCf bUwjoZ">
+															<img src="https://pren.kr/static/Icon/nickname.svg"
+																alt="nickname" width="32.50%" height="35.00%" />
+														</div>
+														<div class="sc-kGXeez kUKQcj">
+															<div class="sc-bdVaJa jCeSos">
+																<input id="name" name="name" placeholder="이름" value=""
+																	class="sc-htpNat ksfJEf sc-kpOJdX intbG" width="100%" />
+															</div>
+														</div>
+													</div>
+												</div>
+												<div width="611px" class="sc-ihiiSJ cOiWSs">
+													<div width="297px" class="sc-chPdSV gRxJcl">
+														<div width="50px" class="sc-kgoBCf bUwjoZ">
+															<img src="https://pren.kr/static/Icon/tel.svg" alt="tel"
+																width="32.50%" height="32.50%" />
+														</div>
+														<div class="sc-kGXeez kUKQcj">
+															<div class="sc-bdVaJa jCeSos">
+																<input id="tel" name="tel"
+																	placeholder="휴대폰 번호(번호만 입력해주세요)" value=""
+																	class="sc-htpNat ksfJEf sc-kpOJdX intbG" width="100%" />
+															</div>
+														</div>
+													</div>
+													<button width="139px" height="50px" type="button"
+														class="sc-EHOje dKYqiz">인증</button>
+												</div>
+												<div class="sc-kyCyAI dXQimh"></div>
+											</div>
+											<div class="sc-ifAKCX ktBaKe">
+												<div width="538px" class="sc-ihiiSJ bvXeCN">
+													<!-- 															<p class="sc-bxivhb sc-iNovjJ cftYnu">이용약관 동의</p> -->
+													<div class="sc-eAyhxF daGJjB">
+														<!-- 																<input type="checkbox" -->
+														<!-- 																	id="b3d360b2-eb37-475b-a81f-c473615b5f8a" value="false" -->
+														<!-- 																	class="sc-bZQynM evOLrP" /><label -->
+														<!-- 																	for="b3d360b2-eb37-475b-a81f-c473615b5f8a" -->
+														<!-- 																	height="10px" value="false" class="sc-gzVnrw KSyMU"></label> -->
+														<!-- 																<p color="#585858" class="sc-bxivhb sc-kbdWBx gkRfQP"> -->
+														<!-- 																	Pren<span class="sc-eVrGFk kBCtDU">서비스 약관</span> 및 <span -->
+														<!-- 																		class="sc-eVrGFk kBCtDU">개인정보 처리방침</span>에 동의합니다.<br /> -->
+														<!-- 																	<br />여기에는 ㈜탈트로부터 마케팅 정보를 받는 것에 대한 동의가 포함됩니다.<br /> <br />언제든지 -->
+														<!-- 																	마케팅 커뮤니케이션을 수신 거부 할 수 있습니다. 
+																</p>-->
+													</div>
+												</div>
+												<div class="sc-kyCyAI ejEJPT"></div>
+											</div>
+											<div width="613px" class="sc-ihiiSJ erEnpy">
+												<button id="registerBtn" width="297px" height="60px"
+													type="button" class="sc-EHOje sc-cLmFfZ fOHccz">회원가입</button>
+											</div>
+										</form>
 									</div>
 								</div>
 							</div>
@@ -1646,5 +1664,7 @@ $(function() {
 					</div>
 				</div>
 			</div>
-			
-<%@include file="footer.jsp" %>		
+		</div>
+	</div>
+
+	<%@include file="footer.jsp"%>
