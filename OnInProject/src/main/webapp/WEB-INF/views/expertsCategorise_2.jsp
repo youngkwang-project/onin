@@ -2584,7 +2584,7 @@ textarea {
 
 		}
 
-		var category = "${category}"
+		var category = "${category.c.CNAME}"
 		if (category != "") {
 			cateName.innerHTML = '<div id="cateName" class="sc-gqjmRU bgQVQZ">'
 					+ category + '</div>'
@@ -2604,9 +2604,9 @@ textarea {
 							
 
 								var detail = '<a  href="/experts/categories/category?cno='
-										+ ${member.CNO}
+										+ ${member.c.CNO}
 										+ '"><div class="sc-fjdhpX eWZWnR">'
-										+ "${member.CNAME}" + '</div></a>'
+										+ "${member.c.CNAME}" + '</div></a>'
 								sum = sum + detail
 							
 							</c:forEach>

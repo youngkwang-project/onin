@@ -45,6 +45,7 @@ public class YKController {
 	@GetMapping(value = "/experts/categories/category/detail")
 	public String category(Model model, @RequestParam("cno") int cno) {
 		
+	
 		
 		
 		return "expertsCategorise_2";
