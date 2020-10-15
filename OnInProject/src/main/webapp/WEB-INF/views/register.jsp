@@ -1460,12 +1460,32 @@ $(function(){
 	
 document.getElementById("registerBtn").addEventListener("click", function(){
 
-	if(){	
-	
-	}
-	}else(check && $("#email")){
+	if(check){
+		if($('#email').val()==""){
+			alert("이메일을 입력하세요.");
+			$('#email').focus();
+			return false;	
+		}else if($('#name').val()==""){
+			alert("이름을 입력하세요.");
+			$('#name').focus();
+			return false;
+		}else if($('#pwd').val==""){
+			alert("비밀번호를 입력하세요.");
+			$('#pwd').focus();
+			return false;
+		}else if($('#tel').val==""){
+			alert("핸드폰번호를 입력하세요.");
+			$('#tel').focus();
+			return false;
+		}else if($('#pwd')!=$('#pwd2')){
+			alert("비밀번호가 일치하지 않습니다.");
+			return false;
+		}else{
 			document.getElementById("register").submit()
-	}
+		}		
+	}else{
+		alert("중복확인을 눌러주세요");
+		}
 });
 	  
 
