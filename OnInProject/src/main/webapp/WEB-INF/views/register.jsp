@@ -1450,6 +1450,7 @@ $(function(){
 
 	});
 
+
 $(function() {
 	$("#alert-success").hide();
 	$("#alert-danger").hide();
@@ -1467,6 +1468,7 @@ $(function() {
 		}
 	});
 });
+
 
 </script>
 
@@ -1585,7 +1587,7 @@ $(function() {
 																</div>
 																<div class="sc-kGXeez kUKQcj">
 																	<div class="sc-bdVaJa jCeSos">
-																		<input name="name" placeholder="이름" value=""
+																		<input id="name" name="name" placeholder="이름" value=""
 																			class="sc-htpNat ksfJEf sc-kpOJdX intbG" width="100%" />
 																	</div>
 																</div>
@@ -1599,7 +1601,7 @@ $(function() {
 																</div>
 																<div class="sc-kGXeez kUKQcj">
 																	<div class="sc-bdVaJa jCeSos">
-																		<input name="tel" placeholder="휴대폰 번호(번호만 입력해주세요)"
+																		<input id="tel" name="tel" placeholder="휴대폰 번호(번호만 입력해주세요)"
 																			value="" class="sc-htpNat ksfJEf sc-kpOJdX intbG"
 																			width="100%" />
 																	</div>
@@ -1629,7 +1631,7 @@ $(function() {
 														</div>
 														<div class="sc-kyCyAI ejEJPT"></div>
 													</div>
-													<div width="613px" class="sc-ihiiSJ erEnpy">
+													<div id="register" width="613px" class="sc-ihiiSJ erEnpy">
 														<button width="297px" height="60px" type="submit"
 													
 															class="sc-EHOje sc-cLmFfZ fOHccz">회원가입</button>

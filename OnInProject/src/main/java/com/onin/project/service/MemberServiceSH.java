@@ -27,7 +27,8 @@ public class MemberServiceSH {
 		// TODO Auto-generated method stub
 		return memberMapper.idCheck(memberDTO);
 	}
-	
+
+		
 //	public void create(MemberDTO memberDTO) throws Exception {
 //		// Controller에서 입력받은 member  정보를  memberDTO에 넣어서 받아온다.
 //		System.out.println("memberDTO = " + memberDTO.getEmail());
@@ -49,7 +50,7 @@ public class MemberServiceSH {
 //		sendMail.setText( // 메일내용
 //				
 //				"<h1>메일인증</h1>" +
-//				"<a href='http://localhost/user/emailConfirm?email=" + memberDTO.getEmail() +
+//				"<a href='http://localhost/emailConfirm?email=" + memberDTO.getEmail() +
 //				"&key=" + key +
 //				"' target='_blenk'>이메일 인증 확인</a>");
 //		sendMail.setFrom("oninmanager@gmail.com", "관리자"); // 보낸이
@@ -61,5 +62,5 @@ public class MemberServiceSH {
 //	public void userAuth(String email) throws Exception {;
 //		memberMapper.userAuth(email);
 //	}
-	
+//	
 }

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.onin.project.mapper.ExpertsMapperSH">
+
+	<insert id="profile">
+		insert into
+		pro_member(mno,profile_img,intro,profile,career,skill,career_file,portfolio_file,add,add_detail,add_post,bank,acc,profile_open,cno,dcno)
+		value(#{mno},#{profile_img},#{intro},#{profile},#{career},#{skill},#{career_file},#{portfolio_file},#{add},#{add_detail},#{add_post},#{bank},#{acc},#{profile_open},#{cno},#{dcno})
+	</insert>
+	<update id="profUpload">
+		update pro_member set 
+		profile_img=#{dbSaveName} 
+		where mno=#{mno}
+	</update>
+</mapper>

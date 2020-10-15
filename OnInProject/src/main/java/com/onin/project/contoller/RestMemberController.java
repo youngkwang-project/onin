@@ -31,7 +31,7 @@ public class RestMemberController {
 		System.out.println(str);
 		return str;
 	}
-	
+//	
 //	@RequestMapping(value = "/emailConfirm", method = RequestMethod.GET)
 //	public String emailConfirm(String email, Model model) throws Exception { // 이메일 인증 확인창
 //			memberService.userAuth(email);

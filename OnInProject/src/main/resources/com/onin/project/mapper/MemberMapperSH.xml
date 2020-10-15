@@ -8,7 +8,7 @@
 	values(#{mno},#{email},#{pwd},#{name},#{tel})
 </insert>
 <!-- <insert id="createAuthKey"> -->
-<!-- 	 into registerauth values(#{email}, #{authKey}) -->
+<!-- 	 into member values(#{email}, #{authKey}) -->
 <!-- </insert> -->
 
 <!-- <update id="userAuth"> -->
