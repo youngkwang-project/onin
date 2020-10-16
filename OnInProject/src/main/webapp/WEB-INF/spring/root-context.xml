@@ -17,7 +17,7 @@
       <property name="jdbcUrl" value="jdbc:log4jdbc:oracle:thin:@localhost:1521:XE"></property> -->
    
       <property name="username" value="project"></property>
-      <property name="password" value="1234"></property>
+      <property name="password" value="2@xmah78ei"></property>
    </bean>
 	<!-- 파일업로드 -->
 	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">

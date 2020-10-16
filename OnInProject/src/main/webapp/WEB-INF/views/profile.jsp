@@ -3548,6 +3548,125 @@ textarea {
 	flex-direction: column;
 	margin-top: 13px;
 }
+
+.hrKZXY {
+	width: 765px;
+	min-height: 691px;
+	border: 1px solid rgb(204, 204, 204);
+	position: fixed;
+	z-index: 99999;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: white;
+	display: flex;
+	flex-direction: column;
+	-webkit-box-align: center;
+	align-items: center;
+	padding: 25px 0px 0px;
+}
+
+#close {
+	width: 100px;
+	margin: auto;
+	cursor: pointer;
+	font-weight: bold;
+}
+.ghsfDZ {
+    width: 765px;
+    min-height: 691px;
+    border: 1px solid rgb(204, 204, 204);
+    position: fixed;
+    z-index: 99999;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+    padding: 25px 0px 0px;
+}
+.hxxTXM {
+    font-size: 24px;
+    color: rgb(25, 25, 25);
+    margin: 42px auto 15px 48px;
+    flex: 0 0 auto;
+}
+.beHNvu {
+    font-size: 16px;
+    color: rgb(25, 25, 25);
+    margin: 26px auto 15px 48px;
+}
+.byurlq {
+    position: relative;
+    display: inline-block;
+}
+.igARar {
+    width: calc(620px);
+    text-align: inherit;
+    min-height: 48px;
+    padding: 0px 23px;
+    font-size: 16px;
+    color: rgb(88, 88, 88);
+    background-color: rgb(246, 246, 246);
+    border: 1px solid rgb(204, 204, 204);
+    position: relative;
+    outline: none;
+    cursor: inherit;
+}
+.beHNvu {
+    font-size: 16px;
+    color: rgb(25, 25, 25);
+    margin: 26px auto 15px 48px;
+}
+.gxxFun {
+    font-size: 13px;
+    color: rgb(153, 153, 153);
+    text-indent: 10px;
+
+}
+.hKPJmL {
+    position: relative;
+}
+.icBQde {
+    display: flex;
+    flex-wrap: wrap;
+    width: 628px;
+    max-height: 300px;
+    overflow: auto;
+    border: 1px solid rgb(204, 204, 204);
+    padding: 0px 20px 20px;
+}
+.kgGRCP {
+    position: relative;
+    width: 143px;
+    height: 143px;
+    margin: 17px 5px 0px;
+    background-color: rgb(231, 231, 231);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+}
+.ejRmPc {
+    display: flex;
+    width: 668px;
+    margin-top: 25px;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+}
+.fCOxdE {
+    height: 40px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: rgb(0, 211, 135);
+    font-weight: 500;
+}
+
 </style>
 
 <script>
@@ -3595,621 +3714,651 @@ function execPostCode() {
 }
 
 
-$(function(){
-	//계좌인증	
-	
-	$('#accConfirm').click(function(){
-		$.ajax({
-			type:"POST",
-			url:"https://openapi.openbanking.or.kr/v2.0/inquiry/real_name",
-		 	headers:{
-			 	Authorization:"Bearer <access_token>"
-		 		},		   
-			dataType:"json",
-			data:{
-				bank_tran_id: "F123456789U4BC34239Z",
-				bank_code_std: "098",
-				account_num: "0001230000678",
-				account_holder_info_type: "1",
-				account_holder_info: "8801012",
-				tran_dtime: "20160310101921"
-				},
-			success:function(data){
-				console.log(data);
-			}
-				})
-		})
+$(function() {
+    //계좌인증	
+
+    $('#accConfirm').click(function() {
+        $.ajax({
+            type: "POST",
+            url: "https://openapi.openbanking.or.kr/v2.0/inquiry/real_name",
+            headers: {
+                Authorization: "Bearer <access_token>"
+            },
+            dataType: "json",
+            data: {
+                bank_tran_id: "F123456789U4BC34239Z",
+                bank_code_std: "098",
+                account_num: "0001230000678",
+                account_holder_info_type: "1",
+                account_holder_info: "8801012",
+                tran_dtime: "20160310101921"
+            },
+            success: function(data) {
+                console.log(data);
+            }
+        })
+    })
+    
+    $('#popBtn').click(function(){
+		$('#pop').show();
+        });
+    $('#close').click(function(){
+		$('#pop').hide();
+        });
+
+    $('#addCar').hide()
+	$('#addCarBtn').click(function(){
+		$('#addCar').show();
+		});
 });
+
+	
+	
+
 </script>
 </head>
 <body>
-<%@include file="header.jsp" %>
-			<div class="sc-bnXvFD buSScp">
-				<div class="fresnel-container fresnel-greaterThan-xs ">
-					<div width="1247px" class="sc-gOhSNZ QbJYd">
-						<div width="928px" class="sc-jwJjzT cBgKYk">
+	<%@include file="header.jsp"%>
+	<div class="sc-bnXvFD buSScp">
+		<div class="fresnel-container fresnel-greaterThan-xs ">
+			<div width="1247px" class="sc-gOhSNZ QbJYd">
+				<div width="928px" class="sc-jwJjzT cBgKYk">
+					<div class="fresnel-container fresnel-greaterThan-xs ">
+						<div class="sc-ghUbLI eCMiui">
+							<img src="https://pren.kr/static/expert_onboarding/illust.svg"
+								width="393px" height="264px" />
+						</div>
+					</div>
+					<div class="fresnel-container fresnel-at-xs ">
+						<div class="sc-ghUbLI PpAqF">
+							<p color="#000000" class="sc-bxivhb sc-ljUfdc bVwINp">판매자 전환</p>
+
+							<div>
+								<p color="#585858" class="sc-bxivhb sc-cgThhu fCcgYe">
+									실력 검증은 기본사항이며 향후 활동하시는데 있어<br />파트너님의 프로의식과 정직함 여부에 따라 <br />의뢰인
+									만족도가 정해집니다. 전문가 파트너 전환심사의 주된 내용은 파트너 전문분야의 실력에 관한 <br />
+									심사입니다. 신중하고 숙고히 작성 부탁드립니다.
+								</p>
+							</div>
+							<div class="sc-ghUbLI PpAqF">
+								<a href="/commission" target="_blank" class="sc-LAuEU hPNSTp"><button
+										class="sc-EHOje sc-iEPtyo eyeceW">
+										<p class="sc-bxivhb sc-ertOQY jDWytV">프랜 수수료 정책 확인하기</p>
+									</button></a><a href="https://pren.kr/categories/experts/portfolio/386"
+									target="__blank" class="sc-gkfylT cCZsfw"><button
+										class="sc-EHOje sc-iEPtyo jFGgVT">
+										<p class="sc-bxivhb sc-ertOQY jDWytV">프로필 작성 가이드 보기</p>
+									</button></a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="sc-bjPkoM sc-kBzFSH hhComY">
+					<div class="fresnel-container fresnel-greaterThan-xs ">
+						<form>
+							<div class="fresnel-container fresnel-at-xs ">
+								<p color="#191919" class="sc-bxivhb kHpoSQ">활동 카테고리 선택</p>
+							</div>
+							<p class="sc-bxivhb sc-faQXZc krsasd">
+								활동 가능한 카테고리와 세부 작업 영역을 선택할 수 있습니다.<br />의뢰요청서가 도착하면 알림으로
+								보내드립니다.
+							</p>
+							<div width="612px" class="sc-imDdex mnBnF">
+								<div width="296px" class="sc-iwsKbI fgptoz">
+									<div class="sc-gZMcBi gwdlnH">
+										<div class="sc-gqjmRU bgQVQZ">카테고리</div>
+										<div class="sc-VigVT gjkitw"></div>
+									</div>
+								</div>
+								<div width="296px" class="sc-iwsKbI fgptoz">
+									<div class="sc-gZMcBi gwdlnH">
+										<div class="sc-gqjmRU bgQVQZ">작업 가능 영역</div>
+										<div class="sc-VigVT gjkitw"></div>
+									</div>
+								</div>
+							</div>
+							<div class="sc-lffWgi fFWFeB">
+								<div width="fit-content" height="36px" data-id="24"
+									class="sc-dnqmqq sc-hMqMXs sc-fGSyRc cdMFHs">웹툰·캐릭터</div>
+								<div width="fit-content" height="36px" data-id="64"
+									class="sc-dnqmqq sc-hMqMXs sc-fGSyRc cdMFHs">영상제작·편집</div>
+							</div>
+						</form>
+					</div>
+				</div>
+				<div class="sc-bjPkoM sc-jEdsij kFfPhc">
+					<div class="fresnel-container fresnel-greaterThan-xs ">
+						<form>
 							<div class="fresnel-container fresnel-greaterThan-xs ">
-								<div class="sc-ghUbLI eCMiui">
-									<img src="https://pren.kr/static/expert_onboarding/illust.svg"
-										width="393px" height="264px" />
+								<p color="#191919" class="sc-bxivhb gAroWi">프로필 항목 등록</p>
+							</div>
+							<div class="sc-lmrgJh hLBqAa">
+								<div class="sc-dzQEYZ BlhYH">
+									<div class="sc-dCVVYJ byuoYp">
+										<div class="sc-kEYyzF lcroCN">
+											<label
+												src="https://pren-backend-storage.s3.ap-northeast-2.amazonaws.com/media/user/1676/ac481338-9eb9-4eb3-91ca-13d35faf2157.png"
+												for="input" class="sc-kkGfuU tGgGQ"></label> <label
+												for="input" class="sc-hSdWYo kEjxSM"></label> <input
+												type="file" id="input" accept="image/*"
+												class="sc-iAyFgw gWYozK" />
+
+										</div>
+										<div class="sc-sVRsr bsTPFA">
+											<div class="fresnel-container fresnel-at-xs ">
+												<p color="#191919" class="sc-bxivhb sc-dHaUqb enLdmk">프로필
+													사진 TIP</p>
+											</div>
+											<p color="#585858" class="sc-bxivhb dnufCY">
+												실명공개는 전문가의 신뢰도를 향상시킵니다.<br />전문가의 사진은 신뢰성과 거래 성사율을 높일수
+												있습니다. 본인의 얼굴만 등록이 가능합니다.
+											</p>
+											<p color="#585858" class="sc-bxivhb giDiXo">
+												* 600x600 정사각 사이즈를 권장합니다. <br />* 적절하지 않은 사진 사용시 반려사유가 될 수
+												있습니다.
+											</p>
+										</div>
+									</div>
+								</div>
+								<div class="sc-dCVVYJ fTZwSX">
+									<p color="#191919" class="sc-bxivhb sc-jkPxnQ jGTkLM">실명 공개
+										여부 선택</p>
+									<p color="#191919" class="sc-bxivhb sc-jkPxnQ jEUQAZ">프로필
+										공개 방법을 선택해주세요.</p>
+									<div class="sc-dCVVYJ ukNHR">
+										<div class="sc-ekQYnd dSQgcU">
+											<div class="sc-bpubUI dQbJbx">
+												<input type="radio" id="username" name="user"
+													class="sc-juQqkt gbRNVn" checked="" /><label
+													for="username" class="sc-bkCOcH fotivz">이름</label>
+											</div>
+											<div width="278px" class="sc-chPdSV bmoXTr">
+												<div width="50px" class="sc-kgoBCf fRTCQn">
+													<img src="https://pren.kr/static/Icon/nickname.svg"
+														alt="nickname" width="32.50%" height="35.00%" />
+												</div>
+												<div class="sc-kGXeez kUKQcj">
+													<div class="sc-bdVaJa jCeSos">
+														<input value="신영광" disabled=""
+															class="sc-htpNat khbizk sc-kpOJdX bAKVje" width="100%" />
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="sc-ekQYnd kByNqL">
+											<div class="sc-bpubUI dQbJbx">
+												<input type="radio" id="nickname" name="user"
+													class="sc-juQqkt gbRNVn" /><label for="nickname"
+													class="sc-bkCOcH fotivz">닉네임</label>
+											</div>
+											<div width="278px" class="sc-chPdSV eqtCXC">
+												<div width="50px" class="sc-kgoBCf fRTCQn">
+													<img src="https://pren.kr/static/Icon/nickname.svg"
+														alt="nickname" width="32.50%" height="35.00%" />
+												</div>
+												<div class="sc-kGXeez kUKQcj">
+													<div class="sc-bdVaJa jCeSos">
+														<input value="영광" disabled=""
+															class="sc-htpNat khbizk sc-kpOJdX bAKVje" width="100%" />
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
 								</div>
 							</div>
 							<div class="fresnel-container fresnel-at-xs ">
-								<div class="sc-ghUbLI PpAqF">
-									<p color="#000000" class="sc-bxivhb sc-ljUfdc bVwINp">판매자
-										전환</p>
-									
-									<div>
-										<p color="#585858" class="sc-bxivhb sc-cgThhu fCcgYe">
-											실력 검증은 기본사항이며 향후 활동하시는데 있어<br />파트너님의 프로의식과 정직함 여부에 따라 <br />의뢰인
-											만족도가 정해집니다. 전문가 파트너 전환심사의 주된 내용은 파트너 전문분야의 실력에 관한 <br />
-											심사입니다. 신중하고 숙고히 작성 부탁드립니다.
-										</p>
-									</div>
-									<div class="sc-ghUbLI PpAqF">
-										<a href="/commission" target="_blank" class="sc-LAuEU hPNSTp"><button
-												class="sc-EHOje sc-iEPtyo eyeceW">
-												<p class="sc-bxivhb sc-ertOQY jDWytV">프랜 수수료 정책 확인하기</p>
-											</button></a><a href="https://pren.kr/categories/experts/portfolio/386"
-											target="__blank" class="sc-gkfylT cCZsfw"><button
-												class="sc-EHOje sc-iEPtyo jFGgVT">
-												<p class="sc-bxivhb sc-ertOQY jDWytV">프로필 작성 가이드 보기</p>
-											</button></a>
-									</div>
+								<p color="#191919" class="sc-bxivhb sc-dHaUqb dAeGPI">한 줄
+									프로필</p>
+							</div>
+							<div class="sc-ewMkZo eYzQqs">
+								<div class="sc-bdVaJa jCeSos">
+									<input placeholder="한 줄 프로필을 입력해주세요."
+										value="열의를 가지고 가르쳐드리겠습니다." width="100%"
+										class="sc-htpNat khbizk" />
 								</div>
+								<p color="#cccccc" class="sc-bxivhb sc-eCXBzT coLRDn">
+									18
+									<!-- -->
+									/
+									<!-- -->
+									23
+								</p>
 							</div>
-						</div>
-						
-						<div class="sc-bjPkoM sc-kBzFSH hhComY">
 							<div class="fresnel-container fresnel-greaterThan-xs ">
-								<form>
-									<div class="fresnel-container fresnel-at-xs ">
-										<p color="#191919" class="sc-bxivhb kHpoSQ">활동 카테고리 선택</p>
-									</div>
-									<p class="sc-bxivhb sc-faQXZc krsasd">
-										활동 가능한 카테고리와 세부 작업 영역을 선택할 수 있습니다.<br />의뢰요청서가 도착하면 알림으로
-										보내드립니다.
-									</p>
-									<div width="612px" class="sc-imDdex mnBnF">
-										<div width="296px" class="sc-iwsKbI fgptoz">
-											<div class="sc-gZMcBi gwdlnH">
-												<div class="sc-gqjmRU bgQVQZ">카테고리</div>
-												<div class="sc-VigVT gjkitw"></div>
-											</div>
-										</div>
-										<div width="296px" class="sc-iwsKbI fgptoz">
-											<div class="sc-gZMcBi gwdlnH">
-												<div class="sc-gqjmRU bgQVQZ">작업 가능 영역</div>
-												<div class="sc-VigVT gjkitw"></div>
-											</div>
-										</div>
-									</div>
-									<div class="sc-lffWgi fFWFeB">
-										<div width="fit-content" height="36px" data-id="24"
-											class="sc-dnqmqq sc-hMqMXs sc-fGSyRc cdMFHs">웹툰·캐릭터</div>
-										<div width="fit-content" height="36px" data-id="64"
-											class="sc-dnqmqq sc-hMqMXs sc-fGSyRc cdMFHs">영상제작·편집</div>
-									</div>
-								</form>
+								<p color="#191919" class="sc-bxivhb sc-dHaUqb dAeGPI">상세 소개</p>
 							</div>
-						</div>
-						<div class="sc-bjPkoM sc-jEdsij kFfPhc">
-							<div class="fresnel-container fresnel-greaterThan-xs ">
-								<form>
-									<div class="fresnel-container fresnel-greaterThan-xs ">
-										<p color="#191919" class="sc-bxivhb gAroWi">프로필 항목 등록</p>
-									</div>
-									<div class="sc-lmrgJh hLBqAa">
-										<div class="sc-dzQEYZ BlhYH">
-											<div class="sc-dCVVYJ byuoYp">
-												<div class="sc-kEYyzF lcroCN">
-													<label 
-														src="https://pren-backend-storage.s3.ap-northeast-2.amazonaws.com/media/user/1676/ac481338-9eb9-4eb3-91ca-13d35faf2157.png"
-														for="input" class="sc-kkGfuU tGgGQ"></label>
-														<label for="input" class="sc-hSdWYo kEjxSM"></label>
-														<input type="file" id="input" accept="image/*"
-														class="sc-iAyFgw gWYozK" />
-														
-												</div>
-												<div class="sc-sVRsr bsTPFA">
-													<div class="fresnel-container fresnel-at-xs ">
-														<p color="#191919" class="sc-bxivhb sc-dHaUqb enLdmk">프로필
-															사진 TIP</p>
-													</div>
-													<p color="#585858" class="sc-bxivhb dnufCY">
-														실명공개는 전문가의 신뢰도를 향상시킵니다.<br />전문가의 사진은 신뢰성과 거래 성사율을 높일수
-														있습니다. 본인의 얼굴만 등록이 가능합니다.
-													</p>
-													<p color="#585858" class="sc-bxivhb giDiXo">
-														* 600x600 정사각 사이즈를 권장합니다. <br />* 적절하지 않은 사진 사용시 반려사유가 될
-														수 있습니다.
-													</p>
-												</div>
-											</div>
-										</div>
-										<div class="sc-dCVVYJ fTZwSX">
-											<p color="#191919" class="sc-bxivhb sc-jkPxnQ jGTkLM">실명
-												공개 여부 선택</p>
-											<p color="#191919" class="sc-bxivhb sc-jkPxnQ jEUQAZ">프로필
-												공개 방법을 선택해주세요.</p>
-											<div class="sc-dCVVYJ ukNHR">
-												<div class="sc-ekQYnd dSQgcU">
-													<div class="sc-bpubUI dQbJbx">
-														<input type="radio" id="username" name="user"
-															class="sc-juQqkt gbRNVn" checked="" /><label
-															for="username" class="sc-bkCOcH fotivz">이름</label>
-													</div>
-													<div width="278px" class="sc-chPdSV bmoXTr">
-														<div width="50px" class="sc-kgoBCf fRTCQn">
-															<img src="https://pren.kr/static/Icon/nickname.svg"
-																alt="nickname" width="32.50%" height="35.00%" />
-														</div>
-														<div class="sc-kGXeez kUKQcj">
-															<div class="sc-bdVaJa jCeSos">
-																<input value="신영광" disabled=""
-																	class="sc-htpNat khbizk sc-kpOJdX bAKVje" width="100%" />
-															</div>
-														</div>
-													</div>
-												</div>
-												<div class="sc-ekQYnd kByNqL">
-													<div class="sc-bpubUI dQbJbx">
-														<input type="radio" id="nickname" name="user"
-															class="sc-juQqkt gbRNVn" /><label for="nickname"
-															class="sc-bkCOcH fotivz">닉네임</label>
-													</div>
-													<div width="278px" class="sc-chPdSV eqtCXC">
-														<div width="50px" class="sc-kgoBCf fRTCQn">
-															<img src="https://pren.kr/static/Icon/nickname.svg"
-																alt="nickname" width="32.50%" height="35.00%" />
-														</div>
-														<div class="sc-kGXeez kUKQcj">
-															<div class="sc-bdVaJa jCeSos">
-																<input value="영광" disabled=""
-																	class="sc-htpNat khbizk sc-kpOJdX bAKVje" width="100%" />
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="fresnel-container fresnel-at-xs ">
-										<p color="#191919" class="sc-bxivhb sc-dHaUqb dAeGPI">한 줄
-											프로필</p>
-									</div>
-									<div class="sc-ewMkZo eYzQqs">
-										<div class="sc-bdVaJa jCeSos">
-											<input placeholder="한 줄 프로필을 입력해주세요."
-												value="열의를 가지고 가르쳐드리겠습니다." width="100%"
-												class="sc-htpNat khbizk" />
-										</div>
-										<p color="#cccccc" class="sc-bxivhb sc-eCXBzT coLRDn">
-											18
-											<!-- -->
-											/
-											<!-- -->
-											23
-										</p>
-									</div>
-									<div class="fresnel-container fresnel-greaterThan-xs ">
-										<p color="#191919" class="sc-bxivhb sc-dHaUqb dAeGPI">상세
-											소개</p>
-									</div>
-									<div class="fresnel-container fresnel-at-xs ">
-										<div width="100%" class="sc-jzJRlG iNJnXl">
-											<textarea height="0px" spellcheck="false"
-												placeholder="상세 프로필을 입력해주세요." width="100%"
-												class="sc-cSHVUG ecbPDt">안녕하세요. 꾸준히 발전해나가려 노력하는 디자이너 신영광입니다.
+							<div class="fresnel-container fresnel-at-xs ">
+								<div width="100%" class="sc-jzJRlG iNJnXl">
+									<textarea height="0px" spellcheck="false"
+										placeholder="상세 프로필을 입력해주세요." width="100%"
+										class="sc-cSHVUG ecbPDt">안녕하세요. 꾸준히 발전해나가려 노력하는 디자이너 신영광입니다.
 경험을 통해 더욱 큰 성장을 이루고 싶습니다.
 
 그래픽 디자인, 편집 디자인, 웹 디자인, 모션 그래픽과 더불어 일러스트 작업까지
 넓고 다양한 프로젝트들을 시도해 왔습니다.
 가지고 있는 역량을 최대한으로 이끌어 내는 결과물을 약속드립니다 :)</textarea>
-											<textarea placeholder="상세 프로필을 입력해주세요." width="100%"
-												class="sc-cSHVUG sc-kAzzGY hdPwAJ"></textarea>
-										</div>
-									</div>
-									<p color="#cccccc" class="sc-bxivhb sc-hfLElm bNajBL">
-										171
-										<!-- -->
-										/
-										<!-- -->
-										350
-									</p>
-								</form>
+									<textarea placeholder="상세 프로필을 입력해주세요." width="100%"
+										class="sc-cSHVUG sc-kAzzGY hdPwAJ"></textarea>
+								</div>
 							</div>
-						</div>
-						<div class="sc-bjPkoM sc-eBipZS dxsYrm">
+							<p color="#cccccc" class="sc-bxivhb sc-hfLElm bNajBL">
+								171
+								<!-- -->
+								/
+								<!-- -->
+								350
+							</p>
+						</form>
+					</div>
+				</div>
+				<div class="sc-bjPkoM sc-eBipZS dxsYrm">
+					<div class="fresnel-container fresnel-greaterThan-xs ">
+						<form>
 							<div class="fresnel-container fresnel-greaterThan-xs ">
-								<form>
-									<div class="fresnel-container fresnel-greaterThan-xs ">
-										<p color="#191919" class="sc-bxivhb gAroWi">경력 및 추가정보 작성</p>
-									</div>
-
-									<div class="fresnel-container fresnel-greaterThan-xs ">
-										<p color="#191919" class="sc-bxivhb sc-dHaUqb gjGgmM">경력</p>
-									</div>
-
-									<div class="fresnel-container fresnel-greaterThan-xs ">
-										<div class="sc-eHgmQL cYGPgb">
-											<div class="sc-cvbbAY iCoHze">
-												<div class="sc-jWBwVP rNZsQ">
-													<input type="text" placeholder="회사(소속)이름" value=""
-														data-id="0" class="sc-brqgnP hTFaCv" />
-													<div class="fresnel-container fresnel-greaterThan-xs ">
-
-													</div>
-													<div class="fresnel-container fresnel-at-xs ">
-														<div width="100%" class="sc-jzJRlG iNJnXl">
-															<textarea height="0px" spellcheck="false"
-																placeholder="개발팀에서 코드리뷰를 담당했습니다." data-id="0"
-																width="100%" class="sc-cSHVUG ldzYSi"></textarea>
-															<textarea placeholder="개발팀에서 코드리뷰를 담당했습니다." data-id="0"
-																width="100%" class="sc-cSHVUG sc-kAzzGY eJWuhM"></textarea>
-														</div>
-													</div>
-													<img src="https://pren.kr/static/Icon/list_item_delete.svg"
-														alt="list_item_delete" width="15px" height="19px"
-														data-id="0" class="sc-cMljjf hNxXIk" />
-												</div>
-											</div>
-											<button width="105px" height="40px" type="button"
-												class="sc-EHOje sc-jAaTju iYSprP">경력 추가</button>
-										</div>
-									</div>
-
-									<div class="fresnel-container fresnel-at-xs ">
-										<p color="#191919" class="sc-bxivhb sc-dHaUqb ivvznD">보유기술</p>
-									</div>
-									<div class="sc-eZXMBi bzZxvs">
-										<div class="sc-Ehqfj bgxZnV">
-											<div class="sc-gggouf iWvWxM">
-												<input type="text" placeholder="보유 기술명을 입력해주세요."
-													data-index="0" value="포토샵1급자격증" class="sc-cyQzhP RmpCp" /><img
-													src="https://pren.kr/static/Icon/list_item_delete.svg"
-													alt="list_item_delete" width="15px" height="19px"
-													data-index="0" class="sc-izUgoq SJaIL" />
-											</div>
-										</div>
-										<span
-											style="font-size: 13px; color: #9d9d9d; line-height: 20px">예:
-											포토샵, 일러스트, Javscript</span>
-										<button width="105px" height="40px" type="button"
-											class="sc-EHOje sc-lXiCt iPTPdU">보유기술 추가</button>
-									</div>
-
-									<div class="fresnel-container fresnel-at-xs ">
-										<p color="#191919" class="sc-bxivhb sc-dHaUqb ivvznD">경력,
-											전공, 자격 증빙자료</p>
-									</div>
-									<div class="sc-eZXMBi bzZxvs">
-										<div class="filepond--wrapper">
-											<input type="file" multiple="" />
-										</div>
-										<span
-											style="font-size: 13px; color: #9d9d9d; line-height: 20px">증빙자료는
-											프랜의 내부 심사용으로 활용 되며 사이트에 노출되지 않습니다. <br />예: 건강보험자격득실확인서,
-											자격증, 학위, 수상내역 등
-										</span>
-									</div>
-								</form>
+								<p color="#191919" class="sc-bxivhb gAroWi">경력 및 추가정보 작성</p>
 							</div>
 
-						</div>
-						<div class="sc-bjPkoM sc-eMgOci eoksPR">
-							<form>
+							<div class="fresnel-container fresnel-greaterThan-xs ">
+								<p color="#191919" class="sc-bxivhb sc-dHaUqb gjGgmM">경력</p>
+							</div>
 
-								<div class="fresnel-container fresnel-at-xs ">
-									<p color="#191919" class="sc-bxivhb kHpoSQ">포트폴리오</p>
+							<div class="fresnel-container fresnel-greaterThan-xs ">
+								<div class="sc-eHgmQL cYGPgb">
+									<div class="sc-cvbbAY iCoHze">
+										<div class="sc-jWBwVP rNZsQ">
+											<input type="text" placeholder="회사(소속)이름" value=""
+												data-id="0" class="sc-brqgnP hTFaCv" />
+											<div class="fresnel-container fresnel-greaterThan-xs ">
+
+											</div>
+											<div class="fresnel-container fresnel-at-xs ">
+												<div width="100%" class="sc-jzJRlG iNJnXl">
+													<textarea height="0px" spellcheck="false"
+														placeholder="개발팀에서 코드리뷰를 담당했습니다." data-id="0" width="100%"
+														class="sc-cSHVUG ldzYSi"></textarea>
+													<textarea placeholder="개발팀에서 코드리뷰를 담당했습니다." data-id="0"
+														width="100%" class="sc-cSHVUG sc-kAzzGY eJWuhM"></textarea>
+												</div>
+												
+												
+											</div>
+											
+											<img src="https://pren.kr/static/Icon/list_item_delete.svg"
+												alt="list_item_delete" width="15px" height="19px"
+												data-id="0" class="sc-cMljjf hNxXIk" />
+										</div>
+										<div id="addCar"class="sc-jWBwVP rNZsQ">
+											<input type="text" placeholder="회사(소속)이름" value=""
+												data-id="0" class="sc-brqgnP hTFaCv" />
+											<div class="fresnel-container fresnel-greaterThan-xs ">
+
+											</div>
+											<div class="fresnel-container fresnel-at-xs ">
+												<div width="100%" class="sc-jzJRlG iNJnXl">
+													<textarea height="0px" spellcheck="false"
+														placeholder="개발팀에서 코드리뷰를 담당했습니다." data-id="0" width="100%"
+														class="sc-cSHVUG ldzYSi"></textarea>
+													<textarea placeholder="개발팀에서 코드리뷰를 담당했습니다." data-id="0"
+														width="100%" class="sc-cSHVUG sc-kAzzGY eJWuhM"></textarea>
+												</div>
+												
+												
+											</div>
+											
+										</div>
+											
+											<img src="https://pren.kr/static/Icon/list_item_delete.svg"
+												alt="list_item_delete" width="15px" height="19px"
+												data-id="0" class="sc-cMljjf hNxXIk" />
+									</div>
+									<button id="addCarBtn" width="105px" height="40px" type="button"
+										class="sc-EHOje sc-jAaTju iYSprP">경력 추가</button>
 								</div>
-								<div class="fresnel-container fresnel-greaterThan-xs ">
-									<p color="#191919" class="sc-bxivhb sc-dHaUqb AuKEO">포트폴리오
-										등록</p>
+							</div>
+
+							<div class="fresnel-container fresnel-at-xs ">
+								<p color="#191919" class="sc-bxivhb sc-dHaUqb ivvznD">보유기술</p>
+							</div>
+							<div class="sc-eZXMBi bzZxvs">
+								<div class="sc-Ehqfj bgxZnV">
+									<div class="sc-gggouf iWvWxM">
+										<input type="text" placeholder="보유 기술명을 입력해주세요."
+											data-index="0" value="포토샵1급자격증" class="sc-cyQzhP RmpCp" /><img
+											src="https://pren.kr/static/Icon/list_item_delete.svg"
+											alt="list_item_delete" width="15px" height="19px"
+											data-index="0" class="sc-izUgoq SJaIL" />
+									</div>
 								</div>
-								<div class="fresnel-container fresnel-at-xs ">
-									<div width="100%" class="sc-Rmtcm kOorpV">
-										<div width="133px" height="133px" class="sc-bRBYWo eKHDCw">
+								<span style="font-size: 13px; color: #9d9d9d; line-height: 20px">예:
+									포토샵, 일러스트, Javscript</span>
+								<button width="105px" height="40px" type="button"
+									class="sc-EHOje sc-lXiCt iPTPdU">보유기술 추가</button>
+							</div>
+
+							<div class="fresnel-container fresnel-at-xs ">
+								<p color="#191919" class="sc-bxivhb sc-dHaUqb ivvznD">경력,
+									전공, 자격 증빙자료</p>
+							</div>
+							<div class="sc-eZXMBi bzZxvs">
+								<div class="filepond--wrapper">
+									<input type="file" multiple="" />
+								</div>
+								<span style="font-size: 13px; color: #9d9d9d; line-height: 20px">증빙자료는
+									프랜의 내부 심사용으로 활용 되며 사이트에 노출되지 않습니다. <br />예: 건강보험자격득실확인서, 자격증,
+									학위, 수상내역 등
+								</span>
+							</div>
+						</form>
+					</div>
+
+				</div>
+				<div class="sc-bjPkoM sc-eMgOci eoksPR">
+					<form>
+
+						<div class="fresnel-container fresnel-at-xs ">
+							<p color="#191919" class="sc-bxivhb kHpoSQ">포트폴리오</p>
+						</div>
+						<div class="fresnel-container fresnel-greaterThan-xs ">
+							<p color="#191919" class="sc-bxivhb sc-dHaUqb AuKEO">포트폴리오 등록</p>
+						</div>
+						<div class="fresnel-container fresnel-at-xs ">
+							<div width="100%" class="sc-Rmtcm kOorpV">
+								<div width="133px" height="133px" class="sc-bRBYWo eKHDCw">
 									<div class="sc-hzDkRC exxwtE">
 										<div id="popBtn" class="sc-jhAzac iQUeLb"></div>
-										
-											<div id="pop" width="765px" class="sc-bHwgHz hrKZXY">
-												<div class="sc-jVODtj fRNLnb">포트폴리오 등록</div>
-												<div class="sc-kUaPvJ hwkZJV">제목 (필수)</div>
-												<div class="sc-gzVnrw cSqmIF">
-													<input width="668px" placeholder="포트폴리오의 제목을 입력해주세요."
-														class="sc-dnqmqq hdBLrx" value="">
-												</div>
-												<div class="sc-kUaPvJ hwkZJV">
-													미디어 링크 (선택사항) <span class="sc-giadOv chxKBG">채널 URL이
-														아닌 각 콘텐츠의 URL을 입력해주세요</span>
-												</div>
-												<div class="sc-gzVnrw cSqmIF">
-													<input width="668px"
-														placeholder="해당 콘텐츠 URL을 적어주세요. (유튜브, 비메오, 사운드클라우드)"
-														class="sc-dnqmqq hdBLrx" value="">
-												</div>
-												<div class="sc-kUaPvJ hwkZJV">상세 설명 (선택사항)</div>
-												<div class="fresnel-container fresnel-greaterThan-xs ">
-													<div class="sc-dxgOiQ bWejUu">
-														<textarea height="93px" spellcheck="false" width="668px"
-															placeholder="포트폴리오에 대한 상세 설명을 입력해주세요."
-															class="sc-ckVGcZ geBGvF"></textarea>
-														<textarea width="668px"
-															placeholder="포트폴리오에 대한 상세 설명을 입력해주세요."
-															class="sc-ckVGcZ sc-jKJlTe dMABRA"></textarea>
-													</div>
-												</div>
-												<div class="fresnel-container fresnel-at-xs "></div>
-												<div class="sc-kUaPvJ hwkZJV">사진 등록</div>
-												<div class="sc-krDsej gTILSB">
-													<div class="sc-dTdPqK cKdCTd">
-														<label class="sc-itybZL cZcsrg">
-															<div class="sc-fjmCvl bMgTAn"></div> <input type="file"
-															accept="image/*" multiple="" class="sc-gPWkxV ldglYA">
-														</label>
-													</div>
-												</div>
-												<div class="sc-fONwsr lcvnNU">
-													<button type="button" class="sc-fzsDOv gBHVGp">삭제하기</button>
-													<button width="107px" height="40px" type="button"
-														class="sc-gqjmRU bgPMq">등록</button>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								</div>
-							</form>
-						</div>
-						<div class="sc-bjPkoM sc-cGDfzg enmltv">
-							<div class="fresnel-container fresnel-greaterThan-xs ">
-								<form>
-									<div class="fresnel-container fresnel-at-xs ">
-										<p color="#191919" class="sc-bxivhb kHpoSQ">판매자 정보 작성</p>
-									</div>
-									<div class="fresnel-container fresnel-at-xs ">
-										<p color="#191919" class="sc-bxivhb sc-dHaUqb iPwsNf">주소</p>
-									</div>
-									<div class="sc-fAMDQA iaJROI">
-										<div class="sc-bdVaJa jCeSos">
-											<input width="231px" display="inline"  placeholder="우편번호" name="addr1" id="addr1" type="text" 
-											readonly="readonly" disabled=""  class="sc-htpNat kdLDsG" />
-											<button type="button" class="btn btn-default" onclick="execPostCode();"><i class="fa fa-search"></i> 우편번호 찾기</button> 
-										</div>
-									</div>
-									<div class="sc-ibnDSj fEvhzc">
-										<div width="455px" class="sc-chPdSV gWWDIG">
-											<div width="50px" class="sc-kgoBCf fRTCQn">
-												<img src="https://pren.kr/static/Icon/address.svg"
-													alt="address" width="42.00%" height="38.00%" />
-											</div>
-											<div class="sc-kGXeez kUKQcj">
-												<div class="sc-bdVaJa jCeSos">
-													<input placeholder="도로명 주소" disabled=""
-														name="addr2" id="addr2" type="text" readonly="readonly"
-														class="sc-htpNat khbizk sc-kpOJdX bAKVje" width="100%" />
-												</div>
-											</div>
-										</div>
-										<div class="sc-bdVaJa jCeSos">
-											<input width="454px" placeholder="상세 주소" placeholder="상세주소" name="addr3" id="addr3" type="text"
-												class="sc-htpNat bOuslz" />
-										</div>
-									</div>
-									<div class="fresnel-container fresnel-at-xs ">
-										<p color="#191919" class="sc-bxivhb sc-dHaUqb idQKzA">계좌정보</p>
-									</div>
-									<div class="sc-OqFzE FuKrt">
-										<div width="296px" class="sc-iwsKbI fgptoz">
-											<div class="sc-gZMcBi eDlBqv">
-												<div selected="" class="sc-gqjmRU lhRJXy">기업은행</div>
-												<div class="sc-VigVT gjkitw"></div>
-											</div>
-										</div>
-										<div class="sc-bdVaJa jCeSos">
-											<input id="accNum" width="457px" placeholder="계좌번호"
-												class="sc-htpNat kdrGQV" />
-										</div>
-										<button id="accConfirm" width="138px" height="50px" type="button"
-											class="sc-EHOje kGGaxd">계좌인증</button>
-										<div class="sc-bCMXmc lhkRLM">
-											<div class="sc-bdVaJa jCeSos">
-												<input id="accOwn" width="296px" placeholder="예금주"
-													class="sc-htpNat gfqNGg" />
-											</div>
-										</div>
-									</div>
-								</form>
-							</div>
 
-						</div>
-						<div width="931px" class="sc-jgwFWF jzQsjH">
-							<div width="453px" height="56px" class="sc-kRCAcj dQWmVC">
-								<img src="https://pren.kr/static/Icon/individual.svg"
-									alt="individual" width="27px" height="27px" />
-								<p color="#cccccc" class="sc-bxivhb kOUrkb">개인 회원</p>
-							</div>
-							<div class="sc-fQfKYo jktryq">
-								<div width="453px" height="56px" class="sc-kRCAcj kEzWvm">
-									<img src="https://pren.kr/static/Icon/enterprise_active.svg"
-										alt="enterprise_active" width="34px" height="32px" />
-									<p color="#00d387" class="sc-bxivhb iBUEIw">기업 회원</p>
+											<div id="pop" style="display: none;" width="765px" class="sc-bsbRJL ghsfDZ">
+											<div class="sc-cLQEGU hxxTXM">포트폴리오 등록</div>
+											<div class="sc-gqPbQI beHNvu">제목 (필수)</div>
+											<div class="sc-bwzfXH byurlq">
+												<input width="668px" placeholder="포트폴리오의 제목을 입력해주세요." class="sc-bxivhb igARar" value="">
+											</div>
+											<div class="sc-gqPbQI beHNvu">미디어 링크 (선택사항) <span class="sc-hORach gxxFun">채널 URL이 아닌 각 콘텐츠의 URL을 입력해주세요</span>
+											</div>
+											<div class="sc-bwzfXH byurlq">
+												<input width="668px" placeholder="해당 콘텐츠 URL을 적어주세요. (유튜브, 비메오, 사운드클라우드)" class="sc-bxivhb igARar" value="">
+											</div>
+											<div class="sc-gqPbQI beHNvu">상세 설명 (선택사항)</div>
+											<div class="fresnel-container fresnel-greaterThan-xs ">
+												<div class="sc-cSHVUG hKPJmL">
+													<textarea height="93px" spellcheck="false" width="668px" placeholder="포트폴리오에 대한 상세 설명을 입력해주세요." class="sc-kAzzGY hKNDzf"></textarea>
+													<textarea width="668px" placeholder="포트폴리오에 대한 상세 설명을 입력해주세요." class="sc-kAzzGY sc-chPdSV bLmzNq"></textarea>
+												</div>
+											</div>
+											<div class="fresnel-container fresnel-at-xs "></div>
+											<div class="sc-gqPbQI beHNvu">사진 등록</div>
+											<div class="sc-hZSUBg icBQde">
+												<div class="sc-cMhqgX kgGRCP">
+													<label class="sc-iuJeZd kGhUgK">
+														<div class="sc-epnACN irrZJD"></div>
+														<input type="file" accept="image/*" multiple="" class="sc-hMFtBS kHmnNc">
+													</label>
+												</div>
+											</div>
+											<div class="sc-bMVAic ejRmPc">
+												<button type="button" class="sc-cmthru fCOxdE">삭제하기</button>
+												<button width="107px" height="40px" type="button" class="sc-bZQynM KQmmV">등록</button>
+											</div>
+										</div>
+														
+									</div>
 								</div>
 							</div>
 						</div>
-						<div width="931px" class="sc-fQfKYo keearA">
-							<p color="#9d9d9d" class="sc-bxivhb sc-jrOYZv eyXHqN">사업자 번호가
-								있는 전문가</p>
-						</div>
-						<div class="sc-bjPkoM sc-grYksN fBXRxb">
-							<form>
-								<div class="fresnel-container fresnel-at-xs ">
-									<p color="#191919" class="sc-bxivhb sc-dHaUqb izAQin">회사정보</p>
+					</form>
+				</div>
+				<div class="sc-bjPkoM sc-cGDfzg enmltv">
+					<div class="fresnel-container fresnel-greaterThan-xs ">
+						<form>
+							<div class="fresnel-container fresnel-at-xs ">
+								<p color="#191919" class="sc-bxivhb kHpoSQ">판매자 정보 작성</p>
+							</div>
+							<div class="fresnel-container fresnel-at-xs ">
+								<p color="#191919" class="sc-bxivhb sc-dHaUqb iPwsNf">주소</p>
+							</div>
+							<div class="sc-fAMDQA iaJROI">
+								<div class="sc-bdVaJa jCeSos">
+									<input width="231px" display="inline" placeholder="우편번호"
+										name="addr1" id="addr1" type="text" readonly="readonly"
+										disabled="" class="sc-htpNat kdLDsG" />
+									<button type="button" class="btn btn-default"
+										onclick="execPostCode();">
+										<i class="fa fa-search"></i> 우편번호 찾기
+									</button>
 								</div>
-								<div class="sc-frudsx fWJOge">
-									<div width="297px" class="sc-chPdSV gRxJcl">
-										<div width="50px" class="sc-kgoBCf fRTCQn">
-											<img src="https://pren.kr/static/Icon/business.svg"
-												alt="business" width="18px" height="17px" />
-										</div>
-										<div class="sc-kGXeez kUKQcj">
-											<div class="sc-bdVaJa jCeSos">
-												<input placeholder="회사명 (법인명)" value=""
-													class="sc-htpNat khbizk sc-kpOJdX bAKVje" width="100%" />
-											</div>
-										</div>
+							</div>
+							<div class="sc-ibnDSj fEvhzc">
+								<div width="455px" class="sc-chPdSV gWWDIG">
+									<div width="50px" class="sc-kgoBCf fRTCQn">
+										<img src="https://pren.kr/static/Icon/address.svg"
+											alt="address" width="42.00%" height="38.00%" />
 									</div>
-									<div width="297px" class="sc-chPdSV gRxJcl">
-										<div width="50px" class="sc-kgoBCf fRTCQn">
-											<img src="https://pren.kr/static/Icon/user.svg" alt="user"
-												width="18px" height="18px" />
-										</div>
-										<div class="sc-kGXeez kUKQcj">
-											<div class="sc-bdVaJa jCeSos">
-												<input placeholder="대표자명" value=""
-													class="sc-htpNat khbizk sc-kpOJdX bAKVje" width="100%" />
-											</div>
-										</div>
-									</div>
-									<div width="297px" class="sc-chPdSV gRxJcl">
-										<div width="50px" class="sc-kgoBCf fRTCQn">
-											<img src="https://pren.kr/static/Icon/company.svg"
-												alt="company" width="18px" height="16px" />
-										</div>
-										<div class="sc-kGXeez kUKQcj">
-											<div class="sc-bdVaJa jCeSos">
-												<input placeholder="사업자 등록 번호" value=""
-													class="sc-htpNat khbizk sc-kpOJdX bAKVje" width="100%" />
-											</div>
-										</div>
-									</div>
-									<div width="297px" class="sc-iwsKbI gREGhl">
-										<div class="sc-gZMcBi eDlBqv">
-											<div selected="" class="sc-gqjmRU lhRJXy">법인</div>
-											<div class="sc-VigVT gjkitw"></div>
-										</div>
-									</div>
-									<div width="297px" class="sc-chPdSV gRxJcl">
-										<div width="50px" class="sc-kgoBCf fRTCQn">
-											<img src="https://pren.kr/static/Icon/business.svg"
-												alt="business" width="18px" height="17px" />
-										</div>
-										<div class="sc-kGXeez kUKQcj">
-											<div class="sc-bdVaJa jCeSos">
-												<input placeholder="업태" value=""
-													class="sc-htpNat khbizk sc-kpOJdX bAKVje" width="100%" />
-											</div>
-										</div>
-									</div>
-									<div width="297px" class="sc-chPdSV gRxJcl">
-										<div width="50px" class="sc-kgoBCf fRTCQn">
-											<img src="https://pren.kr/static/Icon/business.svg"
-												alt="business" width="18px" height="17px" />
-										</div>
-										<div class="sc-kGXeez kUKQcj">
-											<div class="sc-bdVaJa jCeSos">
-												<input placeholder="종목" value=""
-													class="sc-htpNat khbizk sc-kpOJdX bAKVje" width="100%" />
-											</div>
-										</div>
-									</div>
-									<div width="455px" class="sc-chPdSV gWWDIG">
-										<div width="50px" class="sc-kgoBCf fRTCQn">
-											<img src="https://pren.kr/static/Icon/company.svg"
-												alt="company" width="18px" height="16px" />
-										</div>
-										<div class="sc-kGXeez kUKQcj">
-											<div class="sc-bdVaJa jCeSos">
-												<input placeholder="사업장 주소" value=""
-													class="sc-htpNat khbizk sc-kpOJdX bAKVje" width="100%" />
-											</div>
-										</div>
-									</div>
-									<div width="455px" class="sc-chPdSV gWWDIG">
-										<div width="50px" class="sc-kgoBCf fRTCQn">
-											<img src="https://pren.kr/static/Icon/email.svg" alt="email"
-												width="32.50%" height="27.50%" />
-										</div>
-										<div class="sc-kGXeez kUKQcj">
-											<div class="sc-bdVaJa jCeSos">
-												<input placeholder="세금계산서 이메일" value=""
-													class="sc-htpNat khbizk sc-kpOJdX bAKVje" width="100%" />
-											</div>
+									<div class="sc-kGXeez kUKQcj">
+										<div class="sc-bdVaJa jCeSos">
+											<input placeholder="도로명 주소" disabled="" name="addr2"
+												id="addr2" type="text" readonly="readonly"
+												class="sc-htpNat khbizk sc-kpOJdX bAKVje" width="100%" />
 										</div>
 									</div>
 								</div>
+								<div class="sc-bdVaJa jCeSos">
+									<input width="454px" placeholder="상세 주소" placeholder="상세주소"
+										name="addr3" id="addr3" type="text" class="sc-htpNat bOuslz" />
+								</div>
+							</div>
+							<div class="fresnel-container fresnel-at-xs ">
+								<p color="#191919" class="sc-bxivhb sc-dHaUqb idQKzA">계좌정보</p>
+							</div>
+							<div class="sc-OqFzE FuKrt">
+								<div width="296px" class="sc-iwsKbI fgptoz">
+									<div class="sc-gZMcBi eDlBqv">
+										<div selected="" class="sc-gqjmRU lhRJXy">기업은행</div>
+										<div class="sc-VigVT gjkitw"></div>
+									</div>
+								</div>
+								<div class="sc-bdVaJa jCeSos">
+									<input id="accNum" width="457px" placeholder="계좌번호"
+										class="sc-htpNat kdrGQV" />
+								</div>
+								<button id="accConfirm" width="138px" height="50px"
+									type="button" class="sc-EHOje kGGaxd">계좌인증</button>
+								<div class="sc-bCMXmc lhkRLM">
+									<div class="sc-bdVaJa jCeSos">
+										<input id="accOwn" width="296px" placeholder="예금주"
+											class="sc-htpNat gfqNGg" />
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
 
-								<div class="fresnel-container fresnel-at-xs ">
-									<p color="#191919" class="sc-bxivhb sc-dHaUqb gxCLP">사업자
-										등록증 사본</p>
-								</div>
-								<input type="file" accept="image/*" />
-
-								<div class="fresnel-container fresnel-at-xs ">
-									<p color="#191919" class="sc-bxivhb sc-dHaUqb fxoSeK">담당자
-										정보</p>
-								</div>
-								<div class="sc-cBXKeB gTchbb">
-									<div width="455px" class="sc-chPdSV gWWDIG">
-										<div width="50px" class="sc-kgoBCf fRTCQn">
-											<img src="https://pren.kr/static/Icon/user.svg" alt="user"
-												width="18px" height="18px" />
-										</div>
-										<div class="sc-kGXeez kUKQcj">
-											<div class="sc-bdVaJa jCeSos">
-												<input placeholder="담당자명" value=""
-													class="sc-htpNat khbizk sc-kpOJdX bAKVje" width="100%" />
-											</div>
-										</div>
-									</div>
-									<div width="455px" class="sc-chPdSV gWWDIG">
-										<div width="50px" class="sc-kgoBCf fRTCQn">
-											<img src="https://pren.kr/static/Icon/tel.svg" alt="tel"
-												width="32.50%" height="32.50%" />
-										</div>
-										<div class="sc-kGXeez kUKQcj">
-											<div class="sc-bdVaJa jCeSos">
-												<input placeholder="담당자 연락처" value=""
-													class="sc-htpNat khbizk sc-kpOJdX bAKVje" width="100%" />
-											</div>
-										</div>
-									</div>
-								</div>
-							</form>
-						</div>
-						<div width="931px" class="sc-fQfKYo cbmHZE">
-							<p color="#191919" class="sc-bxivhb sc-kJdAmE cFuODr">프로필 공개
-								여부</p>
-							<p color="#191919" class="sc-bxivhb sc-kJdAmE dLUQaJ">사용할
-								프로필의 공개여부를 선택해 주세요.</p>
-							<div class="sc-fQfKYo WIeGJ">
-								<div class="sc-FAiZp irHPjM">
-									<input type="radio" id="_public" checked="" name="is_public"
-										class="sc-fPCuyW cBaGdt" /><label for="_public"
-										class="sc-dAWfgX bAFIeD">공개</label>
-								</div>
-								<div class="sc-FAiZp bsDEcn">
-									<input type="radio" id="_privave" name="is_public"
-										class="sc-fPCuyW cBaGdt" /><label for="_privave"
-										class="sc-dAWfgX bAFIeD">비공개</label>
-								</div>
-							</div>
-						</div>
-						<div class="sc-zDqdV hNiSXq">
-							<button width="297px" height="50px" type="button"
-								style="margin-right: 10px" class="sc-EHOje lfJsSz">미리보기</button>
-							<button width="297px" height="50px" type="button"
-								class="sc-EHOje dXFhe">제출하기</button>
-						</div>
-						<div class="sc-jBoNkH kdNdMq">
-							<p class="sc-fPbjcq eBDCPA">작성한 내용으로 만들어질 포트폴리오 페이지를 미리 보세요!</p>
-							<a class="sc-hBcjXN fqyRIa"><button width="100%"
-									height="40px" class="sc-EHOje sc-hdNmWC jHZbWK">
-									<p color="#00d387" class="sc-bxivhb sc-fPEBxH iwxhFZ">미리보기</p>
-								</button></a>
+				</div>
+				<div width="931px" class="sc-jgwFWF jzQsjH">
+					<div width="453px" height="56px" class="sc-kRCAcj dQWmVC">
+						<img src="https://pren.kr/static/Icon/individual.svg"
+							alt="individual" width="27px" height="27px" />
+						<p color="#cccccc" class="sc-bxivhb kOUrkb">개인 회원</p>
+					</div>
+					<div class="sc-fQfKYo jktryq">
+						<div width="453px" height="56px" class="sc-kRCAcj kEzWvm">
+							<img src="https://pren.kr/static/Icon/enterprise_active.svg"
+								alt="enterprise_active" width="34px" height="32px" />
+							<p color="#00d387" class="sc-bxivhb iBUEIw">기업 회원</p>
 						</div>
 					</div>
 				</div>
+				<div width="931px" class="sc-fQfKYo keearA">
+					<p color="#9d9d9d" class="sc-bxivhb sc-jrOYZv eyXHqN">사업자 번호가
+						있는 전문가</p>
+				</div>
+				<div class="sc-bjPkoM sc-grYksN fBXRxb">
+					<form>
+						<div class="fresnel-container fresnel-at-xs ">
+							<p color="#191919" class="sc-bxivhb sc-dHaUqb izAQin">회사정보</p>
+						</div>
+						<div class="sc-frudsx fWJOge">
+							<div width="297px" class="sc-chPdSV gRxJcl">
+								<div width="50px" class="sc-kgoBCf fRTCQn">
+									<img src="https://pren.kr/static/Icon/business.svg"
+										alt="business" width="18px" height="17px" />
+								</div>
+								<div class="sc-kGXeez kUKQcj">
+									<div class="sc-bdVaJa jCeSos">
+										<input placeholder="회사명 (법인명)" value=""
+											class="sc-htpNat khbizk sc-kpOJdX bAKVje" width="100%" />
+									</div>
+								</div>
+							</div>
+							<div width="297px" class="sc-chPdSV gRxJcl">
+								<div width="50px" class="sc-kgoBCf fRTCQn">
+									<img src="https://pren.kr/static/Icon/user.svg" alt="user"
+										width="18px" height="18px" />
+								</div>
+								<div class="sc-kGXeez kUKQcj">
+									<div class="sc-bdVaJa jCeSos">
+										<input placeholder="대표자명" value=""
+											class="sc-htpNat khbizk sc-kpOJdX bAKVje" width="100%" />
+									</div>
+								</div>
+							</div>
+							<div width="297px" class="sc-chPdSV gRxJcl">
+								<div width="50px" class="sc-kgoBCf fRTCQn">
+									<img src="https://pren.kr/static/Icon/company.svg"
+										alt="company" width="18px" height="16px" />
+								</div>
+								<div class="sc-kGXeez kUKQcj">
+									<div class="sc-bdVaJa jCeSos">
+										<input placeholder="사업자 등록 번호" value=""
+											class="sc-htpNat khbizk sc-kpOJdX bAKVje" width="100%" />
+									</div>
+								</div>
+							</div>
+							<div width="297px" class="sc-iwsKbI gREGhl">
+								<div class="sc-gZMcBi eDlBqv">
+									<div selected="" class="sc-gqjmRU lhRJXy">법인</div>
+									<div class="sc-VigVT gjkitw"></div>
+								</div>
+							</div>
+							<div width="297px" class="sc-chPdSV gRxJcl">
+								<div width="50px" class="sc-kgoBCf fRTCQn">
+									<img src="https://pren.kr/static/Icon/business.svg"
+										alt="business" width="18px" height="17px" />
+								</div>
+								<div class="sc-kGXeez kUKQcj">
+									<div class="sc-bdVaJa jCeSos">
+										<input placeholder="업태" value=""
+											class="sc-htpNat khbizk sc-kpOJdX bAKVje" width="100%" />
+									</div>
+								</div>
+							</div>
+							<div width="297px" class="sc-chPdSV gRxJcl">
+								<div width="50px" class="sc-kgoBCf fRTCQn">
+									<img src="https://pren.kr/static/Icon/business.svg"
+										alt="business" width="18px" height="17px" />
+								</div>
+								<div class="sc-kGXeez kUKQcj">
+									<div class="sc-bdVaJa jCeSos">
+										<input placeholder="종목" value=""
+											class="sc-htpNat khbizk sc-kpOJdX bAKVje" width="100%" />
+									</div>
+								</div>
+							</div>
+							<div width="455px" class="sc-chPdSV gWWDIG">
+								<div width="50px" class="sc-kgoBCf fRTCQn">
+									<img src="https://pren.kr/static/Icon/company.svg"
+										alt="company" width="18px" height="16px" />
+								</div>
+								<div class="sc-kGXeez kUKQcj">
+									<div class="sc-bdVaJa jCeSos">
+										<input placeholder="사업장 주소" value=""
+											class="sc-htpNat khbizk sc-kpOJdX bAKVje" width="100%" />
+									</div>
+								</div>
+							</div>
+							<div width="455px" class="sc-chPdSV gWWDIG">
+								<div width="50px" class="sc-kgoBCf fRTCQn">
+									<img src="https://pren.kr/static/Icon/email.svg" alt="email"
+										width="32.50%" height="27.50%" />
+								</div>
+								<div class="sc-kGXeez kUKQcj">
+									<div class="sc-bdVaJa jCeSos">
+										<input placeholder="세금계산서 이메일" value=""
+											class="sc-htpNat khbizk sc-kpOJdX bAKVje" width="100%" />
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="fresnel-container fresnel-at-xs ">
+							<p color="#191919" class="sc-bxivhb sc-dHaUqb gxCLP">사업자 등록증
+								사본</p>
+						</div>
+						<input type="file" accept="image/*" />
+
+						<div class="fresnel-container fresnel-at-xs ">
+							<p color="#191919" class="sc-bxivhb sc-dHaUqb fxoSeK">담당자 정보</p>
+						</div>
+						<div class="sc-cBXKeB gTchbb">
+							<div width="455px" class="sc-chPdSV gWWDIG">
+								<div width="50px" class="sc-kgoBCf fRTCQn">
+									<img src="https://pren.kr/static/Icon/user.svg" alt="user"
+										width="18px" height="18px" />
+								</div>
+								<div class="sc-kGXeez kUKQcj">
+									<div class="sc-bdVaJa jCeSos">
+										<input placeholder="담당자명" value=""
+											class="sc-htpNat khbizk sc-kpOJdX bAKVje" width="100%" />
+									</div>
+								</div>
+							</div>
+							<div width="455px" class="sc-chPdSV gWWDIG">
+								<div width="50px" class="sc-kgoBCf fRTCQn">
+									<img src="https://pren.kr/static/Icon/tel.svg" alt="tel"
+										width="32.50%" height="32.50%" />
+								</div>
+								<div class="sc-kGXeez kUKQcj">
+									<div class="sc-bdVaJa jCeSos">
+										<input placeholder="담당자 연락처" value=""
+											class="sc-htpNat khbizk sc-kpOJdX bAKVje" width="100%" />
+									</div>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div width="931px" class="sc-fQfKYo cbmHZE">
+					<p color="#191919" class="sc-bxivhb sc-kJdAmE cFuODr">프로필 공개 여부</p>
+					<p color="#191919" class="sc-bxivhb sc-kJdAmE dLUQaJ">사용할 프로필의
+						공개여부를 선택해 주세요.</p>
+					<div class="sc-fQfKYo WIeGJ">
+						<div class="sc-FAiZp irHPjM">
+							<input type="radio" id="_public" checked="" name="is_public"
+								class="sc-fPCuyW cBaGdt" /><label for="_public"
+								class="sc-dAWfgX bAFIeD">공개</label>
+						</div>
+						<div class="sc-FAiZp bsDEcn">
+							<input type="radio" id="_privave" name="is_public"
+								class="sc-fPCuyW cBaGdt" /><label for="_privave"
+								class="sc-dAWfgX bAFIeD">비공개</label>
+						</div>
+					</div>
+				</div>
+				<div class="sc-zDqdV hNiSXq">
+					<button width="297px" height="50px" type="button"
+						style="margin-right: 10px" class="sc-EHOje lfJsSz">미리보기</button>
+					<button width="297px" height="50px" type="button"
+						class="sc-EHOje dXFhe">제출하기</button>
+				</div>
+				<div class="sc-jBoNkH kdNdMq">
+					<p class="sc-fPbjcq eBDCPA">작성한 내용으로 만들어질 포트폴리오 페이지를 미리 보세요!</p>
+					<a class="sc-hBcjXN fqyRIa"><button width="100%" height="40px"
+							class="sc-EHOje sc-hdNmWC jHZbWK">
+							<p color="#00d387" class="sc-bxivhb sc-fPEBxH iwxhFZ">미리보기</p>
+						</button></a>
+				</div>
 			</div>
-<%@include file="footer.jsp" %>		
+		</div>
+	</div>
+	<%@include file="footer.jsp"%>

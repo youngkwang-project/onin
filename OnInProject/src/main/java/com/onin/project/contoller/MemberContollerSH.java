@@ -41,10 +41,10 @@ public class MemberContollerSH {
 		logger.info("/register2 호출");
 		MemberDTO result = memberService.idCheck(memberDTO);
 		if(result !=null) {
-				rttr.addFlashAttribute("msg","중복된 아이디 입니다.");
+			
 				return "/register";
 		}else if(result == null) {
-				rttr.addFlashAttribute("msg","회원가입을 축하드립니다!");
+				
 			memberService.register(memberDTO);
 			model.addAttribute("memberDTO",memberDTO);
 		}

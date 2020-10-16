@@ -1418,95 +1418,111 @@ textarea {
 	font-size: 12px;
 	padding-left: 157px;
 }
+.jPJgla {
+    width: 139px;
+    height: 50px;
+    background-color: rgb(0, 211, 135);
+    font-size: 14px;
+    color: rgb(255, 255, 255);
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
 </style>
 
 
 
 </head>
 <script>
-window.onload = function(){
-	var check = false;
-	var regExp = /([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/
-$(function(){
-	//아이디 중복체크
-	    $('#asd').click(function(){
-	        $.ajax({
-		     type:"POST",
-		     url:"/checkSignup",
-		     data:{
-		            email:$('#email').val()
-		     },
-		     success:function(data){	//data : checkSignup에서 넘겨준 결과값
-		            if($.trim(data)=="YES"){
-		               if(!regExp.test($('#email').val())){ 
-		               	alert("사용이 불가능한 형식의 이메일입니다.");
-		               }else{
-		            	   alert("사용가능한 이메일입니다.");
-		            	   check = true;
-		            	   
-			               }
-		           	}else{
-		               if($('#email').val()!=''){
-		                  alert("중복된 이메일입니다.");
-		                  $('#email').val('');
-		                  $('#email').focus();
-		               }
-		            }
-		         }
-		    }) 
-	     })
+window.onload = function() {
+	  var check = false;
+	  var regExp = /([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/
+	  //아이디 중복체크
+	  $('#asd').click(function() {
+	    $.ajax({
+	      type: "POST",
+	      url: "/checkSignup",
+	      data: {
+	        email: $('#email').val()
+	      },
+	      success: function(data) { //data : checkSignup에서 넘겨준 결과값
+	        if ($.trim(data) == "YES") {
+	          if (!regExp.test($('#email').val())) {
+	            alert("사용이 불가능한 형식의 이메일입니다.");
+	          } else {
+	            alert("사용가능한 이메일입니다.");
+	            check = true;
 
-	});
+	          }
+	        } else {
+	          if ($('#email').val() != '') {
+	            alert("중복된 이메일입니다.");
+	            $('#email').val('');
+	            $('#email').focus();
+	          }
+	        }
+	      }
+	    })
+	  })
+
+	  document.getElementById("registerBtn").addEventListener("click",
+	  function() {
+
+	    if (check) {
+
+	      if ($('#email').val() == "") {
+	        alert("이메일을 입력하세요.");
+	        $('#email').focus();
+	        return false;
+	      }
+
+	      if ($('#pwd').val() == "") {
+	        alert("비밀번호를 입력하세요.");
+	        $('#pwd').focus();
+	        return false;
+	      }
+
+	      if ($('#pwd').val() != $('#pwd2').val()) {
+	        alert("비밀번호가 일치하지 않습니다.");
+	        return false;
+	      }
+
+	      if ($('#name').val() == "") {
+	        alert("이름을 입력하세요.");
+	        $('#name').focus();
+	        return false;
+	      }
+
+	      if ($('#tel').val() == "") {
+	        alert("핸드폰번호를 입력하세요.");
+	        $('#tel').focus();
+	        return false;
+
+	      } else {
+	        document.getElementById("register").submit()
+	      }
+	    } else {
+	      alert("중복확인을 눌러주세요");
+	    }
+	  });
+
+	  $("#alert-success").hide();
+	  $("#alert-danger").hide();
+	  $("#pwd,#pwd2").change(function() {
+	    var pwd1 = $("#pwd").val();
+	    var pwd2 = $("#pwd2").val();
+	    if (pwd1 != "" || pwd2 != "") {
+	      if (pwd1 === pwd2) {
+	        $("#alert-success").show();
+	        $("#alert-danger").hide();
+	      } else {
+	        $("#alert-success").hide();
+	        $("#alert-danger").show();
+	      }
+	    }
+	  });
+	} // onload  끝
 	
-document.getElementById("registerBtn").addEventListener("click", function(){
-
-	if(check){
-		if($('#email').val()==""){
-			alert("이메일을 입력하세요.");
-			$('#email').focus();
-			return false;	
-		}else if($('#name').val()==""){
-			alert("이름을 입력하세요.");
-			$('#name').focus();
-			return false;
-		}else if($('#pwd').val==""){
-			alert("비밀번호를 입력하세요.");
-			$('#pwd').focus();
-			return false;
-		}else if($('#tel').val==""){
-			alert("핸드폰번호를 입력하세요.");
-			$('#tel').focus();
-			return false;
-		}else if($('#pwd')!=$('#pwd2')){
-			alert("비밀번호가 일치하지 않습니다.");
-			return false;
-		}else{
-			document.getElementById("register").submit()
-		}		
-	}else{
-		alert("중복확인을 눌러주세요");
-		}
-});
-	  
-
-$(function() {
-	$("#alert-success").hide();
-	$("#alert-danger").hide();
-	$("#pwd,#pwd2").change(function() {
-		var pwd1 = $("#pwd").val();
-		var pwd2 = $("#pwd2").val();
-		if (pwd1 != "" || pwd2 != "") {
-			if (pwd1 === pwd2) {
-				$("#alert-success").show();
-				$("#alert-danger").hide();
-			} else {
-				$("#alert-success").hide();
-				$("#alert-danger").show();
-			}
-		}
-	});
-});
-}
 
 </script>
 
@@ -1558,26 +1574,26 @@ $(function() {
 															class="sc-EHOje kVkKtH">중복확인</button>
 													</div>
 												</div>
-												<!-- 														 <div width="612px" class="sc-ihiiSJ hmuaMQ"> -->
-												<!-- 															<p class="sc-bxivhb sc-iNovjJ cftYnu"></p> -->
-												<!-- 															<div class="sc-gJTSre cWlVFq"> -->
-												<!-- 																<div width="296px" class="sc-chPdSV glyfuW"> -->
-												<!-- 																	<div width="50px" class="sc-kgoBCf bUwjoZ"> -->
-												<!-- 																		<img src="https://pren.kr/static/Icon/email.svg" -->
-												<!-- 																			alt="email" width="32.50%" height="27.50%" /> -->
-												<!-- 																	</div> -->
-												<!-- 																	<div class="sc-kGXeez kUKQcj"> -->
-												<!-- 																		<div class="sc-bdVaJa jCeSos"> -->
-												<!-- 																			<input name="email" type="text" placeholder="인증번호" -->
-												<!-- 																				value="" class="sc-htpNat ksfJEf sc-kpOJdX intbG" -->
-												<!-- 																				width="100%" /> -->
-												<!-- 																		</div> -->
-												<!-- 																	</div> -->
-												<!-- 																</div> -->
+<!-- 																										 <div id="emailConBtn" width="612px" class="sc-ihiiSJ hmuaMQ"> -->
+<!-- 																											<p class="sc-bxivhb sc-iNovjJ cftYnu"></p> -->
+<!-- 																											<div class="sc-gJTSre cWlVFq"> -->
+<!-- 																												<div width="296px" class="sc-chPdSV glyfuW"> -->
+<!-- 																													<div width="50px" class="sc-kgoBCf bUwjoZ"> -->
+<!-- 																														<img src="https://pren.kr/static/Icon/email.svg" -->
+<!-- 																															alt="email" width="32.50%" height="27.50%" /> -->
+<!-- 																													</div> -->
+<!-- 																													<div class="sc-kGXeez kUKQcj"> -->
+<!-- 																														<div class="sc-bdVaJa jCeSos"> -->
+<!-- 																															<input name="email" type="text" placeholder="인증번호" -->
+<!-- 																																value="" class="sc-htpNat ksfJEf sc-kpOJdX intbG" -->
+<!-- 																																width="100%" /> -->
+<!-- 																														</div> -->
+<!-- 																													</div> -->
+<!-- 																												</div> -->
+<!-- 																													<button width="139px" height="50px" type="button" class="sc-bZQynM jPJgla">인증</button> -->
 
-
-												<!-- 															</div> -->
-												<!-- 														</div> -->
+<!-- 																											</div> -->
+<!-- 																										</div> -->
 
 											</div>
 											<div class="sc-ifAKCX ktBaKe">
