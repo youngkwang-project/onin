@@ -3746,11 +3746,7 @@ $(function() {
 		$('#pop').hide();
         });
 
-    $('#addCar').hide()
-	$('#addCarBtn').click(function(){
-		$('#addCar').show();
-		});
-});
+
 
 	
 	
@@ -3837,12 +3833,11 @@ $(function() {
 								<div class="sc-dzQEYZ BlhYH">
 									<div class="sc-dCVVYJ byuoYp">
 										<div class="sc-kEYyzF lcroCN">
-											<label
+											<label 
 												src="https://pren-backend-storage.s3.ap-northeast-2.amazonaws.com/media/user/1676/ac481338-9eb9-4eb3-91ca-13d35faf2157.png"
-												for="input" class="sc-kkGfuU tGgGQ"></label> <label
-												for="input" class="sc-hSdWYo kEjxSM"></label> <input
-												type="file" id="input" accept="image/*"
-												class="sc-iAyFgw gWYozK" />
+												for="input" ></label> 
+												<label for="input" class="sc-hSdWYo kEjxSM"></label>												 
+												<input type="file" id="input" accept="image/*" class="sc-iAyFgw gWYozK"/>																								
 
 										</div>
 										<div class="sc-sVRsr bsTPFA">
@@ -4006,12 +4001,12 @@ $(function() {
 												
 												
 											</div>
-											
-										</div>
-											
 											<img src="https://pren.kr/static/Icon/list_item_delete.svg"
 												alt="list_item_delete" width="15px" height="19px"
 												data-id="0" class="sc-cMljjf hNxXIk" />
+										</div>
+											
+											
 									</div>
 									<button id="addCarBtn" width="105px" height="40px" type="button"
 										class="sc-EHOje sc-jAaTju iYSprP">경력 추가</button>
