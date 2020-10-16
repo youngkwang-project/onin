@@ -4,4 +4,61 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.onin.project.mapper.MemberMapper">
 
+	<!-- login -->
+	<select id="memberLogin"
+		resultType="com.onin.project.dto.MemberDTO">
+		SELECT * FROM MEMBER WHERE email=#{email} AND PWD =#{pwd}
+	</select>
+
+	<!-- pw찾기 -->
+	<select id="pwdForgot"
+		resultType="com.onin.project.dto.MemberDTO">
+		select * from member where email=#{email}
+	</select>
+
+	<!-- 임시비밀번호변경 -->
+	<update id="updatepwd">
+		update member set pwd = #{pwd} where email = #{email}
+	</update>
+
+	<!-- 회원가입 -->
+	<insert id="register"
+		parameterType="com.onin.project.dto.MemberDTO">
+		<selectKey resultType="int" keyProperty="mno" order="BEFORE">
+			SELECT MAX(MNO)+1 FROM MEMBER
+		</selectKey>
+		insert into member(mno,email,pwd,name,tel)
+		values(#{mno},#{email},#{pwd},#{name,jdbcType=VARCHAR},#{tel})
+
+	</insert>
+
+	<!-- 아이디체크 -->
+	<select id="idCheck" resultType="com.onin.project.dto.MemberDTO">
+		select * from member where email=#{email}
+
+	</select>
+
+	<!--회원정보가져오기 -->
+	<select id="memberSet"
+		resultType="com.onin.project.dto.MemberDTO">
+		select * FROM Member where email=#{email}
+	</select>
+	<!-- 비밀번호수정 -->
+	<update id="pwdChange">
+		update MEMBER set pwd=#{pwd} where email=#{email}
+
+	</update>
+	<!-- 회원탈퇴 -->
+	<delete id="memberDelete">
+
+		DELETE FROM MEMBER WHERE MNO=#{mno}
+
+	</delete>
+	
+	<!-- 인보이스 삭제 -->
+	<delete id="invoiceDel">
+
+		DELETE FROM invoice WHERE from_MNO=#{mno}
+
+	</delete>
 </mapper>

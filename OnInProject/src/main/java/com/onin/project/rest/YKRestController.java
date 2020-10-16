@@ -13,18 +13,16 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 import com.onin.project.dto.CategoryDTO;
-import com.onin.project.service.YKService;
+import com.onin.project.service.ExpertsService;
 
 
 @RestController
 @RequestMapping(value="/rest", produces="text/plain;charset=UTF-8")
 public class YKRestController {
+	
 	private static final Logger logger = LoggerFactory.getLogger(YKRestController.class);
-	
 	@Autowired
-	YKService service;
-	
-
+	ExpertsService service;
 	
 	@GetMapping(path="/category", produces = MediaType.APPLICATION_JSON_VALUE)
 	public List<CategoryDTO> categorySel(Model model){
@@ -32,6 +30,7 @@ public class YKRestController {
 	
 		return service.categorySel();
 	}
+
 
 	
 //	@GetMapping(path="/category2", produces = MediaType.APPLICATION_JSON_VALUE)

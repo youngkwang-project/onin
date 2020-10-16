@@ -2584,7 +2584,7 @@ textarea {
 
 		}
 
-		var category = "${category.c.CNAME}"
+		var category = "${detail2.cname}"
 		if (category != "") {
 			cateName.innerHTML = '<div id="cateName" class="sc-gqjmRU bgQVQZ">'
 					+ category + '</div>'
@@ -2603,10 +2603,10 @@ textarea {
 							<c:forEach var="member" items="${detail}">
 							
 
-								var detail = '<a  href="/experts/categories/category?cno='
-										+ ${member.c.CNO}
+								var detail = '<a  href="/experts/categories/category/detail?cno='
+										+ ${member.CNO}
 										+ '"><div class="sc-fjdhpX eWZWnR">'
-										+ "${member.c.CNAME}" + '</div></a>'
+										+ "${member.CNAME}" + '</div></a>'
 								sum = sum + detail
 							
 							</c:forEach>
@@ -2621,6 +2621,11 @@ textarea {
 			innerB2 = 'open'
 		}
 	}
+		var category2 = "${detail3}"
+			if (category != "") {
+				cateName.innerHTML = '<div id="cateName" class="sc-gqjmRU bgQVQZ">'
+						+ category2 + '</div>'
+			}
 
 	}
 </script>

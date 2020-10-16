@@ -1481,38 +1481,41 @@ textarea {
 }
 </style>
 <script>
-      window.onload = function() {
-         
+	window.onload = function() {
+		var reg_pwd = /^.*(?=.{6,20})(?=.*[0-9])(?=.*[a-zA-Z]).*$/;
 
-         cpwSubmit = function() {
-            var pwd = document.getElementById("nowpwd").value
-            var cpwd_1 = document.getElementById("pwd").value
-            var cpwd_2 = document.getElementById("cpwd_2").value
-            var nowpwd = '${loginMember.pwd}'
-            if(cpwd_1 !== cpwd_2 || pwd != nowpwd){
-               alert("비밀번호를 다시입력해주세요")
-            
-            }else{
-               document.getElementById("pwchange").submit()
-                alert("비밀번호가 변경되었습니다. 다시 로그인하세요")
-            }
-            
-         }
-         deleteFunc = function() {
-             
-        	 document.getElementById("delete").submit()
-        	 alert("회원정보가 삭제되었습니다.")
-             }
-             
-          
-      
-                 document.getElementById("cpwd_bt").addEventListener("click",
-                		 cpwSubmit);
-                 
-                 document.getElementById("delete_bt").addEventListener("click", deleteFunc);
-      
-      }
-   </script>
+		cpwSubmit = function() {
+			var pwd = document.getElementById("nowpwd").value
+			var cpwd_1 = document.getElementById("pwd").value
+			var cpwd_2 = document.getElementById("cpwd_2").value
+			var nowpwd = '${loginMember.pwd}'
+
+			if (reg_pwd.test(cpwd_1)) {
+				if (cpwd_1 !== cpwd_2 || pwd != nowpwd) {
+					alert("비밀번호를 다시입력해주세요")
+
+				} else {
+					document.getElementById("pwchange").submit()
+					alert("비밀번호가 변경되었습니다. 다시 로그인하세요")
+				}
+
+			}else{
+			alert("형식에 맞는 비밀번호를 입력하세요")
+				}
+		}
+		deleteFunc = function() {
+
+			document.getElementById("delete").submit()
+			alert("회원정보가 삭제되었습니다.")
+		}
+
+		document.getElementById("cpwd_bt").addEventListener("click", cpwSubmit);
+
+		document.getElementById("delete_bt").addEventListener("click",
+				deleteFunc);
+
+	}
+</script>
 
 <div class="sc-bnXvFD buSScp">
 	<div class="fresnel-container fresnel-greaterThan-xs ">

@@ -4,4 +4,16 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.onin.project.mapper.EstimateMapper">
 
+<!-- 카테고리 호출 -->
+<select id="category" resultType="com.onin.project.dto.CategoryDTO">
+SELECT * FROM CATEGORY start with CNOREF is null connect by prior CNO = CNOREF
+</select>
+
+<!-- form값 db전송 -->
+<insert id="estimateDone">
+INSERT INTO INVOICE
+(CNO, CNOREF, Q1, Q2, "ad", invoice_date, COST, FROM_MNO, send_date)
+VALUES(#{cno}, #{cnoref}, #{q1}, #{q2}, #{ad}, #{invoice_date}, #{cost}, #{from_mno}, sysdate)
+</insert>
+
 </mapper>

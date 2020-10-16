@@ -4,9 +4,8 @@ import com.onin.project.dto.MemberDTO;
 
 public interface MemberMapperSH {
 	
-	public int register(MemberDTO memberDTO);
 
-	public MemberDTO idCheck(MemberDTO memberDTO);
+	
 	
 
 		
