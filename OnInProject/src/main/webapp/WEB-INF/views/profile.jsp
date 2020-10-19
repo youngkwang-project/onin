@@ -3793,12 +3793,21 @@ $(function() {
 	
 	$('#saveBtn').click(function(){
 		$.ajax({
-			type:"POST"
-			url:
-			date:
-			})
+			type:"GET",
+			url:"/rest_profileSave",
+			date:{
+				intro: $('#intro').val(),
+				profile: $('#detailProf').val(),
+				name: $('#name').val(),
+				mno: ${loginMember.mno}
+				},
+			success:function(data){
+				alert(data);
+				}
 			
-		})  
+			});
+			
+		});  
 })//끝
 
 	
@@ -3879,7 +3888,7 @@ $(function() {
 				</div>
 				<div class="sc-bjPkoM sc-jEdsij kFfPhc">
 					<div class="fresnel-container fresnel-greaterThan-xs ">
-						<form>
+						
 							<div class="fresnel-container fresnel-greaterThan-xs ">
 								<p color="#191919" class="sc-bxivhb gAroWi">프로필 항목 등록</p>
 							</div>
@@ -3929,7 +3938,7 @@ $(function() {
 												</div>
 												<div class="sc-kGXeez kUKQcj">
 													<div class="sc-bdVaJa jCeSos">
-														<input value="${loginMember.name}" disabled=""
+														<input id="name" value="${loginMember.name}" disabled=""
 															class="sc-htpNat khbizk sc-kpOJdX bAKVje" width="100%" />
 													</div>
 												</div>
@@ -3963,8 +3972,8 @@ $(function() {
 							</div>
 							<div class="sc-ewMkZo eYzQqs">
 								<div class="sc-bdVaJa jCeSos">
-									<input placeholder="한 줄 프로필을 입력해주세요."
-										value="열의를 가지고 가르쳐드리겠습니다." width="100%"
+									<input id="intro" placeholder="한 줄 프로필을 입력해주세요."
+										 width="100%" name="intro"
 										class="sc-htpNat khbizk" />
 								</div>
 								<p color="#cccccc" class="sc-bxivhb sc-eCXBzT coLRDn">
@@ -3980,14 +3989,9 @@ $(function() {
 							</div>
 							<div class="fresnel-container fresnel-at-xs ">
 								<div width="100%" class="sc-jzJRlG iNJnXl">
-									<textarea height="0px" spellcheck="false"
+									<textarea id="detailProf" height="0px" spellcheck="false"
 										placeholder="상세 프로필을 입력해주세요." width="100%"
-										class="sc-cSHVUG ecbPDt">안녕하세요. 꾸준히 발전해나가려 노력하는 디자이너 신영광입니다.
-경험을 통해 더욱 큰 성장을 이루고 싶습니다.
-
-그래픽 디자인, 편집 디자인, 웹 디자인, 모션 그래픽과 더불어 일러스트 작업까지
-넓고 다양한 프로젝트들을 시도해 왔습니다.
-가지고 있는 역량을 최대한으로 이끌어 내는 결과물을 약속드립니다 :)</textarea>
+										class="sc-cSHVUG ecbPDt" name="profile"></textarea>
 									<textarea placeholder="상세 프로필을 입력해주세요." width="100%"
 										class="sc-cSHVUG sc-kAzzGY hdPwAJ"></textarea>
 								</div>
@@ -4000,8 +4004,8 @@ $(function() {
 								350
 							</p>
 							<div class="sc-hwcHae dLHQTe">
-							<button id="saveBtn" width="100%" height="100%" type="submit" class="sc-bZQynM fXhoYr">저장</button></div>
-						</form>
+							<button id="saveBtn" width="100%" height="100%" type="button" class="sc-bZQynM fXhoYr">저장</button></div>
+						
 					</div>
 							
 				</div>
