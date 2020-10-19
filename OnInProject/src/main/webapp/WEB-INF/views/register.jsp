@@ -36,10 +36,9 @@
 <meta name="viewport"
 	content="width=device-width,minimum-scale=1,initial-scale=1" />
 <meta name="next-head-count" content="2" />
-<link rel="preload" href="/_next/static/css/styles.e0203beb.chunk.css"
-	as="style" />
+<link rel="preload" href="https://pren.kr/_next/static/css/styles.e0203beb.chunk.css" as="style"/>
 <link rel="stylesheet"
-	href="/_next/static/css/styles.e0203beb.chunk.css" />
+	href="https://pren.kr/_next/static/css/styles.e0203beb.chunk.css" />
 <style
 	data-styled="kdtjOQ jmbAFp JXlWL kBvlYL OZoVQ iQSKvq LOgNr loTjFL eIEXWC VKktY drBCjk hPoZmI hRLeCu bscqcK boFQBu iVogkW dQiHqs fSkSkR eDatwz hUMmIm gQorcQ eDCNLl buSScp ivQTYn JkUIJ bTkeVG cfvPYm fmIaGN bYQuSi hrWlDM bxvfV JWpsr fkjkfb dkblTD iBPVhl dZGvHr fKltYN flDCkP ktBaKe hmuaMQ flypWG bdXKMA cOiWSs bvXeCN erEnpy fnpTqJ cftYnu jXbIfD kiGxiB cWlVFq glyfuW gRxJcl hrcnes ixTvgf bUwjoZ kUKQcj intbG heFMAY jCeSos ksfJEf kVkKtH dKYqiz dUNQAe dXQimh ejEJPT daGJjB iWQyEL evOLrP KSyMU jIURMm gkRfQP gqAyVG kBCtDU fOHccz jfMUaZ qEHPE jKmBqF eAugEp eSRUic isIIme iiYskj jIyWnK jlYqWR jLFQGw ANjrS gKXsws gBjaoW jSzkPZ gQHXag hRQZQm hxWWju gQuMFF fyVqUN"
 	data-styled-version="4.4.1">
@@ -1434,109 +1433,6 @@ textarea {
 
 
 </head>
-<script>
-	window.onload = function() {
-		var check = false;
-		var regExp = /([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
-		var reg_pwd = /^.*(?=.{8,20})(?=.*[0-9])(?=.*[a-zA-Z]).*$/;
-		//아이디 중복체크
-		$('#asd').click(function() {
-			$.ajax({
-				type : "POST",
-				url : "/checkSignup",
-				data : {
-					email : $('#email').val()
-				},
-				success : function(data) { //data : checkSignup에서 넘겨준 결과값
-					if ($.trim(data) == "YES") {
-						if (!regExp.test($('#email').val())) {
-							alert("사용이 불가능한 형식의 이메일입니다.");
-						} else {
-							alert("사용가능한 이메일입니다.");
-							check = true;
-
-						}
-					} else {
-						if ($('#email').val() != '') {
-							alert("중복된 이메일입니다.");
-							$('#email').val('');
-							$('#email').focus();
-						}
-					}
-				}
-			})
-		})
-
-		document.getElementById("registerBtn").addEventListener("click",
-				function() {
-
-					if (check) {
-
-						if ($('#email').val() == "") {
-							alert("이메일을 입력하세요.");
-							$('#email').focus();
-							return false;
-						}
-						if ($('#pwd').val() == "") {
-							alert("비밀번호를 입력하세요.");
-							$('#pwd').focus();
-							return false;
-						}
-						if ($('#pwd').val() != $('#pwd2').val()) {
-							alert("비밀번호가 일치하지 않습니다.");
-							return false;
-						}
-						if (!reg_pwd.test($('#pwd').val())) {
-							alert("형식에맞는 비밀번호를 입력하세요")
-							return false;
-						}
-
-						if ($('#name').val() == "") {
-							alert("이름을 입력하세요.");
-							$('#name').focus();
-							return false;
-						}
-
-						if ($('#tel').val() == "") {
-							alert("핸드폰번호를 입력하세요.");
-							$('#tel').focus();
-							return false;
-
-						} else {
-							document.getElementById("register").submit()
-						}
-					} else {
-						alert("중복확인을 눌러주세요");
-					}
-				});
-
-		$("#alert-success").hide();
-		$("#alert-danger").hide();
-		$("#pwdc").hide();
-		$("#pwd,#pwd2").change(
-				function() {
-					var pwd1 = $("#pwd").val();
-					var pwd2 = $("#pwd2").val();
-					if (pwd1 != "" || pwd2 != "") {
-						if (!reg_pwd.test($('#pwd').val())
-								|| !reg_pwd.test($('#pwd2').val())) {
-							$("#pwdc").show();
-							$("#alert-success").hide();
-							$("#alert-danger").hide();
-						} else if (pwd1 === pwd2) {
-							$("#alert-success").show();
-							$("#alert-danger").hide();
-							$("#pwdc").hide();
-						} else {
-							$("#alert-success").hide();
-							$("#alert-danger").show();
-							$("#pwdc").hide();
-						}
-					}
-
-				});
-	} // onload  끝
-</script>
 
 
 <body>
@@ -1718,3 +1614,108 @@ textarea {
 	</div>
 
 	<%@include file="footer.jsp"%>
+	
+	<script>
+	
+		var check = false;
+		var regExp = /([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
+		var reg_pwd = /^.*(?=.{8,20})(?=.*[0-9])(?=.*[a-zA-Z]).*$/;
+		//아이디 중복체크
+		$('#asd').click(function() {
+			$.ajax({
+				type : "POST",
+				url : "/checkSignup",
+				data : {
+					email : $('#email').val()
+				},
+				success : function(data) { //data : checkSignup에서 넘겨준 결과값
+					if ($.trim(data) == "YES") {
+						if (!regExp.test($('#email').val())) {
+							alert("사용이 불가능한 형식의 이메일입니다.");
+						} else {
+							alert("사용가능한 이메일입니다.");
+							check = true;
+
+						}
+					} else {
+						if ($('#email').val() != '') {
+							alert("중복된 이메일입니다.");
+							$('#email').val('');
+							$('#email').focus();
+						}
+					}
+				}
+			})
+		})
+
+		document.getElementById("registerBtn").addEventListener("click",
+				function() {
+
+					if (check) {
+
+						if ($('#email').val() == "") {
+							alert("이메일을 입력하세요.");
+							$('#email').focus();
+							return false;
+						}
+						if ($('#pwd').val() == "") {
+							alert("비밀번호를 입력하세요.");
+							$('#pwd').focus();
+							return false;
+						}
+						if ($('#pwd').val() != $('#pwd2').val()) {
+							alert("비밀번호가 일치하지 않습니다.");
+							return false;
+						}
+						if (!reg_pwd.test($('#pwd').val())) {
+							alert("형식에맞는 비밀번호를 입력하세요")
+							return false;
+						}
+
+						if ($('#name').val() == "") {
+							alert("이름을 입력하세요.");
+							$('#name').focus();
+							return false;
+						}
+
+						if ($('#tel').val() == "") {
+							alert("핸드폰번호를 입력하세요.");
+							$('#tel').focus();
+							return false;
+
+						} else {
+							document.getElementById("register").submit()
+						}
+					} else {
+						alert("중복확인을 눌러주세요");
+					}
+				});
+
+		$("#alert-success").hide();
+		$("#alert-danger").hide();
+		$("#pwdc").hide();
+		$("#pwd,#pwd2").change(
+				function() {
+					var pwd1 = $("#pwd").val();
+					var pwd2 = $("#pwd2").val();
+					if (pwd1 != "" || pwd2 != "") {
+						if (!reg_pwd.test($('#pwd').val())
+								|| !reg_pwd.test($('#pwd2').val())) {
+							$("#pwdc").show();
+							$("#alert-success").hide();
+							$("#alert-danger").hide();
+						} else if (pwd1 === pwd2) {
+							$("#alert-success").show();
+							$("#alert-danger").hide();
+							$("#pwdc").hide();
+						} else {
+							$("#alert-success").hide();
+							$("#alert-danger").show();
+							$("#pwdc").hide();
+						}
+					}
+
+				});
+	 // onload  끝
+</script>
+	
