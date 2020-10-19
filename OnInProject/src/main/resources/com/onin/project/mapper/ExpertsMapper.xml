@@ -17,6 +17,8 @@ select * FROM CATEGORY where CNOREF=#{cno}
 <select id="categorySel_3" resultType="com.onin.project.dto.CategoryJoinDTO">
 SELECT  c.cno,c.cname,c2.cno AS dcno,c2.CNAME AS dcname FROM CATEGORY c, CATEGORY c2 WHERE c.cno=c2.CNOREF AND c2.cno = #{dcno}
 </select>
-
+<update id="profUpload">
+   UPDATE MEMBER SET PROF=#{dbSaveName} WHERE MNO=#{mno}
+</update>
 
 </mapper>

@@ -1347,8 +1347,7 @@ textarea {
 		</div>
 	</div>
 
-
+<%@include file="footer.jsp"%>
 
 </body>
 </html>
-<%@include file="footer.jsp"%>

@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.onin.project.dto.CategoryDTO;
+import com.onin.project.dto.ExpertsDTO;
 import com.onin.project.dto.MemberDTO;
 import com.onin.project.service.ExpertsService;
 import com.onin.project.service.MemberService;
@@ -40,6 +41,11 @@ public class RestMemberController {
 		return str;
 	}
 	
+	@PostMapping(path="/rest_profileSave")
+	public String Save(ExpertsDTO expertsDTO) {
+		exService.profile(expertsDTO);
+		return "abc";
+	}
 
 
 }

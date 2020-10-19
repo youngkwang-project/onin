@@ -56,4 +56,6 @@ public class MemberService {
 		return mapper.invoiceDel(member);
 		
 	}
+	
+
 }
