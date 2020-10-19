@@ -21,4 +21,10 @@ SELECT  c.cno,c.cname,c2.cno AS dcno,c2.CNAME AS dcname FROM CATEGORY c, CATEGOR
    UPDATE MEMBER SET PROF=#{dbSaveName} WHERE MNO=#{mno}
 </update>
 
+<insert id="save">
+	insert into pro_member(mno,profile_img,name,intro,profile)
+	values(#{mno},#{profile_img},#{name},#{intro},'asd')
+
+</insert>
+
 </mapper>

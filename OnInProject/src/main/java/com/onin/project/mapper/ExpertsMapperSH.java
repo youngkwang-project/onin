@@ -10,5 +10,6 @@ public interface ExpertsMapperSH {
 	
 	public int profUpload(ProfUploadDTO profUploadDTO);
 		
+	public int save(ExpertsDTO expertsDTO);
 	
 }

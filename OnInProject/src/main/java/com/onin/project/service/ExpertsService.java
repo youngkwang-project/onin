@@ -9,6 +9,7 @@ import com.onin.project.dto.CategoryDTO;
 import com.onin.project.dto.CategoryJoinDTO;
 import com.onin.project.dto.ExpertsDTO;
 import com.onin.project.dto.ProfUploadDTO;
+import com.onin.project.dto.ProfileDTO;
 import com.onin.project.mapper.ExpertsMapper;
 
 @Service
@@ -36,12 +37,14 @@ ExpertsMapper mapper;
 
 		return mapper.categorySel_3(dcno);
 	}
-	public int profile(ExpertsDTO expertsDTO) {
-		return mapper.profile(expertsDTO);
-	}
+	//public int profile(ExpertsDTO expertsDTO) {
+		//return mapper.profile(expertsDTO);
+	//}
 	public int profUpload( ProfUploadDTO profUploadDTO ) {
 	      int retVal = mapper.profUpload(profUploadDTO);
 	      return retVal;
-	
+	}
+	public int save(ProfileDTO profileDTO) {
+		return mapper.save(profileDTO);
 	}
 }

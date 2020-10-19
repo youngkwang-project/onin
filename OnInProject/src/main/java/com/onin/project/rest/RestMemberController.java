@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.onin.project.dto.CategoryDTO;
 import com.onin.project.dto.ExpertsDTO;
 import com.onin.project.dto.MemberDTO;
+import com.onin.project.dto.ProfileDTO;
 import com.onin.project.service.ExpertsService;
 import com.onin.project.service.MemberService;
 
@@ -41,9 +42,10 @@ public class RestMemberController {
 		return str;
 	}
 	
-	@PostMapping(path="/rest_profileSave")
-	public String Save(ExpertsDTO expertsDTO) {
-		exService.profile(expertsDTO);
+	@GetMapping(path="/rest_profileSave")
+	public String save(ProfileDTO profileDTO) {
+		System.out.println(profileDTO);
+		exService.save(profileDTO);
 		return "abc";
 	}
 

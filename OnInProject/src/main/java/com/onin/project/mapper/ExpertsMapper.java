@@ -6,6 +6,7 @@ import com.onin.project.dto.CategoryDTO;
 import com.onin.project.dto.CategoryJoinDTO;
 import com.onin.project.dto.ExpertsDTO;
 import com.onin.project.dto.ProfUploadDTO;
+import com.onin.project.dto.ProfileDTO;
 
 public interface ExpertsMapper {
 
@@ -18,7 +19,9 @@ public interface ExpertsMapper {
 
 	public List<CategoryJoinDTO> categorySel_3(int dcno);
 	
-	public int profile(ExpertsDTO expertsDTO);
+	//public int profile(ExpertsDTO expertsDTO);
 	
 	public int profUpload(ProfUploadDTO profUploadDTO);
+	
+	public int save(ProfileDTO profileDTO);
 }
