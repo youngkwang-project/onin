@@ -2544,46 +2544,7 @@ textarea {
 	
 </script>
 
-<script>
-	window.onload = function() {
-		var innerS = document.getElementById("inner")
-		var cateName = document.getElementById("cateName")
-		document.getElementById("moreCategory")
-				.addEventListener("click", inner);
 
-		var innerB = 'open'
-
-		function inner() {
-			if (innerB == 'open') {
-
-				$.ajax({
-							url : '/rest/category',
-							dataType : 'json', /*html, text, json, xml, script*/
-							method : 'get',
-							success : function(data) {
-
-								var sum = ""
-								for (var i = 0; i < data.length; i++) {
-
-									var category = '<a  href="/experts/categories/category?cno='
-											+ data[i].cno
-											+ '"><div class="sc-fjdhpX eWZWnR">'
-											+ data[i].cname + '</div></a>'
-									sum = sum + category
-								}
-								innerS.innerHTML = sum
-								innerB = 'close'
-							}
-						});
-
-			} else {
-				innerS.innerHTML = ""
-				innerB = 'open'
-			}
-
-		}
-	}
-</script>
 </head>
 <body>
 	<%@include file="header.jsp"%>
@@ -2755,4 +2716,44 @@ textarea {
 			</div>
 		</div>
 	</div>
+	<script>
+	
+		var innerS = document.getElementById("inner")
+		var cateName = document.getElementById("cateName")
+		document.getElementById("moreCategory")
+				.addEventListener("click", inner);
+
+		var innerB = 'open'
+
+		function inner() {
+			if (innerB == 'open') {
+
+				$.ajax({
+							url : '/rest/category',
+							dataType : 'json', /*html, text, json, xml, script*/
+							method : 'get',
+							success : function(data) {
+
+								var sum = ""
+								for (var i = 0; i < data.length; i++) {
+
+									var category = '<a  href="/experts/categories/category?cno='
+											+ data[i].cno
+											+ '"><div class="sc-fjdhpX eWZWnR">'
+											+ data[i].cname + '</div></a>'
+									sum = sum + category
+								}
+								innerS.innerHTML = sum
+								innerB = 'close'
+							}
+						});
+
+			} else {
+				innerS.innerHTML = ""
+				innerB = 'open'
+			}
+
+		}
+	
+</script>
 	<%@include file="footer.jsp"%>

@@ -5,6 +5,7 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%@ page import="com.onin.project.dto.MemberDTO" %>
 <%@ page import="com.onin.project.dto.InvoiceDTO" %>
+<%MemberDTO loginMember = (MemberDTO)session.getAttribute("loginMember"); %>
 <style>
 .CTxus {
     display: flex;
@@ -46,19 +47,27 @@
     background-color: rgb(204, 204, 204);
     text-align: center;
 }
+body {
+    margin: 0;
+    font-family: "Overpass", sans-serif;
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #6c757d;
+    text-align: left;
+    background-color: #f8f9fa;
+}
 </style>
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.0.min.js" ></script>
 <script>
 	window.onload =function(){
-	$("#proChangePage").css("display","none");
-
 	$("#memBtn").click(function(){
 		$("#proChangePage").toggle();
 		});
 		
 		}
 </script>
-<%MemberDTO loginMember = (MemberDTO)session.getAttribute("loginMember"); %>
+
 
 	<div id="__next">
 		
@@ -128,4 +137,7 @@
 			
 			
 			</div>
+			<script>
+			$("#proChangePage").css("display","none");
+			</script>
 			

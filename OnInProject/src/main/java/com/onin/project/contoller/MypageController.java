@@ -27,4 +27,8 @@ public class MypageController {
 
 		   return "invoice";
 	   }
+	 @GetMapping("/mypage/chat")
+	 public String chat() {
+		 return "chat";
+	 }
 }

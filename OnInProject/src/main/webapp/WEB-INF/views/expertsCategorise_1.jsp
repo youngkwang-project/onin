@@ -2543,87 +2543,6 @@ textarea {
 	crossorigin="anonymous">
 	
 </script>
-
-<script>
-	window.onload = function() {
-		var innerS = document.getElementById("inner")
-		var cateName = document.getElementById("cateName")
-		document.getElementById("moreCategory")
-				.addEventListener("click", inner);
-
-		var innerB = 'open'
-
-		function inner() {
-			if (innerB == 'open') {
-
-				$
-						.ajax({
-							url : '/rest/category',
-							dataType : 'json', /*html, text, json, xml, script*/
-							method : 'get',
-							success : function(data) {
-
-								var sum = ""
-								for (var i = 0; i < data.length; i++) {
-
-									var category = '<a  href="/experts/categories/category?cno='
-											+ data[i].cno
-											+ '"><div class="sc-fjdhpX eWZWnR">'
-											+ data[i].cname + '</div></a>'
-									sum = sum + category
-								}
-								innerS.innerHTML = sum
-								innerB = 'close'
-							}
-						});
-
-			} else {
-				innerS.innerHTML = ""
-				innerB = 'open'
-			}
-
-		}
-
-		var category = "${category}"
-		if (category != "") {
-			cateName.innerHTML = '<div id="cateName" class="sc-gqjmRU bgQVQZ">'
-					+ category + '</div>'
-		}
-
-		var innerS_1 = document.getElementById("inner_detail")
-		var cateName = document.getElementById("detailName")
-		document.getElementById("moreCategory_detail").addEventListener(
-				"click", inner2);
-
-		var innerB2 = 'open'
-	function inner2() {
-		if (innerB2 == 'open') {
-			
-							var sum = ""
-							<c:forEach var="member" items="${detail}">
-							
-
-								var detail = '<a  href="/experts/categories/category/detail?cno='
-										+ ${member.CNO}
-										+ '"><div class="sc-fjdhpX eWZWnR">'
-										+ "${member.CNAME}" + '</div></a>'
-								sum = sum + detail
-							
-							</c:forEach>
-										
-							innerS_1.innerHTML = sum
-							innerB2 = 'close'
-						
-					
-
-		} else {
-			innerS_1.innerHTML = ""
-			innerB2 = 'open'
-		}
-	}
-
-	}
-</script>
 </head>
 <body>
 	<%@include file="header.jsp"%>
@@ -2795,4 +2714,86 @@ textarea {
 			</div>
 		</div>
 	</div>
+	
+<script>
+	
+		var innerS = document.getElementById("inner")
+		var cateName = document.getElementById("cateName")
+		document.getElementById("moreCategory")
+				.addEventListener("click", inner);
+
+		var innerB = 'open'
+
+		function inner() {
+			if (innerB == 'open') {
+
+				$
+						.ajax({
+							url : '/rest/category',
+							dataType : 'json', /*html, text, json, xml, script*/
+							method : 'get',
+							success : function(data) {
+
+								var sum = ""
+								for (var i = 0; i < data.length; i++) {
+
+									var category = '<a  href="/experts/categories/category?cno='
+											+ data[i].cno
+											+ '"><div class="sc-fjdhpX eWZWnR">'
+											+ data[i].cname + '</div></a>'
+									sum = sum + category
+								}
+								innerS.innerHTML = sum
+								innerB = 'close'
+							}
+						});
+
+			} else {
+				innerS.innerHTML = ""
+				innerB = 'open'
+			}
+
+		}
+
+		var category = "${category}"
+		if (category != "") {
+			cateName.innerHTML = '<div id="cateName" class="sc-gqjmRU bgQVQZ">'
+					+ category + '</div>'
+		}
+
+		var innerS_1 = document.getElementById("inner_detail")
+		var cateName = document.getElementById("detailName")
+		document.getElementById("moreCategory_detail").addEventListener(
+				"click", inner2);
+
+		var innerB2 = 'open'
+	function inner2() {
+		if (innerB2 == 'open') {
+			
+							var sum = ""
+							<c:forEach var="member" items="${detail}">
+							
+
+								var detail = '<a  href="/experts/categories/category/detail?cno='
+										+ ${member.CNO}
+										+ '"><div class="sc-fjdhpX eWZWnR">'
+										+ "${member.CNAME}" + '</div></a>'
+								sum = sum + detail
+							
+							</c:forEach>
+										
+							innerS_1.innerHTML = sum
+							innerB2 = 'close'
+						
+					
+
+		} else {
+			innerS_1.innerHTML = ""
+			innerB2 = 'open'
+		}
+	}
+
+	
+</script>
+	
 	<%@include file="footer.jsp"%>
