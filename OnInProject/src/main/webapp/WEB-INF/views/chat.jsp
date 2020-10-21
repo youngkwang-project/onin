@@ -41,7 +41,7 @@
 	as="style" />
 <link rel="stylesheet"
 	href="https://pren.kr/_next/static/css/styles.e0203beb.chunk.css" />
-<link rel="preload"
+<!-- <link rel="preload"
 	href="https://pren.kr/_next/static/zQP1Jc0b2vsx9bLqRd04B/pages/mypren/settings.js"
 	as="script" />
 <link rel="preload"
@@ -58,7 +58,7 @@
 	as="script" />
 <link rel="preload"
 	href="https://pren.kr/_next/static/runtime/main-45c1073cc97bb62d2b0b.js"
-	as="script" />
+	as="script" /> -->
 
 <style
 	data-styled="kdtjOQ jmbAFp JXlWL kBvlYL OZoVQ iQSKvq LOgNr loTjFL eIEXWC VKktY drBCjk hPoZmI hRLeCu boFQBu iVogkW hrMujW bMqLzo kqUWbj dQiHqs fSkSkR eDatwz DHRxw gjMCrt gMnszk bIPonl ebkKka gQorcQ eDCNLl isRlUq fWBprJ gKfNDk cdJxKW buSScp aLnDj dcCyRv dDgyXN kEouQA ixlgyn jvXLhQ gyJIGO laZApR iNaNZM idLzqq eOzNQX bAeuYa iPNPCE Aqbls eXGkyY iYDdKN hhWBwc grHZkF iWfFWA bUQfyh GdyIw cJKKXK gRxJcl bUwjoZ kUKQcj bAKVje jCeSos ksfJEf flZrYg fdOyNa qEHPE jKmBqF eAugEp eSRUic isIIme iiYskj jIyWnK jlYqWR jLFQGw ANjrS gKXsws gBjaoW jSzkPZ gQHXag hRQZQm hxWWju gQuMFF fyVqUN"
@@ -1342,17 +1342,12 @@ textarea {
 	margin-bottom: 50px;
 }
 
-@media
-(
-max-width
-:
-1200px)
-{
-.idLzqq {
-	padding: 15px 25px;
+@media ( max-width : 1200px) {
+	.idLzqq {
+		padding: 15px 25px;
+	}
 }
 
-}
 .idLzqq {
 	transition: padding 0.2s ease 0s;
 	width: 100%;
@@ -1370,19 +1365,14 @@ max-width
 	font-size: 38px;
 }
 
-@media
-(
-min-width
-:
-769px)
-{
-.oYbOU {
-	margin: 20px 5px;
-	border-radius: 5px;
-	box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 10px 0px;
+@media ( min-width : 769px) {
+	.oYbOU {
+		margin: 20px 5px;
+		border-radius: 5px;
+		box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 10px 0px;
+	}
 }
 
-}
 .oYbOU {
 	width: auto;
 	height: 134px;
@@ -1461,18 +1451,13 @@ min-width
 	color: rgb(204, 204, 204);
 }
 
-@media
-(
-min-width
-:
-1001px)
-{
-.bOsVOo {
-	width: 60%;
-	min-height: calc(100vh - 210px);
+@media ( min-width : 1001px) {
+	.bOsVOo {
+		width: 60%;
+		min-height: calc(100vh - 210px);
+	}
 }
 
-}
 .bOsVOo {
 	overflow: auto;
 	transition: width 0.2s ease 0s;
@@ -1766,34 +1751,81 @@ min-width
 												<div class="sc-fYxtnH emapSw">혹시 캐릭터디자인은 어떻게 견적이 나오나요?</div>
 												<p class="sc-tilXH cjNsf">2020.10.20. 10.30</p>
 											</div>
+											<div class="sc-jnlKLf jBRXnw">
+												<div class="sc-fYxtnH emapSw">혹시 캐릭터디자인은 어떻게 견적이 나오나요?</div>
+												<p class="sc-tilXH cjNsf">2020.10.20. 10.30</p>
+											</div>
+											<div class="sc-jnlKLf jBRXnw">
+												<div class="sc-fYxtnH emapSw">혹시 캐릭터디자인은 어떻게 견적이 나오나요?</div>
+												<p class="sc-tilXH cjNsf">2020.10.20. 10.30</p>
+											</div>
+											<div class="sc-jnlKLf jBRXnw">
+												<div class="sc-fYxtnH emapSw">혹시 캐릭터디자인은 어떻게 견적이 나오나요?</div>
+												<p class="sc-tilXH cjNsf">2020.10.20. 10.30</p>
+											</div>
+											<div class="sc-jnlKLf jBRXnw">
+												<div class="sc-fYxtnH emapSw">혹시 캐릭터디자인은 어떻게 견적이 나오나요?</div>
+												<p class="sc-tilXH cjNsf">2020.10.20. 10.30</p>
+											</div>
+											<div class="sc-jnlKLf jBRXnw">
+												<div class="sc-fYxtnH emapSw">혹시 캐릭터디자인은 어떻게 견적이 나오나요?</div>
+												<p class="sc-tilXH cjNsf">2020.10.20. 10.30</p>
+											</div>
+											<div class="sc-jnlKLf jBRXnw">
+												<div class="sc-fYxtnH emapSw">혹시 캐릭터디자인은 어떻게 견적이 나오나요?</div>
+												<p class="sc-tilXH cjNsf">2020.10.20. 10.30</p>
+											</div>
+											<div class="sc-jnlKLf jBRXnw">
+												<div class="sc-fYxtnH emapSw">혹시 캐릭터디자인은 어떻게 견적이 나오나요?</div>
+												<p class="sc-tilXH cjNsf">2020.10.20. 10.30</p>
+											</div>
 										</div>
 										<div class="sc-koErNt jvTlNp">
 											<div class="sc-gJqsIT dQGJOj">
 												<div class="sc-kDhYZr cdepHk"></div>
 											</div>
-											<input type="text" placeholder="Type a message here…"
-												value="" class="sc-jhaWeW eSPEoU">
-											<button type="button" class="sc-guztPN bfbmyh"></button>
+											<input type="text" id="send"
+												placeholder="Type a message here…"
+												class="sc-jhaWeW eSPEoU">
+											<button type="button" onclick="send_message()" value="Send"
+												class="sc-guztPN bfbmyh"></button>
 										</div>
 									</div>
 								</div>
 							</div>
-							
+
 						</div>
 					</div>
-
-
-
-
-
-
-
-
 				</div>
 			</div>
 		</div>
 	</div>
+	<script>
+		var wsUri = "ws://localhost:9999/ws/chat";
+		var ws = new WebSocket(wsUri);
 
+		ws.onopen = function() {
+			console.log("connection");
+
+		};
+		//메시지를 수신할때
+		ws.onmessage = function(evt) {
+			
+			console.log(evt)
+		};
+		ws.onerror = function(err) {
+			console.log(err)
+		};
+
+		ws.onclose = function(evt) {
+			console.log("close")
+		}
+
+		function send_message() {
+			var msg = $("#send").val();
+			ws.send(msg)
+		}
+	</script>
 	<%@include file="footer.jsp"%>
 
 </body>

@@ -1805,46 +1805,7 @@ textarea {
 </head>
 <body>
 	<script>
-    (function() {
-        var w = window;
-        if (w.ChannelIO) {
-            return (window.console.error || window.console.log || function() {})('ChannelIO script included twice.');
-        }
-        var d = window.document;
-        var ch = function() {
-            ch.c(arguments);
-        };
-        ch.q = [];
-        ch.c = function(args) {
-            ch.q.push(args);
-        };
-        w.ChannelIO = ch;
-        function l() {
-            if (w.ChannelIOInitialized) {
-                return;
-            }
-            w.ChannelIOInitialized = true;
-            var s = document.createElement('script');
-            s.type = 'text/javascript';
-            s.async = true;
-            s.src = 'https://cdn.channel.io/plugin/ch-plugin-web.js';
-            s.charset = 'UTF-8';
-            var x = document.getElementsByTagName('script')[0];
-            x.parentNode.insertBefore(s, x);
-        }
-        if (document.readyState === 'complete') {
-            l();
-        } else if (window.attachEvent) {
-            window.attachEvent('onload', l);
-        } else {
-            window.addEventListener('DOMContentLoaded', l, false);
-            window.addEventListener('load', l, false);
-        }
-    })();
-    ChannelIO('boot', {
-        "pluginKey": "8597edd3-13ff-441f-90a3-6e172237e6c7"
-    });
-    </script>
+    
 
 <%@include file="header.jsp" %>
 			<div class="sc-bnXvFD buSScp">
@@ -1875,7 +1836,7 @@ textarea {
 															href="/estimate?firstCategoryId=1"
 															class="sc-jVODtj YMbLl">빠른 의뢰 요청</a> <a
 															title="마케팅 전문가 찾기"
-															href="/experts/categories?firstCategoryId=1"
+															href="/experts/categories/category?cno=100"
 															class="sc-jVODtj eEQRlu">전문가 찾기</a>
 													</div>
 												</div>
@@ -1893,7 +1854,7 @@ textarea {
 															href="/estimate?firstCategoryId=16"
 															class="sc-jVODtj YMbLl">빠른 의뢰 요청</a> <a
 															title="디자인 전문가 찾기"
-															href="/experts/categories?firstCategoryId=16"
+															href="/experts/categories/category?cno=200"
 															class="sc-jVODtj eEQRlu">전문가 찾기</a>
 													</div>
 												</div>
@@ -2128,6 +2089,46 @@ textarea {
 					</div>
 				</div>
 			</div>
+			(function() {
+		        var w = window;
+		        if (w.ChannelIO) {
+		            return (window.console.error || window.console.log || function() {})('ChannelIO script included twice.');
+		        }
+		        var d = window.document;
+		        var ch = function() {
+		            ch.c(arguments);
+		        };
+		        ch.q = [];
+		        ch.c = function(args) {
+		            ch.q.push(args);
+		        };
+		        w.ChannelIO = ch;
+		        function l() {
+		            if (w.ChannelIOInitialized) {
+		                return;
+		            }
+		            w.ChannelIOInitialized = true;
+		            var s = document.createElement('script');
+		            s.type = 'text/javascript';
+		            s.async = true;
+		            s.src = 'https://cdn.channel.io/plugin/ch-plugin-web.js';
+		            s.charset = 'UTF-8';
+		            var x = document.getElementsByTagName('script')[0];
+		            x.parentNode.insertBefore(s, x);
+		        }
+		        if (document.readyState === 'complete') {
+		            l();
+		        } else if (window.attachEvent) {
+		            window.attachEvent('onload', l);
+		        } else {
+		            window.addEventListener('DOMContentLoaded', l, false);
+		            window.addEventListener('load', l, false);
+		        }
+		    })();
+		    ChannelIO('boot', {
+		        "pluginKey": "8597edd3-13ff-441f-90a3-6e172237e6c7"
+		    });
+		    </script>
 <%@include file="footer.jsp" %>			
 
 

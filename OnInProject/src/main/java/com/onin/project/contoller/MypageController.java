@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.onin.project.dto.InvoiceJoinDTO;
+import com.onin.project.handler.ChatHandler;
 import com.onin.project.service.MypageService;
 @Controller
 public class MypageController {
@@ -16,7 +17,8 @@ public class MypageController {
 	private static final Logger logger = LoggerFactory.getLogger(MypageController.class);
 	@Autowired
 	MypageService service;
-	
+	@Autowired
+	ChatHandler chatHandler;
 	
 	//보낸의요청서 리스트
 	 @GetMapping("/mypage/invoice")
