@@ -49,7 +49,7 @@ public class ChatHandler extends TextWebSocketHandler {
 			sess.sendMessage(message);
 		};
 		
-		
+
 		
 		
 	}
