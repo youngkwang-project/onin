@@ -43,9 +43,9 @@ public class ChatHandler extends TextWebSocketHandler {
 
 //		int mno = ((MemberDTO)session.getAttributes().get("loginMember")).getMno();
 //		System.out.println(mno);
-
+		
 		for(WebSocketSession sess : sessions) {
-			System.out.println(sess);
+			
 			sess.sendMessage(message);
 		};
 		
@@ -56,8 +56,8 @@ public class ChatHandler extends TextWebSocketHandler {
 	@Override
 	public void afterConnectionClosed(WebSocketSession session, CloseStatus status) throws Exception{
 		logger.info("close : " + session);
+		sessions.re
 		
-		System.out.println(sessions);
 		
 	}
 	

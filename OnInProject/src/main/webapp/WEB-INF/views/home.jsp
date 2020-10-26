@@ -3,7 +3,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%-- <%@ page session="false"%> --%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
-<%@ page import="com.onin.project.dto.MemberDTO" %>
+<%@ page import="com.onin.project.dto.MemberDTO"%>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -1804,292 +1804,283 @@ textarea {
 </style>
 </head>
 <body>
-	<script>
-    
 
-<%@include file="header.jsp" %>
-			<div class="sc-bnXvFD buSScp">
-				<div class="sc-hGoxap hvaoks">
-					<div>
-						<div class="sc-VJcYb cUdoxi">
-							<div class="sc-fONwsr eHjbcA">
-								<div class="sc-kUaPvJ eJsQbz">
-									<p class="sc-bxivhb sc-ipXKqB ekTjCa">
-										찾으시는 전문가의 <br /> 카테고리를 선택해주세요.
-									</p>
-									<p class="sc-bxivhb sc-hmXxxW egbETC">
-										ON-IN의 전문가는 상위 10% 전문가만을 선별하여 <br /> 검증 된 각 분야의 아웃소싱 전문가와
-										클라이언트를 연결해주는 서비스 입니다.
-									</p>
-									<div class="sc-fjmCvl jmdDbZ">
-										<div class="sc-bHwgHz hlmMzj">
-											<div class="sc-krDsej hSvfKj">
-												<div class="sc-dTdPqK bUhfNT">
-													<div class="sc-itybZL kDTKbj">
-														<img
-															src="https://pren.kr/static/experts/category_icon/마케팅.svg"
-															alt="마케팅 아이콘" class="sc-eMigcr kxXIgY" /> <span
-															class="sc-fzsDOv gjBhzf">마케팅</span>
-													</div>
-													<div class="sc-gPWkxV DGrYa _CategoryButtonContainer">
-														<a title="마케팅 빠른 의뢰 요청하기"
-															href="/estimate?firstCategoryId=1"
-															class="sc-jVODtj YMbLl">빠른 의뢰 요청</a> <a
-															title="마케팅 전문가 찾기"
-															href="/experts/categories/category?cno=100"
-															class="sc-jVODtj eEQRlu">전문가 찾기</a>
-													</div>
-												</div>
+
+
+	<%@include file="header.jsp"%>
+	<div class="sc-bnXvFD buSScp">
+		<div class="sc-hGoxap hvaoks">
+			<div>
+				<div class="sc-VJcYb cUdoxi">
+					<div class="sc-fONwsr eHjbcA">
+						<div class="sc-kUaPvJ eJsQbz">
+							<p class="sc-bxivhb sc-ipXKqB ekTjCa">
+								찾으시는 전문가의 <br /> 카테고리를 선택해주세요.
+							</p>
+							<p class="sc-bxivhb sc-hmXxxW egbETC">
+								ON-IN의 전문가는 상위 10% 전문가만을 선별하여 <br /> 검증 된 각 분야의 아웃소싱 전문가와
+								클라이언트를 연결해주는 서비스 입니다.
+							</p>
+							<div class="sc-fjmCvl jmdDbZ">
+								<div class="sc-bHwgHz hlmMzj">
+									<div class="sc-krDsej hSvfKj">
+										<div class="sc-dTdPqK bUhfNT">
+											<div class="sc-itybZL kDTKbj">
+												<img
+													src="https://pren.kr/static/experts/category_icon/마케팅.svg"
+													alt="마케팅 아이콘" class="sc-eMigcr kxXIgY" /> <span
+													class="sc-fzsDOv gjBhzf">마케팅</span>
 											</div>
-											<div class="sc-krDsej hSvfKj">
-												<div class="sc-dTdPqK bUhfNT">
-													<div class="sc-itybZL kDTKbj">
-														<img
-															src="https://pren.kr/static/experts/category_icon/디자인.svg"
-															alt="디자인 아이콘" class="sc-eMigcr kxXIgY" /> <span
-															class="sc-fzsDOv gjBhzf">디자인</span>
-													</div>
-													<div class="sc-gPWkxV DGrYa _CategoryButtonContainer">
-														<a title="디자인 빠른 의뢰 요청하기"
-															href="/estimate?firstCategoryId=16"
-															class="sc-jVODtj YMbLl">빠른 의뢰 요청</a> <a
-															title="디자인 전문가 찾기"
-															href="/experts/categories/category?cno=200"
-															class="sc-jVODtj eEQRlu">전문가 찾기</a>
-													</div>
-												</div>
-											</div>
-											<div class="sc-krDsej hSvfKj">
-												<div class="sc-dTdPqK bUhfNT">
-													<div class="sc-itybZL kDTKbj">
-														<img
-															src="https://pren.kr/static/experts/category_icon/IT프로그래밍.svg"
-															alt="IT프로그래밍 아이콘" class="sc-eMigcr kxXIgY" /> <span
-															class="sc-fzsDOv gjBhzf">IT프로그래밍</span>
-													</div>
-													<div class="sc-gPWkxV DGrYa _CategoryButtonContainer">
-														<a title="IT프로그래밍 빠른 의뢰 요청하기"
-															href="/estimate?firstCategoryId=32"
-															class="sc-jVODtj YMbLl">빠른 의뢰 요청</a> <a
-															title="IT프로그래밍 전문가 찾기"
-															href="/experts/categories?firstCategoryId=32"
-															class="sc-jVODtj eEQRlu">전문가 찾기</a>
-													</div>
-												</div>
-											</div>
-											<div class="sc-krDsej hSvfKj">
-												<div class="sc-dTdPqK bUhfNT">
-													<div class="sc-itybZL kDTKbj">
-														<img
-															src="https://pren.kr/static/experts/category_icon/번역·통역.svg"
-															alt="번역·통역 아이콘" class="sc-eMigcr kxXIgY" /> <span
-															class="sc-fzsDOv gjBhzf">번역·통역</span>
-													</div>
-													<div class="sc-gPWkxV DGrYa _CategoryButtonContainer">
-														<a title="번역·통역 빠른 의뢰 요청하기"
-															href="/estimate?firstCategoryId=45"
-															class="sc-jVODtj YMbLl">빠른 의뢰 요청</a> <a
-															title="번역·통역 전문가 찾기"
-															href="/experts/categories?firstCategoryId=45"
-															class="sc-jVODtj eEQRlu">전문가 찾기</a>
-													</div>
-												</div>
-											</div>
-											<div class="sc-krDsej hSvfKj">
-												<div class="sc-dTdPqK bUhfNT">
-													<div class="sc-itybZL kDTKbj">
-														<img
-															src="https://pren.kr/static/experts/category_icon/영상·사진·음악.svg"
-															alt="영상·사진·음악 아이콘" class="sc-eMigcr kxXIgY" /> <span
-															class="sc-fzsDOv gjBhzf">영상·사진·음악</span>
-													</div>
-													<div class="sc-gPWkxV DGrYa _CategoryButtonContainer">
-														<a title="영상·사진·음악 빠른 의뢰 요청하기"
-															href="/estimate?firstCategoryId=61"
-															class="sc-jVODtj YMbLl">빠른 의뢰 요청</a> <a
-															title="영상·사진·음악 전문가 찾기"
-															href="/experts/categories?firstCategoryId=61"
-															class="sc-jVODtj eEQRlu">전문가 찾기</a>
-													</div>
-												</div>
-											</div>
-											<div class="sc-krDsej hSvfKj">
-												<div class="sc-dTdPqK bUhfNT">
-													<div class="sc-itybZL kDTKbj">
-														<img
-															src="https://pren.kr/static/experts/category_icon/문서·작문.svg"
-															alt="문서·작문 아이콘" class="sc-eMigcr kxXIgY" /> <span
-															class="sc-fzsDOv gjBhzf">문서·작문</span>
-													</div>
-													<div class="sc-gPWkxV DGrYa _CategoryButtonContainer">
-														<a title="문서·작문 빠른 의뢰 요청하기"
-															href="/estimate?firstCategoryId=69"
-															class="sc-jVODtj YMbLl">빠른 의뢰 요청</a> <a
-															title="문서·작문 전문가 찾기"
-															href="/experts/categories?firstCategoryId=69"
-															class="sc-jVODtj eEQRlu">전문가 찾기</a>
-													</div>
-												</div>
-											</div>
-											<div class="sc-krDsej hSvfKj">
-												<div class="sc-dTdPqK bUhfNT">
-													<div class="sc-itybZL kDTKbj">
-														<img
-															src="https://pren.kr/static/experts/category_icon/상담·컨설팅.svg"
-															alt="상담·컨설팅 아이콘" class="sc-eMigcr kxXIgY" /> <span
-															class="sc-fzsDOv gjBhzf">상담·컨설팅</span>
-													</div>
-													<div class="sc-gPWkxV DGrYa _CategoryButtonContainer">
-														<a title="상담·컨설팅 빠른 의뢰 요청하기"
-															href="/estimate?firstCategoryId=78"
-															class="sc-jVODtj YMbLl">빠른 의뢰 요청</a> <a
-															title="상담·컨설팅 전문가 찾기"
-															href="/experts/categories?firstCategoryId=78"
-															class="sc-jVODtj eEQRlu">전문가 찾기</a>
-													</div>
-												</div>
-											</div>
-											<div class="sc-krDsej hSvfKj">
-												<div class="sc-dTdPqK bUhfNT">
-													<div class="sc-itybZL kDTKbj">
-														<img
-															src="https://pren.kr/static/experts/category_icon/이벤트.svg"
-															alt="이벤트 아이콘" class="sc-eMigcr kxXIgY" /> <span
-															class="sc-fzsDOv gjBhzf">이벤트</span>
-													</div>
-													<div class="sc-gPWkxV DGrYa _CategoryButtonContainer">
-														<a title="이벤트 빠른 의뢰 요청하기"
-															href="/estimate?firstCategoryId=93"
-															class="sc-jVODtj YMbLl">빠른 의뢰 요청</a> <a
-															title="이벤트 전문가 찾기"
-															href="/experts/categories?firstCategoryId=93"
-															class="sc-jVODtj eEQRlu">전문가 찾기</a>
-													</div>
-												</div>
-											</div>
-											<div class="sc-krDsej hSvfKj">
-												<div class="sc-dTdPqK bUhfNT">
-													<div class="sc-itybZL kDTKbj">
-														<img
-															src="https://pren.kr/static/experts/category_icon/레슨.svg"
-															alt="레슨 아이콘" class="sc-eMigcr kxXIgY" /> <span
-															class="sc-fzsDOv gjBhzf">레슨</span>
-													</div>
-													<div class="sc-gPWkxV DGrYa _CategoryButtonContainer">
-														<a title="레슨 빠른 의뢰 요청하기"
-															href="/estimate?firstCategoryId=100"
-															class="sc-jVODtj YMbLl">빠른 의뢰 요청</a> <a title="레슨 전문가 찾기"
-															href="/experts/categories?firstCategoryId=100"
-															class="sc-jVODtj eEQRlu">전문가 찾기</a>
-													</div>
-												</div>
-											</div>
-											<div class="sc-krDsej hSvfKj">
-												<div class="sc-dTdPqK bUhfNT">
-													<div class="sc-itybZL kDTKbj">
-														<img
-															src="https://pren.kr/static/experts/category_icon/기타(생활서비스).svg"
-															alt="기타(생활서비스) 아이콘" class="sc-eMigcr kxXIgY" /> <span
-															class="sc-fzsDOv gjBhzf">기타(생활서비스)</span>
-													</div>
-													<div class="sc-gPWkxV DGrYa _CategoryButtonContainer">
-														<a title="기타(생활서비스) 빠른 의뢰 요청하기"
-															href="/estimate?firstCategoryId=111"
-															class="sc-jVODtj YMbLl">빠른 의뢰 요청</a> <a
-															title="기타(생활서비스) 전문가 찾기"
-															href="/experts/categories?firstCategoryId=111"
-															class="sc-jVODtj eEQRlu">전문가 찾기</a>
-													</div>
-												</div>
+											<div class="sc-gPWkxV DGrYa _CategoryButtonContainer">
+												<a title="마케팅 빠른 의뢰 요청하기" href="/estimate?firstCategoryId=1"
+													class="sc-jVODtj YMbLl">빠른 의뢰 요청</a> <a title="마케팅 전문가 찾기"
+													href="/experts/categories/category?cno=100"
+													class="sc-jVODtj eEQRlu">전문가 찾기</a>
 											</div>
 										</div>
 									</div>
-								</div>
-								<img src="https://pren.kr/static/main/main_section1_img.png"
-									class="sc-giadOv jWzsLF" />
-							</div>
-						</div>
-						<div class="fresnel-container fresnel-greaterThan-xs ">
-							<div class="sc-cqCuEk jQzxey">
-								<div class="sc-dliRfk kolQpy">
-									<div class="react-reveal">
-										<p class="sc-bxivhb sc-qrIAp kKBvkU">ON-IN은 전문가와 고객을
-											연결합니다.</p>
+									<div class="sc-krDsej hSvfKj">
+										<div class="sc-dTdPqK bUhfNT">
+											<div class="sc-itybZL kDTKbj">
+												<img
+													src="https://pren.kr/static/experts/category_icon/디자인.svg"
+													alt="디자인 아이콘" class="sc-eMigcr kxXIgY" /> <span
+													class="sc-fzsDOv gjBhzf">디자인</span>
+											</div>
+											<div class="sc-gPWkxV DGrYa _CategoryButtonContainer">
+												<a title="디자인 빠른 의뢰 요청하기"
+													href="/estimate?firstCategoryId=16" class="sc-jVODtj YMbLl">빠른
+													의뢰 요청</a> <a title="디자인 전문가 찾기"
+													href="/experts/categories/category?cno=200"
+													class="sc-jVODtj eEQRlu">전문가 찾기</a>
+											</div>
+										</div>
 									</div>
-									<div class="react-reveal">
-										<div width="941px" class="sc-iqzUVk gSzJuG">
-											<div class="react-reveal">
-												<div class="sc-kLIISr dmOecU">
-													<img
-														src="https://pren.kr/static/main/main_section2_icon1.svg"
-														width="60px" height="66px" alt="pren_headerlogo" />
-													<p color="#191919" class="sc-bxivhb sc-ipZHIp loxkfo">선별된
-														전문가</p>
-													<p class="sc-bxivhb sc-ipZHIp jkEPwm">
-														ON-IN은 아무나 전문가를 선별하지 않습니다. <br /> 선별된 상위 전문가들을 만나보세요.
-													</p>
-												</div>
+									<div class="sc-krDsej hSvfKj">
+										<div class="sc-dTdPqK bUhfNT">
+											<div class="sc-itybZL kDTKbj">
+												<img
+													src="https://pren.kr/static/experts/category_icon/IT프로그래밍.svg"
+													alt="IT프로그래밍 아이콘" class="sc-eMigcr kxXIgY" /> <span
+													class="sc-fzsDOv gjBhzf">IT프로그래밍</span>
 											</div>
-											<div class="react-reveal">
-												<div class="sc-kLIISr dmOecU">
-													<img
-														src="https://pren.kr/static/main/main_section2_icon2.svg"
-														width="65px" height="62px" alt="pren_headerlogo" />
-													<p color="#191919" class="sc-bxivhb sc-ipZHIp loxkfo">차별성있는
-														프로필</p>
-													<p class="sc-bxivhb sc-ipZHIp jkEPwm">
-														전문가의 이력, 경력, 포트폴리오를 넘어 <br /> 작업철학이 담긴 프로필 사이트를 둘러보세요.
-													</p>
-												</div>
+											<div class="sc-gPWkxV DGrYa _CategoryButtonContainer">
+												<a title="IT프로그래밍 빠른 의뢰 요청하기"
+													href="/estimate?firstCategoryId=32" class="sc-jVODtj YMbLl">빠른
+													의뢰 요청</a> <a title="IT프로그래밍 전문가 찾기"
+													href="/experts/categories?firstCategoryId=32"
+													class="sc-jVODtj eEQRlu">전문가 찾기</a>
 											</div>
-											<div class="react-reveal">
-												<div class="sc-kLIISr dmOecU">
-													<img
-														src="https://pren.kr/static/main/main_section2_icon3.svg"
-														width="65px" height="62px" alt="pren_headerlogo" />
-													<p color="#191919" class="sc-bxivhb sc-ipZHIp loxkfo">함께하는
-														성장 히스토리</p>
-													<p class="sc-bxivhb sc-ipZHIp jkEPwm">
-														월 평균거래, 거래성사율 등 <br /> 전문가의 활동에 대한 히스토리를 제공해드립니다.
-													</p>
-												</div>
+										</div>
+									</div>
+									<div class="sc-krDsej hSvfKj">
+										<div class="sc-dTdPqK bUhfNT">
+											<div class="sc-itybZL kDTKbj">
+												<img
+													src="https://pren.kr/static/experts/category_icon/번역·통역.svg"
+													alt="번역·통역 아이콘" class="sc-eMigcr kxXIgY" /> <span
+													class="sc-fzsDOv gjBhzf">번역·통역</span>
+											</div>
+											<div class="sc-gPWkxV DGrYa _CategoryButtonContainer">
+												<a title="번역·통역 빠른 의뢰 요청하기"
+													href="/estimate?firstCategoryId=45" class="sc-jVODtj YMbLl">빠른
+													의뢰 요청</a> <a title="번역·통역 전문가 찾기"
+													href="/experts/categories?firstCategoryId=45"
+													class="sc-jVODtj eEQRlu">전문가 찾기</a>
+											</div>
+										</div>
+									</div>
+									<div class="sc-krDsej hSvfKj">
+										<div class="sc-dTdPqK bUhfNT">
+											<div class="sc-itybZL kDTKbj">
+												<img
+													src="https://pren.kr/static/experts/category_icon/영상·사진·음악.svg"
+													alt="영상·사진·음악 아이콘" class="sc-eMigcr kxXIgY" /> <span
+													class="sc-fzsDOv gjBhzf">영상·사진·음악</span>
+											</div>
+											<div class="sc-gPWkxV DGrYa _CategoryButtonContainer">
+												<a title="영상·사진·음악 빠른 의뢰 요청하기"
+													href="/estimate?firstCategoryId=61" class="sc-jVODtj YMbLl">빠른
+													의뢰 요청</a> <a title="영상·사진·음악 전문가 찾기"
+													href="/experts/categories?firstCategoryId=61"
+													class="sc-jVODtj eEQRlu">전문가 찾기</a>
+											</div>
+										</div>
+									</div>
+									<div class="sc-krDsej hSvfKj">
+										<div class="sc-dTdPqK bUhfNT">
+											<div class="sc-itybZL kDTKbj">
+												<img
+													src="https://pren.kr/static/experts/category_icon/문서·작문.svg"
+													alt="문서·작문 아이콘" class="sc-eMigcr kxXIgY" /> <span
+													class="sc-fzsDOv gjBhzf">문서·작문</span>
+											</div>
+											<div class="sc-gPWkxV DGrYa _CategoryButtonContainer">
+												<a title="문서·작문 빠른 의뢰 요청하기"
+													href="/estimate?firstCategoryId=69" class="sc-jVODtj YMbLl">빠른
+													의뢰 요청</a> <a title="문서·작문 전문가 찾기"
+													href="/experts/categories?firstCategoryId=69"
+													class="sc-jVODtj eEQRlu">전문가 찾기</a>
+											</div>
+										</div>
+									</div>
+									<div class="sc-krDsej hSvfKj">
+										<div class="sc-dTdPqK bUhfNT">
+											<div class="sc-itybZL kDTKbj">
+												<img
+													src="https://pren.kr/static/experts/category_icon/상담·컨설팅.svg"
+													alt="상담·컨설팅 아이콘" class="sc-eMigcr kxXIgY" /> <span
+													class="sc-fzsDOv gjBhzf">상담·컨설팅</span>
+											</div>
+											<div class="sc-gPWkxV DGrYa _CategoryButtonContainer">
+												<a title="상담·컨설팅 빠른 의뢰 요청하기"
+													href="/estimate?firstCategoryId=78" class="sc-jVODtj YMbLl">빠른
+													의뢰 요청</a> <a title="상담·컨설팅 전문가 찾기"
+													href="/experts/categories?firstCategoryId=78"
+													class="sc-jVODtj eEQRlu">전문가 찾기</a>
+											</div>
+										</div>
+									</div>
+									<div class="sc-krDsej hSvfKj">
+										<div class="sc-dTdPqK bUhfNT">
+											<div class="sc-itybZL kDTKbj">
+												<img
+													src="https://pren.kr/static/experts/category_icon/이벤트.svg"
+													alt="이벤트 아이콘" class="sc-eMigcr kxXIgY" /> <span
+													class="sc-fzsDOv gjBhzf">이벤트</span>
+											</div>
+											<div class="sc-gPWkxV DGrYa _CategoryButtonContainer">
+												<a title="이벤트 빠른 의뢰 요청하기"
+													href="/estimate?firstCategoryId=93" class="sc-jVODtj YMbLl">빠른
+													의뢰 요청</a> <a title="이벤트 전문가 찾기"
+													href="/experts/categories?firstCategoryId=93"
+													class="sc-jVODtj eEQRlu">전문가 찾기</a>
+											</div>
+										</div>
+									</div>
+									<div class="sc-krDsej hSvfKj">
+										<div class="sc-dTdPqK bUhfNT">
+											<div class="sc-itybZL kDTKbj">
+												<img
+													src="https://pren.kr/static/experts/category_icon/레슨.svg"
+													alt="레슨 아이콘" class="sc-eMigcr kxXIgY" /> <span
+													class="sc-fzsDOv gjBhzf">레슨</span>
+											</div>
+											<div class="sc-gPWkxV DGrYa _CategoryButtonContainer">
+												<a title="레슨 빠른 의뢰 요청하기"
+													href="/estimate?firstCategoryId=100"
+													class="sc-jVODtj YMbLl">빠른 의뢰 요청</a> <a title="레슨 전문가 찾기"
+													href="/experts/categories?firstCategoryId=100"
+													class="sc-jVODtj eEQRlu">전문가 찾기</a>
+											</div>
+										</div>
+									</div>
+									<div class="sc-krDsej hSvfKj">
+										<div class="sc-dTdPqK bUhfNT">
+											<div class="sc-itybZL kDTKbj">
+												<img
+													src="https://pren.kr/static/experts/category_icon/기타(생활서비스).svg"
+													alt="기타(생활서비스) 아이콘" class="sc-eMigcr kxXIgY" /> <span
+													class="sc-fzsDOv gjBhzf">기타(생활서비스)</span>
+											</div>
+											<div class="sc-gPWkxV DGrYa _CategoryButtonContainer">
+												<a title="기타(생활서비스) 빠른 의뢰 요청하기"
+													href="/estimate?firstCategoryId=111"
+													class="sc-jVODtj YMbLl">빠른 의뢰 요청</a> <a
+													title="기타(생활서비스) 전문가 찾기"
+													href="/experts/categories?firstCategoryId=111"
+													class="sc-jVODtj eEQRlu">전문가 찾기</a>
 											</div>
 										</div>
 									</div>
 								</div>
 							</div>
 						</div>
-						<div class="fresnel-container fresnel-at-xs ">
-							<div class="sc-ePZHVD fcimHu">
-								<div class="sc-bGbJRg kQZhiA">
+						<img src="https://pren.kr/static/main/main_section1_img.png"
+							class="sc-giadOv jWzsLF" />
+					</div>
+				</div>
+				<div class="fresnel-container fresnel-greaterThan-xs ">
+					<div class="sc-cqCuEk jQzxey">
+						<div class="sc-dliRfk kolQpy">
+							<div class="react-reveal">
+								<p class="sc-bxivhb sc-qrIAp kKBvkU">ON-IN은 전문가와 고객을 연결합니다.</p>
+							</div>
+							<div class="react-reveal">
+								<div width="941px" class="sc-iqzUVk gSzJuG">
 									<div class="react-reveal">
-										<p class="sc-bxivhb sc-bEjcJn bMiaoG">
-											세상을 바꾸는 새로운 방법, <br /> ON-IN에서 시작하세요.
-										</p>
+										<div class="sc-kLIISr dmOecU">
+											<img
+												src="https://pren.kr/static/main/main_section2_icon1.svg"
+												width="60px" height="66px" alt="pren_headerlogo" />
+											<p color="#191919" class="sc-bxivhb sc-ipZHIp loxkfo">선별된
+												전문가</p>
+											<p class="sc-bxivhb sc-ipZHIp jkEPwm">
+												ON-IN은 아무나 전문가를 선별하지 않습니다. <br /> 선별된 상위 전문가들을 만나보세요.
+											</p>
+										</div>
 									</div>
 									<div class="react-reveal">
-										<p class="sc-bxivhb sc-bEjcJn gVPiKu">
-											ON-IN에는 다양한 분야의 전문가들이 있습니다. <br /> 검증된 전문과들과 쉽고 빠르게 소통하고 시간을
-											절약하세요.
-										</p>
+										<div class="sc-kLIISr dmOecU">
+											<img
+												src="https://pren.kr/static/main/main_section2_icon2.svg"
+												width="65px" height="62px" alt="pren_headerlogo" />
+											<p color="#191919" class="sc-bxivhb sc-ipZHIp loxkfo">차별성있는
+												프로필</p>
+											<p class="sc-bxivhb sc-ipZHIp jkEPwm">
+												전문가의 이력, 경력, 포트폴리오를 넘어 <br /> 작업철학이 담긴 프로필 사이트를 둘러보세요.
+											</p>
+										</div>
 									</div>
-									<%MemberDTO loginMember3 = (MemberDTO)session.getAttribute("loginMember"); %>
 									<div class="react-reveal">
-									<%if(loginMember3==null){ %>
-										<a href="/register">
-										<button width="200px" height="40px" class="sc-EHOje ihmBCL">ON-IN 가입하기</button>
-									<%}else{%>	
-										<a href="/estimate">
-										<button width="200px" height="40px" class="sc-EHOje ihmBCL">의뢰요청하기</button>
-									<%} %>
+										<div class="sc-kLIISr dmOecU">
+											<img
+												src="https://pren.kr/static/main/main_section2_icon3.svg"
+												width="65px" height="62px" alt="pren_headerlogo" />
+											<p color="#191919" class="sc-bxivhb sc-ipZHIp loxkfo">함께하는
+												성장 히스토리</p>
+											<p class="sc-bxivhb sc-ipZHIp jkEPwm">
+												월 평균거래, 거래성사율 등 <br /> 전문가의 활동에 대한 히스토리를 제공해드립니다.
+											</p>
+										</div>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
+				<div class="fresnel-container fresnel-at-xs ">
+					<div class="sc-ePZHVD fcimHu">
+						<div class="sc-bGbJRg kQZhiA">
+							<div class="react-reveal">
+								<p class="sc-bxivhb sc-bEjcJn bMiaoG">
+									세상을 바꾸는 새로운 방법, <br /> ON-IN에서 시작하세요.
+								</p>
+							</div>
+							<div class="react-reveal">
+								<p class="sc-bxivhb sc-bEjcJn gVPiKu">
+									ON-IN에는 다양한 분야의 전문가들이 있습니다. <br /> 검증된 전문과들과 쉽고 빠르게 소통하고 시간을
+									절약하세요.
+								</p>
+							</div>
+							<%MemberDTO loginMember3 = (MemberDTO)session.getAttribute("loginMember"); %>
+							<div class="react-reveal">
+								<%if(loginMember3==null){ %>
+								<a href="/register">
+									<button width="200px" height="40px" class="sc-EHOje ihmBCL">ON-IN
+										가입하기</button> <%}else{%> <a href="/estimate">
+										<button width="200px" height="40px" class="sc-EHOje ihmBCL">의뢰요청하기</button>
+										<%} %>
+								
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
-			(function() {
+		</div>
+	</div>
+	<script>
+	/* 		(function() {
 		        var w = window;
 		        if (w.ChannelIO) {
 		            return (window.console.error || window.console.log || function() {})('ChannelIO script included twice.');
@@ -2127,8 +2118,6 @@ textarea {
 		    })();
 		    ChannelIO('boot', {
 		        "pluginKey": "8597edd3-13ff-441f-90a3-6e172237e6c7"
-		    });
+		    }); */
 		    </script>
-<%@include file="footer.jsp" %>			
-
-
+	<%@include file="footer.jsp"%>
