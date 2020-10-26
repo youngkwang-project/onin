@@ -42,7 +42,7 @@ public interface ExpertsMapper {
 	
 	public int save4Up(Profile4DTO profile4DTO);
 	
-	public String profile1(int mno);
+	public String profile1(ExpertsDTO expertsDTO);
 
 	public ProfileDTO selProfile(ProfileDTO profileDTO);
 

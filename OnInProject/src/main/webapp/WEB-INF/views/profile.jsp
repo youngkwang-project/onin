@@ -4309,7 +4309,7 @@ function execPostCode() {
 		    formData.append("skill", $("input[name=skill]").val());		    
 		    formData.append("career_file", $("input[name=career_file]")[0].files[0]);
 		$.ajax({
-			type:"POST",
+			type:"GET",
 			url:"/rest_profileSave2",
 			data:{
 				mno: ${loginMember.mno},

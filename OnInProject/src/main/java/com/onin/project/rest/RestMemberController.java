@@ -138,7 +138,7 @@ public class RestMemberController {
 
 		return "a";
 	}
-	@RequestMapping(path="/rest_profileSave2", method = RequestMethod.POST , headers = "content-type=multipart/*")
+	@RequestMapping(path="/rest_profileSave2", method = RequestMethod.GET , headers = "content-type=multipart/*")
 	public String save2(Model model,Profile2DTO profile2DTO,@RequestParam("career_file") MultipartFile multipartFile,@RequestParam("career") String career,
 			@RequestParam("skill") String skill,@RequestParam("careerDetail") String careerDetail) {
 		

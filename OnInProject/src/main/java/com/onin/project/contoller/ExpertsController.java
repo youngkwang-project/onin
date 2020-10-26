@@ -68,9 +68,9 @@ public class ExpertsController {
 
 
 	@GetMapping("/profile")
-	public String profile(Model model, @RequestParam("mno") int mno) {
+	public String profile(Model model, ExpertsDTO expertsDTO) {
 		// service에 새로운 메소드 만들어 -> mno를 주고, profile 이미지 주소 값을 가져오게...
-		model.addAttribute("profile",service.profile1(mno));
+		model.addAttribute("profile",service.profile1(expertsDTO));
 		// 그걸 모델에 담아... profile
 		return "/profile";
 	}
