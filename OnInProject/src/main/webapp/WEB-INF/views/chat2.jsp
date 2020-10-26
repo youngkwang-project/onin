@@ -1715,7 +1715,6 @@ textarea {
 						<div class="sc-hARARD bQfiCB">
 							<div data-id="489" data-otherid="404" data-isexpert="false"
 								class="sc-bwzfXH oYbOU">
-							<!--채팅리스트 -->
 								<div
 									src="https://pren-backend-storage.s3.ap-northeast-2.amazonaws.com/media/user/404/%E1%84%86%E1%85%AE%E1%86%AB%E1%84%89%E1%85%AE%E1%86%A8_%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%91%E1%85%B5%E1%86%AF.GIF"
 									class="sc-hlILIN ejvkWL"></div>
@@ -1745,9 +1744,41 @@ textarea {
 												<p class="sc-hCaUpS fohRgw">캐릭터/이모티콘을 디자인합니다</p>
 											</div>
 										</div>
-										<!-- 댓글-->
 										<div class="sc-bvTASY gVUiYw chatBox">
-											
+											<p class="sc-bSbAYC hYUSLL">직거래 이용 시 발생하는 사기, 분쟁 등의 모든
+												문제는 프랜에서 도움을 드릴 수가 없습니다.</p>
+											<div class="sc-jnlKLf jBRXnw">
+												<div class="sc-fYxtnH emapSw">혹시 캐릭터디자인은 어떻게 견적이 나오나요?</div>
+												<p class="sc-tilXH cjNsf">2020.10.20. 10.30</p>
+											</div>
+											<div class="sc-jnlKLf jBRXnw">
+												<div class="sc-fYxtnH emapSw">혹시 캐릭터디자인은 어떻게 견적이 나오나요?</div>
+												<p class="sc-tilXH cjNsf">2020.10.20. 10.30</p>
+											</div>
+											<div class="sc-jnlKLf jBRXnw">
+												<div class="sc-fYxtnH emapSw">혹시 캐릭터디자인은 어떻게 견적이 나오나요?</div>
+												<p class="sc-tilXH cjNsf">2020.10.20. 10.30</p>
+											</div>
+											<div class="sc-jnlKLf jBRXnw">
+												<div class="sc-fYxtnH emapSw">혹시 캐릭터디자인은 어떻게 견적이 나오나요?</div>
+												<p class="sc-tilXH cjNsf">2020.10.20. 10.30</p>
+											</div>
+											<div class="sc-jnlKLf jBRXnw">
+												<div class="sc-fYxtnH emapSw">혹시 캐릭터디자인은 어떻게 견적이 나오나요?</div>
+												<p class="sc-tilXH cjNsf">2020.10.20. 10.30</p>
+											</div>
+											<div class="sc-jnlKLf jBRXnw">
+												<div class="sc-fYxtnH emapSw">혹시 캐릭터디자인은 어떻게 견적이 나오나요?</div>
+												<p class="sc-tilXH cjNsf">2020.10.20. 10.30</p>
+											</div>
+											<div class="sc-jnlKLf jBRXnw">
+												<div class="sc-fYxtnH emapSw">혹시 캐릭터디자인은 어떻게 견적이 나오나요?</div>
+												<p class="sc-tilXH cjNsf">2020.10.20. 10.30</p>
+											</div>
+											<div class="sc-jnlKLf jBRXnw">
+												<div class="sc-fYxtnH emapSw">혹시 캐릭터디자인은 어떻게 견적이 나오나요?</div>
+												<p class="sc-tilXH cjNsf">2020.10.20. 10.30</p>
+											</div>
 										</div>
 										<div class="sc-koErNt jvTlNp">
 											<div class="sc-gJqsIT dQGJOj">

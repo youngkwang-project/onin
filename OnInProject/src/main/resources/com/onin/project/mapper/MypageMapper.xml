@@ -9,4 +9,10 @@
 SELECT * FROM CATEGORY c, INVOICE i WHERE c.CNO = i.CNO AND i.FROM_MNO =#{from_mno}
 </select>
 
+<insert id="setChat"
+		parameterType="com.onin.project.dto.ChatDTO">
+		insert into chat(from_mno,getchat,sendchat,to_mno,chatdate)
+		values(1,'asd',#{sendChat},2,sysdate)
+
+	</insert>
 </mapper>

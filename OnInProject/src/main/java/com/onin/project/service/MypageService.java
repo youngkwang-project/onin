@@ -18,4 +18,9 @@ public class MypageService {
 	public List<InvoiceJoinDTO> invoice(int from_mno) {
 		return mapper.invoice(from_mno);
 	}
+
+	public void setChat(String message) {
+		mapper.setChat(message);
+		
+	}
 }

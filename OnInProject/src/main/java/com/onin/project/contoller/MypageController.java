@@ -17,8 +17,6 @@ public class MypageController {
 	private static final Logger logger = LoggerFactory.getLogger(MypageController.class);
 	@Autowired
 	MypageService service;
-	@Autowired
-	ChatHandler chatHandler;
 	
 	//보낸의요청서 리스트
 	 @GetMapping("/mypage/invoice")
@@ -26,11 +24,11 @@ public class MypageController {
 		   logger.info("보낸의뢰요청서");
 		   model.addAttribute("list", service.invoice(from_mno));
 
-
 		   return "invoice";
 	   }
 	 @GetMapping("/mypage/chat")
 	 public String chat() {
+		 
 		 return "chat";
 	 }
 }

@@ -58,6 +58,8 @@ public class MemberContoller {
 	public String loginDone(HttpServletRequest request,HttpSession session, MemberDTO memberdto) {
 		logger.info("입력된 id/pw값"+ memberdto.toString());
 		MemberDTO loginMember = service.memberLogin(memberdto);
+		
+		
 		if(loginMember==null) {
 			logger.info("login실패");
 			request.setAttribute("loginFailMsg", "아이디/패스워드를 확인해주세요.");
