@@ -70,12 +70,13 @@ public class RestMemberController {
 		return str;
 	}
 
-	@RequestMapping(path="/rest_profileSave", method = RequestMethod.POST , headers = "content-type=multipart/*")
-	public String save(Model model,ProfileDTO profileDTO,@RequestParam("profile_img") MultipartFile multipartFile,@RequestParam("name") String name,
-			@RequestParam("intro") String intro,@RequestParam("profile") String profile){
-		System.out.println("profilDTO = " + profileDTO);
+	@RequestMapping(path="/rest_profileSave", method = RequestMethod.POST , consumes ={"multipart/form-data"})
+	public String save(Model model,@RequestParam("profile_img") MultipartFile multipartFile,@RequestParam("name") String name,
+			@RequestParam("intro") String intro,@RequestParam("profile") String profile,@RequestParam("mno")int mno){
+		System.out.println("profilDTO = ");
 		logger.info("### upload");
 		logger.info("실제 파일이름은 ? " + multipartFile.getOriginalFilename());
+		logger.info("회원번호는"+mno);
 		logger.info("name==="+name);
 		logger.info("intro="+intro);
 		logger.info("profile="+profile);
@@ -121,28 +122,28 @@ public class RestMemberController {
 		// URL은 http://localhost:9999/resources/fileupload/실제파일명
 		// model에 담아서 jsp에서 img로 출력 
 
-		model.addAttribute("imgSrc", "/resources/fileupload/" + multipartFile.getOriginalFilename());
-
-
-		ProfileDTO profileUpload = exService.selProfile(profileDTO);
-		System.out.println("프로필"+profileUpload+"프로필");
-		if(profileUpload==null) {
-			exService.save(profileDTO);
-		}else {
-			exService.saveUp(profileDTO);
-		}
-
-		model.addAttribute("intro",profileDTO.getIntro());
+//		model.addAttribute("imgSrc", "/resources/fileupload/" + multipartFile.getOriginalFilename());
+//
+//
+//		ProfileDTO profileUpload = exService.selProfile(profileDTO);
+//		System.out.println("프로필"+profileUpload+"프로필");
+//		if(profileUpload==null) {
+//			exService.save(profileDTO);
+//		}else {
+//			exService.saveUp(profileDTO);
+//		}
+//
+//		model.addAttribute("intro",profileDTO.getIntro());
 
 
 
 		return "a";
 	}
-	@RequestMapping(path="/rest_profileSave2", method = RequestMethod.POST , headers = "content-type=multipart/*")
-	public String save2(Model model,Profile2DTO profile2DTO,@RequestParam("career_file") MultipartFile multipartFile,@RequestParam("career") String career,
+	@RequestMapping(path="/rest_profileSave2", method = RequestMethod.POST , consumes ={"multipart/form-data"})
+	public String save2(Model model,@RequestParam("career_file") MultipartFile multipartFile,@RequestParam("career") String career,
 			@RequestParam("skill") String skill,@RequestParam("careerDetail") String careerDetail) {
 		
-		System.out.println("profilDTO = " + profile2DTO);
+		System.out.println("profilDTO = " );
 		logger.info("### upload");
 		logger.info("실제 파일이름은 ? " + multipartFile.getOriginalFilename());
 		logger.info("name==="+career);
@@ -193,12 +194,12 @@ public class RestMemberController {
 		model.addAttribute("imgSrc", "/resources/fileupload/" + multipartFile.getOriginalFilename());
 
 
-		Profile2DTO profile2 = exService.selProfile2(profile2DTO);
-		if(profile2==null) {
-			exService.save2(profile2DTO);
-		}else {
-			exService.save2Up(profile2DTO);
-		}
+//		Profile2DTO profile2 = exService.selProfile2(profile2DTO);
+//		if(profile2==null) {
+//			exService.save2(profile2DTO);
+//		}else {
+//			exService.save2Up(profile2DTO);
+//		}
 		return "b";
 	}
 	@PostMapping(path="/rest_profileSave3")

@@ -981,11 +981,10 @@
 /* sc-component-id: sc-kEYyzF */
 .lcroCN {
 	width: 260px;
-    height: 260px; 
-    border-radius: 70%;
-    overflow: hidden;
+	height: 260px;
+	border-radius: 70%;
+	overflow: hidden;
 	position: relative;
-	
 }
 
 .dmMMMQ {
@@ -3577,167 +3576,183 @@ textarea {
 	cursor: pointer;
 	font-weight: bold;
 }
+
 .ghsfDZ {
-    width: 765px;
-    min-height: 691px;
-    border: 1px solid rgb(204, 204, 204);
-    position: fixed;
-    z-index: 99999;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    -webkit-box-align: center;
-    align-items: center;
-    padding: 25px 0px 0px;
+	width: 765px;
+	min-height: 691px;
+	border: 1px solid rgb(204, 204, 204);
+	position: fixed;
+	z-index: 99999;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: white;
+	display: flex;
+	flex-direction: column;
+	-webkit-box-align: center;
+	align-items: center;
+	padding: 25px 0px 0px;
 }
+
 .hxxTXM {
-    font-size: 24px;
-    color: rgb(25, 25, 25);
-    margin: 42px auto 15px 48px;
-    flex: 0 0 auto;
+	font-size: 24px;
+	color: rgb(25, 25, 25);
+	margin: 42px auto 15px 48px;
+	flex: 0 0 auto;
 }
+
 .beHNvu {
-    font-size: 16px;
-    color: rgb(25, 25, 25);
-    margin: 26px auto 15px 48px;
+	font-size: 16px;
+	color: rgb(25, 25, 25);
+	margin: 26px auto 15px 48px;
 }
+
 .byurlq {
-    position: relative;
-    display: inline-block;
+	position: relative;
+	display: inline-block;
 }
+
 .igARar {
-    width: calc(620px);
-    text-align: inherit;
-    min-height: 48px;
-    padding: 0px 23px;
-    font-size: 16px;
-    color: rgb(88, 88, 88);
-    background-color: rgb(246, 246, 246);
-    border: 1px solid rgb(204, 204, 204);
-    position: relative;
-    outline: none;
-    cursor: inherit;
+	width: calc(620px);
+	text-align: inherit;
+	min-height: 48px;
+	padding: 0px 23px;
+	font-size: 16px;
+	color: rgb(88, 88, 88);
+	background-color: rgb(246, 246, 246);
+	border: 1px solid rgb(204, 204, 204);
+	position: relative;
+	outline: none;
+	cursor: inherit;
 }
+
 .beHNvu {
-    font-size: 16px;
-    color: rgb(25, 25, 25);
-    margin: 26px auto 15px 48px;
+	font-size: 16px;
+	color: rgb(25, 25, 25);
+	margin: 26px auto 15px 48px;
 }
+
 .gxxFun {
-    font-size: 13px;
-    color: rgb(153, 153, 153);
-    text-indent: 10px;
-
+	font-size: 13px;
+	color: rgb(153, 153, 153);
+	text-indent: 10px;
 }
+
 .hKPJmL {
-    position: relative;
-}
-.icBQde {
-    display: flex;
-    flex-wrap: wrap;
-    width: 628px;
-    max-height: 300px;
-    overflow: auto;
-    border: 1px solid rgb(204, 204, 204);
-    padding: 0px 20px 20px;
-}
-.kgGRCP {
-    position: relative;
-    width: 143px;
-    height: 143px;
-    margin: 17px 5px 0px;
-    background-color: rgb(231, 231, 231);
-    border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    -webkit-box-align: center;
-    align-items: center;
-}
-.ejRmPc {
-    display: flex;
-    width: 668px;
-    margin-top: 25px;
-    -webkit-box-pack: justify;
-    justify-content: space-between;
-}
-.fCOxdE {
-    height: 40px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: rgb(0, 211, 135);
-    font-weight: 500;
-}
-.dLHQTe{
-	width: 107px;
-    height: 40px;
-    margin-top: 30px;
-    float: right;
-    display: flex;
-    -webkit-box-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    align-items: center;
-}
-.fXhoYr {
-    width: 100%;
-    height: 100%;
-    background-color: rgb(0, 211, 135);
-    font-size: 14px;
-    color: rgb(255, 255, 255);
-    border: none;
-    outline: none;
-    cursor: pointer;
-}
-.hKNDzf {
-    width: calc(620px);
-    height: calc(57px);
-    font-size: 14px;
-    line-height: 2.14;
-    color: rgb(88, 88, 88);
-    background-color: rgb(246, 246, 246);
-    border: 1px solid rgb(204, 204, 204);
-    outline: none;
-    padding: 18px 23px;
-    overflow-y: hidden;
-    resize: none;
-    cursor: inherit;
-}
-.irrZJD {
-    width: 31px;
-    height: 5px;
-    background-color: white;
-    position: relative;
-}
-.kGhUgK {
-    cursor: pointer;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    -webkit-box-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    justify-content: center;
-}
-.irrZJD::after {
-    content: "";
-    position: absolute;
-    left: 13px;
-    top: -13px;
-    width: 5px;
-    height: 31px;
-    background-color: white;
+	position: relative;
 }
 
+.icBQde {
+	display: flex;
+	flex-wrap: wrap;
+	width: 628px;
+	max-height: 300px;
+	overflow: auto;
+	border: 1px solid rgb(204, 204, 204);
+	padding: 0px 20px 20px;
+}
+
+.kgGRCP {
+	position: relative;
+	width: 143px;
+	height: 143px;
+	margin: 17px 5px 0px;
+	background-color: rgb(231, 231, 231);
+	border-radius: 20px;
+	display: flex;
+	flex-direction: column;
+	-webkit-box-align: center;
+	align-items: center;
+}
+
+.ejRmPc {
+	display: flex;
+	width: 668px;
+	margin-top: 25px;
+	-webkit-box-pack: justify;
+	justify-content: space-between;
+}
+
+.fCOxdE {
+	height: 40px;
+	background: none;
+	border: none;
+	cursor: pointer;
+	color: rgb(0, 211, 135);
+	font-weight: 500;
+}
+
+.dLHQTe {
+	width: 107px;
+	height: 40px;
+	margin-top: 30px;
+	float: right;
+	display: flex;
+	-webkit-box-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	align-items: center;
+}
+
+.fXhoYr {
+	width: 100%;
+	height: 100%;
+	background-color: rgb(0, 211, 135);
+	font-size: 14px;
+	color: rgb(255, 255, 255);
+	border: none;
+	outline: none;
+	cursor: pointer;
+}
+
+.hKNDzf {
+	width: calc(620px);
+	height: calc(57px);
+	font-size: 14px;
+	line-height: 2.14;
+	color: rgb(88, 88, 88);
+	background-color: rgb(246, 246, 246);
+	border: 1px solid rgb(204, 204, 204);
+	outline: none;
+	padding: 18px 23px;
+	overflow-y: hidden;
+	resize: none;
+	cursor: inherit;
+}
+
+.irrZJD {
+	width: 31px;
+	height: 5px;
+	background-color: white;
+	position: relative;
+}
+
+.kGhUgK {
+	cursor: pointer;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	-webkit-box-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	justify-content: center;
+}
+
+.irrZJD::after {
+	content: "";
+	position: absolute;
+	left: 13px;
+	top: -13px;
+	width: 5px;
+	height: 31px;
+	background-color: white;
+}
 </style>
 
 </head>
 
 <body>
-	
+
 	<%@include file="header.jsp"%>
 	<div class="sc-bnXvFD buSScp">
 		<div class="fresnel-container fresnel-greaterThan-xs ">
@@ -3776,59 +3791,59 @@ textarea {
 
 				<div class="sc-bjPkoM sc-kBzFSH hhComY">
 					<div class="fresnel-container fresnel-greaterThan-xs ">
-						
-							<div class="fresnel-container fresnel-at-xs ">
-								<p color="#191919" class="sc-bxivhb kHpoSQ">활동 카테고리 선택</p>
-							</div>
-							<p class="sc-bxivhb sc-faQXZc krsasd">
-								활동 가능한 카테고리와 세부 작업 영역을 선택할 수 있습니다.<br />의뢰요청서가 도착하면 알림으로
-								보내드립니다.
-							</p>
-							<div width="612px" class="sc-imDdex mnBnF">
-								<div width="296px" class="sc-iwsKbI fgptoz">
-									<div class="sc-gZMcBi gwdlnH">
-										<div class="sc-gqjmRU bgQVQZ">카테고리</div>
-										<div class="sc-VigVT gjkitw"></div>
-									</div>
-								</div>
-								<div width="296px" class="sc-iwsKbI fgptoz">
-									<div class="sc-gZMcBi gwdlnH">
-										<div class="sc-gqjmRU bgQVQZ">작업 가능 영역</div>
-										<div class="sc-VigVT gjkitw"></div>
-									</div>
+
+						<div class="fresnel-container fresnel-at-xs ">
+							<p color="#191919" class="sc-bxivhb kHpoSQ">활동 카테고리 선택</p>
+						</div>
+						<p class="sc-bxivhb sc-faQXZc krsasd">
+							활동 가능한 카테고리와 세부 작업 영역을 선택할 수 있습니다.<br />의뢰요청서가 도착하면 알림으로 보내드립니다.
+						</p>
+						<div width="612px" class="sc-imDdex mnBnF">
+							<div width="296px" class="sc-iwsKbI fgptoz">
+								<div class="sc-gZMcBi gwdlnH">
+									<div class="sc-gqjmRU bgQVQZ">카테고리</div>
+									<div class="sc-VigVT gjkitw"></div>
 								</div>
 							</div>
-							<div class="sc-lffWgi fFWFeB">
-								<div width="fit-content" height="36px" data-id="24"
-									class="sc-dnqmqq sc-hMqMXs sc-fGSyRc cdMFHs">웹툰·캐릭터</div>
-								<div width="fit-content" height="36px" data-id="64"
-									class="sc-dnqmqq sc-hMqMXs sc-fGSyRc cdMFHs">영상제작·편집</div>
+							<div width="296px" class="sc-iwsKbI fgptoz">
+								<div class="sc-gZMcBi gwdlnH">
+									<div class="sc-gqjmRU bgQVQZ">작업 가능 영역</div>
+									<div class="sc-VigVT gjkitw"></div>
+								</div>
 							</div>
-						
+						</div>
+						<div class="sc-lffWgi fFWFeB">
+							<div width="fit-content" height="36px" data-id="24"
+								class="sc-dnqmqq sc-hMqMXs sc-fGSyRc cdMFHs">웹툰·캐릭터</div>
+							<div width="fit-content" height="36px" data-id="64"
+								class="sc-dnqmqq sc-hMqMXs sc-fGSyRc cdMFHs">영상제작·편집</div>
+						</div>
+
 					</div>
 				</div>
-				
+
 				<div class="sc-bjPkoM sc-jEdsij kFfPhc">
 					<div class="fresnel-container fresnel-greaterThan-xs ">
-						<form method="post" enctype="multipart/form-data">
+						<form method="post" enctype="multipart/form-data" id="form1">
 							<div class="fresnel-container fresnel-greaterThan-xs ">
 								<p color="#191919" class="sc-bxivhb gAroWi">프로필 항목 등록</p>
 							</div>
 							<div class="sc-lmrgJh hLBqAa">
 								<div class="sc-dzQEYZ BlhYH">
 									<div class="sc-dCVVYJ byuoYp">
-										
-										<div class="sc-kEYyzF lcroCN" >
-											<img id="preview"
-												src="#"
-												onerror="this.src='data:image/jpeg;base64,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'" 
-												width="265px;" height="265px;" /> 
-												<label for="uploadImg" class="sc-hSdWYo kEjxSM"></label>								 
-												<input type="file" name="profile_img" id="uploadImg" accept="image/*"class="sc-iAyFgw gWYozK"/>
-																																			
+										<input type="hidden" id="mno" name="mno"
+											value="${loginMember.mno}" />
+										<div class="sc-kEYyzF lcroCN">
+											<img id="preview" src="#"
+												onerror="this.src='data:image/jpeg;base64,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'"
+												width="265px;" height="265px;" /> <label for="uploadImg"
+												class="sc-hSdWYo kEjxSM"></label> <input type="file"
+												name="profile_img" id="uploadImg" accept="image/*"
+												class="sc-iAyFgw gWYozK" />
+
 
 										</div>
-										
+
 										<div class="sc-sVRsr bsTPFA">
 											<div class="fresnel-container fresnel-at-xs ">
 												<p color="#191919" class="sc-bxivhb sc-dHaUqb enLdmk">프로필
@@ -3853,8 +3868,7 @@ textarea {
 									<div class="sc-dCVVYJ ukNHR">
 										<div class="sc-ekQYnd dSQgcU">
 											<div class="sc-bpubUI dQbJbx">
-												<input type="radio" id="username" name="name"
-													class="sc-juQqkt gbRNVn" checked="" /><label
+												<input type="radio" class="sc-juQqkt gbRNVn" checked /><label
 													for="username" class="sc-bkCOcH fotivz">이름</label>
 											</div>
 											<div width="278px" class="sc-chPdSV bmoXTr">
@@ -3864,31 +3878,14 @@ textarea {
 												</div>
 												<div class="sc-kGXeez kUKQcj">
 													<div class="sc-bdVaJa jCeSos">
-														<input id="name" value="${loginMember.name}" disabled="" name="name"
+														<input type="text" id="name" name="name"
+															value="${loginMember.name}" readonly 
 															class="sc-htpNat khbizk sc-kpOJdX bAKVje" width="100%" />
 													</div>
 												</div>
 											</div>
 										</div>
-<!-- 										<div class="sc-ekQYnd kByNqL"> -->
-<!-- 											<div class="sc-bpubUI dQbJbx"> -->
-<!-- 												<input type="radio" id="nickname" name="user" -->
-<!-- 													class="sc-juQqkt gbRNVn" /><label for="nickname" -->
-<!-- 													class="sc-bkCOcH fotivz">닉네임</label> -->
-<!-- 											</div> -->
-<!-- 											<div width="278px" class="sc-chPdSV eqtCXC"> -->
-<!-- 												<div width="50px" class="sc-kgoBCf fRTCQn"> -->
-<!-- 													<img src="https://pren.kr/static/Icon/nickname.svg" -->
-<!-- 														alt="nickname" width="32.50%" height="35.00%" /> -->
-<!-- 												</div> -->
-<!-- 												<div class="sc-kGXeez kUKQcj"> -->
-<!-- 													<div class="sc-bdVaJa jCeSos"> -->
-<!-- 														<input value="영광" disabled="" -->
-<!-- 															class="sc-htpNat khbizk sc-kpOJdX bAKVje" width="100%" /> -->
-<!-- 													</div> -->
-<!-- 												</div> -->
-<!-- 											</div> -->
-<!-- 										</div> -->
+
 									</div>
 								</div>
 							</div>
@@ -3898,9 +3895,8 @@ textarea {
 							</div>
 							<div class="sc-ewMkZo eYzQqs">
 								<div class="sc-bdVaJa jCeSos">
-									<input id="intro" placeholder="한 줄 프로필을 입력해주세요."
-										 width="100%" name="intro" value="${intro}"
-										class="sc-htpNat khbizk" />
+									<input type="text" id="intro" placeholder="한 줄 프로필을 입력해주세요." width="100%"
+										name="intro" class="sc-htpNat khbizk" />
 								</div>
 								<p color="#cccccc" class="sc-bxivhb sc-eCXBzT coLRDn">
 									18
@@ -3918,7 +3914,7 @@ textarea {
 									<textarea id="detailProf" height="0px" spellcheck="false"
 										placeholder="상세 프로필을 입력해주세요." width="100%"
 										class="sc-cSHVUG ecbPDt" name="profile"></textarea>
-								
+
 								</div>
 							</div>
 							<p color="#cccccc" class="sc-bxivhb sc-hfLElm bNajBL">
@@ -3929,12 +3925,14 @@ textarea {
 								350
 							</p>
 							<div class="sc-hwcHae dLHQTe">
-							<input id="saveBtn" width="100%" height="100%" type="button" class="sc-bZQynM fXhoYr" value="저장"/></div>
+								<input id="saveBtn" width="100%" height="100%" type="button"
+									class="sc-bZQynM fXhoYr" value="저장" />
+							</div>
 						</form>
 					</div>
-							
+
 				</div>
-				
+
 				<div class="sc-bjPkoM sc-eBipZS dxsYrm">
 					<div class="fresnel-container fresnel-greaterThan-xs ">
 						<form>
@@ -3950,35 +3948,38 @@ textarea {
 								<div id="careerText" class="sc-eHgmQL cYGPgb">
 									<div class="sc-cvbbAY iCoHze">
 										<div class="sc-jWBwVP rNZsQ">
-											<input id="career" name="career" type="text" placeholder="회사(소속)이름" value=""
-												data-id="0" class="sc-brqgnP hTFaCv" />
+											<input id="career" name="career" type="text"
+												placeholder="회사(소속)이름" value="" data-id="0"
+												class="sc-brqgnP hTFaCv" />
 											<div class="fresnel-container fresnel-greaterThan-xs ">
 
 											</div>
 											<div class="fresnel-container fresnel-at-xs ">
 												<div width="100%" class="sc-jzJRlG iNJnXl">
-													<textarea id="careerDetail" name="careerDetail" height="0px" spellcheck="false"
+													<textarea id="careerDetail" name="careerDetail"
+														height="0px" spellcheck="false"
 														placeholder="개발팀에서 코드리뷰를 담당했습니다." data-id="0" width="100%"
 														class="sc-cSHVUG ldzYSi"></textarea>
-													
+
 												</div>
-												
-												
+
+
 											</div>
-											
+
 											<img src="https://pren.kr/static/Icon/list_item_delete.svg"
 												alt="list_item_delete" width="15px" height="19px"
 												data-id="0" class="sc-cMljjf hNxXIk" />
-												
+
 										</div>
-											
-											
+
+
 									</div>
 									<input id="addCarBtn" width="105px" height="40px" type="button"
-										class="sc-EHOje sc-jAaTju iYSprP"  onclick="add_div()" value="경력 추가"/>
-								
+										class="sc-EHOje sc-jAaTju iYSprP" onclick="add_div()"
+										value="경력 추가" />
+
 								</div>
-								
+
 								<div id="field"></div>
 							</div>
 
@@ -3988,8 +3989,9 @@ textarea {
 							<div class="sc-eZXMBi bzZxvs">
 								<div class="sc-Ehqfj bgxZnV">
 									<div id="addSkill" class="sc-gggouf iWvWxM">
-										<input id="skill" name="skill"  type="text" placeholder="보유 자격증을 입력해주세요."
-											data-index="0" value="" class="sc-cyQzhP RmpCp" /><img
+										<input id="skill" name="skill" type="text"
+											placeholder="보유 자격증을 입력해주세요." data-index="0" value=""
+											class="sc-cyQzhP RmpCp" /><img
 											src="https://pren.kr/static/Icon/list_item_delete.svg"
 											alt="list_item_delete" width="15px" height="19px"
 											data-index="0" class="sc-izUgoq SJaIL" />
@@ -3997,8 +3999,8 @@ textarea {
 								</div>
 								<span style="font-size: 13px; color: #9d9d9d; line-height: 20px">예:
 									컴퓨터활용능력1급, 메이크업자격증1급, 네크워크관리사1급</span>
-								<button id="addSkillBtn" width="105px" height="40px" type="button"
-									class="sc-EHOje sc-lXiCt iPTPdU">자격증 추가</button>
+								<button id="addSkillBtn" width="105px" height="40px"
+									type="button" class="sc-EHOje sc-lXiCt iPTPdU">자격증 추가</button>
 							</div>
 
 							<div class="fresnel-container fresnel-at-xs ">
@@ -4007,7 +4009,8 @@ textarea {
 							</div>
 							<div class="sc-eZXMBi bzZxvs">
 								<div class="filepond--wrapper">
-									<input id="career_file" name="career_file" type="file" multiple="" />
+									<input id="career_file" name="career_file" type="file"
+										multiple="" />
 								</div>
 								<span style="font-size: 13px; color: #9d9d9d; line-height: 20px">증빙자료는
 									프랜의 내부 심사용으로 활용 되며 사이트에 노출되지 않습니다. <br />예: 건강보험자격득실확인서, 자격증,
@@ -4015,7 +4018,9 @@ textarea {
 								</span>
 							</div>
 							<div class="sc-hwcHae dLHQTe">
-								<button id="saveBtn2" width="100%" height="100%" type="button" class="sc-bZQynM fXhoYr">저장</button></div>
+								<button id="saveBtn2" width="100%" height="100%" type="button"
+									class="sc-bZQynM fXhoYr">저장</button>
+							</div>
 						</form>
 					</div>
 
@@ -4033,24 +4038,35 @@ textarea {
 							<div width="100%" class="sc-Rmtcm kOorpV">
 								<div width="133px" height="133px" class="sc-bRBYWo eKHDCw">
 									<div id="popBtn" class="sc-hzDkRC exxwtE">
-										<div  class="sc-jhAzac iQUeLb"></div>
+										<div class="sc-jhAzac iQUeLb"></div>
 
-											<div id="pop" style="display: none;" width="765px" class="sc-bsbRJL ghsfDZ">
+										<div id="pop" style="display: none;" width="765px"
+											class="sc-bsbRJL ghsfDZ">
 											<div class="sc-cLQEGU hxxTXM">포트폴리오 등록</div>
 											<div class="sc-gqPbQI beHNvu">제목 (필수)</div>
 											<div class="sc-bwzfXH byurlq">
-												<input id="portfolio_title" name="portfolio_title" width="668px" placeholder="포트폴리오의 제목을 입력해주세요." class="sc-bxivhb igARar" value="">
+												<input id="portfolio_title" name="portfolio_title"
+													width="668px" placeholder="포트폴리오의 제목을 입력해주세요."
+													class="sc-bxivhb igARar" value="">
 											</div>
-											<div class="sc-gqPbQI beHNvu">미디어 링크 (선택사항) <span class="sc-hORach gxxFun">채널 URL이 아닌 각 콘텐츠의 URL을 입력해주세요</span>
+											<div class="sc-gqPbQI beHNvu">
+												미디어 링크 (선택사항) <span class="sc-hORach gxxFun">채널 URL이
+													아닌 각 콘텐츠의 URL을 입력해주세요</span>
 											</div>
 											<div class="sc-bwzfXH byurlq">
-												<input id="portfolio_link" name="portfolio_link"width="668px" placeholder="해당 콘텐츠 URL을 적어주세요. (유튜브, 비메오, 사운드클라우드)" class="sc-bxivhb igARar" value="">
+												<input id="portfolio_link" name="portfolio_link"
+													width="668px"
+													placeholder="해당 콘텐츠 URL을 적어주세요. (유튜브, 비메오, 사운드클라우드)"
+													class="sc-bxivhb igARar" value="">
 											</div>
 											<div class="sc-gqPbQI beHNvu">상세 설명 (선택사항)</div>
 											<div class="fresnel-container fresnel-greaterThan-xs ">
 												<div class="sc-cSHVUG hKPJmL">
-													<textarea id="portfolio_explain" name="portfolio_explain" height="93px" spellcheck="false" width="668px" placeholder="포트폴리오에 대한 상세 설명을 입력해주세요." class="sc-kAzzGY hKNDzf"></textarea>
-													
+													<textarea id="portfolio_explain" name="portfolio_explain"
+														height="93px" spellcheck="false" width="668px"
+														placeholder="포트폴리오에 대한 상세 설명을 입력해주세요."
+														class="sc-kAzzGY hKNDzf"></textarea>
+
 												</div>
 											</div>
 											<div class="fresnel-container fresnel-at-xs "></div>
@@ -4058,25 +4074,27 @@ textarea {
 											<div class="sc-hZSUBg icBQde">
 												<div class="sc-cMhqgX kgGRCP">
 													<label for="portfolio_img" class="sc-iuJeZd kGhUgK">
-														<div class="sc-epnACN irrZJD">
-												
-														</div>
-														<input id="portfolio_img" name="portfolio_img" type="file" accept="image/*" multiple="" class="sc-hMFtBS kHmnNc">
+														<div class="sc-epnACN irrZJD"></div> <input
+														id="portfolio_img" name="portfolio_img" type="file"
+														accept="image/*" multiple="" class="sc-hMFtBS kHmnNc">
 													</label>
 												</div>
 											</div>
 											<div class="sc-bMVAic ejRmPc">
-										
-												<button id="uploadPort"width="107px" height="40px" type="button" class="sc-bZQynM KQmmV">등록</button>
+
+												<button id="uploadPort" width="107px" height="40px"
+													type="button" class="sc-bZQynM KQmmV">등록</button>
 											</div>
 										</div>
-														
+
 									</div>
 								</div>
 							</div>
 						</div>
 						<div class="sc-hwcHae dLHQTe">
-						<button id="saveBtn3" width="100%" height="100%" type="button" class="sc-bZQynM fXhoYr">저장</button></div>
+							<button id="saveBtn3" width="100%" height="100%" type="button"
+								class="sc-bZQynM fXhoYr">저장</button>
+						</div>
 					</form>
 				</div>
 				<div class="sc-bjPkoM sc-cGDfzg enmltv">
@@ -4090,9 +4108,10 @@ textarea {
 							</div>
 							<div class="sc-fAMDQA iaJROI">
 								<div class="sc-bdVaJa jCeSos">
-									<input id="add_post" name="addr1" width="231px" display="inline" placeholder="우편번호"
-										name="addr1" id="addr1" type="text" readonly="readonly"
-										disabled="" class="sc-htpNat kdLDsG" />
+									<input id="add_post" name="addr1" width="231px"
+										display="inline" placeholder="우편번호" name="addr1" id="addr1"
+										type="text" readonly="readonly" disabled=""
+										class="sc-htpNat kdLDsG" />
 									<button type="button" class="btn btn-default"
 										onclick="execPostCode();">
 										<i class="fa fa-search"></i> 우편번호 찾기
@@ -4107,15 +4126,17 @@ textarea {
 									</div>
 									<div class="sc-kGXeez kUKQcj">
 										<div class="sc-bdVaJa jCeSos">
-											<input id="address" name="addr2" placeholder="도로명 주소" disabled="" name="addr2"
-												id="addr2" type="text" readonly="readonly"
+											<input id="address" name="addr2" placeholder="도로명 주소"
+												disabled="" name="addr2" id="addr2" type="text"
+												readonly="readonly"
 												class="sc-htpNat khbizk sc-kpOJdX bAKVje" width="100%" />
 										</div>
 									</div>
 								</div>
 								<div class="sc-bdVaJa jCeSos">
-									<input id="add_detail" name="add_detail" width="454px" placeholder="상세 주소" placeholder="상세주소"
-										name="addr3" id="addr3" type="text" class="sc-htpNat bOuslz" />
+									<input id="add_detail" name="add_detail" width="454px"
+										placeholder="상세 주소" placeholder="상세주소" name="addr3" id="addr3"
+										type="text" class="sc-htpNat bOuslz" />
 								</div>
 							</div>
 							<div class="fresnel-container fresnel-at-xs ">
@@ -4136,18 +4157,20 @@ textarea {
 									type="button" class="sc-EHOje kGGaxd">계좌인증</button>
 								<div class="sc-bCMXmc lhkRLM">
 									<div class="sc-bdVaJa jCeSos">
-										<input id="accholder" name="accholder" width="296px" placeholder="예금주"
-											class="sc-htpNat gfqNGg" />
+										<input id="accholder" name="accholder" width="296px"
+											placeholder="예금주" class="sc-htpNat gfqNGg" />
 									</div>
 								</div>
 							</div>
 							<div class="sc-hwcHae dLHQTe">
-							<button id="saveBtn4" width="100%" height="100%" type="button" class="sc-bZQynM fXhoYr">저장</button></div>
+								<button id="saveBtn4" width="100%" height="100%" type="button"
+									class="sc-bZQynM fXhoYr">저장</button>
+							</div>
 						</form>
 					</div>
 
 				</div>
-				
+
 				<div width="931px" class="sc-fQfKYo cbmHZE">
 					<p color="#191919" class="sc-bxivhb sc-kJdAmE cFuODr">프로필 공개 여부</p>
 					<p color="#191919" class="sc-bxivhb sc-kJdAmE dLUQaJ">사용할 프로필의
@@ -4181,7 +4204,7 @@ textarea {
 			</div>
 		</div>
 	</div>
-	
+
 	<script>
 function execPostCode() {
     new daum.Postcode({
@@ -4279,27 +4302,27 @@ function execPostCode() {
 	
 	
 	$('#saveBtn').click(function(){
-		 var formData = new FormData();
-		 	formData.append("profile_img", $("input[name=profile_img]")[0].files[0]);
-		    formData.append("name", $("input[name=name]").val());
+		var form1 = $('#form1')[0];
+		 var formData = new FormData(form1);
+		 	/* formData.append("profile_img", $("input[name=profile_img]")[0].files[0]); */
+		  /*   formData.append("name", $("input[name=name]").val());
 		    formData.append("intro", $("input[name=intro]").val());		    
-		    formData.append("profile", $("textarea[name=profile]").val());
-		$.ajax({
-			type:"POST",
-			url:"/rest_profileSave",
-			data:{
-				formData,
-				mno: ${loginMember.mno}				
+		    formData.append("profile", $("textarea[name=profile]").val()); */
+		console.log(formData);
+			$.ajax({
+				type:"POST",
+				url:"/rest_profileSave",
+				data:formData,				
+				enctype: 'multipar/form-data',
+				contentType: false,
+				processData : false,
+				success:function(data){
+					alert(data)
 				},
-			enctype: 'multipart/form-data',
-			contentType: false,
-			processData : false,
-			success:function(data){
-				alert(data);
-				}
-			
+				error : function(e){
+					console.log(e)
+					}
 			});
-			
 		});
 
 	$('#saveBtn2').click(function(){
@@ -4312,14 +4335,14 @@ function execPostCode() {
 			type:"POST",
 			url:"/rest_profileSave2",
 			data:{
-				mno: ${loginMember.mno},
+				/* mno: ${loginMember.mno}, */
 				formData
 				},
 			contentType: false,
 			processData : false,
 			enctype: 'multipart/form-data',
 			success:function(data){
-				alert(data);
+				alert(data)
 				}
 			
 			});
@@ -4356,7 +4379,7 @@ function execPostCode() {
 				add_detail: $('#add_detail').val(),
 				bank: $('#bank').val(),
 				acc: $('#acc').val(),
-				accholder: $('#accholder').val(),
+				accholder: $('#accholder').val()
 				},
 			success:function(data){
 				alert(data);
@@ -4391,4 +4414,3 @@ function execPostCode() {
 
 </script>
 	<%@include file="footer.jsp"%>
-	

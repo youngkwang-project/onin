@@ -63,8 +63,7 @@ body {
 	window.onload =function(){
 	$("#memBtn").click(function(){
 		$("#proChangePage").toggle();
-		});
-		
+		});		
 		}
 </script>
 
