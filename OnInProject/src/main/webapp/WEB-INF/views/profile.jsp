@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
+
 
 
 <!DOCTYPE html>
@@ -27,7 +27,8 @@
 	href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900&amp;display=swap&amp;subset=korean"
 	rel="stylesheet" />
 <script type="text/javascript"
-	src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	src="https://code.jquery.com/jquery-3.2.0.min.js"></script>
+<script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
 <script type="text/javascript"
 	src="https://cdn.iamport.kr/js/iamport.payment-1.1.7.js"></script>
 <meta name="naver-site-verification"
@@ -3691,10 +3692,497 @@ textarea {
     outline: none;
     cursor: pointer;
 }
+.hKNDzf {
+    width: calc(620px);
+    height: calc(57px);
+    font-size: 14px;
+    line-height: 2.14;
+    color: rgb(88, 88, 88);
+    background-color: rgb(246, 246, 246);
+    border: 1px solid rgb(204, 204, 204);
+    outline: none;
+    padding: 18px 23px;
+    overflow-y: hidden;
+    resize: none;
+    cursor: inherit;
+}
+.irrZJD {
+    width: 31px;
+    height: 5px;
+    background-color: white;
+    position: relative;
+}
+.kGhUgK {
+    cursor: pointer;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+}
+.irrZJD::after {
+    content: "";
+    position: absolute;
+    left: 13px;
+    top: -13px;
+    width: 5px;
+    height: 31px;
+    background-color: white;
+}
 
 </style>
 
-<script>
+</head>
+
+<body>
+	
+	<%@include file="header.jsp"%>
+	<div class="sc-bnXvFD buSScp">
+		<div class="fresnel-container fresnel-greaterThan-xs ">
+			<div width="1247px" class="sc-gOhSNZ QbJYd">
+				<div width="928px" class="sc-jwJjzT cBgKYk">
+					<div class="fresnel-container fresnel-greaterThan-xs ">
+						<div class="sc-ghUbLI eCMiui">
+							<img src="https://pren.kr/static/expert_onboarding/illust.svg"
+								width="393px" height="264px" />
+						</div>
+					</div>
+					<div class="fresnel-container fresnel-at-xs ">
+						<div class="sc-ghUbLI PpAqF">
+							<p color="#000000" class="sc-bxivhb sc-ljUfdc bVwINp">판매자 전환</p>
+
+							<div>
+								<p color="#585858" class="sc-bxivhb sc-cgThhu fCcgYe">
+									실력 검증은 기본사항이며 향후 활동하시는데 있어<br />파트너님의 프로의식과 정직함 여부에 따라 <br />의뢰인
+									만족도가 정해집니다. 전문가 파트너 전환심사의 주된 내용은 파트너 전문분야의 실력에 관한 <br />
+									심사입니다. 신중하고 숙고히 작성 부탁드립니다.
+								</p>
+							</div>
+							<div class="sc-ghUbLI PpAqF">
+								<a href="/commission" target="_blank" class="sc-LAuEU hPNSTp"><button
+										class="sc-EHOje sc-iEPtyo eyeceW">
+										<p class="sc-bxivhb sc-ertOQY jDWytV">프랜 수수료 정책 확인하기</p>
+									</button></a><a href="https://pren.kr/categories/experts/portfolio/386"
+									target="__blank" class="sc-gkfylT cCZsfw"><button
+										class="sc-EHOje sc-iEPtyo jFGgVT">
+										<p class="sc-bxivhb sc-ertOQY jDWytV">프로필 작성 가이드 보기</p>
+									</button></a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="sc-bjPkoM sc-kBzFSH hhComY">
+					<div class="fresnel-container fresnel-greaterThan-xs ">
+						
+							<div class="fresnel-container fresnel-at-xs ">
+								<p color="#191919" class="sc-bxivhb kHpoSQ">활동 카테고리 선택</p>
+							</div>
+							<p class="sc-bxivhb sc-faQXZc krsasd">
+								활동 가능한 카테고리와 세부 작업 영역을 선택할 수 있습니다.<br />의뢰요청서가 도착하면 알림으로
+								보내드립니다.
+							</p>
+							<div width="612px" class="sc-imDdex mnBnF">
+								<div width="296px" class="sc-iwsKbI fgptoz">
+									<div class="sc-gZMcBi gwdlnH">
+										<div class="sc-gqjmRU bgQVQZ">카테고리</div>
+										<div class="sc-VigVT gjkitw"></div>
+									</div>
+								</div>
+								<div width="296px" class="sc-iwsKbI fgptoz">
+									<div class="sc-gZMcBi gwdlnH">
+										<div class="sc-gqjmRU bgQVQZ">작업 가능 영역</div>
+										<div class="sc-VigVT gjkitw"></div>
+									</div>
+								</div>
+							</div>
+							<div class="sc-lffWgi fFWFeB">
+								<div width="fit-content" height="36px" data-id="24"
+									class="sc-dnqmqq sc-hMqMXs sc-fGSyRc cdMFHs">웹툰·캐릭터</div>
+								<div width="fit-content" height="36px" data-id="64"
+									class="sc-dnqmqq sc-hMqMXs sc-fGSyRc cdMFHs">영상제작·편집</div>
+							</div>
+						
+					</div>
+				</div>
+				
+				<div class="sc-bjPkoM sc-jEdsij kFfPhc">
+					<div class="fresnel-container fresnel-greaterThan-xs ">
+						<form method="post" enctype="multipart/form-data">
+							<div class="fresnel-container fresnel-greaterThan-xs ">
+								<p color="#191919" class="sc-bxivhb gAroWi">프로필 항목 등록</p>
+							</div>
+							<div class="sc-lmrgJh hLBqAa">
+								<div class="sc-dzQEYZ BlhYH">
+									<div class="sc-dCVVYJ byuoYp">
+										
+										<div class="sc-kEYyzF lcroCN" >
+											<img id="preview"
+												src="#"
+												onerror="this.src='data:image/jpeg;base64,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'" 
+												width="265px;" height="265px;" /> 
+												<label for="uploadImg" class="sc-hSdWYo kEjxSM"></label>								 
+												<input type="file" name="profile_img" id="uploadImg" accept="image/*"class="sc-iAyFgw gWYozK"/>
+																																			
+
+										</div>
+										
+										<div class="sc-sVRsr bsTPFA">
+											<div class="fresnel-container fresnel-at-xs ">
+												<p color="#191919" class="sc-bxivhb sc-dHaUqb enLdmk">프로필
+													사진 TIP</p>
+											</div>
+											<p color="#585858" class="sc-bxivhb dnufCY">
+												실명공개는 전문가의 신뢰도를 향상시킵니다.<br />전문가의 사진은 신뢰성과 거래 성사율을 높일수
+												있습니다. 본인의 얼굴만 등록이 가능합니다.
+											</p>
+											<p color="#585858" class="sc-bxivhb giDiXo">
+												* 600x600 정사각 사이즈를 권장합니다. <br />* 적절하지 않은 사진 사용시 반려사유가 될 수
+												있습니다.
+											</p>
+										</div>
+									</div>
+								</div>
+								<div class="sc-dCVVYJ fTZwSX">
+									<p color="#191919" class="sc-bxivhb sc-jkPxnQ jGTkLM">실명 공개
+										여부 선택</p>
+									<p color="#191919" class="sc-bxivhb sc-jkPxnQ jEUQAZ">프로필
+										공개 방법을 선택해주세요.</p>
+									<div class="sc-dCVVYJ ukNHR">
+										<div class="sc-ekQYnd dSQgcU">
+											<div class="sc-bpubUI dQbJbx">
+												<input type="radio" id="username" name="name"
+													class="sc-juQqkt gbRNVn" checked="" /><label
+													for="username" class="sc-bkCOcH fotivz">이름</label>
+											</div>
+											<div width="278px" class="sc-chPdSV bmoXTr">
+												<div width="50px" class="sc-kgoBCf fRTCQn">
+													<img src="https://pren.kr/static/Icon/nickname.svg"
+														alt="nickname" width="32.50%" height="35.00%" />
+												</div>
+												<div class="sc-kGXeez kUKQcj">
+													<div class="sc-bdVaJa jCeSos">
+														<input id="name" value="${loginMember.name}" disabled="" name="name"
+															class="sc-htpNat khbizk sc-kpOJdX bAKVje" width="100%" />
+													</div>
+												</div>
+											</div>
+										</div>
+<!-- 										<div class="sc-ekQYnd kByNqL"> -->
+<!-- 											<div class="sc-bpubUI dQbJbx"> -->
+<!-- 												<input type="radio" id="nickname" name="user" -->
+<!-- 													class="sc-juQqkt gbRNVn" /><label for="nickname" -->
+<!-- 													class="sc-bkCOcH fotivz">닉네임</label> -->
+<!-- 											</div> -->
+<!-- 											<div width="278px" class="sc-chPdSV eqtCXC"> -->
+<!-- 												<div width="50px" class="sc-kgoBCf fRTCQn"> -->
+<!-- 													<img src="https://pren.kr/static/Icon/nickname.svg" -->
+<!-- 														alt="nickname" width="32.50%" height="35.00%" /> -->
+<!-- 												</div> -->
+<!-- 												<div class="sc-kGXeez kUKQcj"> -->
+<!-- 													<div class="sc-bdVaJa jCeSos"> -->
+<!-- 														<input value="영광" disabled="" -->
+<!-- 															class="sc-htpNat khbizk sc-kpOJdX bAKVje" width="100%" /> -->
+<!-- 													</div> -->
+<!-- 												</div> -->
+<!-- 											</div> -->
+<!-- 										</div> -->
+									</div>
+								</div>
+							</div>
+							<div class="fresnel-container fresnel-at-xs ">
+								<p color="#191919" class="sc-bxivhb sc-dHaUqb dAeGPI">한 줄
+									프로필</p>
+							</div>
+							<div class="sc-ewMkZo eYzQqs">
+								<div class="sc-bdVaJa jCeSos">
+									<input id="intro" placeholder="한 줄 프로필을 입력해주세요."
+										 width="100%" name="intro" value="${intro}"
+										class="sc-htpNat khbizk" />
+								</div>
+								<p color="#cccccc" class="sc-bxivhb sc-eCXBzT coLRDn">
+									18
+									<!-- -->
+									/
+									<!-- -->
+									23
+								</p>
+							</div>
+							<div class="fresnel-container fresnel-greaterThan-xs ">
+								<p color="#191919" class="sc-bxivhb sc-dHaUqb dAeGPI">상세 소개</p>
+							</div>
+							<div class="fresnel-container fresnel-at-xs ">
+								<div width="100%" class="sc-jzJRlG iNJnXl">
+									<textarea id="detailProf" height="0px" spellcheck="false"
+										placeholder="상세 프로필을 입력해주세요." width="100%"
+										class="sc-cSHVUG ecbPDt" name="profile"></textarea>
+								
+								</div>
+							</div>
+							<p color="#cccccc" class="sc-bxivhb sc-hfLElm bNajBL">
+								171
+								<!-- -->
+								/
+								<!-- -->
+								350
+							</p>
+							<div class="sc-hwcHae dLHQTe">
+							<input id="saveBtn" width="100%" height="100%" type="button" class="sc-bZQynM fXhoYr" value="저장"/></div>
+						</form>
+					</div>
+							
+				</div>
+				
+				<div class="sc-bjPkoM sc-eBipZS dxsYrm">
+					<div class="fresnel-container fresnel-greaterThan-xs ">
+						<form>
+							<div class="fresnel-container fresnel-greaterThan-xs ">
+								<p color="#191919" class="sc-bxivhb gAroWi">경력 및 추가정보 작성</p>
+							</div>
+
+							<div class="fresnel-container fresnel-greaterThan-xs ">
+								<p color="#191919" class="sc-bxivhb sc-dHaUqb gjGgmM">경력</p>
+							</div>
+
+							<div class="fresnel-container fresnel-greaterThan-xs ">
+								<div id="careerText" class="sc-eHgmQL cYGPgb">
+									<div class="sc-cvbbAY iCoHze">
+										<div class="sc-jWBwVP rNZsQ">
+											<input id="career" name="career" type="text" placeholder="회사(소속)이름" value=""
+												data-id="0" class="sc-brqgnP hTFaCv" />
+											<div class="fresnel-container fresnel-greaterThan-xs ">
+
+											</div>
+											<div class="fresnel-container fresnel-at-xs ">
+												<div width="100%" class="sc-jzJRlG iNJnXl">
+													<textarea id="careerDetail" name="careerDetail" height="0px" spellcheck="false"
+														placeholder="개발팀에서 코드리뷰를 담당했습니다." data-id="0" width="100%"
+														class="sc-cSHVUG ldzYSi"></textarea>
+													
+												</div>
+												
+												
+											</div>
+											
+											<img src="https://pren.kr/static/Icon/list_item_delete.svg"
+												alt="list_item_delete" width="15px" height="19px"
+												data-id="0" class="sc-cMljjf hNxXIk" />
+												
+										</div>
+											
+											
+									</div>
+									<input id="addCarBtn" width="105px" height="40px" type="button"
+										class="sc-EHOje sc-jAaTju iYSprP"  onclick="add_div()" value="경력 추가"/>
+								
+								</div>
+								
+								<div id="field"></div>
+							</div>
+
+							<div class="fresnel-container fresnel-at-xs ">
+								<p color="#191919" class="sc-bxivhb sc-dHaUqb ivvznD">보유자격증</p>
+							</div>
+							<div class="sc-eZXMBi bzZxvs">
+								<div class="sc-Ehqfj bgxZnV">
+									<div id="addSkill" class="sc-gggouf iWvWxM">
+										<input id="skill" name="skill"  type="text" placeholder="보유 자격증을 입력해주세요."
+											data-index="0" value="" class="sc-cyQzhP RmpCp" /><img
+											src="https://pren.kr/static/Icon/list_item_delete.svg"
+											alt="list_item_delete" width="15px" height="19px"
+											data-index="0" class="sc-izUgoq SJaIL" />
+									</div>
+								</div>
+								<span style="font-size: 13px; color: #9d9d9d; line-height: 20px">예:
+									컴퓨터활용능력1급, 메이크업자격증1급, 네크워크관리사1급</span>
+								<button id="addSkillBtn" width="105px" height="40px" type="button"
+									class="sc-EHOje sc-lXiCt iPTPdU">자격증 추가</button>
+							</div>
+
+							<div class="fresnel-container fresnel-at-xs ">
+								<p color="#191919" class="sc-bxivhb sc-dHaUqb ivvznD">경력,
+									전공, 자격 증빙자료</p>
+							</div>
+							<div class="sc-eZXMBi bzZxvs">
+								<div class="filepond--wrapper">
+									<input id="career_file" name="career_file" type="file" multiple="" />
+								</div>
+								<span style="font-size: 13px; color: #9d9d9d; line-height: 20px">증빙자료는
+									프랜의 내부 심사용으로 활용 되며 사이트에 노출되지 않습니다. <br />예: 건강보험자격득실확인서, 자격증,
+									학위, 수상내역 등
+								</span>
+							</div>
+							<div class="sc-hwcHae dLHQTe">
+								<button id="saveBtn2" width="100%" height="100%" type="button" class="sc-bZQynM fXhoYr">저장</button></div>
+						</form>
+					</div>
+
+				</div>
+				<div class="sc-bjPkoM sc-eMgOci eoksPR">
+					<form>
+
+						<div class="fresnel-container fresnel-at-xs ">
+							<p color="#191919" class="sc-bxivhb kHpoSQ">포트폴리오</p>
+						</div>
+						<div class="fresnel-container fresnel-greaterThan-xs ">
+							<p color="#191919" class="sc-bxivhb sc-dHaUqb AuKEO">포트폴리오 등록</p>
+						</div>
+						<div class="fresnel-container fresnel-at-xs ">
+							<div width="100%" class="sc-Rmtcm kOorpV">
+								<div width="133px" height="133px" class="sc-bRBYWo eKHDCw">
+									<div id="popBtn" class="sc-hzDkRC exxwtE">
+										<div  class="sc-jhAzac iQUeLb"></div>
+
+											<div id="pop" style="display: none;" width="765px" class="sc-bsbRJL ghsfDZ">
+											<div class="sc-cLQEGU hxxTXM">포트폴리오 등록</div>
+											<div class="sc-gqPbQI beHNvu">제목 (필수)</div>
+											<div class="sc-bwzfXH byurlq">
+												<input id="portfolio_title" name="portfolio_title" width="668px" placeholder="포트폴리오의 제목을 입력해주세요." class="sc-bxivhb igARar" value="">
+											</div>
+											<div class="sc-gqPbQI beHNvu">미디어 링크 (선택사항) <span class="sc-hORach gxxFun">채널 URL이 아닌 각 콘텐츠의 URL을 입력해주세요</span>
+											</div>
+											<div class="sc-bwzfXH byurlq">
+												<input id="portfolio_link" name="portfolio_link"width="668px" placeholder="해당 콘텐츠 URL을 적어주세요. (유튜브, 비메오, 사운드클라우드)" class="sc-bxivhb igARar" value="">
+											</div>
+											<div class="sc-gqPbQI beHNvu">상세 설명 (선택사항)</div>
+											<div class="fresnel-container fresnel-greaterThan-xs ">
+												<div class="sc-cSHVUG hKPJmL">
+													<textarea id="portfolio_explain" name="portfolio_explain" height="93px" spellcheck="false" width="668px" placeholder="포트폴리오에 대한 상세 설명을 입력해주세요." class="sc-kAzzGY hKNDzf"></textarea>
+													
+												</div>
+											</div>
+											<div class="fresnel-container fresnel-at-xs "></div>
+											<div class="sc-gqPbQI beHNvu">사진 등록</div>
+											<div class="sc-hZSUBg icBQde">
+												<div class="sc-cMhqgX kgGRCP">
+													<label for="portfolio_img" class="sc-iuJeZd kGhUgK">
+														<div class="sc-epnACN irrZJD">
+												
+														</div>
+														<input id="portfolio_img" name="portfolio_img" type="file" accept="image/*" multiple="" class="sc-hMFtBS kHmnNc">
+													</label>
+												</div>
+											</div>
+											<div class="sc-bMVAic ejRmPc">
+										
+												<button id="uploadPort"width="107px" height="40px" type="button" class="sc-bZQynM KQmmV">등록</button>
+											</div>
+										</div>
+														
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="sc-hwcHae dLHQTe">
+						<button id="saveBtn3" width="100%" height="100%" type="button" class="sc-bZQynM fXhoYr">저장</button></div>
+					</form>
+				</div>
+				<div class="sc-bjPkoM sc-cGDfzg enmltv">
+					<div class="fresnel-container fresnel-greaterThan-xs ">
+						<form>
+							<div class="fresnel-container fresnel-at-xs ">
+								<p color="#191919" class="sc-bxivhb kHpoSQ">판매자 정보 작성</p>
+							</div>
+							<div class="fresnel-container fresnel-at-xs ">
+								<p color="#191919" class="sc-bxivhb sc-dHaUqb iPwsNf">주소</p>
+							</div>
+							<div class="sc-fAMDQA iaJROI">
+								<div class="sc-bdVaJa jCeSos">
+									<input id="add_post" name="addr1" width="231px" display="inline" placeholder="우편번호"
+										name="addr1" id="addr1" type="text" readonly="readonly"
+										disabled="" class="sc-htpNat kdLDsG" />
+									<button type="button" class="btn btn-default"
+										onclick="execPostCode();">
+										<i class="fa fa-search"></i> 우편번호 찾기
+									</button>
+								</div>
+							</div>
+							<div class="sc-ibnDSj fEvhzc">
+								<div width="455px" class="sc-chPdSV gWWDIG">
+									<div width="50px" class="sc-kgoBCf fRTCQn">
+										<img src="https://pren.kr/static/Icon/address.svg"
+											alt="address" width="42.00%" height="38.00%" />
+									</div>
+									<div class="sc-kGXeez kUKQcj">
+										<div class="sc-bdVaJa jCeSos">
+											<input id="address" name="addr2" placeholder="도로명 주소" disabled="" name="addr2"
+												id="addr2" type="text" readonly="readonly"
+												class="sc-htpNat khbizk sc-kpOJdX bAKVje" width="100%" />
+										</div>
+									</div>
+								</div>
+								<div class="sc-bdVaJa jCeSos">
+									<input id="add_detail" name="add_detail" width="454px" placeholder="상세 주소" placeholder="상세주소"
+										name="addr3" id="addr3" type="text" class="sc-htpNat bOuslz" />
+								</div>
+							</div>
+							<div class="fresnel-container fresnel-at-xs ">
+								<p color="#191919" class="sc-bxivhb sc-dHaUqb idQKzA">계좌정보</p>
+							</div>
+							<div class="sc-OqFzE FuKrt">
+								<div width="296px" class="sc-iwsKbI fgptoz">
+									<div id="bank" name="bank" class="sc-gZMcBi eDlBqv">
+										<div selected="" class="sc-gqjmRU lhRJXy">기업은행</div>
+										<div class="sc-VigVT gjkitw"></div>
+									</div>
+								</div>
+								<div class="sc-bdVaJa jCeSos">
+									<input id="acc" name="acc" width="457px" placeholder="계좌번호"
+										class="sc-htpNat kdrGQV" />
+								</div>
+								<button id="accConfirm" width="138px" height="50px"
+									type="button" class="sc-EHOje kGGaxd">계좌인증</button>
+								<div class="sc-bCMXmc lhkRLM">
+									<div class="sc-bdVaJa jCeSos">
+										<input id="accholder" name="accholder" width="296px" placeholder="예금주"
+											class="sc-htpNat gfqNGg" />
+									</div>
+								</div>
+							</div>
+							<div class="sc-hwcHae dLHQTe">
+							<button id="saveBtn4" width="100%" height="100%" type="button" class="sc-bZQynM fXhoYr">저장</button></div>
+						</form>
+					</div>
+
+				</div>
+				
+				<div width="931px" class="sc-fQfKYo cbmHZE">
+					<p color="#191919" class="sc-bxivhb sc-kJdAmE cFuODr">프로필 공개 여부</p>
+					<p color="#191919" class="sc-bxivhb sc-kJdAmE dLUQaJ">사용할 프로필의
+						공개여부를 선택해 주세요.</p>
+					<div class="sc-fQfKYo WIeGJ">
+						<div class="sc-FAiZp irHPjM">
+							<input type="radio" id="_public" checked="" name="is_public"
+								class="sc-fPCuyW cBaGdt" /><label for="_public"
+								class="sc-dAWfgX bAFIeD">공개</label>
+						</div>
+						<div class="sc-FAiZp bsDEcn">
+							<input type="radio" id="_privave" name="is_public"
+								class="sc-fPCuyW cBaGdt" /><label for="_privave"
+								class="sc-dAWfgX bAFIeD">비공개</label>
+						</div>
+					</div>
+				</div>
+				<div class="sc-zDqdV hNiSXq">
+					<button width="297px" height="50px" type="button"
+						style="margin-right: 10px" class="sc-EHOje lfJsSz">미리보기</button>
+					<button width="297px" height="50px" type="button"
+						class="sc-EHOje dXFhe">제출하기</button>
+				</div>
+				<div class="sc-jBoNkH kdNdMq">
+					<p class="sc-fPbjcq eBDCPA">작성한 내용으로 만들어질 포트폴리오 페이지를 미리 보세요!</p>
+					<a class="sc-hBcjXN fqyRIa"><button width="100%" height="40px"
+							class="sc-EHOje sc-hdNmWC jHZbWK">
+							<p color="#00d387" class="sc-bxivhb sc-fPEBxH iwxhFZ">미리보기</p>
+						</button></a>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<script>
 function execPostCode() {
     new daum.Postcode({
         oncomplete: function(data) {
@@ -3739,7 +4227,7 @@ function execPostCode() {
 }
 
 
-$(function() {
+
     //계좌인증	
 
     $('#accConfirm').click(function() {
@@ -3767,10 +4255,12 @@ $(function() {
     $('#popBtn').click(function(){
 		$('#pop').show();
         });
-    $('#close').click(function(){
+    $('#uploadPort').click(function(){
 		$('#pop').hide();
         });
-	//이미지업로드
+
+    
+	//파일업로드 이미지 미리보기
    
     function readURL(input) {
         if (input.files && input.files[0]) {
@@ -3782,24 +4272,69 @@ $(function() {
         }
     }
 
-    $("#input").change(function() {
+    $("#uploadImg").change(function() {
         readURL(this);
     });
 
-	$("#addCarBtn").click(function(){
-			
-		})
 	
 	
 	$('#saveBtn').click(function(){
+		 var formData = new FormData();
+		 	formData.append("profile_img", $("input[name=profile_img]")[0].files[0]);
+		    formData.append("name", $("input[name=name]").val());
+		    formData.append("intro", $("input[name=intro]").val());		    
+		    formData.append("profile", $("textarea[name=profile]").val());
 		$.ajax({
-			type:"GET",
+			type:"POST",
 			url:"/rest_profileSave",
-			date:{
-				intro: $('#intro').val(),
-				profile: $('#detailProf').val(),
-				name: $('#name').val(),
-				mno: ${loginMember.mno}
+			data:{
+				formData,
+				mno: ${loginMember.mno}				
+				},
+			dataType:"text",
+			contentType: false,
+			processData : false,
+			success:function(data){
+				alert(data);
+				}
+			
+			});
+			
+		});
+
+	$('#saveBtn2').click(function(){
+		 var formData = new FormData();
+		 	formData.append("career", $("input[name=career]").val());
+		    formData.append("careerDetail", $("input[name=careerDetail]").val());
+		    formData.append("skill", $("input[name=skill]").val());		    
+		    formData.append("career_file", $("input[name=career_file]")[0].files[0]);
+		$.ajax({
+			type:"POST",
+			url:"/rest_profileSave2",
+			data:{
+				mno: ${loginMember.mno},
+				formData
+				},
+				contentType: false,
+				processData : false,
+			success:function(data){
+				alert(data);
+				}
+			
+			});
+			
+		});
+
+	$('#saveBtn3').click(function(){
+		$.ajax({
+			type:"POST",
+			url:"/rest_profileSave3",
+			data:{
+				mno: ${loginMember.mno},
+				portfolio_title: $('#portfolio_title').val(),
+				portfolio_link: $('#portfolio_link').val(),
+				portfolio_explain: $('#portfolio_explain').val(),
+				portfolio_img : $('#portfolio_img').val()
 				},
 			success:function(data){
 				alert(data);
@@ -3807,469 +4342,52 @@ $(function() {
 			
 			});
 			
-		});  
-})//끝
+		});    
+
+	$('#saveBtn4').click(function(){
+		$.ajax({
+			type:"POST",
+			url:"/rest_profileSave4",
+			data:{
+				mno: ${loginMember.mno},
+				add_post: $('#add_post').val(),
+				address: $('#address').val(),
+				add_detail: $('#add_detail').val(),
+				bank: $('#bank').val(),
+				acc: $('#acc').val(),
+				accholder: $('#accholder').val(),
+				},
+			success:function(data){
+				alert(data);
+				}
+			
+			});
+			
+		});    
+
+	function add_div(){
+
+	    var div = document.createElement('div');
+
+
+
+	    div.innerHTML = document.getElementById('careerText').innerHTML;
+
+	    document.getElementById('field').appendChild(div);
+
+	}
+
+
+
+	function remove_div(obj){
+
+	document.getElementById('field').removeChild(obj.parentNode);
+
+	}
 
 	
-	
+
 
 </script>
-</head>
-<body>
-	
-	<%@include file="header.jsp"%>
-	<div class="sc-bnXvFD buSScp">
-		<div class="fresnel-container fresnel-greaterThan-xs ">
-			<div width="1247px" class="sc-gOhSNZ QbJYd">
-				<div width="928px" class="sc-jwJjzT cBgKYk">
-					<div class="fresnel-container fresnel-greaterThan-xs ">
-						<div class="sc-ghUbLI eCMiui">
-							<img src="https://pren.kr/static/expert_onboarding/illust.svg"
-								width="393px" height="264px" />
-						</div>
-					</div>
-					<div class="fresnel-container fresnel-at-xs ">
-						<div class="sc-ghUbLI PpAqF">
-							<p color="#000000" class="sc-bxivhb sc-ljUfdc bVwINp">판매자 전환</p>
-
-							<div>
-								<p color="#585858" class="sc-bxivhb sc-cgThhu fCcgYe">
-									실력 검증은 기본사항이며 향후 활동하시는데 있어<br />파트너님의 프로의식과 정직함 여부에 따라 <br />의뢰인
-									만족도가 정해집니다. 전문가 파트너 전환심사의 주된 내용은 파트너 전문분야의 실력에 관한 <br />
-									심사입니다. 신중하고 숙고히 작성 부탁드립니다.
-								</p>
-							</div>
-							<div class="sc-ghUbLI PpAqF">
-								<a href="/commission" target="_blank" class="sc-LAuEU hPNSTp"><button
-										class="sc-EHOje sc-iEPtyo eyeceW">
-										<p class="sc-bxivhb sc-ertOQY jDWytV">프랜 수수료 정책 확인하기</p>
-									</button></a><a href="https://pren.kr/categories/experts/portfolio/386"
-									target="__blank" class="sc-gkfylT cCZsfw"><button
-										class="sc-EHOje sc-iEPtyo jFGgVT">
-										<p class="sc-bxivhb sc-ertOQY jDWytV">프로필 작성 가이드 보기</p>
-									</button></a>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="sc-bjPkoM sc-kBzFSH hhComY">
-					<div class="fresnel-container fresnel-greaterThan-xs ">
-						<form>
-							<div class="fresnel-container fresnel-at-xs ">
-								<p color="#191919" class="sc-bxivhb kHpoSQ">활동 카테고리 선택</p>
-							</div>
-							<p class="sc-bxivhb sc-faQXZc krsasd">
-								활동 가능한 카테고리와 세부 작업 영역을 선택할 수 있습니다.<br />의뢰요청서가 도착하면 알림으로
-								보내드립니다.
-							</p>
-							<div width="612px" class="sc-imDdex mnBnF">
-								<div width="296px" class="sc-iwsKbI fgptoz">
-									<div class="sc-gZMcBi gwdlnH">
-										<div class="sc-gqjmRU bgQVQZ">카테고리</div>
-										<div class="sc-VigVT gjkitw"></div>
-									</div>
-								</div>
-								<div width="296px" class="sc-iwsKbI fgptoz">
-									<div class="sc-gZMcBi gwdlnH">
-										<div class="sc-gqjmRU bgQVQZ">작업 가능 영역</div>
-										<div class="sc-VigVT gjkitw"></div>
-									</div>
-								</div>
-							</div>
-							<div class="sc-lffWgi fFWFeB">
-								<div width="fit-content" height="36px" data-id="24"
-									class="sc-dnqmqq sc-hMqMXs sc-fGSyRc cdMFHs">웹툰·캐릭터</div>
-								<div width="fit-content" height="36px" data-id="64"
-									class="sc-dnqmqq sc-hMqMXs sc-fGSyRc cdMFHs">영상제작·편집</div>
-							</div>
-						</form>
-					</div>
-				</div>
-				<div class="sc-bjPkoM sc-jEdsij kFfPhc">
-					<div class="fresnel-container fresnel-greaterThan-xs ">
-						
-							<div class="fresnel-container fresnel-greaterThan-xs ">
-								<p color="#191919" class="sc-bxivhb gAroWi">프로필 항목 등록</p>
-							</div>
-							<div class="sc-lmrgJh hLBqAa">
-								<div class="sc-dzQEYZ BlhYH">
-									<div class="sc-dCVVYJ byuoYp">
-										<div class="sc-kEYyzF lcroCN" >
-											<img id="preview"
-												src="data:image/jpeg;base64,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" width="265px;" height="265px;" /> 
-												<label for="input" class="sc-hSdWYo kEjxSM"></label>								 
-												<input type="file" name="profile_img" id="input" accept="image/*"class="sc-iAyFgw gWYozK"/>
-																																			
-
-										</div>
-										<div class="sc-sVRsr bsTPFA">
-											<div class="fresnel-container fresnel-at-xs ">
-												<p color="#191919" class="sc-bxivhb sc-dHaUqb enLdmk">프로필
-													사진 TIP</p>
-											</div>
-											<p color="#585858" class="sc-bxivhb dnufCY">
-												실명공개는 전문가의 신뢰도를 향상시킵니다.<br />전문가의 사진은 신뢰성과 거래 성사율을 높일수
-												있습니다. 본인의 얼굴만 등록이 가능합니다.
-											</p>
-											<p color="#585858" class="sc-bxivhb giDiXo">
-												* 600x600 정사각 사이즈를 권장합니다. <br />* 적절하지 않은 사진 사용시 반려사유가 될 수
-												있습니다.
-											</p>
-										</div>
-									</div>
-								</div>
-								<div class="sc-dCVVYJ fTZwSX">
-									<p color="#191919" class="sc-bxivhb sc-jkPxnQ jGTkLM">실명 공개
-										여부 선택</p>
-									<p color="#191919" class="sc-bxivhb sc-jkPxnQ jEUQAZ">프로필
-										공개 방법을 선택해주세요.</p>
-									<div class="sc-dCVVYJ ukNHR">
-										<div class="sc-ekQYnd dSQgcU">
-											<div class="sc-bpubUI dQbJbx">
-												<input type="radio" id="username" name="user"
-													class="sc-juQqkt gbRNVn" checked="" /><label
-													for="username" class="sc-bkCOcH fotivz">이름</label>
-											</div>
-											<div width="278px" class="sc-chPdSV bmoXTr">
-												<div width="50px" class="sc-kgoBCf fRTCQn">
-													<img src="https://pren.kr/static/Icon/nickname.svg"
-														alt="nickname" width="32.50%" height="35.00%" />
-												</div>
-												<div class="sc-kGXeez kUKQcj">
-													<div class="sc-bdVaJa jCeSos">
-														<input id="name" value="${loginMember.name}" disabled=""
-															class="sc-htpNat khbizk sc-kpOJdX bAKVje" width="100%" />
-													</div>
-												</div>
-											</div>
-										</div>
-<!-- 										<div class="sc-ekQYnd kByNqL"> -->
-<!-- 											<div class="sc-bpubUI dQbJbx"> -->
-<!-- 												<input type="radio" id="nickname" name="user" -->
-<!-- 													class="sc-juQqkt gbRNVn" /><label for="nickname" -->
-<!-- 													class="sc-bkCOcH fotivz">닉네임</label> -->
-<!-- 											</div> -->
-<!-- 											<div width="278px" class="sc-chPdSV eqtCXC"> -->
-<!-- 												<div width="50px" class="sc-kgoBCf fRTCQn"> -->
-<!-- 													<img src="https://pren.kr/static/Icon/nickname.svg" -->
-<!-- 														alt="nickname" width="32.50%" height="35.00%" /> -->
-<!-- 												</div> -->
-<!-- 												<div class="sc-kGXeez kUKQcj"> -->
-<!-- 													<div class="sc-bdVaJa jCeSos"> -->
-<!-- 														<input value="영광" disabled="" -->
-<!-- 															class="sc-htpNat khbizk sc-kpOJdX bAKVje" width="100%" /> -->
-<!-- 													</div> -->
-<!-- 												</div> -->
-<!-- 											</div> -->
-<!-- 										</div> -->
-									</div>
-								</div>
-							</div>
-							<div class="fresnel-container fresnel-at-xs ">
-								<p color="#191919" class="sc-bxivhb sc-dHaUqb dAeGPI">한 줄
-									프로필</p>
-							</div>
-							<div class="sc-ewMkZo eYzQqs">
-								<div class="sc-bdVaJa jCeSos">
-									<input id="intro" placeholder="한 줄 프로필을 입력해주세요."
-										 width="100%" name="intro"
-										class="sc-htpNat khbizk" />
-								</div>
-								<p color="#cccccc" class="sc-bxivhb sc-eCXBzT coLRDn">
-									18
-									<!-- -->
-									/
-									<!-- -->
-									23
-								</p>
-							</div>
-							<div class="fresnel-container fresnel-greaterThan-xs ">
-								<p color="#191919" class="sc-bxivhb sc-dHaUqb dAeGPI">상세 소개</p>
-							</div>
-							<div class="fresnel-container fresnel-at-xs ">
-								<div width="100%" class="sc-jzJRlG iNJnXl">
-									<textarea id="detailProf" height="0px" spellcheck="false"
-										placeholder="상세 프로필을 입력해주세요." width="100%"
-										class="sc-cSHVUG ecbPDt" name="profile"></textarea>
-									<textarea placeholder="상세 프로필을 입력해주세요." width="100%"
-										class="sc-cSHVUG sc-kAzzGY hdPwAJ"></textarea>
-								</div>
-							</div>
-							<p color="#cccccc" class="sc-bxivhb sc-hfLElm bNajBL">
-								171
-								<!-- -->
-								/
-								<!-- -->
-								350
-							</p>
-							<div class="sc-hwcHae dLHQTe">
-							<button id="saveBtn" width="100%" height="100%" type="button" class="sc-bZQynM fXhoYr">저장</button></div>
-						
-					</div>
-							
-				</div>
-				<div class="sc-bjPkoM sc-eBipZS dxsYrm">
-					<div class="fresnel-container fresnel-greaterThan-xs ">
-						<form>
-							<div class="fresnel-container fresnel-greaterThan-xs ">
-								<p color="#191919" class="sc-bxivhb gAroWi">경력 및 추가정보 작성</p>
-							</div>
-
-							<div class="fresnel-container fresnel-greaterThan-xs ">
-								<p color="#191919" class="sc-bxivhb sc-dHaUqb gjGgmM">경력</p>
-							</div>
-
-							<div class="fresnel-container fresnel-greaterThan-xs ">
-								<div class="sc-eHgmQL cYGPgb">
-									<div class="sc-cvbbAY iCoHze">
-										<div class="sc-jWBwVP rNZsQ">
-											<input type="text" placeholder="회사(소속)이름" value=""
-												data-id="0" class="sc-brqgnP hTFaCv" />
-											<div class="fresnel-container fresnel-greaterThan-xs ">
-
-											</div>
-											<div class="fresnel-container fresnel-at-xs ">
-												<div width="100%" class="sc-jzJRlG iNJnXl">
-													<textarea height="0px" spellcheck="false"
-														placeholder="개발팀에서 코드리뷰를 담당했습니다." data-id="0" width="100%"
-														class="sc-cSHVUG ldzYSi"></textarea>
-													<textarea placeholder="개발팀에서 코드리뷰를 담당했습니다." data-id="0"
-														width="100%" class="sc-cSHVUG sc-kAzzGY eJWuhM"></textarea>
-												</div>
-												
-												
-											</div>
-											
-											<img src="https://pren.kr/static/Icon/list_item_delete.svg"
-												alt="list_item_delete" width="15px" height="19px"
-												data-id="0" class="sc-cMljjf hNxXIk" />
-										</div>
-										<div id="addCar"class="sc-jWBwVP rNZsQ">
-											<input type="text" placeholder="회사(소속)이름" value=""
-												data-id="0" class="sc-brqgnP hTFaCv" />
-											<div class="fresnel-container fresnel-greaterThan-xs ">
-
-											</div>
-											<div class="fresnel-container fresnel-at-xs ">
-												<div id= "addCareer" width="100%" class="sc-jzJRlG iNJnXl">
-													<textarea height="0px" spellcheck="false"
-														placeholder="개발팀에서 코드리뷰를 담당했습니다." data-id="0" width="100%"
-														class="sc-cSHVUG ldzYSi"></textarea>
-													<textarea placeholder="개발팀에서 코드리뷰를 담당했습니다." data-id="0"
-														width="100%" class="sc-cSHVUG sc-kAzzGY eJWuhM"></textarea>
-												</div>
-												
-												
-											</div>
-											<img src="https://pren.kr/static/Icon/list_item_delete.svg"
-												alt="list_item_delete" width="15px" height="19px"
-												data-id="0" class="sc-cMljjf hNxXIk" />
-										</div>
-											
-											
-									</div>
-									<button id="addCarBtn" width="105px" height="40px" type="button"
-										class="sc-EHOje sc-jAaTju iYSprP">경력 추가</button>
-								</div>
-							</div>
-
-							<div class="fresnel-container fresnel-at-xs ">
-								<p color="#191919" class="sc-bxivhb sc-dHaUqb ivvznD">보유기술</p>
-							</div>
-							<div class="sc-eZXMBi bzZxvs">
-								<div class="sc-Ehqfj bgxZnV">
-									<div id="addSkill" class="sc-gggouf iWvWxM">
-										<input type="text" placeholder="보유 기술명을 입력해주세요."
-											data-index="0" value="포토샵1급자격증" class="sc-cyQzhP RmpCp" /><img
-											src="https://pren.kr/static/Icon/list_item_delete.svg"
-											alt="list_item_delete" width="15px" height="19px"
-											data-index="0" class="sc-izUgoq SJaIL" />
-									</div>
-								</div>
-								<span style="font-size: 13px; color: #9d9d9d; line-height: 20px">예:
-									포토샵, 일러스트, Javscript</span>
-								<button id="addSkillBtn" width="105px" height="40px" type="button"
-									class="sc-EHOje sc-lXiCt iPTPdU">보유기술 추가</button>
-							</div>
-
-							<div class="fresnel-container fresnel-at-xs ">
-								<p color="#191919" class="sc-bxivhb sc-dHaUqb ivvznD">경력,
-									전공, 자격 증빙자료</p>
-							</div>
-							<div class="sc-eZXMBi bzZxvs">
-								<div class="filepond--wrapper">
-									<input type="file" multiple="" />
-								</div>
-								<span style="font-size: 13px; color: #9d9d9d; line-height: 20px">증빙자료는
-									프랜의 내부 심사용으로 활용 되며 사이트에 노출되지 않습니다. <br />예: 건강보험자격득실확인서, 자격증,
-									학위, 수상내역 등
-								</span>
-							</div>
-							<div class="sc-hwcHae dLHQTe">
-								<button width="100%" height="100%" type="submit" class="sc-bZQynM fXhoYr">저장</button></div>
-						</form>
-					</div>
-
-				</div>
-				<div class="sc-bjPkoM sc-eMgOci eoksPR">
-					<form>
-
-						<div class="fresnel-container fresnel-at-xs ">
-							<p color="#191919" class="sc-bxivhb kHpoSQ">포트폴리오</p>
-						</div>
-						<div class="fresnel-container fresnel-greaterThan-xs ">
-							<p color="#191919" class="sc-bxivhb sc-dHaUqb AuKEO">포트폴리오 등록</p>
-						</div>
-						<div class="fresnel-container fresnel-at-xs ">
-							<div width="100%" class="sc-Rmtcm kOorpV">
-								<div width="133px" height="133px" class="sc-bRBYWo eKHDCw">
-									<div class="sc-hzDkRC exxwtE">
-										<div id="popBtn" class="sc-jhAzac iQUeLb"></div>
-
-											<div id="pop" style="display: none;" width="765px" class="sc-bsbRJL ghsfDZ">
-											<div class="sc-cLQEGU hxxTXM">포트폴리오 등록</div>
-											<div class="sc-gqPbQI beHNvu">제목 (필수)</div>
-											<div class="sc-bwzfXH byurlq">
-												<input width="668px" placeholder="포트폴리오의 제목을 입력해주세요." class="sc-bxivhb igARar" value="">
-											</div>
-											<div class="sc-gqPbQI beHNvu">미디어 링크 (선택사항) <span class="sc-hORach gxxFun">채널 URL이 아닌 각 콘텐츠의 URL을 입력해주세요</span>
-											</div>
-											<div class="sc-bwzfXH byurlq">
-												<input width="668px" placeholder="해당 콘텐츠 URL을 적어주세요. (유튜브, 비메오, 사운드클라우드)" class="sc-bxivhb igARar" value="">
-											</div>
-											<div class="sc-gqPbQI beHNvu">상세 설명 (선택사항)</div>
-											<div class="fresnel-container fresnel-greaterThan-xs ">
-												<div class="sc-cSHVUG hKPJmL">
-													<textarea height="93px" spellcheck="false" width="668px" placeholder="포트폴리오에 대한 상세 설명을 입력해주세요." class="sc-kAzzGY hKNDzf"></textarea>
-													<textarea width="668px" placeholder="포트폴리오에 대한 상세 설명을 입력해주세요." class="sc-kAzzGY sc-chPdSV bLmzNq"></textarea>
-												</div>
-											</div>
-											<div class="fresnel-container fresnel-at-xs "></div>
-											<div class="sc-gqPbQI beHNvu">사진 등록</div>
-											<div class="sc-hZSUBg icBQde">
-												<div class="sc-cMhqgX kgGRCP">
-													<label class="sc-iuJeZd kGhUgK">
-														<div class="sc-epnACN irrZJD"></div>
-														<input type="file" accept="image/*" multiple="" class="sc-hMFtBS kHmnNc">
-													</label>
-												</div>
-											</div>
-											<div class="sc-bMVAic ejRmPc">
-												<button type="button" class="sc-cmthru fCOxdE">삭제하기</button>
-												<button width="107px" height="40px" type="button" class="sc-bZQynM KQmmV">등록</button>
-											</div>
-										</div>
-														
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="sc-hwcHae dLHQTe">
-						<button width="100%" height="100%" type="submit" class="sc-bZQynM fXhoYr">저장</button></div>
-					</form>
-				</div>
-				<div class="sc-bjPkoM sc-cGDfzg enmltv">
-					<div class="fresnel-container fresnel-greaterThan-xs ">
-						<form>
-							<div class="fresnel-container fresnel-at-xs ">
-								<p color="#191919" class="sc-bxivhb kHpoSQ">판매자 정보 작성</p>
-							</div>
-							<div class="fresnel-container fresnel-at-xs ">
-								<p color="#191919" class="sc-bxivhb sc-dHaUqb iPwsNf">주소</p>
-							</div>
-							<div class="sc-fAMDQA iaJROI">
-								<div class="sc-bdVaJa jCeSos">
-									<input width="231px" display="inline" placeholder="우편번호"
-										name="addr1" id="addr1" type="text" readonly="readonly"
-										disabled="" class="sc-htpNat kdLDsG" />
-									<button type="button" class="btn btn-default"
-										onclick="execPostCode();">
-										<i class="fa fa-search"></i> 우편번호 찾기
-									</button>
-								</div>
-							</div>
-							<div class="sc-ibnDSj fEvhzc">
-								<div width="455px" class="sc-chPdSV gWWDIG">
-									<div width="50px" class="sc-kgoBCf fRTCQn">
-										<img src="https://pren.kr/static/Icon/address.svg"
-											alt="address" width="42.00%" height="38.00%" />
-									</div>
-									<div class="sc-kGXeez kUKQcj">
-										<div class="sc-bdVaJa jCeSos">
-											<input placeholder="도로명 주소" disabled="" name="addr2"
-												id="addr2" type="text" readonly="readonly"
-												class="sc-htpNat khbizk sc-kpOJdX bAKVje" width="100%" />
-										</div>
-									</div>
-								</div>
-								<div class="sc-bdVaJa jCeSos">
-									<input width="454px" placeholder="상세 주소" placeholder="상세주소"
-										name="addr3" id="addr3" type="text" class="sc-htpNat bOuslz" />
-								</div>
-							</div>
-							<div class="fresnel-container fresnel-at-xs ">
-								<p color="#191919" class="sc-bxivhb sc-dHaUqb idQKzA">계좌정보</p>
-							</div>
-							<div class="sc-OqFzE FuKrt">
-								<div width="296px" class="sc-iwsKbI fgptoz">
-									<div class="sc-gZMcBi eDlBqv">
-										<div selected="" class="sc-gqjmRU lhRJXy">기업은행</div>
-										<div class="sc-VigVT gjkitw"></div>
-									</div>
-								</div>
-								<div class="sc-bdVaJa jCeSos">
-									<input id="accNum" width="457px" placeholder="계좌번호"
-										class="sc-htpNat kdrGQV" />
-								</div>
-								<button id="accConfirm" width="138px" height="50px"
-									type="button" class="sc-EHOje kGGaxd">계좌인증</button>
-								<div class="sc-bCMXmc lhkRLM">
-									<div class="sc-bdVaJa jCeSos">
-										<input id="accOwn" width="296px" placeholder="예금주"
-											class="sc-htpNat gfqNGg" />
-									</div>
-								</div>
-							</div>
-							<div class="sc-hwcHae dLHQTe">
-							<button width="100%" height="100%" type="submit" class="sc-bZQynM fXhoYr">저장</button></div>
-						</form>
-					</div>
-
-				</div>
-				
-				<div width="931px" class="sc-fQfKYo cbmHZE">
-					<p color="#191919" class="sc-bxivhb sc-kJdAmE cFuODr">프로필 공개 여부</p>
-					<p color="#191919" class="sc-bxivhb sc-kJdAmE dLUQaJ">사용할 프로필의
-						공개여부를 선택해 주세요.</p>
-					<div class="sc-fQfKYo WIeGJ">
-						<div class="sc-FAiZp irHPjM">
-							<input type="radio" id="_public" checked="" name="is_public"
-								class="sc-fPCuyW cBaGdt" /><label for="_public"
-								class="sc-dAWfgX bAFIeD">공개</label>
-						</div>
-						<div class="sc-FAiZp bsDEcn">
-							<input type="radio" id="_privave" name="is_public"
-								class="sc-fPCuyW cBaGdt" /><label for="_privave"
-								class="sc-dAWfgX bAFIeD">비공개</label>
-						</div>
-					</div>
-				</div>
-				<div class="sc-zDqdV hNiSXq">
-					<button width="297px" height="50px" type="button"
-						style="margin-right: 10px" class="sc-EHOje lfJsSz">미리보기</button>
-					<button width="297px" height="50px" type="button"
-						class="sc-EHOje dXFhe">제출하기</button>
-				</div>
-				<div class="sc-jBoNkH kdNdMq">
-					<p class="sc-fPbjcq eBDCPA">작성한 내용으로 만들어질 포트폴리오 페이지를 미리 보세요!</p>
-					<a class="sc-hBcjXN fqyRIa"><button width="100%" height="40px"
-							class="sc-EHOje sc-hdNmWC jHZbWK">
-							<p color="#00d387" class="sc-bxivhb sc-fPEBxH iwxhFZ">미리보기</p>
-						</button></a>
-				</div>
-			</div>
-		</div>
-	</div>
 	<%@include file="footer.jsp"%>
 	

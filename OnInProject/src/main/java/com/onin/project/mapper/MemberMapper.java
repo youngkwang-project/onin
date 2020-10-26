@@ -25,5 +25,7 @@ public interface MemberMapper {
 	public int memberDelete(MemberDTO member);
 	//회원탈퇴시 인보이스 삭
 	public int invoiceDel(MemberDTO member);
+	
+	
 
 }

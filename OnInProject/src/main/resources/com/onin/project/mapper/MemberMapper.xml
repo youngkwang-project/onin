@@ -61,4 +61,5 @@
 		DELETE FROM invoice WHERE from_MNO=#{mno}
 
 	</delete>
+	
 </mapper>

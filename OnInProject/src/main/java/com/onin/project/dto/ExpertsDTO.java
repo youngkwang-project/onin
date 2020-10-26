@@ -12,15 +12,17 @@ public class ExpertsDTO {
 	String career_file;
 	String skill;
 	String portfolio_file;
-	String add;
+	String address;
 	String add_detail;
 	String add_post;
 	String bank;
 	String acc;
+	String accHolder;
 	String profile_open;
 	String money;
 	String pro_open;
 	String cno;
 	String dcno;
-	String pro_mno;
+	int pro_mno;
+	String name;
 }

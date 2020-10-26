@@ -6,25 +6,95 @@
 
 <!--전문가찾기 -->
 <select id="categorySel" resultType="com.onin.project.dto.CategoryDTO">
-select * FROM CATEGORY where LV = 1
+	select * FROM CATEGORY where LV = 1
 </select>
 <select id="categorySel_1" resultType="com.onin.project.dto.CategoryDTO">
-select * FROM CATEGORY where cno=#{cno}
+	select * FROM CATEGORY where cno=#{cno}
 </select>
 <select id="categorySel_2" resultType="com.onin.project.dto.CategoryDTO">
-select * FROM CATEGORY where CNOREF=#{cno}
+	select * FROM CATEGORY where CNOREF=#{cno}
 </select>
 <select id="categorySel_3" resultType="com.onin.project.dto.CategoryJoinDTO">
-SELECT  c.cno,c.cname,c2.cno AS dcno,c2.CNAME AS dcname FROM CATEGORY c, CATEGORY c2 WHERE c.cno=c2.CNOREF AND c2.cno = #{dcno}
+	SELECT  c.cno,c.cname,c2.cno AS dcno,c2.CNAME AS dcname FROM CATEGORY c, CATEGORY c2 WHERE c.cno=c2.CNOREF AND c2.cno = #{dcno}
 </select>
 <update id="profUpload">
-   UPDATE MEMBER SET PROF=#{dbSaveName} WHERE MNO=#{mno}
+   UPDATE PRO_MEMBER SET PROFILE_IMG=#{dbSaveName} WHERE MNO=#{mno}
 </update>
 
-<insert id="save">
-	insert into pro_member(mno,profile_img,name,intro,profile)
-	values(#{mno},#{profile_img},#{name},#{intro},'asd')
-
+<insert id="profile">
+ 	insert into pro_member(mno,name,intro,profile,career,career_file,skill,portfolio_file,address,add_detail,add_post,bank,acc,accholder,profile_open,money,pro_open,cno,dcno,pro_mno)
+ 	values(#{mno},#{name,jdbcType=VARCHAR},#{intro},#{profile},#{career},#{career_file},#{skill},#{portfolio_file},#{address},#{add_detail},#{add_post},#{bank},#{acc},#{accholder},#{profile_open},#{money},#{pro_open},#{cno},#{dcno},#{mno})
 </insert>
+
+<select id="selProfile" resultType="com.onin.project.dto.ProfileDTO">
+	select * from profile where mno=#{mno}
+</select>
+<insert id="save">
+	insert into profile(MNO,NAME,PROFILE,PROFILE_IMG,INTRO)
+	values (#{mno},#{name,jdbcType=VARCHAR},#{profile},#{profile_img},#{intro})
+</insert>
+<update id="saveUp">
+	update profile
+		set profile = #{profile},
+			profile_img = #{profile_img},
+			intro = #{intro},
+			name = #{name,jdbcType=VARCHAR}
+		where mno = #{mno}
+</update>
+
+<select id="selProfile2" resultType="com.onin.project.dto.Profile2DTO">
+	select * from profile_2 where mno=#{mno}
+</select>
+<insert id="save2">
+	insert into profile_2(MNO,CAREER,CAREERDETAIL,SKILL,CAREER_FILE)
+	values (#{mno},#{career},#{careerDetail},#{skill},#{career_file})
+</insert>
+<update id="save2Up">
+	update profile_2
+		set career = #{career},
+			careerDetail = #{careerDetail},
+			skill = #{skill},
+			career_file = #{career_file}
+		where mno = #{mno}
+</update>
+
+
+<select id="selProfile3" resultType="com.onin.project.dto.Profile3DTO">
+	select * from profile_3 where mno=#{mno}
+</select>
+<insert id="save3">
+	insert into profile_3(MNO,PORTFOLIO_TITLE,PORTFOLIO_LINK,PORTFOLIO_EXPLAIN,PORTFOLIO_IMG)
+	values (#{mno},#{portfolio_title},#{portfolio_link},#{portfolio_explain},#{portfolio_img})
+</insert>
+<update id="save3Up">
+	update profile_3
+		set portfolio_title = #{portfolio_title},
+			portfolio_link = #{portfolio_link},
+			portfolio_explain = #{portfolio_explain},
+			portfolio_img = #{portfolio_img} 
+		where mno = #{mno}
+</update>
+
+<select id="selProfile4" resultType="com.onin.project.dto.Profile4DTO">
+	select * from profile_4 where mno=#{mno}
+</select>
+<insert id="save4">
+	insert into profile_4(MNO,ADD_POST,ADDRESS,ADD_DETAIL,BANK,ACC,ACCHOLDER)
+	values (#{mno},#{add_post},#{address},#{add_detail},#{bank},#{acc},#{accholder})
+</insert>
+<update id="save4Up">
+	update profile_4
+		set add_post = #{add_post},
+			address = #{address},
+			add_detail = #{add_detail},
+			bank = #{bank},
+			acc = #{acc},
+			accholder = #{addholder}
+		where mno = #{mno}
+</update>
+
+<select id="profile1" resultType="String">
+	select profile_img from pro_member where mno=#{mno}
+</select>
 
 </mapper>
