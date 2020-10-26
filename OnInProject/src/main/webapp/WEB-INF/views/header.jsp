@@ -117,11 +117,11 @@ body {
 							</a>
 							<%} else{%>
 							<div id="memBtn">${loginMember.name}님</div>
-							<div id="proChangePage"class="sc-dEoRIm CTxus" >
+							<div id="proChangePage"class="sc-dEoRIm CTxus">
 								<div class="sc-jtggT YZagr"></div>
 								<div class="sc-dliRfk hJdTGF">
 									<p color="#191919" class="sc-ifAKCX sc-fcdeBU gCjPgN">${loginMember.name}님 안녕하세요?</p>
-									<a href="/profile" class="sc-gmeYpB ciywvL">
+									<a href="/profile?mno=${loginMember.mno}" class="sc-gmeYpB ciywvL">
 										<p color="#585858" class="sc-ifAKCX sc-fcdeBU dPKmIm">전문가 전환</p>
 									</a>
 								</div>

@@ -77,8 +77,8 @@ ExpertsMapper mapper;
 	public int save4Up(Profile4DTO profile4DTO) {
 		return mapper.save4Up(profile4DTO);
 	}
-	public String profile1(ExpertsDTO expertsDTO) {
-		return mapper.profile1(expertsDTO);
+	public String profile1(int mno) {
+		return mapper.profile1(mno);
 	}
 	public ProfileDTO selProfile(ProfileDTO profileDTO) {
 		return mapper.selProfile(profileDTO);

@@ -4291,7 +4291,7 @@ function execPostCode() {
 				formData,
 				mno: ${loginMember.mno}				
 				},
-			dataType:"text",
+			enctype: 'multipart/form-data',
 			contentType: false,
 			processData : false,
 			success:function(data){
@@ -4309,14 +4309,15 @@ function execPostCode() {
 		    formData.append("skill", $("input[name=skill]").val());		    
 		    formData.append("career_file", $("input[name=career_file]")[0].files[0]);
 		$.ajax({
-			type:"GET",
+			type:"POST",
 			url:"/rest_profileSave2",
 			data:{
 				mno: ${loginMember.mno},
 				formData
 				},
-				contentType: false,
-				processData : false,
+			contentType: false,
+			processData : false,
+			enctype: 'multipart/form-data',
 			success:function(data){
 				alert(data);
 				}
