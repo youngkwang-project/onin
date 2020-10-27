@@ -1347,9 +1347,7 @@ textarea {
 		</div>
 		<div class="sc-jKmXuR bxiZch">
 			<div class="sc-elNKlv bRLJtp">
-				<div class="sc-kkbgRg itjHuC">
-
-				</div>
+				<div class="sc-kkbgRg itjHuC"></div>
 			</div>
 			<div class="sc-bYwvMP beStNa">
 				<div class="sc-hUMlYv bqFEAl">
@@ -1359,58 +1357,53 @@ textarea {
 							<div class="sc-RbTVP hzZIma">
 								<div class="sc-hMrMfs dgCAgh">
 									<div class="sc-iwsKbI dEdoSR">
-										
-											<form action="estimate" method="post" autocomplete="off">
-												<div class="sc-gqjmRU bgQVQZ">
-												
-													<div>
-													<label>카테고리</label>
-													<select class="category1" name="cnoref">
+
+										<form action="estimate" method="post" autocomplete="off">
+											<div class="sc-gqjmRU bgQVQZ">
+
+												<div>
+													<label>카테고리</label> <select class="category1" name="cnoref">
+														<option value="">전체</option>
+													</select> <label>세부카테고리</label> <select class="category2" name="cno">
 														<option value="">전체</option>
 													</select>
-													
-													<label>세부카테고리</label>
-													<select class="category2" name="cno">
-														<option value="">전체</option>
-													</select>
-													</div>
-													
-													<div>
-													<h2>Detail</h2><br>
-													개인인가요 기업인가요?<br>
-													<input type="text" name="q1" id="q1"><br>
-													
-													원하는 수업 내용을 상세하게 적어주세요.<br>
-									
-													<textarea name="q2" id="q2" rows="5" cols="30"></textarea>
-													</div>
-													
-													<div>
-													<h2>Address</h2><br>
-													원하는 지역(시,구)<br>
-													<input type="text" name="ad" id="ad">
-													</div>
-													
-													<div>
-													<h2>Date</h2><br>
-													원하는 날짜<br>
-													<input type="date" name="invoice_date" id="invoice_date">
-													</div>
-													
-													<div>
-													<h2>Budget</h2><br>
-													원하는 가격을 적어주세요.<br>
-													<input type="text" name="cost" id="cost">원
-													</div>
-													
-													<input type="hidden" name="from_mno" value="${loginMember.mno}">
-													
-													<div class="sc-yZwTr jnJmPo">
-														<input type="submit" value="보내기">
-													</div>
 												</div>
-											</form>
-										
+
+												<div>
+													<h2>Detail</h2>
+													<br> 개인인가요 기업인가요?<br> <input type="text"
+														name="q1" id="q1"><br> 원하는 수업 내용을 상세하게 적어주세요.<br>
+
+													<textarea name="q2" id="q2" rows="5" cols="30"></textarea>
+												</div>
+
+												<div>
+													<h2>Address</h2>
+													<br> 원하는 지역(시,구)<br> <input type="text" name="ad"
+														id="ad">
+												</div>
+
+												<div>
+													<h2>Date</h2>
+													<br> 원하는 날짜<br> <input type="date"
+														name="invoice_date" id="invoice_date">
+												</div>
+
+												<div>
+													<h2>Budget</h2>
+													<br> 원하는 가격을 적어주세요.<br> <input type="text"
+														name="cost" id="cost">원
+												</div>
+
+												<input type="hidden" name="from_mno"
+													value="${loginMember.mno}">
+
+												<div class="sc-yZwTr jnJmPo">
+													<input type="submit" value="보내기">
+												</div>
+											</div>
+										</form>
+
 									</div>
 								</div>
 							</div>
@@ -1428,31 +1421,31 @@ textarea {
 							<div class="sc-cBrjTV qAGnZ">
 								<div class="sc-iCwjlJ XyIJP">
 									<div class="sc-jUpvKA bfopgi">Category</div>
-									<div id= 'cname' class="sc-jdfcpN dBjJUM"></div>
+									<div id='cname' class="sc-jdfcpN dBjJUM"></div>
 								</div>
 								<div class="sc-iCwjlJ XyIJP">
 									<div class="sc-jUpvKA bfopgi">Detail</div>
 									<div class="sc-jdfcpN dBjJUM" id="v1"></div>
 									<div class="sc-jdfcpN dBjJUM" id="v2"></div>
 								</div>
-								
+
 								<div class="sc-iCwjlJ XyIJP">
 									<div class="sc-jUpvKA bfopgi">Address</div>
 									<div class="sc-jdfcpN dBjJUM" id="adv1"></div>
 								</div>
-								
+
 								<div class="sc-iCwjlJ XyIJP">
 									<div class="sc-jUpvKA bfopgi">Date</div>
 									<div class="sc-jdfcpN dBjJUM" id="invoice_datev1"></div>
 								</div>
-								
 
-								
+
+
 								<div class="sc-iCwjlJ XyIJP">
 									<div class="sc-fkyLDJ kqIOgM">
 										<div class="sc-jUpvKA bfopgi">Budget</div>
-										<span class="sc-eEieub jjTsJw" id="costv1"> </span>
-										<span style="padding-top: 5px;">원</span>
+										<span class="sc-eEieub jjTsJw" id="costv1"> </span> <span
+											style="padding-top: 5px;">원</span>
 									</div>
 									<div style="justify-content: flex-end" class="sc-fkyLDJ kqIOgM">
 										<p class="sc-jRuhRL jVRVdm"></p>
