@@ -44,61 +44,61 @@ import com.onin.project.service.MemberService;
 
 public class TestRestController {
 
-	@Autowired
-	ServletContext sc;
+//	@Autowired
+//	ServletContext sc;
 	
-	private static final Logger logger = LoggerFactory.getLogger(TestRestController.class);
-	@RequestMapping(value = "/upload", method = RequestMethod.POST , headers = "content-type=multipart/*")
-	 public String upload(@RequestParam("upFile") MultipartFile multipartFile,@RequestParam("test2") String test2,@RequestParam("test3") String test3,Model model) {
-	      logger.info("### upload");
-	      logger.info("실제 파일이름은 ? " + multipartFile.getOriginalFilename());
-	      logger.info("test3==="+test3);
-	      logger.info("test2="+test2);
-	      
-	      File targetFile = new File(sc.getRealPath("/resources/profileFiles/") + multipartFile.getOriginalFilename());
-
-	      logger.info("파일 저장위치는 :  " + targetFile);
-	      InputStream inputStream = null;
-	      OutputStream outputStream = null;
-
-	      try {
-	         // upload된 stream을 받아서 targetFile로 저장 
-
-	         inputStream = multipartFile.getInputStream();
-	         outputStream = new FileOutputStream(targetFile);
-	         
-	         int fileByte = 0;
-	         while((fileByte = inputStream.read()) != -1 ) {
-	            outputStream.write(fileByte);
-	         }
-	         
-	         //FileUtils.copyInputStreamToFile(fileStream, targetFile);
-	      } catch (IOException e) {
-	         //FileUtils.deleteQuietly(targetFile);
-	         
-	         // 복사하다가 disk full등 에러나면 ? 
-	         // 우선 패스
-	         e.printStackTrace();
-	      } finally { 
-	         try {
-	            inputStream.close();
-	         } catch (IOException e) {
-	            // TODO Auto-generated catch block
-	            e.printStackTrace();
-	         }
-	         try {
-	            outputStream.close();
-	         } catch (IOException e) {
-	            // TODO Auto-generated catch block
-	            e.printStackTrace();
-	         }
-	      }
-	      
-	      // 실제 디렉토리와 URL은 다르다.. 
-	      // URL은 http://localhost:9999/resources/fileupload/실제파일명
-	      // model에 담아서 jsp에서 img로 출력 
-	      
-	      model.addAttribute("imgSrc", "/resources/fileupload/" + multipartFile.getOriginalFilename());
-	      return "TestUpload";
-	   }
+//	private static final Logger logger = LoggerFactory.getLogger(TestRestController.class);
+//	@RequestMapping(value = "/upload", method = RequestMethod.POST , headers = "content-type=multipart/*")
+//	 public String upload(@RequestParam("upFile") MultipartFile multipartFile,@RequestParam("test2") String test2,@RequestParam("test3") String test3,Model model) {
+//	      logger.info("### upload");
+//	      logger.info("실제 파일이름은 ? " + multipartFile.getOriginalFilename());
+//	      logger.info("test3==="+test3);
+//	      logger.info("test2="+test2);
+//	      
+//	      File targetFile = new File(sc.getRealPath("/resources/profileFiles/") + multipartFile.getOriginalFilename());
+//
+//	      logger.info("파일 저장위치는 :  " + targetFile);
+//	      InputStream inputStream = null;
+//	      OutputStream outputStream = null;
+//
+//	      try {
+//	         // upload된 stream을 받아서 targetFile로 저장 
+//
+//	         inputStream = multipartFile.getInputStream();
+//	         outputStream = new FileOutputStream(targetFile);
+//	         
+//	         int fileByte = 0;
+//	         while((fileByte = inputStream.read()) != -1 ) {
+//	            outputStream.write(fileByte);
+//	         }
+//	         
+//	         //FileUtils.copyInputStreamToFile(fileStream, targetFile);
+//	      } catch (IOException e) {
+//	         //FileUtils.deleteQuietly(targetFile);
+//	         
+//	         // 복사하다가 disk full등 에러나면 ? 
+//	         // 우선 패스
+//	         e.printStackTrace();
+//	      } finally { 
+//	         try {
+//	            inputStream.close();
+//	         } catch (IOException e) {
+//	            // TODO Auto-generated catch block
+//	            e.printStackTrace();
+//	         }
+//	         try {
+//	            outputStream.close();
+//	         } catch (IOException e) {
+//	            // TODO Auto-generated catch block
+//	            e.printStackTrace();
+//	         }
+//	      }
+//	      
+//	      // 실제 디렉토리와 URL은 다르다.. 
+//	      // URL은 http://localhost:9999/resources/fileupload/실제파일명
+//	      // model에 담아서 jsp에서 img로 출력 
+//	      
+//	      model.addAttribute("imgSrc", "/resources/fileupload/" + multipartFile.getOriginalFilename());
+//	      return "TestUpload";
+//	   }
 }

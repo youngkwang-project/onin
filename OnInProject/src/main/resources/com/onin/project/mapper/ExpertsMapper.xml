@@ -89,7 +89,7 @@
 			add_detail = #{add_detail},
 			bank = #{bank},
 			acc = #{acc},
-			accholder = #{addholder}
+			accholder = #{accholder}
 		where mno = #{mno}
 </update>
 

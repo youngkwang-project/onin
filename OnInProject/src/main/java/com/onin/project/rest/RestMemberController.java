@@ -73,18 +73,33 @@ public class RestMemberController {
 	@RequestMapping(path="/rest_profileSave", method = RequestMethod.POST , consumes ={"multipart/form-data"})
 	public String save(Model model,@RequestParam("profile_img") MultipartFile multipartFile,@RequestParam("name") String name,
 			@RequestParam("intro") String intro,@RequestParam("profile") String profile,@RequestParam("mno")int mno){
-		System.out.println("profilDTO = ");
+	
+		
+		
 		logger.info("### upload");
 		logger.info("실제 파일이름은 ? " + multipartFile.getOriginalFilename());
 		logger.info("회원번호는"+mno);
 		logger.info("name==="+name);
 		logger.info("intro="+intro);
 		logger.info("profile="+profile);
-
+		
+		
+		
+		
+		
 		File targetFile = new File(sc.getRealPath("/resources/profileFiles/") + multipartFile.getOriginalFilename());
 		logger.info("파일 저장위치는 :  " + targetFile);
+		
 		InputStream inputStream = null;
 		OutputStream outputStream = null;
+		ProfileDTO profileDTO = new ProfileDTO();
+		
+		profileDTO.setIntro(intro);
+		profileDTO.setMno(mno);
+		profileDTO.setName(name);
+		profileDTO.setProfile(profile);
+		profileDTO.setProfile_img("/resources/profileFiles/"+multipartFile.getOriginalFilename());
+	
 		try {
 			// upload된 stream을 받아서 targetFile로 저장 
 
@@ -122,17 +137,17 @@ public class RestMemberController {
 		// URL은 http://localhost:9999/resources/fileupload/실제파일명
 		// model에 담아서 jsp에서 img로 출력 
 
-//		model.addAttribute("imgSrc", "/resources/fileupload/" + multipartFile.getOriginalFilename());
-//
-//
-//		ProfileDTO profileUpload = exService.selProfile(profileDTO);
-//		System.out.println("프로필"+profileUpload+"프로필");
-//		if(profileUpload==null) {
-//			exService.save(profileDTO);
-//		}else {
-//			exService.saveUp(profileDTO);
-//		}
-//
+		//model.addAttribute("imgSrc", "/resources/profileFiles/" + multipartFile.getOriginalFilename());
+
+
+		ProfileDTO profileUpload = exService.selProfile(profileDTO);
+		System.out.println("프로필"+profileUpload+"프로필");
+		if(profileUpload==null) {
+			exService.save(profileDTO);
+		}else {
+			exService.saveUp(profileDTO);
+		}
+
 //		model.addAttribute("intro",profileDTO.getIntro());
 
 
@@ -141,7 +156,7 @@ public class RestMemberController {
 	}
 	@RequestMapping(path="/rest_profileSave2", method = RequestMethod.POST , consumes ={"multipart/form-data"})
 	public String save2(Model model,@RequestParam("career_file") MultipartFile multipartFile,@RequestParam("career") String career,
-			@RequestParam("skill") String skill,@RequestParam("careerDetail") String careerDetail) {
+			@RequestParam("skill") String skill,@RequestParam("careerDetail") String careerDetail,@RequestParam("mno")int mno) {
 		
 		System.out.println("profilDTO = " );
 		logger.info("### upload");
@@ -150,10 +165,18 @@ public class RestMemberController {
 		logger.info("intro="+skill);
 		logger.info("profile="+careerDetail);
 
-		File targetFile = new File(sc.getRealPath("/resources/profileFiles/") + multipartFile.getOriginalFilename());
+		File targetFile = new File(sc.getRealPath("/resources/career_file/") + multipartFile.getOriginalFilename());
 		logger.info("파일 저장위치는 :  " + targetFile);
 		InputStream inputStream = null;
 		OutputStream outputStream = null;
+		
+		Profile2DTO profile2DTO = new Profile2DTO();
+		profile2DTO.setMno(mno);
+		profile2DTO.setCareer(career);
+		profile2DTO.setCareerDetail(careerDetail);
+		profile2DTO.setCareer_file("/resources/career_file/"+multipartFile.getOriginalFilename());
+		profile2DTO.setSkill(skill);
+		
 		try {
 			// upload된 stream을 받아서 targetFile로 저장 
 
@@ -191,15 +214,15 @@ public class RestMemberController {
 		// URL은 http://localhost:9999/resources/fileupload/실제파일명
 		// model에 담아서 jsp에서 img로 출력 
 
-		model.addAttribute("imgSrc", "/resources/fileupload/" + multipartFile.getOriginalFilename());
+		//model.addAttribute("imgSrc", "/resources/careerFiles/" + multipartFile.getOriginalFilename());
 
 
-//		Profile2DTO profile2 = exService.selProfile2(profile2DTO);
-//		if(profile2==null) {
-//			exService.save2(profile2DTO);
-//		}else {
-//			exService.save2Up(profile2DTO);
-//		}
+		Profile2DTO profile2 = exService.selProfile2(profile2DTO);
+		if(profile2==null) {
+			exService.save2(profile2DTO);
+		}else {
+			exService.save2Up(profile2DTO);
+		}
 		return "b";
 	}
 	@PostMapping(path="/rest_profileSave3")

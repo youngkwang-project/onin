@@ -3879,7 +3879,7 @@ textarea {
 												<div class="sc-kGXeez kUKQcj">
 													<div class="sc-bdVaJa jCeSos">
 														<input type="text" id="name" name="name"
-															value="${loginMember.name}" readonly 
+															value="${loginMember.name}" readonly
 															class="sc-htpNat khbizk sc-kpOJdX bAKVje" width="100%" />
 													</div>
 												</div>
@@ -3895,8 +3895,8 @@ textarea {
 							</div>
 							<div class="sc-ewMkZo eYzQqs">
 								<div class="sc-bdVaJa jCeSos">
-									<input type="text" id="intro" placeholder="한 줄 프로필을 입력해주세요." width="100%"
-										name="intro" class="sc-htpNat khbizk" />
+									<input type="text" id="intro" placeholder="한 줄 프로필을 입력해주세요."
+										width="100%" name="intro" class="sc-htpNat khbizk" />
 								</div>
 								<p color="#cccccc" class="sc-bxivhb sc-eCXBzT coLRDn">
 									18
@@ -3935,7 +3935,7 @@ textarea {
 
 				<div class="sc-bjPkoM sc-eBipZS dxsYrm">
 					<div class="fresnel-container fresnel-greaterThan-xs ">
-						<form>
+						<form method="post" enctype="multipart/form-data" id="form2">
 							<div class="fresnel-container fresnel-greaterThan-xs ">
 								<p color="#191919" class="sc-bxivhb gAroWi">경력 및 추가정보 작성</p>
 							</div>
@@ -3982,7 +3982,8 @@ textarea {
 
 								<div id="field"></div>
 							</div>
-
+							<input type="hidden" id="mno" name="mno"
+								value="${loginMember.mno}" />
 							<div class="fresnel-container fresnel-at-xs ">
 								<p color="#191919" class="sc-bxivhb sc-dHaUqb ivvznD">보유자격증</p>
 							</div>
@@ -4025,78 +4026,7 @@ textarea {
 					</div>
 
 				</div>
-				<div class="sc-bjPkoM sc-eMgOci eoksPR">
-					<form>
 
-						<div class="fresnel-container fresnel-at-xs ">
-							<p color="#191919" class="sc-bxivhb kHpoSQ">포트폴리오</p>
-						</div>
-						<div class="fresnel-container fresnel-greaterThan-xs ">
-							<p color="#191919" class="sc-bxivhb sc-dHaUqb AuKEO">포트폴리오 등록</p>
-						</div>
-						<div class="fresnel-container fresnel-at-xs ">
-							<div width="100%" class="sc-Rmtcm kOorpV">
-								<div width="133px" height="133px" class="sc-bRBYWo eKHDCw">
-									<div id="popBtn" class="sc-hzDkRC exxwtE">
-										<div class="sc-jhAzac iQUeLb"></div>
-
-										<div id="pop" style="display: none;" width="765px"
-											class="sc-bsbRJL ghsfDZ">
-											<div class="sc-cLQEGU hxxTXM">포트폴리오 등록</div>
-											<div class="sc-gqPbQI beHNvu">제목 (필수)</div>
-											<div class="sc-bwzfXH byurlq">
-												<input id="portfolio_title" name="portfolio_title"
-													width="668px" placeholder="포트폴리오의 제목을 입력해주세요."
-													class="sc-bxivhb igARar" value="">
-											</div>
-											<div class="sc-gqPbQI beHNvu">
-												미디어 링크 (선택사항) <span class="sc-hORach gxxFun">채널 URL이
-													아닌 각 콘텐츠의 URL을 입력해주세요</span>
-											</div>
-											<div class="sc-bwzfXH byurlq">
-												<input id="portfolio_link" name="portfolio_link"
-													width="668px"
-													placeholder="해당 콘텐츠 URL을 적어주세요. (유튜브, 비메오, 사운드클라우드)"
-													class="sc-bxivhb igARar" value="">
-											</div>
-											<div class="sc-gqPbQI beHNvu">상세 설명 (선택사항)</div>
-											<div class="fresnel-container fresnel-greaterThan-xs ">
-												<div class="sc-cSHVUG hKPJmL">
-													<textarea id="portfolio_explain" name="portfolio_explain"
-														height="93px" spellcheck="false" width="668px"
-														placeholder="포트폴리오에 대한 상세 설명을 입력해주세요."
-														class="sc-kAzzGY hKNDzf"></textarea>
-
-												</div>
-											</div>
-											<div class="fresnel-container fresnel-at-xs "></div>
-											<div class="sc-gqPbQI beHNvu">사진 등록</div>
-											<div class="sc-hZSUBg icBQde">
-												<div class="sc-cMhqgX kgGRCP">
-													<label for="portfolio_img" class="sc-iuJeZd kGhUgK">
-														<div class="sc-epnACN irrZJD"></div> <input
-														id="portfolio_img" name="portfolio_img" type="file"
-														accept="image/*" multiple="" class="sc-hMFtBS kHmnNc">
-													</label>
-												</div>
-											</div>
-											<div class="sc-bMVAic ejRmPc">
-
-												<button id="uploadPort" width="107px" height="40px"
-													type="button" class="sc-bZQynM KQmmV">등록</button>
-											</div>
-										</div>
-
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="sc-hwcHae dLHQTe">
-							<button id="saveBtn3" width="100%" height="100%" type="button"
-								class="sc-bZQynM fXhoYr">저장</button>
-						</div>
-					</form>
-				</div>
 				<div class="sc-bjPkoM sc-cGDfzg enmltv">
 					<div class="fresnel-container fresnel-greaterThan-xs ">
 						<form>
@@ -4206,6 +4136,9 @@ textarea {
 	</div>
 
 	<script>
+
+	
+	
 function execPostCode() {
     new daum.Postcode({
         oncomplete: function(data) {
@@ -4253,7 +4186,7 @@ function execPostCode() {
 
     //계좌인증	
 
-    $('#accConfirm').click(function() {
+  /*   $('#accConfirm').click(function() {
         $.ajax({
             type: "POST",
             url: "https://openapi.openbanking.or.kr/v2.0/inquiry/real_name",
@@ -4273,15 +4206,39 @@ function execPostCode() {
                 console.log(data);
             }
         })
-    })
-    //포트폴리오 레이어팝업
-    $('#popBtn').click(function(){
-		$('#pop').show();
+    }) */
+  /*   
+    $('#accConfirm').click(function() {
+        $.ajax({
+			type : 'POST',
+			url : 'https://openapi.openbanking.or.kr/v2.0/user/register?bank_tran_id=F123456789U4BC34239Z&bank_code_std=097®ister_account_num=1001234567890123&user_info=19810101&user_name=홍길동&user_ci=Dqz4/p…...j34XFJTVzz&user_email=testbed@kftc.or.kr&scope=inquiry&info_prvd_agmt_yn=Y&wd_agmt_yn=Y&agmt_data_type=1',
+			headers: {
+				  "Accept": "application/json"
+			},
+			data : {
+				  "api_tran_id": "AA12349BHZ1324K82AL3",
+				  "api_tran_dtm": "20190910101921567",
+				  "rsp_code": "A0000",
+				  "rsp_message": "",
+				  "bank_tran_id": "F123456789U4BC34239Z",
+				  "bank_tran_date": "20190910",
+				  "bank_code_tran": "097",
+				  "bank_rsp_code": "000",
+				  "bank_rsp_message": "",
+				  "user_seq_no": "U123456789",
+				  "fintech_use_num": "123456789012345678901234",
+				  "payer_num": "16000101100000002570"
+				},
+			success : function(data){
+				alert('asd')
+				},
+				error:function(request,status,error){
+				    alert("code:"+request.status+"\n"+"message:"+request.responseText+"\n"+"error:"+error);}
+			
+				
+            });
         });
-    $('#uploadPort').click(function(){
-		$('#pop').hide();
-        });
-
+    */
     
 	//파일업로드 이미지 미리보기
    
@@ -4326,25 +4283,20 @@ function execPostCode() {
 		});
 
 	$('#saveBtn2').click(function(){
-		 var formData = new FormData();
-		 	formData.append("career", $("input[name=career]").val());
-		    formData.append("careerDetail", $("input[name=careerDetail]").val());
-		    formData.append("skill", $("input[name=skill]").val());		    
-		    formData.append("career_file", $("input[name=career_file]")[0].files[0]);
+		var form2 = $('#form2')[0];
+		 var formData = new FormData(form2);
 		$.ajax({
 			type:"POST",
 			url:"/rest_profileSave2",
-			data:{
-				/* mno: ${loginMember.mno}, */
-				formData
-				},
+			data:formData,
 			contentType: false,
 			processData : false,
 			enctype: 'multipart/form-data',
 			success:function(data){
 				alert(data)
-				}
-			
+				},error:function(request,status,error){
+				    alert("code:"+request.status+"\n"+"message:"+request.responseText+"\n"+"error:"+error);}
+			    			
 			});
 			
 		});
