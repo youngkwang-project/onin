@@ -21,11 +21,6 @@
    UPDATE PRO_MEMBER SET PROFILE_IMG=#{dbSaveName} WHERE MNO=#{mno}
 </update>
 
-<insert id="profile">
- 	insert into pro_member(mno,name,intro,profile,career,career_file,skill,portfolio_file,address,add_detail,add_post,bank,acc,accholder,profile_open,money,pro_open,cno,dcno,pro_mno)
- 	values(#{mno},#{name,jdbcType=VARCHAR},#{intro},#{profile},#{career},#{career_file},#{skill},#{portfolio_file},#{address},#{add_detail},#{add_post},#{bank},#{acc},#{accholder},#{profile_open},#{money},#{pro_open},#{cno},#{dcno},#{mno})
-</insert>
-
 <select id="selProfile" resultType="com.onin.project.dto.ProfileDTO">
 	select * from profile where mno=#{mno}
 </select>
@@ -96,5 +91,13 @@
 <select id="profile1" resultType="String">
 	select profile_img from pro_member where mno=#{mno}
 </select>
-
+<select id="profile" resultType="com.onin.project.dto.ExpertsDTO">
+SELECT p.mno,p.PROFILE_IMG, p.name, p.INTRO ,p.PROFILE ,p2.CAREER ,p2.CAREER_FILE ,p2.CAREERDETAIL ,p2.SKILL ,p3.PORTFOLIO_EXPLAIN ,p3.PORTFOLIO_IMG ,p3.PORTFOLIO_LINK ,p3.PORTFOLIO_TITLE,p4.ACC ,p4.ACCHOLDER, p4.ADD_DETAIL ,p4.ADD_POST ,p4.ADDRESS, p4.BANK 
+FROM PROFILE p , PROFILE_2 p2 ,PROFILE_3 p3 ,PROFILE_4 p4 
+WHERE p.mno=p2.MNO AND p2.MNO =p3.MNO AND p3.MNO =p4.MNO
+</select>
+<insert id="profileUpload">
+ 	insert into pro_member(mno,profile_img,name,intro,profile,career,career_file,careerdetail,skill,portfolio_explain,portfolio_img,portfolio_link,portfolio_title,acc,accholder,add_detail,add_post,address,bank)
+ 	values({mno},{profile_img},{name},{intro},{profile},{career},{career_file},{careerDetail},{skill},{portfolio_explain},{portfolio_img},{portfolio_link},{portfolio_title},{acc},{accholder},{add_detail},{add_post},{address},{bank})
+ </insert>
 </mapper>

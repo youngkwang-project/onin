@@ -51,4 +51,6 @@ public interface ExpertsMapper {
 	public Profile3DTO selProfile3(Profile3DTO profile3DTO);
 	
 	public Profile4DTO selProfile4(Profile4DTO profile4DTO);
+	
+	public int profileUpload(ExpertsDTO expertsDTO);
 }

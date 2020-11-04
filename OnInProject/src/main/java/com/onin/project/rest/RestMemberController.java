@@ -73,20 +73,14 @@ public class RestMemberController {
 	@RequestMapping(path="/rest_profileSave", method = RequestMethod.POST , consumes ={"multipart/form-data"})
 	public String save(Model model,@RequestParam("profile_img") MultipartFile multipartFile,@RequestParam("name") String name,
 			@RequestParam("intro") String intro,@RequestParam("profile") String profile,@RequestParam("mno")int mno){
-	
-		
-		
+			
 		logger.info("### upload");
 		logger.info("실제 파일이름은 ? " + multipartFile.getOriginalFilename());
 		logger.info("회원번호는"+mno);
 		logger.info("name==="+name);
 		logger.info("intro="+intro);
 		logger.info("profile="+profile);
-		
-		
-		
-		
-		
+			
 		File targetFile = new File(sc.getRealPath("/resources/profileFiles/") + multipartFile.getOriginalFilename());
 		logger.info("파일 저장위치는 :  " + targetFile);
 		
@@ -177,6 +171,7 @@ public class RestMemberController {
 		profile2DTO.setCareer_file("/resources/career_file/"+multipartFile.getOriginalFilename());
 		profile2DTO.setSkill(skill);
 		
+		
 		try {
 			// upload된 stream을 받아서 targetFile로 저장 
 
@@ -223,12 +218,76 @@ public class RestMemberController {
 		}else {
 			exService.save2Up(profile2DTO);
 		}
+		
+		
+		
 		return "b";
 	}
-	@PostMapping(path="/rest_profileSave3")
-	public String save3(Profile3DTO profile3DTO) {
-		System.out.println(profile3DTO);
+	@RequestMapping(path="/rest_profileSave3", method = RequestMethod.POST , consumes ={"multipart/form-data"})
+	public String save3(Model model,@RequestParam("portfolio_img") MultipartFile multipartFile,@RequestParam("portfolio_title") String portfolio_title,
+			@RequestParam("portfolio_explain") String portfolio_explain,@RequestParam("portfolio_link") String portfolio_link,@RequestParam("mno")int mno) {
+		
 
+		logger.info("### upload");
+		logger.info("실제 파일이름은 ? " + multipartFile.getOriginalFilename());
+		logger.info("name==="+portfolio_title);
+		logger.info("intro="+portfolio_explain);
+		logger.info("profile="+portfolio_link);
+
+		File targetFile = new File(sc.getRealPath("/resources/portfolio_file/") + multipartFile.getOriginalFilename());
+		logger.info("파일 저장위치는 :  " + targetFile);
+		InputStream inputStream = null;
+		OutputStream outputStream = null;
+		
+		Profile3DTO profile3DTO = new Profile3DTO();
+		profile3DTO.setMno(mno);
+		profile3DTO.setPortfolio_explain(portfolio_explain);
+		profile3DTO.setPortfolio_link(portfolio_link);
+		profile3DTO.setPortfolio_img("/resources/portfolio_file/"+multipartFile.getOriginalFilename());
+		profile3DTO.setPortfolio_title(portfolio_title);
+		
+		try {
+			// upload된 stream을 받아서 targetFile로 저장 
+
+			inputStream = multipartFile.getInputStream();
+			outputStream = new FileOutputStream(targetFile);
+
+			int fileByte = 0;
+			while((fileByte = inputStream.read()) != -1 ) {
+				outputStream.write(fileByte);
+			}
+
+			//FileUtils.copyInputStreamToFile(fileStream, targetFile);
+		} catch (IOException e) {
+			//FileUtils.deleteQuietly(targetFile);
+
+			// 복사하다가 disk full등 에러나면 ? 
+			// 우선 패스
+			e.printStackTrace();
+		} finally { 
+			try {
+				inputStream.close();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			try {
+				outputStream.close();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+
+		// 실제 디렉토리와 URL은 다르다.. 
+		// URL은 http://localhost:9999/resources/fileupload/실제파일명
+		// model에 담아서 jsp에서 img로 출력 
+
+		//model.addAttribute("imgSrc", "/resources/careerFiles/" + multipartFile.getOriginalFilename());
+
+
+		
+		
 		Profile3DTO profile3 = exService.selProfile3(profile3DTO);
 		System.out.println("이건3번째"+profile3);
 		if(profile3==null) {

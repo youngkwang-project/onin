@@ -1137,7 +1137,7 @@
 	border: none;
 	outline: none;
 	cursor: pointer;
-	margin-left: auto;
+	margin-left: 810px;
 	background-color: #cccccc;
 	margin-top: 12px;
 }
@@ -3792,6 +3792,10 @@ textarea {
 	z-index: 1;
 	box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 20px 0px;
 }
+.kHmnNc{
+ width: 0px;
+ hight: 0px;
+}
 </style>
 
 </head>
@@ -3901,15 +3905,16 @@ textarea {
 					<div class="fresnel-container fresnel-greaterThan-xs ">
 						<form method="post" enctype="multipart/form-data" id="form1">
 							<div class="fresnel-container fresnel-greaterThan-xs ">
+							<input type="hidden" id="mno" name="mno"
+											value="${loginMember.mno}" />
 								<p color="#191919" class="sc-bxivhb gAroWi">프로필 항목 등록</p>
 							</div>
 							<div class="sc-lmrgJh hLBqAa">
 								<div class="sc-dzQEYZ BlhYH">
 									<div class="sc-dCVVYJ byuoYp">
-										<input type="hidden" id="mno" name="mno"
-											value="${loginMember.mno}" />
+										
 										<div class="sc-kEYyzF lcroCN">
-											<img id="preview" src="#"
+											<img id="preview" src="${profile1st.profile_img}"
 												onerror="this.src='data:image/jpeg;base64,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'"
 												width="265px;" height="265px;" /> <label for="uploadImg"
 												class="sc-hSdWYo kEjxSM"></label> <input type="file"
@@ -3971,7 +3976,7 @@ textarea {
 							<div class="sc-ewMkZo eYzQqs">
 								<div class="sc-bdVaJa jCeSos">
 									<input type="text" id="intro" placeholder="한 줄 프로필을 입력해주세요."
-										width="100%" name="intro" class="sc-htpNat khbizk" />
+										width="100%" name="intro" class="sc-htpNat khbizk" value="${profile1st.intro}"/>
 								</div>
 								<p color="#cccccc" class="sc-bxivhb sc-eCXBzT coLRDn">
 									18
@@ -3988,7 +3993,7 @@ textarea {
 								<div width="100%" class="sc-jzJRlG iNJnXl">
 									<textarea id="detailProf" height="0px" spellcheck="false"
 										placeholder="상세 프로필을 입력해주세요." width="100%"
-										class="sc-cSHVUG ecbPDt" name="profile"></textarea>
+										class="sc-cSHVUG ecbPDt" name="profile" value="${profile1st.profile}"></textarea>
 
 								</div>
 							</div>
@@ -4010,11 +4015,13 @@ textarea {
 
 				<div class="sc-bjPkoM sc-eBipZS dxsYrm">
 					<div class="fresnel-container fresnel-greaterThan-xs ">
-						<form>
+						<form method="post" enctype="multipart/form-data" id="form2">
 							<div class="fresnel-container fresnel-greaterThan-xs ">
+							<input type="hidden" id="mno" name="mno"
+											value="${loginMember.mno}" />
 								<p color="#191919" class="sc-bxivhb gAroWi">경력 및 추가정보 작성</p>
 							</div>
-
+							
 							<div class="fresnel-container fresnel-greaterThan-xs ">
 								<p color="#191919" class="sc-bxivhb sc-dHaUqb gjGgmM">경력</p>
 							</div>
@@ -4024,7 +4031,7 @@ textarea {
 									<div class="sc-cvbbAY iCoHze">
 										<div class="sc-jWBwVP rNZsQ">
 											<input id="career" name="career" type="text"
-												placeholder="회사(소속)이름" value="" data-id="0"
+												placeholder="회사(소속)이름" value="${profile2nd.career}" data-id="0"
 												class="sc-brqgnP hTFaCv" />
 											<div class="fresnel-container fresnel-greaterThan-xs "></div>
 											<div class="fresnel-container fresnel-at-xs ">
@@ -4032,7 +4039,7 @@ textarea {
 													<textarea id="careerDetail" name="careerDetail"
 														height="0px" spellcheck="false"
 														placeholder="개발팀에서 코드리뷰를 담당했습니다." data-id="0" width="100%"
-														class="sc-cSHVUG ldzYSi"></textarea>
+														class="sc-cSHVUG ldzYSi">${profile2nd.careerDetail}</textarea>
 
 												</div>
 
@@ -4041,8 +4048,8 @@ textarea {
 
 											<img src="https://pren.kr/static/Icon/list_item_delete.svg"
 												alt="list_item_delete" width="15px" height="19px"
-												data-id="0" class="sc-cMljjf hNxXIk" />
-
+												data-id="0" class="sc-cMljjf hNxXIk" /> <input
+												type="button" value="삭제" onclick="remove_div(this)">
 										</div>
 
 
@@ -4050,6 +4057,8 @@ textarea {
 									<input id="addCarBtn" width="105px" height="40px" type="button"
 										class="sc-EHOje sc-jAaTju iYSprP" onclick="add_div()"
 										value="경력 추가" />
+
+
 
 								</div>
 
@@ -4063,7 +4072,7 @@ textarea {
 								<div class="sc-Ehqfj bgxZnV">
 									<div id="addSkill" class="sc-gggouf iWvWxM">
 										<input id="skill" name="skill" type="text"
-											placeholder="보유 자격증을 입력해주세요." data-index="0" value=""
+											placeholder="보유 자격증을 입력해주세요." data-index="0" value="${profile2nd.skill}"
 											class="sc-cyQzhP RmpCp" /><img
 											src="https://pren.kr/static/Icon/list_item_delete.svg"
 											alt="list_item_delete" width="15px" height="19px"
@@ -4099,28 +4108,34 @@ textarea {
 
 				</div>
 				<div class="sc-bjPkoM sc-eMgOci eoksPR">
-					<form>
+					
 
 						<div class="fresnel-container fresnel-at-xs ">
+						
 							<p color="#191919" class="sc-bxivhb kHpoSQ">포트폴리오</p>
 						</div>
+					
 						<div class="fresnel-container fresnel-greaterThan-xs ">
 							<p color="#191919" class="sc-bxivhb sc-dHaUqb AuKEO">포트폴리오 등록</p>
 						</div>
 						<div class="fresnel-container fresnel-at-xs ">
 							<div width="100%" class="sc-Rmtcm kOorpV">
 								<div width="133px" height="133px" class="sc-bRBYWo eKHDCw">
-									<div id="popBtn" class="sc-hzDkRC exxwtE">
-										<div class="sc-jhAzac iQUeLb"></div>
-
+									<div class="sc-hzDkRC exxwtE">
+										<form method="post" enctype="multipart/form-data" id="form3">
+										<div id="popBtn" class="sc-jhAzac iQUeLb"></div>
+									
 										<div id="pop" style="display: none;" width="765px"
 											class="sc-bsbRJL ghsfDZ">
+		
+											<input type="hidden" id="mno" name="mno"
+											value="${loginMember.mno}" />
 											<div class="sc-cLQEGU hxxTXM">포트폴리오 등록</div>
 											<div class="sc-gqPbQI beHNvu">제목 (필수)</div>
 											<div class="sc-bwzfXH byurlq">
 												<input id="portfolio_title" name="portfolio_title"
 													width="668px" placeholder="포트폴리오의 제목을 입력해주세요."
-													class="sc-bxivhb igARar" value="">
+													class="sc-bxivhb igARar" value="${profile3rd.portfolio_title}">
 											</div>
 											<div class="sc-gqPbQI beHNvu">
 												미디어 링크 (선택사항) <span class="sc-hORach gxxFun">채널 URL이
@@ -4130,7 +4145,7 @@ textarea {
 												<input id="portfolio_link" name="portfolio_link"
 													width="668px"
 													placeholder="해당 콘텐츠 URL을 적어주세요. (유튜브, 비메오, 사운드클라우드)"
-													class="sc-bxivhb igARar" value="">
+													class="sc-bxivhb igARar" value="${profile3rd.portfolio_link}">
 											</div>
 											<div class="sc-gqPbQI beHNvu">상세 설명 (선택사항)</div>
 											<div class="fresnel-container fresnel-greaterThan-xs ">
@@ -4138,7 +4153,7 @@ textarea {
 													<textarea id="portfolio_explain" name="portfolio_explain"
 														height="93px" spellcheck="false" width="668px"
 														placeholder="포트폴리오에 대한 상세 설명을 입력해주세요."
-														class="sc-kAzzGY hKNDzf"></textarea>
+														class="sc-kAzzGY hKNDzf" >${profile3rd.portfolio_explain}</textarea>
 
 												</div>
 											</div>
@@ -4146,11 +4161,12 @@ textarea {
 											<div class="sc-gqPbQI beHNvu">사진 등록</div>
 											<div class="sc-hZSUBg icBQde">
 												<div class="sc-cMhqgX kgGRCP">
-													<label for="portfolio_img" class="sc-iuJeZd kGhUgK">
+													 <label for="portfolio_img" class="sc-iuJeZd kGhUgK">
 														<div class="sc-epnACN irrZJD"></div> <input
 														id="portfolio_img" name="portfolio_img" type="file"
 														accept="image/*" multiple="" class="sc-hMFtBS kHmnNc">
-													</label>
+													</label>  
+													
 												</div>
 											</div>
 											<div class="sc-bMVAic ejRmPc">
@@ -4158,6 +4174,7 @@ textarea {
 												<button id="uploadPort" width="107px" height="40px"
 													type="button" class="sc-bZQynM KQmmV">등록</button>
 											</div>
+											</form>
 										</div>
 
 									</div>
@@ -4168,7 +4185,7 @@ textarea {
 							<button id="saveBtn3" width="100%" height="100%" type="button"
 								class="sc-bZQynM fXhoYr">저장</button>
 						</div>
-					</form>
+					
 				</div>
 				<div class="sc-bjPkoM sc-cGDfzg enmltv">
 					<div class="fresnel-container fresnel-greaterThan-xs ">
@@ -4181,9 +4198,9 @@ textarea {
 							</div>
 							<div class="sc-fAMDQA iaJROI">
 								<div class="sc-bdVaJa jCeSos">
-									<input id="add_post" name="addr1" width="231px"
-										display="inline" placeholder="우편번호" name="addr1" id="addr1"
-										type="text" readonly="readonly" disabled=""
+									<input id="add_post" name="add_post" width="231px"
+										display="inline" placeholder="우편번호"
+										type="text" readonly="readonly" disabled="" value="${profile4th.add_post}"
 										class="sc-htpNat kdLDsG" />
 									<button type="button" class="btn btn-default"
 										onclick="execPostCode();">
@@ -4199,16 +4216,16 @@ textarea {
 									</div>
 									<div class="sc-kGXeez kUKQcj">
 										<div class="sc-bdVaJa jCeSos">
-											<input id="address" name="addr2" placeholder="도로명 주소"
-												disabled="" name="addr2" id="addr2" type="text"
-												readonly="readonly"
+											<input id="address" name="address" placeholder="도로명 주소"
+												disabled=""  type="text"
+												readonly="readonly" value="${profile4th.address}"
 												class="sc-htpNat khbizk sc-kpOJdX bAKVje" width="100%" />
 										</div>
 									</div>
 								</div>
 								<div class="sc-bdVaJa jCeSos">
 									<input id="add_detail" name="add_detail" width="454px"
-										placeholder="상세 주소" placeholder="상세주소" name="addr3" id="addr3"
+										placeholder="상세 주소" value="${profile4th.add_detail}"
 										type="text" class="sc-htpNat bOuslz" />
 								</div>
 							</div>
@@ -4347,13 +4364,7 @@ function execPostCode() {
             }
         })
     })
-    //포트폴리오 레이어팝업
-    $('#popBtn').click(function(){
-		$('#pop').show();
-        });
-    $('#uploadPort').click(function(){
-		$('#pop').hide();
-        });
+   
 
     
 	//파일업로드 이미지 미리보기
@@ -4377,10 +4388,7 @@ function execPostCode() {
 	$('#saveBtn').click(function(){
 		var form1 = $('#form1')[0];
 		 var formData = new FormData(form1);
-		 	/* formData.append("profile_img", $("input[name=profile_img]")[0].files[0]); */
-		  /*   formData.append("name", $("input[name=name]").val());
-		    formData.append("intro", $("input[name=intro]").val());		    
-		    formData.append("profile", $("textarea[name=profile]").val()); */
+		 
 		console.log(formData);
 			$.ajax({
 				type:"POST",
@@ -4399,18 +4407,13 @@ function execPostCode() {
 		});
 
 	$('#saveBtn2').click(function(){
-		 var formData = new FormData();
-		 	formData.append("career", $("input[name=career]").val());
-		    formData.append("careerDetail", $("input[name=careerDetail]").val());
-		    formData.append("skill", $("input[name=skill]").val());		    
-		    formData.append("career_file", $("input[name=career_file]")[0].files[0]);
+		var form2 = $('#form2')[0];
+		 var formData = new FormData(form2);
+		 	
 		$.ajax({
 			type:"POST",
 			url:"/rest_profileSave2",
-			data:{
-				/* mno: ${loginMember.mno}, */
-				formData
-				},
+			data:formData,
 			contentType: false,
 			processData : false,
 			enctype: 'multipart/form-data',
@@ -4423,16 +4426,16 @@ function execPostCode() {
 		});
 
 	$('#saveBtn3').click(function(){
+		var form3 = $('#form3')[0];
+		 var formData = new FormData(form3);
+		 
 		$.ajax({
 			type:"POST",
 			url:"/rest_profileSave3",
-			data:{
-				mno: ${loginMember.mno},
-				portfolio_title: $('#portfolio_title').val(),
-				portfolio_link: $('#portfolio_link').val(),
-				portfolio_explain: $('#portfolio_explain').val(),
-				portfolio_img : $('#portfolio_img').val()
-				},
+			data: formData,
+			contentType: false,
+			processData : false,
+			enctype: 'multipart/form-data',
 			success:function(data){
 				alert(data);
 				}
@@ -4484,12 +4487,24 @@ function execPostCode() {
 
 	
 //카테고리
+$('#category1').hide();
+$('#category2').hide();
 $("#category1Btn").click(function(){
-	$("#category1").html("<div>어나어 </div>")
-})
+	$('#category1').toggle();
+});
 $("#category2Btn").click(function(){
-	
-})
+	$('#category2').toggle();
+});
+
+
+//포트폴리오 팝업창
+$('#popBtn').click(function(){
+	$('#pop').show();
+});
+$('#uploadPort').click(function(){
+	$('#pop').hide();
+});
+
 
 </script>
 	<%@include file="footer.jsp"%>

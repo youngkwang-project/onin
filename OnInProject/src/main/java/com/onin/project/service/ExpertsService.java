@@ -95,4 +95,7 @@ ExpertsMapper mapper;
 		// TODO Auto-generated method stub
 		return mapper.selProfile4(profile4DTO);
 	}
+	public int profileUpload(ExpertsDTO expertsDTO) {
+		return mapper.profileUpload(expertsDTO);
+	}
 }
